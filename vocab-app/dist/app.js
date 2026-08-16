@@ -1,0 +1,4473 @@
+"use strict";
+(() => {
+  // ../content/src/vocab.ts
+  var VOCAB = [
+    {
+      "id": "voc-001",
+      "fr": "le temps libre",
+      "uk": "\u0432\u0456\u043B\u044C\u043D\u0438\u0439 \u0447\u0430\u0441",
+      "en": "free time",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Pendant mon temps libre, je me repose et je lis.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-002",
+      "fr": "les loisirs",
+      "uk": "\u0434\u043E\u0437\u0432\u0456\u043B\u043B\u044F",
+      "en": "leisure activities",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Il consacre ses loisirs \xE0 la lecture et au sport.",
+      "note": "Toujours au pluriel dans ce sens ; = le temps libre.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-003",
+      "fr": "se reposer",
+      "uk": "\u0432\u0456\u0434\u043F\u043E\u0447\u0438\u0432\u0430\u0442\u0438",
+      "en": "to rest",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Le week-end, je me repose \xE0 la maison.",
+      "note": "Verbe pronominal.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-004",
+      "fr": "se d\xE9tendre",
+      "uk": "\u0440\u043E\u0437\u0441\u043B\u0430\u0431\u043B\u044F\u0442\u0438\u0441\u044F",
+      "en": "to relax",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Je me d\xE9tends en regardant la nature.",
+      "note": "Pronominal ; conjugaison : je me d\xE9tends, nous nous d\xE9tendons.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-005",
+      "fr": "se distraire",
+      "uk": "\u0440\u043E\u0437\u0432\u0430\u0436\u0430\u0442\u0438\u0441\u044F",
+      "en": "to entertain oneself",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Il se distrait avec un bon livre.",
+      "note": "Pronominal ; vous vous distrayez.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-006",
+      "fr": "une distraction",
+      "uk": "\u0440\u043E\u0437\u0432\u0430\u0433\u0430",
+      "en": "distraction, amusement",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Le cin\xE9ma reste ma distraction pr\xE9f\xE9r\xE9e.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-007",
+      "fr": "consacrer",
+      "uk": "\u043F\u0440\u0438\u0441\u0432\u044F\u0447\u0443\u0432\u0430\u0442\u0438",
+      "en": "to devote",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Je consacre mon temps libre \xE0 de nombreuses activit\xE9s.",
+      "note": "consacrer qqch \xC0 qqch.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-008",
+      "fr": "s'ennuyer",
+      "uk": "\u043D\u0443\u0434\u044C\u0433\u0443\u0432\u0430\u0442\u0438",
+      "en": "to be bored",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Elle s'ennuie parfois le dimanche.",
+      "note": "Contraire de s'amuser ; pronominal.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-009",
+      "fr": "s'occuper",
+      "uk": "\u0437\u0430\u0439\u043C\u0430\u0442\u0438\u0441\u044F \u0447\u0438\u043C\u043E\u0441\u044C",
+      "en": "to keep oneself busy",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Quand je m'ennuie, je m'occupe en lisant ou en cuisinant.",
+      "note": "s'occuper DE qqch/qqn.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-010",
+      "fr": "une occupation",
+      "uk": "\u0437\u0430\u043D\u044F\u0442\u0442\u044F",
+      "en": "occupation, pastime",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Quand je m'ennuie, je cherche une occupation.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-011",
+      "fr": "une bo\xEEte de nuit",
+      "uk": "\u043D\u0456\u0447\u043D\u0438\u0439 \u043A\u043B\u0443\u0431",
+      "en": "nightclub",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Ils sortent en bo\xEEte le samedi soir.",
+      "note": "On dit \xAB aller EN bo\xEEte \xBB (sans article).",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-012",
+      "fr": "faire la f\xEAte",
+      "uk": "\u0433\u0443\u043B\u044F\u0442\u0438, \u0441\u0432\u044F\u0442\u043A\u0443\u0432\u0430\u0442\u0438",
+      "en": "to party",
+      "pos": "expression",
+      "theme": "loisirs",
+      "example": "Les jeunes aiment faire la f\xEAte le samedi soir.",
+      "note": "Article LA, pas \xAB de la \xBB : faire LA f\xEAte.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-013",
+      "fr": "faire un tour",
+      "uk": "\u043F\u0440\u043E\u0433\u0443\u043B\u044F\u0442\u0438\u0441\u044F",
+      "en": "to go for a walk / a spin",
+      "pos": "expression",
+      "theme": "loisirs",
+      "example": "On fait un tour apr\xE8s le d\xEEner.",
+      "note": "Article UN : faire UN tour.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-014",
+      "fr": "se promener",
+      "uk": "\u0433\u0443\u043B\u044F\u0442\u0438",
+      "en": "to go for a walk",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Ils se prom\xE8nent en ville.",
+      "note": "Pronominal ; je me prom\xE8ne.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-015",
+      "fr": "se balader",
+      "uk": "\u043F\u0440\u043E\u0433\u0443\u043B\u044E\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to stroll",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Elles se baladent dans le parc.",
+      "note": "Registre familier ; = se promener.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-016",
+      "fr": "faire les magasins",
+      "uk": "\u0445\u043E\u0434\u0438\u0442\u0438 \u043F\u043E \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\u0445",
+      "en": "to go shopping",
+      "pos": "expression",
+      "theme": "loisirs",
+      "example": "Les filles aiment faire les magasins en ville.",
+      "note": "Article LES, pas \xAB des \xBB.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-017",
+      "fr": "le tricot",
+      "uk": "\u0432'\u044F\u0437\u0430\u043D\u043D\u044F",
+      "en": "knitting",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Jeanne fait du tricot pour ses enfants.",
+      "note": "faire DU tricot (masculin).",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-018",
+      "fr": "tricoter",
+      "uk": "\u0432'\u044F\u0437\u0430\u0442\u0438",
+      "en": "to knit",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Elle tricote des pulls en laine \xE0 ses enfants.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-019",
+      "fr": "la couture",
+      "uk": "\u0448\u0438\u0442\u0442\u044F",
+      "en": "sewing",
+      "pos": "nom",
+      "theme": "loisirs",
+      "example": "Elle fait aussi de la couture.",
+      "note": "faire DE LA couture (f\xE9minin).",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-020",
+      "fr": "coudre",
+      "uk": "\u0448\u0438\u0442\u0438",
+      "en": "to sew",
+      "pos": "verbe",
+      "theme": "loisirs",
+      "example": "Elle coud tr\xE8s bien, elle fait de beaux v\xEAtements.",
+      "note": "Irr\xE9gulier : je couds, nous cousons.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-021",
+      "fr": "faire de la voile",
+      "uk": "\u0437\u0430\u0439\u043C\u0430\u0442\u0438\u0441\u044F \u0432\u0456\u0442\u0440\u0438\u043B\u044C\u043D\u0438\u043C \u0441\u043F\u043E\u0440\u0442\u043E\u043C",
+      "en": "to go sailing",
+      "pos": "expression",
+      "theme": "loisirs",
+      "example": "En \xE9t\xE9, je fais de la voile sur le lac.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-022",
+      "fr": "faire du snowboard",
+      "uk": "\u043A\u0430\u0442\u0430\u0442\u0438\u0441\u044F \u043D\u0430 \u0441\u043D\u043E\u0443\u0431\u043E\u0440\u0434\u0456",
+      "en": "to snowboard",
+      "pos": "expression",
+      "theme": "loisirs",
+      "example": "En hiver, il fait du snowboard \xE0 la montagne.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-023",
+      "fr": "le t\xE9l\xE9travail",
+      "uk": "\u0434\u0438\u0441\u0442\u0430\u043D\u0446\u0456\u0439\u043D\u0430 \u0440\u043E\u0431\u043E\u0442\u0430",
+      "en": "remote work",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Je fais du t\xE9l\xE9travail et je n'ai plus de temps libre.",
+      "note": "",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-024",
+      "fr": "pr\xE9f\xE9rer",
+      "uk": "\u043D\u0430\u0434\u0430\u0432\u0430\u0442\u0438 \u043F\u0435\u0440\u0435\u0432\u0430\u0433\u0443",
+      "en": "to prefer",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Je pr\xE9f\xE8re le th\xE9 au caf\xE9.",
+      "note": "Construction : pr\xE9f\xE9rer qqch \xC0 qqch.",
+      "source": "JE PRATIQUE UN LOISIR"
+    },
+    {
+      "id": "voc-025",
+      "fr": "r\xEAver de",
+      "uk": "\u043C\u0440\u0456\u044F\u0442\u0438 \u043F\u0440\u043E",
+      "en": "to dream of",
+      "pos": "verbe",
+      "theme": "celebrite",
+      "example": "Parfois je r\xEAve d'\xEAtre c\xE9l\xE8bre.",
+      "note": "r\xEAver DE + nom / infinitif.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-026",
+      "fr": "une star",
+      "uk": "\u0437\u0456\u0440\u043A\u0430 (\u0432\u0456\u0434\u043E\u043C\u0430 \u043B\u044E\u0434\u0438\u043D\u0430)",
+      "en": "star, celebrity",
+      "pos": "nom",
+      "theme": "celebrite",
+      "example": "Elle est devenue une star apr\xE8s ce film.",
+      "note": "Anglicisme courant, f\xE9minin m\xEAme pour un homme.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-027",
+      "fr": "une vedette",
+      "uk": "\u043A\u0456\u043D\u043E\u0437\u0456\u0440\u043A\u0430",
+      "en": "(film) star",
+      "pos": "nom",
+      "theme": "celebrite",
+      "example": "C'est une vedette du cin\xE9ma fran\xE7ais.",
+      "note": "\xC9quivalent fran\xE7ais de \xAB star \xBB.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-028",
+      "fr": "une c\xE9l\xE9brit\xE9",
+      "uk": "\u0437\u043D\u0430\u043C\u0435\u043D\u0438\u0442\u0456\u0441\u0442\u044C",
+      "en": "celebrity",
+      "pos": "nom",
+      "theme": "celebrite",
+      "example": "Si j'\xE9tais une c\xE9l\xE9brit\xE9, j'aimerais \xEAtre invisible.",
+      "note": "",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-029",
+      "fr": "c\xE9l\xE8bre",
+      "uk": "\u0437\u043D\u0430\u043C\u0435\u043D\u0438\u0442\u0438\u0439",
+      "en": "famous",
+      "pos": "adjectif",
+      "theme": "celebrite",
+      "example": "Ce cin\xE9aste c\xE9l\xE8bre a r\xE9alis\xE9 de nombreux films.",
+      "note": "Contraire : inconnu.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-030",
+      "fr": "un boys band",
+      "uk": "\u0431\u043E\u0439-\u0431\u0435\u043D\u0434, \u0445\u043B\u043E\u043F\u0447\u0430\u0447\u0438\u0439 \u0433\u0443\u0440\u0442",
+      "en": "boy band",
+      "pos": "nom",
+      "theme": "celebrite",
+      "example": "On ferait un boys band et on gagnerait.",
+      "note": "",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-031",
+      "fr": "\xEAtre enceinte",
+      "uk": "\u0431\u0443\u0442\u0438 \u0432\u0430\u0433\u0456\u0442\u043D\u043E\u044E",
+      "en": "to be pregnant",
+      "pos": "expression",
+      "theme": "celebrite",
+      "example": "On entendrait des rumeurs comme quoi Julie est enceinte.",
+      "note": "Adjectif uniquement f\xE9minin : enceinte.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-032",
+      "fr": "retoucher",
+      "uk": "\u0440\u0435\u0434\u0430\u0433\u0443\u0432\u0430\u0442\u0438, \u043E\u0431\u0440\u043E\u0431\u043B\u044F\u0442\u0438 (\u0444\u043E\u0442\u043E)",
+      "en": "to retouch, to edit",
+      "pos": "verbe",
+      "theme": "celebrite",
+      "example": "Elle n'est pas enceinte, on a retouch\xE9 la photo.",
+      "note": "retoucher une photo = la modifier avec un logiciel.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-033",
+      "fr": "d\xE9laisser",
+      "uk": "\u043A\u0438\u0434\u0430\u0442\u0438, \u0437\u0430\u043D\u0435\u0434\u0431\u0443\u0432\u0430\u0442\u0438",
+      "en": "to neglect, to abandon",
+      "pos": "verbe",
+      "theme": "celebrite",
+      "example": "Je deviendrais trop populaire, alors je la d\xE9laisserais.",
+      "note": "= arr\xEAter de s'occuper de quelqu'un.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-034",
+      "fr": "un fan",
+      "uk": "\u0444\u0430\u043D\u0430\u0442, \u043F\u0440\u0438\u0445\u0438\u043B\u044C\u043D\u0438\u043A",
+      "en": "fan",
+      "pos": "nom",
+      "theme": "celebrite",
+      "example": "Si tu \xE9tais c\xE9l\xE8bre, tu aurais beaucoup de fans.",
+      "note": "= une personne qui aime \xE9norm\xE9ment une star.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-035",
+      "fr": "une \xE9mission",
+      "uk": "\u0442\u0435\u043B\u0435\u043F\u0435\u0440\u0435\u0434\u0430\u0447\u0430",
+      "en": "TV show",
+      "pos": "nom",
+      "theme": "celebrite",
+      "example": "Je participerais \xE0 une \xE9mission qui s'appellerait \xAB Are You a Star \xBB.",
+      "note": "",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-036",
+      "fr": "gagner",
+      "uk": "\u0432\u0438\u0433\u0440\u0430\u0432\u0430\u0442\u0438; \u0437\u0430\u0440\u043E\u0431\u043B\u044F\u0442\u0438",
+      "en": "to win; to earn",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "On danserait devant un grand public et on gagnerait.",
+      "note": "Deux sens : gagner un concours / gagner de l'argent.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-037",
+      "fr": "ha\xEFr",
+      "uk": "\u043D\u0435\u043D\u0430\u0432\u0438\u0434\u0456\u0442\u0438",
+      "en": "to hate",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Julie partirait avec Dimitri que je hais.",
+      "note": "Attention : je hais [\u025B], mais nous ha\xEFssons.",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-038",
+      "fr": "un extrait",
+      "uk": "\u0443\u0440\u0438\u0432\u043E\u043A",
+      "en": "extract, excerpt",
+      "pos": "nom",
+      "theme": "general",
+      "example": "\xC9coutez l'extrait et r\xE9pondez aux questions.",
+      "note": "",
+      "source": "Samuel"
+    },
+    {
+      "id": "voc-039",
+      "fr": "une salle",
+      "uk": "\u0437\u0430\u043B (\u043A\u0456\u043D\u043E\u0437\u0430\u043B)",
+      "en": "(cinema) hall, screen room",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le cin\xE9ma est aussi la salle o\xF9 l'on passe des films.",
+      "note": "\xAB la salle obscure \xBB = le cin\xE9ma.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-040",
+      "fr": "passer un film",
+      "uk": "\u043F\u043E\u043A\u0430\u0437\u0443\u0432\u0430\u0442\u0438 \u0444\u0456\u043B\u044C\u043C",
+      "en": "to show a film",
+      "pos": "expression",
+      "theme": "cinema",
+      "example": "Les cin\xE9math\xE8ques passent des films de qualit\xE9.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-041",
+      "fr": "\xEAtre passionn\xE9 de",
+      "uk": "\u0437\u0430\u0445\u043E\u043F\u043B\u044E\u0432\u0430\u0442\u0438\u0441\u044F \u0447\u0438\u043C\u043E\u0441\u044C",
+      "en": "to be passionate about",
+      "pos": "expression",
+      "theme": "cinema",
+      "example": "Anne est passionn\xE9e de cin\xE9ma et va souvent au cin\xE9ma.",
+      "note": "\xEAtre passionn\xE9 DE + nom.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-042",
+      "fr": "en version originale",
+      "uk": "\u043C\u043E\u0432\u043E\u044E \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u0443",
+      "en": "in the original language",
+      "pos": "expression",
+      "theme": "cinema",
+      "example": "Je voudrais voir un film en version originale ce soir.",
+      "note": "Abr\xE9g\xE9 en \xAB v.o. \xBB.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-043",
+      "fr": "en version fran\xE7aise",
+      "uk": "\u0443 \u0444\u0440\u0430\u043D\u0446\u0443\u0437\u044C\u043A\u043E\u043C\u0443 \u0434\u0443\u0431\u043B\u044E\u0432\u0430\u043D\u043D\u0456",
+      "en": "dubbed in French",
+      "pos": "expression",
+      "theme": "cinema",
+      "example": "Vous pr\xE9f\xE9rez voir les films en v.o. ou en v.f. ?",
+      "note": "Abr\xE9g\xE9 en \xAB v.f. \xBB.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-044",
+      "fr": "un cin\xE9-club",
+      "uk": "\u043A\u0456\u043D\u043E\u043A\u043B\u0443\u0431",
+      "en": "film club",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Les cin\xE9-clubs passent des films de qualit\xE9.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-045",
+      "fr": "une cin\xE9math\xE8que",
+      "uk": "\u0441\u0456\u043D\u0435\u043C\u0430\u0442\u0435\u043A\u0430, \u0444\u0456\u043B\u044C\u043C\u043E\u0444\u043E\u043D\u0434",
+      "en": "film archive, cinematheque",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Vous devriez aller \xE0 la cin\xE9math\xE8que, ils passent de grands classiques.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-046",
+      "fr": "un grand classique",
+      "uk": "\u043A\u043B\u0430\u0441\u0438\u043A\u0430 \u043A\u0456\u043D\u043E",
+      "en": "a classic",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Tu devrais aller voir ce grand classique, il est magnifique !",
+      "note": "= un film ancien et tr\xE8s connu.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-047",
+      "fr": "muet",
+      "uk": "\u043D\u0456\u043C\u0438\u0439 (\u0444\u0456\u043B\u044C\u043C)",
+      "en": "silent (film)",
+      "pos": "adjectif",
+      "theme": "cinema",
+      "example": "Un film muet, c'est un film sans paroles.",
+      "note": "Contraire : parlant. F\xE9minin : muette.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-048",
+      "fr": "un cin\xE9aste",
+      "uk": "\u043A\u0456\u043D\u0435\u043C\u0430\u0442\u043E\u0433\u0440\u0430\u0444\u0456\u0441\u0442, \u043A\u0456\u043D\u043E\u043C\u0438\u0442\u0435\u0446\u044C",
+      "en": "filmmaker",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Un cin\xE9aste est en train de tourner un film dans mon quartier.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-049",
+      "fr": "un r\xE9alisateur",
+      "uk": "\u0440\u0435\u0436\u0438\u0441\u0435\u0440",
+      "en": "director",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Si j'avais le temps, je regarderais tous les films de ce r\xE9alisateur.",
+      "note": "F\xE9minin : une r\xE9alisatrice.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-050",
+      "fr": "r\xE9aliser",
+      "uk": "\u0437\u043D\u0456\u043C\u0430\u0442\u0438, \u0441\u0442\u0430\u0432\u0438\u0442\u0438 (\u0444\u0456\u043B\u044C\u043C)",
+      "en": "to direct (a film)",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "Ce cin\xE9aste c\xE9l\xE8bre a r\xE9alis\xE9 de nombreux films.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-051",
+      "fr": "tourner",
+      "uk": "\u0437\u043D\u0456\u043C\u0430\u0442\u0438 (\u0444\u0456\u043B\u044C\u043C)",
+      "en": "to shoot (a film)",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "Si j'avais un grand budget, je tournerais un film sur ma vie.",
+      "note": "tourner = filmer ; r\xE9aliser = diriger l'ensemble.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-052",
+      "fr": "le tournage",
+      "uk": "\u0437\u0439\u043E\u043C\u043A\u0438",
+      "en": "filming, shoot",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Il dirige les acteurs sur le lieu du tournage.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-053",
+      "fr": "inconnu",
+      "uk": "\u043D\u0435\u0432\u0456\u0434\u043E\u043C\u0438\u0439",
+      "en": "unknown",
+      "pos": "adjectif",
+      "theme": "cinema",
+      "example": "Ce r\xE9alisateur \xE9tait encore inconnu il y a cinq ans.",
+      "note": "Contraire : connu, c\xE9l\xE8bre.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-054",
+      "fr": "une s\xE9ance",
+      "uk": "\u0441\u0435\u0430\u043D\u0441",
+      "en": "screening, showing",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Je voudrais deux billets pour la s\xE9ance de 20 heures.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-055",
+      "fr": "un \xE9cran",
+      "uk": "\u0435\u043A\u0440\u0430\u043D",
+      "en": "screen",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Nous voudrions une place loin de l'\xE9cran.",
+      "note": "",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-056",
+      "fr": "un renseignement",
+      "uk": "\u0434\u043E\u0432\u0456\u0434\u043A\u0430, \u0456\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0456\u044F",
+      "en": "piece of information",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Est-ce que je pourrais avoir un renseignement, s'il vous pla\xEEt ?",
+      "note": "avoir un renseignement = \u043E\u0442\u0440\u0438\u043C\u0430\u0442\u0438 \u0456\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0456\u044E.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-057",
+      "fr": "nouveau",
+      "uk": "\u043D\u043E\u0432\u0438\u0439 (\u0456\u043D\u0448\u0438\u0439, \u0434\u043B\u044F \u043C\u0435\u043D\u0435)",
+      "en": "new (another one)",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "J'ai un nouveau t\xE9l\xE9phone que j'ai achet\xE9 d'occasion.",
+      "note": "nouveau \u2260 neuf : nouveau = nouveau POUR MOI. Formes : nouveau / nouvel / nouvelle / nouveaux / nouvelles.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-058",
+      "fr": "neuf",
+      "uk": "\u043D\u043E\u0432\u0438\u0439 (\u0449\u043E\u0439\u043D\u043E \u0432\u0438\u0440\u043E\u0431\u043B\u0435\u043D\u0438\u0439)",
+      "en": "brand new",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "J'ai un t\xE9l\xE9phone neuf, il sort de l'usine.",
+      "note": "neuf \u2260 nouveau : neuf = jamais utilis\xE9. Formes : neuf / neuve / neufs / neuves. Se place APR\xC8S le nom.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-059",
+      "fr": "d'occasion",
+      "uk": "\u0432\u0436\u0438\u0432\u0430\u043D\u0438\u0439, \u0431/\u0432",
+      "en": "second-hand",
+      "pos": "expression",
+      "theme": "general",
+      "example": "J'ai achet\xE9 cette voiture d'occasion.",
+      "note": "Contraire : neuf.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-060",
+      "fr": "volontiers",
+      "uk": "\u0437\u0430\u043B\u044E\u0431\u043A\u0438",
+      "en": "gladly, willingly",
+      "pos": "adverbe",
+      "theme": "general",
+      "example": "Je boirais bien un caf\xE9. = Je prendrais volontiers un caf\xE9.",
+      "note": "\xAB verbe au conditionnel + bien \xBB = volontiers.",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-061",
+      "fr": "croyant",
+      "uk": "\u0432\u0456\u0440\u0443\u044E\u0447\u0438\u0439",
+      "en": "believer, religious",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Il est croyant mais il ne va pas \xE0 l'\xE9glise.",
+      "note": "Ne pas confondre : croyant / chr\xE9tien (\u0445\u0440\u0438\u0441\u0442\u0438\u044F\u043D\u0438\u043D) / cr\xE9tin (\u0456\u0434\u0456\u043E\u0442, insulte).",
+      "source": "Cin\xE9ma"
+    },
+    {
+      "id": "voc-062",
+      "fr": "une bande dessin\xE9e",
+      "uk": "\u043A\u043E\u043C\u0456\u043A\u0441",
+      "en": "comic book",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "J'ai lu toutes les bandes dessin\xE9es de Gaston Lagaffe.",
+      "note": "Abr\xE9g\xE9 : une BD, des BD.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-063",
+      "fr": "un dessin anim\xE9",
+      "uk": "\u043C\u0443\u043B\u044C\u0442\u0444\u0456\u043B\u044C\u043C",
+      "en": "cartoon",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Les enfants regardent un dessin anim\xE9 le samedi matin.",
+      "note": "Ne pas confondre avec une bande dessin\xE9e (papier).",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-064",
+      "fr": "un dessinateur",
+      "uk": "\u0445\u0443\u0434\u043E\u0436\u043D\u0438\u043A-\u0456\u043B\u044E\u0441\u0442\u0440\u0430\u0442\u043E\u0440",
+      "en": "illustrator, cartoonist",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Le personnage a \xE9t\xE9 confi\xE9 \xE0 un dessinateur qu\xE9b\xE9cois.",
+      "note": "= personne qui dessine.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-065",
+      "fr": "un tirage",
+      "uk": "\u0442\u0438\u0440\u0430\u0436",
+      "en": "print run",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Ce tome b\xE9n\xE9ficie d'un tirage de plus d'un million d'exemplaires.",
+      "note": "= fait d'imprimer un texte, une image, un livre.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-066",
+      "fr": "un tome",
+      "uk": "\u0442\u043E\u043C",
+      "en": "volume",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Il s'agira du 22e tome des aventures du personnage.",
+      "note": "= un volume, une partie d'une s\xE9rie.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-067",
+      "fr": "un personnage",
+      "uk": "\u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436",
+      "en": "character",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Gaston est un personnage de bande dessin\xE9e imagin\xE9 par Franquin.",
+      "note": "un personnage principal \u2260 un personnage secondaire.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-068",
+      "fr": "une case",
+      "uk": "\u043A\u0430\u0434\u0440 (\u0443 \u043A\u043E\u043C\u0456\u043A\u0441\u0456)",
+      "en": "panel",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Chaque case raconte un moment de l'histoire.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-069",
+      "fr": "une planche",
+      "uk": "\u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0430 \u043A\u043E\u043C\u0456\u043A\u0441\u0443",
+      "en": "comic page",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Le dessinateur termine une planche par jour.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-070",
+      "fr": "une bulle",
+      "uk": "\u0431\u0443\u043B\u044C\u0431\u0430\u0448\u043A\u0430 \u0437 \u0442\u0435\u043A\u0441\u0442\u043E\u043C",
+      "en": "speech bubble",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Les dialogues sont \xE9crits dans les bulles.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-071",
+      "fr": "un \xE9diteur",
+      "uk": "\u0432\u0438\u0434\u0430\u0432\u0435\u0446\u044C",
+      "en": "publisher",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "L'\xE9diteur Dupuis a d\xE9cid\xE9 de faire revivre Gaston Lagaffe.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-072",
+      "fr": "confier",
+      "uk": "\u0434\u043E\u0432\u0456\u0440\u044F\u0442\u0438, \u0434\u043E\u0440\u0443\u0447\u0430\u0442\u0438",
+      "en": "to entrust",
+      "pos": "verbe",
+      "theme": "bd",
+      "example": "Ils ont fait revivre Gaston en le confiant \xE0 un dessinateur qu\xE9b\xE9cois.",
+      "note": "confier qqch \xC0 qqn.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-073",
+      "fr": "faire revivre",
+      "uk": "\u0432\u0456\u0434\u0440\u043E\u0434\u0436\u0443\u0432\u0430\u0442\u0438",
+      "en": "to bring back to life",
+      "pos": "expression",
+      "theme": "bd",
+      "example": "L'\xE9diteur a d\xE9cid\xE9 de faire revivre Gaston Lagaffe.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-074",
+      "fr": "une gaffe",
+      "uk": "\u043F\u0440\u043E\u043C\u0430\u0445, \u043B\u044F\u043F",
+      "en": "blunder",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "J'ai fait une gaffe pendant la r\xE9union.",
+      "note": "= une faute. Familier : \xAB Fais gaffe ! \xBB = Attention !",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-075",
+      "fr": "une b\xEAtise",
+      "uk": "\u0434\u0443\u0440\u043D\u0438\u0446\u044F",
+      "en": "silly thing, nonsense",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Gaston est connu pour ses b\xEAtises : il provoque des catastrophes.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-076",
+      "fr": "un \xE9colo",
+      "uk": "\u043F\u0440\u0438\u0445\u0438\u043B\u044C\u043D\u0438\u043A \u0435\u043A\u043E\u043B\u043E\u0433\u0456\u0457, \u0437\u0435\u043B\u0435\u043D\u0438\u0439",
+      "en": "eco-friendly person",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Gaston est gentil, bienveillant, c'est un \xE9colo.",
+      "note": "Familier, abr\xE9g\xE9 de \xAB \xE9cologiste \xBB ; aussi adjectif.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-077",
+      "fr": "bienveillant",
+      "uk": "\u0434\u043E\u0431\u0440\u043E\u0437\u0438\u0447\u043B\u0438\u0432\u0438\u0439",
+      "en": "kind, benevolent",
+      "pos": "adjectif",
+      "theme": "bd",
+      "example": "Gaston est gentil et bienveillant.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-078",
+      "fr": "le bonheur",
+      "uk": "\u0449\u0430\u0441\u0442\u044F",
+      "en": "happiness",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Ce personnage nous fait r\xE9fl\xE9chir \xE0 notre rapport au bonheur.",
+      "note": "Paire : bonheur \u2260 malheur (bon- / mal-).",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-079",
+      "fr": "le malheur",
+      "uk": "\u043D\u0435\u0449\u0430\u0441\u0442\u044F",
+      "en": "misfortune",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Le malheur des uns fait le bonheur des autres.",
+      "note": "Paire : malheur \u2260 bonheur.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-080",
+      "fr": "un lieu",
+      "uk": "\u043C\u0456\u0441\u0446\u0435",
+      "en": "place",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Il dirige les acteurs sur le lieu du tournage.",
+      "note": "Ne pas confondre : un lieu (\u043C\u0456\u0441\u0446\u0435) / un lien (\u0437\u0432'\u044F\u0437\u043E\u043A, \u043F\u043E\u0441\u0438\u043B\u0430\u043D\u043D\u044F).",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-081",
+      "fr": "un lien",
+      "uk": "\u0437\u0432'\u044F\u0437\u043E\u043A; \u043F\u043E\u0441\u0438\u043B\u0430\u043D\u043D\u044F",
+      "en": "link, bond",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Gaston nous fait r\xE9fl\xE9chir \xE0 notre lien avec le travail.",
+      "note": "Ne pas confondre avec \xAB un lieu \xBB (\u043C\u0456\u0441\u0446\u0435).",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-082",
+      "fr": "un clin d'\u0153il",
+      "uk": "\u043F\u0456\u0434\u043C\u043E\u0440\u0433\u0443\u0432\u0430\u043D\u043D\u044F, \u043D\u0430\u0442\u044F\u043A",
+      "en": "wink, nod",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "On peut faire des petits clins d'\u0153il au monde moderne.",
+      "note": "faire un clin d'\u0153il \xC0 qqch/qqn.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-083",
+      "fr": "un \xE2ge d'or",
+      "uk": "\u0437\u043E\u043B\u043E\u0442\u0438\u0439 \u0432\u0456\u043A",
+      "en": "golden age",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "Delaf a fait le choix de pr\xE9server l'\xE2ge d'or de Gaston.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-084",
+      "fr": "inventer",
+      "uk": "\u0432\u0438\u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0438, \u0432\u0438\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438",
+      "en": "to invent",
+      "pos": "verbe",
+      "theme": "bd",
+      "example": "Les lecteurs ont ador\xE9 le personnage que Delaf avait invent\xE9.",
+      "note": "",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-085",
+      "fr": "une reprise",
+      "uk": "\u0432\u0456\u0434\u043D\u043E\u0432\u043B\u0435\u043D\u043D\u044F; \u0440\u0435\u043C\u0435\u0439\u043A",
+      "en": "resumption; remake",
+      "pos": "nom",
+      "theme": "bd",
+      "example": "La fille de Franquin s'opposait \xE0 cette reprise.",
+      "note": "Deux sens : reprise d'un projet / reprise d'une \u0153uvre (= remake).",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-086",
+      "fr": "para\xEEtre",
+      "uk": "\u0432\u0438\u0445\u043E\u0434\u0438\u0442\u0438 \u0434\u0440\u0443\u043A\u043E\u043C; \u0437\u0434\u0430\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to be published; to seem",
+      "pos": "verbe",
+      "theme": "bd",
+      "example": "Ce tome 22 peut donc para\xEEtre cette semaine.",
+      "note": "Deux sens : un livre para\xEEt / il para\xEEt fatigu\xE9.",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-087",
+      "fr": "pleurer",
+      "uk": "\u043F\u043B\u0430\u043A\u0430\u0442\u0438",
+      "en": "to cry",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Tout en pleurant, elle riait.",
+      "note": "Ne pas confondre avec \xAB pleuvoir \xBB (il pleut = \u0439\u0434\u0435 \u0434\u043E\u0449).",
+      "source": "BD / Gaston Lagaffe"
+    },
+    {
+      "id": "voc-088",
+      "fr": "un blockbuster",
+      "uk": "\u0431\u043B\u043E\u043A\u0431\u0430\u0441\u0442\u0435\u0440",
+      "en": "blockbuster",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Ce film a un gros budget, c'est un vrai blockbuster.",
+      "note": "Crit\xE8res : grand public, gros budget, forte m\xE9diatisation. En fran\xE7ais : une superproduction.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-089",
+      "fr": "une superproduction",
+      "uk": "\u043C\u0430\u0441\u0448\u0442\u0430\u0431\u043D\u0430 \u043A\u0456\u043D\u043E\u043F\u0440\u043E\u0434\u0443\u043A\u0446\u0456\u044F",
+      "en": "big-budget production",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Ce film est une superproduction am\xE9ricaine.",
+      "note": "\xC9quivalent fran\xE7ais de \xAB blockbuster \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-090",
+      "fr": "un film d'auteur",
+      "uk": "\u0430\u0432\u0442\u043E\u0440\u0441\u044C\u043A\u0435 (\u0430\u0440\u0442\u0445\u0430\u0443\u0441\u043D\u0435) \u043A\u0456\u043D\u043E",
+      "en": "art-house film",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Ce cin\xE9ma ne diffuse que des films d'auteur.",
+      "note": "Antonyme du blockbuster : plus \xE9litiste, budget limit\xE9.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-091",
+      "fr": "un teaser",
+      "uk": "\u0442\u0438\u0437\u0435\u0440",
+      "en": "teaser",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Nous n'avons vu que le teaser, pas le trailer.",
+      "note": "En fran\xE7ais : une accroche. Diffus\xE9 bien avant la sortie.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-092",
+      "fr": "une bande-annonce",
+      "uk": "\u0442\u0440\u0435\u0439\u043B\u0435\u0440",
+      "en": "trailer",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "La bande-annonce appara\xEEt apr\xE8s les teasers.",
+      "note": "\xC9quivalent fran\xE7ais de \xAB trailer \xBB ; plus construite que le teaser.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-093",
+      "fr": "un prequel",
+      "uk": "\u043F\u0440\u0438\u043A\u0432\u0435\u043B",
+      "en": "prequel",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Seul le r\xE9alisateur conna\xEEt la fin du prequel.",
+      "note": "En fran\xE7ais : un ant\xE9pisode (qu\xE9b\xE9cois). \xC0 ne pas confondre avec le flashback.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-094",
+      "fr": "un flashback",
+      "uk": "\u0444\u043B\u0435\u0448\u0431\u0435\u043A",
+      "en": "flashback",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le film commence par un flashback sur son enfance.",
+      "note": "En fran\xE7ais : un retour en arri\xE8re, au sein d'un m\xEAme film.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-095",
+      "fr": "un reboot",
+      "uk": "\u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u043A",
+      "en": "reboot",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le reboot n'est qu'une adaptation libre de la saga.",
+      "note": "En fran\xE7ais : un red\xE9marrage. Nouveau r\xE9alisateur, nouveau casting.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-096",
+      "fr": "un remake",
+      "uk": "\u0440\u0435\u043C\u0435\u0439\u043A",
+      "en": "remake",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le seul probl\xE8me avec ce remake, c'est le sc\xE9nario.",
+      "note": "= une simple reprise d'une \u0153uvre existante.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-097",
+      "fr": "un sc\xE9nario",
+      "uk": "\u0441\u0446\u0435\u043D\u0430\u0440\u0456\u0439",
+      "en": "screenplay",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le seul probl\xE8me de ce film, c'est le sc\xE9nario.",
+      "note": "",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-098",
+      "fr": "la m\xE9diatisation",
+      "uk": "\u0432\u0438\u0441\u0432\u0456\u0442\u043B\u0435\u043D\u043D\u044F \u0432 \u0417\u041C\u0406, \u043C\u0435\u0434\u0456\u0439\u043D\u0430 \u0443\u0432\u0430\u0433\u0430",
+      "en": "media coverage",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Ce film a b\xE9n\xE9fici\xE9 d'une forte m\xE9diatisation.",
+      "note": "",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-099",
+      "fr": "au figur\xE9",
+      "uk": "\u0443 \u043F\u0435\u0440\u0435\u043D\u043E\u0441\u043D\u043E\u043C\u0443 \u0437\u043D\u0430\u0447\u0435\u043D\u043D\u0456",
+      "en": "figuratively",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Par extension et au figur\xE9, le terme s'applique au cin\xE9ma.",
+      "note": "Contraire : au sens propre.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-100",
+      "fr": "impliquer",
+      "uk": "\u043E\u0437\u043D\u0430\u0447\u0430\u0442\u0438, \u043F\u0435\u0440\u0435\u0434\u0431\u0430\u0447\u0430\u0442\u0438",
+      "en": "to imply, to involve",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Le film d'auteur implique un budget limit\xE9.",
+      "note": "\xEAtre impliqu\xE9 = \u0431\u0443\u0442\u0438 \u0437\u0430\u043B\u0443\u0447\u0435\u043D\u0438\u043C.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-101",
+      "fr": "confondre",
+      "uk": "\u043F\u043B\u0443\u0442\u0430\u0442\u0438",
+      "en": "to confuse, to mix up",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "\xC0 ne pas confondre avec le trailer.",
+      "note": "confondre A AVEC B.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-102",
+      "fr": "au sein de",
+      "uk": "\u0432\u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0456, \u0443 \u0441\u043A\u043B\u0430\u0434\u0456",
+      "en": "within",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Le flashback est un retour en arri\xE8re au sein d'un m\xEAme film.",
+      "note": "",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-103",
+      "fr": "s'essouffler",
+      "uk": "\u0432\u0438\u0434\u0438\u0445\u0430\u0442\u0438\u0441\u044F",
+      "en": "to run out of steam",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "Le reboot relance une saga qui s'essouffle.",
+      "note": "= qui a perdu son dynamisme. Famille : souffle, souffler, respirer.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-104",
+      "fr": "faire partie de",
+      "uk": "\u0431\u0443\u0442\u0438 \u0447\u0430\u0441\u0442\u0438\u043D\u043E\u044E",
+      "en": "to be part of",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Les s\xE9ries font partie de l'industrie du cin\xE9ma.",
+      "note": "",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-105",
+      "fr": "entendre parler de",
+      "uk": "\u0447\u0443\u0442\u0438 \u043F\u0440\u043E",
+      "en": "to hear about",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Je n'ai pas entendu parler de ce r\xE9alisateur.",
+      "note": "entendre parler DE qqn/qqch.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-106",
+      "fr": "une \u0153uvre d'art",
+      "uk": "\u0442\u0432\u0456\u0440 \u043C\u0438\u0441\u0442\u0435\u0446\u0442\u0432\u0430",
+      "en": "work of art",
+      "pos": "nom",
+      "theme": "art",
+      "example": "On red\xE9couvre un labyrinthe d'\u0153uvres d'art dans les bois.",
+      "note": "= objet cr\xE9\xE9 par un artiste.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-107",
+      "fr": "\xE9tincelant",
+      "uk": "\u0431\u043B\u0438\u0441\u043A\u0443\u0447\u0438\u0439, \u0456\u0441\u043A\u0440\u0438\u0441\u0442\u0438\u0439",
+      "en": "sparkling, glittering",
+      "pos": "adjectif",
+      "theme": "art",
+      "example": "Une immense t\xEAte \xE9tincelante de miroirs domine la for\xEAt.",
+      "note": "= qui brille beaucoup, qui refl\xE8te la lumi\xE8re.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-108",
+      "fr": "un ferrailleur",
+      "uk": "\u0442\u043E\u0440\u0433\u043E\u0432\u0435\u0446\u044C \u043C\u0435\u0442\u0430\u043B\u043E\u0431\u0440\u0443\u0445\u0442\u043E\u043C",
+      "en": "scrap metal dealer",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Ils vont rencontrer un ferrailleur, avec qui ils vont devenir tr\xE8s amis.",
+      "note": "= personne qui ach\xE8te et vend de vieux objets en m\xE9tal.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-109",
+      "fr": "s'agr\xE9ger",
+      "uk": "\u043F\u0440\u0438\u0454\u0434\u043D\u0443\u0432\u0430\u0442\u0438\u0441\u044F, \u043E\u0431'\u0454\u0434\u043D\u0443\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to join, to band together",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "Plein d'autres artistes vont venir s'agr\xE9ger \xE0 eux.",
+      "note": "s'agr\xE9ger \xC0 un groupe.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-110",
+      "fr": "saisissant",
+      "uk": "\u0432\u0440\u0430\u0436\u0430\u044E\u0447\u0438\u0439, \u043F\u0440\u0438\u0433\u043E\u043B\u043E\u043C\u0448\u043B\u0438\u0432\u0438\u0439",
+      "en": "striking",
+      "pos": "adjectif",
+      "theme": "art",
+      "example": "L'\u0153uvre la plus saisissante du Cyclop est suspendue \xE0 13 m\xE8tres.",
+      "note": "= qui provoque une \xE9motion forte et soudaine.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-111",
+      "fr": "un hommage",
+      "uk": "\u0434\u0430\u043D\u0438\u043D\u0430 \u043F\u043E\u0432\u0430\u0433\u0438, \u0432\u0448\u0430\u043D\u0443\u0432\u0430\u043D\u043D\u044F",
+      "en": "tribute",
+      "pos": "nom",
+      "theme": "art",
+      "example": "On d\xE9couvre aussi un hommage \xE0 Yves Klein.",
+      "note": "rendre hommage \xC0 qqn.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-112",
+      "fr": "suspendre",
+      "uk": "\u043F\u0456\u0434\u0432\u0456\u0448\u0443\u0432\u0430\u0442\u0438",
+      "en": "to suspend, to hang",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "L'\u0153uvre se trouve suspendue \xE0 plus de 13 m\xE8tres de haut.",
+      "note": "= accrocher en hauteur, sans support en dessous.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-113",
+      "fr": "une parcelle",
+      "uk": "\u0434\u0456\u043B\u044F\u043D\u043A\u0430 (\u0437\u0435\u043C\u043B\u0456)",
+      "en": "plot of land",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Ils d\xE9cident d'acheter un bout de parcelle dans les bois.",
+      "note": "= petite partie de terrain.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-114",
+      "fr": "anxieux",
+      "uk": "\u0442\u0440\u0438\u0432\u043E\u0436\u043D\u0438\u0439",
+      "en": "anxious",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Avant l'exposition, l'artiste \xE9tait anxieux.",
+      "note": "Ne pas confondre avec \xAB ennuyeux \xBB (\u043D\u0443\u0434\u043D\u0438\u0439). F\xE9minin : anxieuse.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-115",
+      "fr": "ennuyeux",
+      "uk": "\u043D\u0443\u0434\u043D\u0438\u0439",
+      "en": "boring",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "La visite guid\xE9e \xE9tait longue et ennuyeuse.",
+      "note": "Paire : ennuyeux (\u043D\u0443\u0434\u043D\u0438\u0439) / anxieux (\u0442\u0440\u0438\u0432\u043E\u0436\u043D\u0438\u0439).",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-116",
+      "fr": "une cause",
+      "uk": "\u043F\u0440\u0438\u0447\u0438\u043D\u0430",
+      "en": "cause",
+      "pos": "nom",
+      "theme": "art",
+      "example": "La cause est un fait qui entra\xEEne un autre fait.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-117",
+      "fr": "une cons\xE9quence",
+      "uk": "\u043D\u0430\u0441\u043B\u0456\u0434\u043E\u043A",
+      "en": "consequence",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Ce probl\xE8me technique a eu pour cons\xE9quence l'annulation du spectacle.",
+      "note": "avoir pour cons\xE9quence.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-118",
+      "fr": "entra\xEEner",
+      "uk": "\u0441\u043F\u0440\u0438\u0447\u0438\u043D\u044F\u0442\u0438, \u0442\u044F\u0433\u043D\u0443\u0442\u0438 \u0437\u0430 \u0441\u043E\u0431\u043E\u044E",
+      "en": "to lead to, to cause",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "Le manque de budget a entra\xEEn\xE9 un retard dans les travaux.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-119",
+      "fr": "provoquer",
+      "uk": "\u0432\u0438\u043A\u043B\u0438\u043A\u0430\u0442\u0438, \u0441\u043F\u0440\u0438\u0447\u0438\u043D\u044F\u0442\u0438",
+      "en": "to cause, to provoke",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "La restauration a provoqu\xE9 une fermeture temporaire du site.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-120",
+      "fr": "gr\xE2ce \xE0",
+      "uk": "\u0437\u0430\u0432\u0434\u044F\u043A\u0438",
+      "en": "thanks to",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Gr\xE2ce \xE0 l'aide de nombreux b\xE9n\xE9voles, l'exposition a pu ouvrir \xE0 temps.",
+      "note": "Sens positif ; contraire : \xE0 cause de (sens n\xE9gatif).",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-121",
+      "fr": "\xE0 cause de",
+      "uk": "\u0447\u0435\u0440\u0435\u0437 (\u0449\u043E\u0441\u044C \u043F\u043E\u0433\u0430\u043D\u0435)",
+      "en": "because of",
+      "pos": "expression",
+      "theme": "art",
+      "example": "La visite en plein air a \xE9t\xE9 annul\xE9e \xE0 cause du mauvais temps.",
+      "note": "Sens n\xE9gatif ; positif : gr\xE2ce \xE0.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-122",
+      "fr": "une livraison",
+      "uk": "\u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0430",
+      "en": "delivery",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "La livraison arrivera demain matin.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-123",
+      "fr": "un colis",
+      "uk": "\u043F\u043E\u0441\u0438\u043B\u043A\u0430",
+      "en": "parcel",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "Bonjour, c'est pour un colis.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-124",
+      "fr": "un point relais",
+      "uk": "\u043F\u0443\u043D\u043A\u0442 \u0432\u0438\u0434\u0430\u0447\u0456",
+      "en": "pickup point",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "Le colis vous attend au point relais du quartier.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-125",
+      "fr": "remettre",
+      "uk": "\u043F\u0435\u0440\u0435\u0434\u0430\u0432\u0430\u0442\u0438, \u0432\u0456\u0434\u0434\u0430\u0432\u0430\u0442\u0438",
+      "en": "to hand over",
+      "pos": "verbe",
+      "theme": "transport",
+      "example": "Le facteur m'a remis le colis en main propre.",
+      "note": "remettre qqch \xC0 qqn.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-126",
+      "fr": "r\xE9cup\xE9rer",
+      "uk": "\u0437\u0430\u0431\u0438\u0440\u0430\u0442\u0438",
+      "en": "to collect, to pick up",
+      "pos": "verbe",
+      "theme": "transport",
+      "example": "Je viendrai r\xE9cup\xE9rer mon colis demain.",
+      "note": "= aller chercher, venir chercher.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-127",
+      "fr": "un num\xE9ro de suivi",
+      "uk": "\u043D\u043E\u043C\u0435\u0440 \u0432\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043D\u043D\u044F",
+      "en": "tracking number",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "Vous avez le num\xE9ro de suivi de votre colis ?",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-128",
+      "fr": "une pi\xE8ce d'identit\xE9",
+      "uk": "\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442, \u0449\u043E \u043F\u043E\u0441\u0432\u0456\u0434\u0447\u0443\u0454 \u043E\u0441\u043E\u0431\u0443",
+      "en": "ID document",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "Il faut pr\xE9senter une pi\xE8ce d'identit\xE9 pour retirer le colis.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-129",
+      "fr": "les horaires d'ouverture",
+      "uk": "\u0433\u043E\u0434\u0438\u043D\u0438 \u0440\u043E\u0431\u043E\u0442\u0438",
+      "en": "opening hours",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "Quels sont les horaires d'ouverture du point relais ?",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-130",
+      "fr": "faire un aller-retour",
+      "uk": "\u0437'\u0457\u0437\u0434\u0438\u0442\u0438 \u0442\u0443\u0434\u0438 \u0439 \u043D\u0430\u0437\u0430\u0434",
+      "en": "to make a round trip",
+      "pos": "expression",
+      "theme": "transport",
+      "example": "J'ai fait un aller-retour \xE0 Paris dans la journ\xE9e.",
+      "note": "",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-131",
+      "fr": "pratique",
+      "uk": "\u0437\u0440\u0443\u0447\u043D\u0438\u0439, \u043F\u0440\u0430\u043A\u0442\u0438\u0447\u043D\u0438\u0439",
+      "en": "handy, convenient",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Le point relais est juste \xE0 c\xF4t\xE9, c'est tr\xE8s pratique.",
+      "note": "Faux ami : ne veut pas dire \xAB \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \xBB (= la pratique).",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-132",
+      "fr": "un quartier",
+      "uk": "\u0440\u0430\u0439\u043E\u043D",
+      "en": "neighbourhood",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "D\xE9cris ton quartier en trois ou quatre phrases.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-133",
+      "fr": "r\xE9sidentiel",
+      "uk": "\u0436\u0438\u0442\u043B\u043E\u0432\u0438\u0439 (\u0441\u043F\u0430\u043B\u044C\u043D\u0438\u0439)",
+      "en": "residential",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "C'est un quartier r\xE9sidentiel, tr\xE8s calme le soir.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-134",
+      "fr": "commer\xE7ant",
+      "uk": "\u0442\u043E\u0440\u0433\u043E\u0432\u0438\u0439, \u0437 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\u043C\u0438",
+      "en": "with lots of shops",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si le quartier est commer\xE7ant, tu trouveras tout \xE0 pied.",
+      "note": "une rue commer\xE7ante.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-135",
+      "fr": "bruyant",
+      "uk": "\u0448\u0443\u043C\u043D\u0438\u0439",
+      "en": "noisy",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si le quartier est bruyant, je d\xE9m\xE9nagerai.",
+      "note": "Contraire : calme, silencieux.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-136",
+      "fr": "anim\xE9",
+      "uk": "\u0436\u0432\u0430\u0432\u0438\u0439, \u043F\u043E\u0436\u0432\u0430\u0432\u043B\u0435\u043D\u0438\u0439",
+      "en": "lively",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Le soir, la rue est tr\xE8s anim\xE9e.",
+      "note": "Contraire : d\xE9sert.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-137",
+      "fr": "ensoleill\xE9",
+      "uk": "\u0441\u043E\u043D\u044F\u0447\u043D\u0438\u0439",
+      "en": "sunny",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si elle trouve un appartement ensoleill\xE9, elle emm\xE9nagera tout de suite.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-138",
+      "fr": "sombre",
+      "uk": "\u0442\u0435\u043C\u043D\u0438\u0439",
+      "en": "dark",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si l'appartement est sombre, cherche un logement plus lumineux !",
+      "note": "Contraire : lumineux.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-139",
+      "fr": "lumineux",
+      "uk": "\u0441\u0432\u0456\u0442\u043B\u0438\u0439",
+      "en": "bright, light-filled",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si tu trouves un appartement lumineux, tu te sentiras mieux.",
+      "note": "Contraire : sombre.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-140",
+      "fr": "spacieux",
+      "uk": "\u043F\u0440\u043E\u0441\u0442\u043E\u0440\u0438\u0439",
+      "en": "spacious",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si tu veux un appartement spacieux, loue un T3 !",
+      "note": "Contraire : minuscule.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-141",
+      "fr": "minuscule",
+      "uk": "\u043A\u0440\u0438\u0445\u0456\u0442\u043D\u0438\u0439",
+      "en": "tiny",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si un studio fait 15 m\xB2, il est minuscule.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-142",
+      "fr": "bien situ\xE9",
+      "uk": "\u0443 \u0433\u0430\u0440\u043D\u043E\u043C\u0443 \u043C\u0456\u0441\u0446\u0456",
+      "en": "well located",
+      "pos": "expression",
+      "theme": "logement",
+      "example": "Si l'appartement est bien situ\xE9, prends vite une d\xE9cision !",
+      "note": "Contraire : mal situ\xE9.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-143",
+      "fr": "d\xE9sert",
+      "uk": "\u0431\u0435\u0437\u043B\u044E\u0434\u043D\u0438\u0439",
+      "en": "deserted",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "Si une rue est d\xE9serte, elle n'est pas anim\xE9e.",
+      "note": "Attention : le nom \xAB un d\xE9sert \xBB = \u043F\u0443\u0441\u0442\u0435\u043B\u044F.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-144",
+      "fr": "un bail",
+      "uk": "\u0434\u043E\u0433\u043E\u0432\u0456\u0440 \u043E\u0440\u0435\u043D\u0434\u0438",
+      "en": "lease",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "Si tu veux emm\xE9nager, tu signeras un bail.",
+      "note": "= contrat entre le locataire et le propri\xE9taire. Prononciation : -ail = [aj].",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-145",
+      "fr": "une caution",
+      "uk": "\u0437\u0430\u0441\u0442\u0430\u0432\u0430, \u0434\u0435\u043F\u043E\u0437\u0438\u0442",
+      "en": "deposit",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "Si tu n'as pas de caution, le propri\xE9taire refusera de louer.",
+      "note": "= somme pay\xE9e en garantie avant d'emm\xE9nager.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-146",
+      "fr": "un devis",
+      "uk": "\u043A\u043E\u0448\u0442\u043E\u0440\u0438\u0441",
+      "en": "estimate, quote",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Si nous avons un devis raisonnable, nous r\xE9noverons la plomberie.",
+      "note": "= une estimation du co\xFBt des travaux.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-147",
+      "fr": "s'installer",
+      "uk": "\u043E\u0431\u043B\u0430\u0448\u0442\u043E\u0432\u0443\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to settle in",
+      "pos": "verbe",
+      "theme": "logement",
+      "example": "Si la superficie est grande, la famille s'installera confortablement.",
+      "note": "= commencer \xE0 vivre confortablement dans un logement.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-148",
+      "fr": "emm\xE9nager",
+      "uk": "\u0432\u0441\u0435\u043B\u044F\u0442\u0438\u0441\u044F",
+      "en": "to move in",
+      "pos": "verbe",
+      "theme": "logement",
+      "example": "Si je trouve un appartement ensoleill\xE9, j'emm\xE9nagerai tout de suite.",
+      "note": "emm\xE9nager (\u0432\u0441\u0435\u043B\u044F\u0442\u0438\u0441\u044F) \u2260 d\xE9m\xE9nager (\u0432\u0438\u0457\u0436\u0434\u0436\u0430\u0442\u0438).",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-149",
+      "fr": "d\xE9m\xE9nager",
+      "uk": "\u043F\u0435\u0440\u0435\u0457\u0436\u0434\u0436\u0430\u0442\u0438",
+      "en": "to move (house)",
+      "pos": "verbe",
+      "theme": "logement",
+      "example": "Si mon quartier est trop bruyant, je d\xE9m\xE9nagerai.",
+      "note": "Contraire : emm\xE9nager.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-150",
+      "fr": "un propri\xE9taire",
+      "uk": "\u0432\u043B\u0430\u0441\u043D\u0438\u043A",
+      "en": "owner, landlord",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "Si vous payez une caution, le propri\xE9taire signera le bail.",
+      "note": "= la personne \xE0 qui appartient le logement.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-151",
+      "fr": "le loyer",
+      "uk": "\u043E\u0440\u0435\u043D\u0434\u043D\u0430 \u043F\u043B\u0430\u0442\u0430",
+      "en": "rent",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "Si mon propri\xE9taire est une bonne personne, je paierai le loyer \xE0 temps.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-152",
+      "fr": "louer",
+      "uk": "\u043E\u0440\u0435\u043D\u0434\u0443\u0432\u0430\u0442\u0438; \u0437\u0434\u0430\u0432\u0430\u0442\u0438 \u0432 \u043E\u0440\u0435\u043D\u0434\u0443",
+      "en": "to rent",
+      "pos": "verbe",
+      "theme": "logement",
+      "example": "Si tu veux un appartement spacieux, loue un T3 !",
+      "note": "Double sens : le locataire loue / le propri\xE9taire loue.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-153",
+      "fr": "signer",
+      "uk": "\u043F\u0456\u0434\u043F\u0438\u0441\u0443\u0432\u0430\u0442\u0438",
+      "en": "to sign",
+      "pos": "verbe",
+      "theme": "logement",
+      "example": "Si tu veux emm\xE9nager vite, signe le bail aujourd'hui !",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-154",
+      "fr": "la banlieue",
+      "uk": "\u043F\u0435\u0440\u0435\u0434\u043C\u0456\u0441\u0442\u044F",
+      "en": "suburbs",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "Si le loyer est trop cher, cherche en banlieue !",
+      "note": "habiter EN banlieue.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-155",
+      "fr": "bien desservi",
+      "uk": "\u0437 \u0433\u0430\u0440\u043D\u0438\u043C \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u0438\u043C \u0441\u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u044F\u043C",
+      "en": "well served (by transport)",
+      "pos": "expression",
+      "theme": "transport",
+      "example": "Si un quartier est bien desservi, les gens prennent le m\xE9tro facilement.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-156",
+      "fr": "des travaux",
+      "uk": "\u0440\u0435\u043C\u043E\u043D\u0442\u043D\u0456 \u0440\u043E\u0431\u043E\u0442\u0438",
+      "en": "building works",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Si la maison est en mauvais \xE9tat, ils devront faire des travaux.",
+      "note": "Toujours au pluriel ; singulier \xAB un travail \xBB = \u0440\u043E\u0431\u043E\u0442\u0430.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-157",
+      "fr": "r\xE9nover",
+      "uk": "\u0440\u043E\u0431\u0438\u0442\u0438 \u0440\u0435\u043C\u043E\u043D\u0442, \u0440\u0435\u0441\u0442\u0430\u0432\u0440\u0443\u0432\u0430\u0442\u0438",
+      "en": "to renovate",
+      "pos": "verbe",
+      "theme": "renovation",
+      "example": "Si nous avons un devis raisonnable, nous r\xE9noverons la plomberie.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-158",
+      "fr": "la plomberie",
+      "uk": "\u0441\u0430\u043D\u0442\u0435\u0445\u043D\u0456\u043A\u0430",
+      "en": "plumbing",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Nous r\xE9noverons la plomberie l'ann\xE9e prochaine.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-159",
+      "fr": "ancien",
+      "uk": "\u0441\u0442\u0430\u0440\u0438\u0439; \u043A\u043E\u043B\u0438\u0448\u043D\u0456\u0439",
+      "en": "old; former",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "J'habite dans une maison ancienne du XIXe si\xE8cle.",
+      "note": "Pi\xE8ge de place : une maison ancienne = \u0441\u0442\u0430\u0440\u0430 ; mon ancienne maison = \u043A\u043E\u043B\u0438\u0448\u043D\u044F.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-160",
+      "fr": "propre",
+      "uk": "\u0432\u043B\u0430\u0441\u043D\u0438\u0439; \u0447\u0438\u0441\u0442\u0438\u0439",
+      "en": "own; clean",
+      "pos": "adjectif",
+      "theme": "logement",
+      "example": "J'aimerais avoir ma propre maison, et qu'elle soit toujours propre.",
+      "note": "Pi\xE8ge de place : ma propre maison = \u0432\u043B\u0430\u0441\u043D\u0430 ; ma maison propre = \u0447\u0438\u0441\u0442\u0430.",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-161",
+      "fr": "un abribus",
+      "uk": "\u0430\u0432\u0442\u043E\u0431\u0443\u0441\u043D\u0430 \u0437\u0443\u043F\u0438\u043D\u043A\u0430 (\u0437 \u043D\u0430\u0432\u0456\u0441\u043E\u043C)",
+      "en": "bus shelter",
+      "pos": "nom",
+      "theme": "transport",
+      "example": "J'attends le bus sous l'abribus parce qu'il pleut.",
+      "note": "",
+      "source": "Si + pr\xE9sent / cadre de vie"
+    },
+    {
+      "id": "voc-162",
+      "fr": "abattre un mur",
+      "uk": "\u0437\u043D\u043E\u0441\u0438\u0442\u0438 \u0441\u0442\u0456\u043D\u0443",
+      "en": "to knock down a wall",
+      "pos": "expression",
+      "theme": "renovation",
+      "example": "Vous pouvez par exemple abattre le mur du salon.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-163",
+      "fr": "refaire",
+      "uk": "\u043F\u0435\u0440\u0435\u0440\u043E\u0431\u043B\u044F\u0442\u0438, \u0440\u0435\u043C\u043E\u043D\u0442\u0443\u0432\u0430\u0442\u0438",
+      "en": "to redo",
+      "pos": "verbe",
+      "theme": "renovation",
+      "example": "En fait, il faut tout refaire dans cet appartement.",
+      "note": "refaire la cuisine, refaire l'installation \xE9lectrique.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-164",
+      "fr": "repeindre",
+      "uk": "\u043F\u0435\u0440\u0435\u0444\u0430\u0440\u0431\u043E\u0432\u0443\u0432\u0430\u0442\u0438",
+      "en": "to repaint",
+      "pos": "verbe",
+      "theme": "renovation",
+      "example": "Ils vont repeindre les volets en bleu.",
+      "note": "Conjugu\xE9 comme peindre : je repeins, nous repeignons.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-165",
+      "fr": "le papier peint",
+      "uk": "\u0448\u043F\u0430\u043B\u0435\u0440\u0438",
+      "en": "wallpaper",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Il faut enlever le vieux papier peint du salon.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-166",
+      "fr": "le parquet",
+      "uk": "\u043F\u0430\u0440\u043A\u0435\u0442",
+      "en": "wooden floor",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Ils vont cirer le parquet du salon.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-167",
+      "fr": "rafra\xEEchir",
+      "uk": "\u043E\u0441\u0432\u0456\u0436\u0438\u0442\u0438 (\u0440\u0435\u043C\u043E\u043D\u0442)",
+      "en": "to freshen up",
+      "pos": "verbe",
+      "theme": "renovation",
+      "example": "Pour les travaux, vous pr\xE9f\xE9rez r\xE9nover compl\xE8tement ou juste rafra\xEEchir ?",
+      "note": "Moins lourd que \xAB r\xE9nover \xBB.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-168",
+      "fr": "le carrelage",
+      "uk": "\u043F\u043B\u0438\u0442\u043A\u0430",
+      "en": "tiling",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Pour les murs de la cuisine, vous pr\xE9f\xE9rez le carrelage ou le papier peint ?",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-169",
+      "fr": "la moquette",
+      "uk": "\u043A\u0438\u043B\u0438\u043C\u043E\u0432\u0435 \u043F\u043E\u043A\u0440\u0438\u0442\u0442\u044F",
+      "en": "fitted carpet",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Pour le sol du salon, vous pr\xE9f\xE9rez le parquet ou la moquette ?",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-170",
+      "fr": "une chemin\xE9e",
+      "uk": "\u043A\u0430\u043C\u0456\u043D",
+      "en": "fireplace",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Ce serait bien aussi avec une chemin\xE9e dans le coin.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-171",
+      "fr": "le chauffage central",
+      "uk": "\u0446\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u0435 \u043E\u043F\u0430\u043B\u0435\u043D\u043D\u044F",
+      "en": "central heating",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Pour chauffer la pi\xE8ce, vous pr\xE9f\xE9rez une chemin\xE9e ou le chauffage central ?",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-172",
+      "fr": "un coup de peinture",
+      "uk": "\u0448\u0430\u0440 \u0444\u0430\u0440\u0431\u0438, \u043E\u0441\u0432\u0456\u0436\u0435\u043D\u043D\u044F \u0444\u0430\u0440\u0431\u043E\u044E",
+      "en": "a lick of paint",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Tu as vu l'\xE9tat des murs ? Il va falloir un bon coup de peinture.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-173",
+      "fr": "le toit",
+      "uk": "\u0434\u0430\u0445",
+      "en": "roof",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Le toit et la tuyauterie sont en tr\xE8s bon \xE9tat.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-174",
+      "fr": "la tuyauterie",
+      "uk": "\u0442\u0440\u0443\u0431\u0438, \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\u0432\u0456\u0434",
+      "en": "pipework",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "La tuyauterie est en bon \xE9tat, c'est un point positif.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-175",
+      "fr": "\xE9taler",
+      "uk": "\u0440\u043E\u0437\u0442\u044F\u0433\u0443\u0432\u0430\u0442\u0438 (\u0432 \u0447\u0430\u0441\u0456)",
+      "en": "to spread out",
+      "pos": "verbe",
+      "theme": "renovation",
+      "example": "Il faudra \xE9taler les travaux sur au moins deux ans.",
+      "note": "\xE9taler qqch SUR une p\xE9riode.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-176",
+      "fr": "une salle \xE0 manger",
+      "uk": "\u0457\u0434\u0430\u043B\u044C\u043D\u044F",
+      "en": "dining room",
+      "pos": "nom",
+      "theme": "logement",
+      "example": "\xC7a ferait une grande cuisine-salle \xE0 manger.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-177",
+      "fr": "un cr\xE9dit",
+      "uk": "\u043A\u0440\u0435\u0434\u0438\u0442",
+      "en": "loan",
+      "pos": "nom",
+      "theme": "renovation",
+      "example": "Tu crois qu'on obtiendra un cr\xE9dit de la banque ?",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-178",
+      "fr": "un banquier",
+      "uk": "\u0431\u0430\u043D\u043A\u0456\u0440",
+      "en": "banker",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "\xC7a rassure les banquiers que tu sois fonctionnaire.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-179",
+      "fr": "un fonctionnaire",
+      "uk": "\u0434\u0435\u0440\u0436\u0441\u043B\u0443\u0436\u0431\u043E\u0432\u0435\u0446\u044C",
+      "en": "civil servant",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "\xC7a devrait marcher parce que tu es fonctionnaire.",
+      "note": "",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-180",
+      "fr": "s'en tirer \xE0",
+      "uk": "\u043E\u0431\u0456\u0439\u0442\u0438\u0441\u044F \u0432 (\u0441\u0443\u043C\u0443)",
+      "en": "to get off with, to come to",
+      "pos": "expression",
+      "theme": "renovation",
+      "example": "On va s'en tirer \xE0 combien, \xE0 ton avis ?",
+      "note": "Registre familier.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-181",
+      "fr": "s'inqui\xE9ter",
+      "uk": "\u0445\u0432\u0438\u043B\u044E\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to worry",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Ta m\xE8re dit de ne pas t'inqui\xE9ter.",
+      "note": "Imp\xE9ratif n\xE9gatif : ne t'inqui\xE8te pas.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-182",
+      "fr": "un an",
+      "uk": "\u0440\u0456\u043A (\u043F\u0456\u0441\u043B\u044F \u0447\u0438\u0441\u043B\u0456\u0432\u043D\u0438\u043A\u0430)",
+      "en": "year",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Il a trente ans et il vit seul.",
+      "note": "an APR\xC8S un chiffre (deux ans) ; ann\xE9e avec cette/toute/bonne.",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-183",
+      "fr": "une ann\xE9e",
+      "uk": "\u0440\u0456\u043A (\u0442\u0440\u0438\u0432\u0430\u043B\u0456\u0441\u0442\u044C)",
+      "en": "year (duration)",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Cette ann\xE9e, nous r\xE9noverons la cuisine.",
+      "note": "Paire : un an (chiffre + ans) / une ann\xE9e (bonne ann\xE9e, toute l'ann\xE9e).",
+      "source": "Discours indirect / d\xE9m\xE9nager et r\xE9nover"
+    },
+    {
+      "id": "voc-184",
+      "fr": "le ch\xF4mage",
+      "uk": "\u0431\u0435\u0437\u0440\u043E\u0431\u0456\u0442\u0442\u044F",
+      "en": "unemployment",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Il n'a pas de travail, il est au ch\xF4mage.",
+      "note": "\xEAtre AU ch\xF4mage.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-185",
+      "fr": "un ch\xF4meur",
+      "uk": "\u0431\u0435\u0437\u0440\u043E\u0431\u0456\u0442\u043D\u0438\u0439",
+      "en": "unemployed person",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Il n'a pas de travail, c'est un ch\xF4meur.",
+      "note": "F\xE9minin : une ch\xF4meuse.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-186",
+      "fr": "le taux de ch\xF4mage",
+      "uk": "\u0440\u0456\u0432\u0435\u043D\u044C \u0431\u0435\u0437\u0440\u043E\u0431\u0456\u0442\u0442\u044F",
+      "en": "unemployment rate",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Le taux de ch\xF4mage est de 8 pour cent.",
+      "note": "",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-187",
+      "fr": "un patron",
+      "uk": "\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u0438\u043A, \u0431\u043E\u0441",
+      "en": "boss",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Mon patron est tr\xE8s s\xE9v\xE8re.",
+      "note": "= le chef, le responsable.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-188",
+      "fr": "le turbin",
+      "uk": "\u0440\u043E\u0431\u043E\u0442\u0430, \u043A\u0430\u0442\u043E\u0440\u0433\u0430",
+      "en": "grind, slog",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Allez, au turbin ! Il faut travailler !",
+      "note": "Argot ; connotation de travail p\xE9nible.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-189",
+      "fr": "bosser",
+      "uk": "\u043F\u0440\u0430\u0446\u044E\u0432\u0430\u0442\u0438, \u0432\u043A\u0430\u043B\u0443\u0432\u0430\u0442\u0438",
+      "en": "to work (informal)",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "Nous bosserons beaucoup cette semaine.",
+      "note": "Familier ; = travailler.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-190",
+      "fr": "glander",
+      "uk": "\u0431\u0430\u0439\u0434\u0438\u043A\u0443\u0432\u0430\u0442\u0438",
+      "en": "to laze around",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "Si je suis en vacances, je glanderai toute la journ\xE9e !",
+      "note": "Familier ; = ne rien faire, perdre son temps.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-191",
+      "fr": "virer",
+      "uk": "\u0437\u0432\u0456\u043B\u044C\u043D\u044F\u0442\u0438 (\u0437 \u0440\u043E\u0431\u043E\u0442\u0438)",
+      "en": "to fire, to sack",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "Si le patron n'est pas content, il me virera.",
+      "note": "Familier ; \xE9quivalent standard : licencier.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-192",
+      "fr": "licencier",
+      "uk": "\u0437\u0432\u0456\u043B\u044C\u043D\u044F\u0442\u0438",
+      "en": "to lay off, to dismiss",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "L'entreprise a licenci\xE9 dix employ\xE9s cette ann\xE9e.",
+      "note": "Registre standard ; familier : virer.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-193",
+      "fr": "embaucher",
+      "uk": "\u043D\u0430\u0439\u043C\u0430\u0442\u0438 \u043D\u0430 \u0440\u043E\u0431\u043E\u0442\u0443",
+      "en": "to hire",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "Si l'entreprise grandit, elle embauchera de nouvelles personnes.",
+      "note": "= recruter quelqu'un.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-194",
+      "fr": "lucratif",
+      "uk": "\u043F\u0440\u0438\u0431\u0443\u0442\u043A\u043E\u0432\u0438\u0439",
+      "en": "lucrative",
+      "pos": "adjectif",
+      "theme": "carriere",
+      "example": "Si je trouve un emploi lucratif, je gagnerai bien ma vie.",
+      "note": "= qui rapporte beaucoup d'argent.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-195",
+      "fr": "se pr\xE9occuper",
+      "uk": "\u0442\u0443\u0440\u0431\u0443\u0432\u0430\u0442\u0438\u0441\u044F, \u043F\u0435\u0440\u0435\u0439\u043C\u0430\u0442\u0438\u0441\u044F",
+      "en": "to worry about",
+      "pos": "verbe",
+      "theme": "carriere",
+      "example": "Il ne se pr\xE9occupe pas de son avenir professionnel.",
+      "note": "se pr\xE9occuper DE qqch ; = s'inqui\xE9ter, se faire du souci.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-196",
+      "fr": "un emploi",
+      "uk": "\u0440\u043E\u0431\u043E\u0442\u0430, \u043F\u043E\u0441\u0430\u0434\u0430",
+      "en": "job",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Je cherche un emploi depuis trois mois.",
+      "note": "chercher / trouver un emploi.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-197",
+      "fr": "une entreprise",
+      "uk": "\u043F\u0456\u0434\u043F\u0440\u0438\u0454\u043C\u0441\u0442\u0432\u043E, \u043A\u043E\u043C\u043F\u0430\u043D\u0456\u044F",
+      "en": "company",
+      "pos": "nom",
+      "theme": "carriere",
+      "example": "Si l'entreprise grandit, elle embauchera.",
+      "note": "",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-198",
+      "fr": "prendre ses jambes \xE0 son cou",
+      "uk": "\u043D\u0430\u043A\u0438\u0432\u0430\u0442\u0438 \u043F'\u044F\u0442\u0430\u043C\u0438, \u0432\u0442\u0435\u043A\u0442\u0438",
+      "en": "to take to one's heels",
+      "pos": "expression",
+      "theme": "carriere",
+      "example": "Au moment d'aller au turbin, je prendrai mes jambes \xE0 mon cou.",
+      "note": "Expression fig\xE9e, registre familier.",
+      "source": "Je n'aime pas travailler !"
+    },
+    {
+      "id": "voc-199",
+      "fr": "une installation",
+      "uk": "\u0456\u043D\u0441\u0442\u0430\u043B\u044F\u0446\u0456\u044F",
+      "en": "an installation",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le Cyclop est une installation monumentale cach\xE9e dans les bois.",
+      "note": "F\xE9m. En art contemporain : \u0153uvre construite dans un lieu donn\xE9.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-200",
+      "fr": "le verre",
+      "uk": "\u0441\u043A\u043B\u043E",
+      "en": "glass",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Il est fait en verre et en acier.",
+      "note": "Masc. Ne pas confondre avec \xAB un verre \xBB = \u0441\u043A\u043B\u044F\u043D\u043A\u0430.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-201",
+      "fr": "l'acier",
+      "uk": "\u0441\u0442\u0430\u043B\u044C",
+      "en": "steel",
+      "pos": "nom",
+      "theme": "art",
+      "example": "La structure en acier p\xE8se plusieurs centaines de tonnes.",
+      "note": "Masc. : l'acier, un acier.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-202",
+      "fr": "un miroir",
+      "uk": "\u0434\u0437\u0435\u0440\u043A\u0430\u043B\u043E",
+      "en": "a mirror",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Une immense t\xEAte sans corps, \xE9tincelante de miroirs.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-203",
+      "fr": "une sculpture sonore",
+      "uk": "\u0437\u0432\u0443\u043A\u043E\u0432\u0430 \u0441\u043A\u0443\u043B\u044C\u043F\u0442\u0443\u0440\u0430",
+      "en": "a sound sculpture",
+      "pos": "nom",
+      "theme": "art",
+      "example": "\xC0 l'int\xE9rieur, on trouve des sculptures sonores de Jean Tinguely.",
+      "note": "F\xE9m.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-204",
+      "fr": "le son",
+      "uk": "\u0437\u0432\u0443\u043A",
+      "en": "sound",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le son des machines fait partie de l'\u0153uvre.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-205",
+      "fr": "la mati\xE8re",
+      "uk": "\u043C\u0430\u0442\u0435\u0440\u0456\u0430\u043B, \u0440\u0435\u0447\u043E\u0432\u0438\u043D\u0430",
+      "en": "material, matter",
+      "pos": "nom",
+      "theme": "art",
+      "example": "En quelle mati\xE8re est-il fait ? \u2014 Il est fait en verre et en acier.",
+      "note": "F\xE9m. Question type : \xAB En quelle mati\xE8re ? \xBB \u2192 \xAB en / de + mati\xE8re \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-206",
+      "fr": "le poids",
+      "uk": "\u0432\u0430\u0433\u0430",
+      "en": "weight",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Quel est le poids du Cyclop ? \u2014 Il p\xE8se environ 300 tonnes.",
+      "note": "Masc. Le -ds final est muet : [pwa].",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-207",
+      "fr": "peser",
+      "uk": "\u0432\u0430\u0436\u0438\u0442\u0438",
+      "en": "to weigh",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "\xC7a p\xE8se combien ? \u2014 \xC7a p\xE8se trois cents tonnes.",
+      "note": "Verbe en -e_er : je p\xE8se, nous pesons.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-208",
+      "fr": "un visage",
+      "uk": "\u043E\u0431\u043B\u0438\u0447\u0447\u044F",
+      "en": "a face",
+      "pos": "nom",
+      "theme": "art",
+      "example": "On devine un visage g\xE9ant entre les arbres.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-209",
+      "fr": "un \u0153il",
+      "uk": "\u043E\u043A\u043E",
+      "en": "an eye",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Une immense t\xEAte avec un seul \u0153il.",
+      "note": "Masc. Pluriel irr\xE9gulier : des yeux.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-210",
+      "fr": "un chantier",
+      "uk": "\u0431\u0443\u0434\u0456\u0432\u0435\u043B\u044C\u043D\u0438\u0439 \u043C\u0430\u0439\u0434\u0430\u043D\u0447\u0438\u043A, \u0431\u0443\u0434\u0456\u0432\u043D\u0438\u0446\u0442\u0432\u043E",
+      "en": "a building site, works",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le chantier du Cyclop a dur\xE9 plus de vingt ans.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-211",
+      "fr": "une intention",
+      "uk": "\u043D\u0430\u043C\u0456\u0440",
+      "en": "an intention",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Quelle \xE9tait l'intention des artistes avec Le Cyclop ?",
+      "note": "F\xE9m. \xAB avoir l'intention de + infinitif \xBB = \u043C\u0430\u0442\u0438 \u043D\u0430\u043C\u0456\u0440.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-212",
+      "fr": "un labyrinthe",
+      "uk": "\u043B\u0430\u0431\u0456\u0440\u0438\u043D\u0442",
+      "en": "a maze, labyrinth",
+      "pos": "nom",
+      "theme": "art",
+      "example": "On red\xE9couvre un labyrinthe d'\u0153uvres d'art \xE0 l'int\xE9rieur.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-213",
+      "fr": "une horloge",
+      "uk": "\u0433\u043E\u0434\u0438\u043D\u043D\u0438\u043A (\u043D\u0430\u0441\u0442\u0456\u043D\u043D\u0438\u0439, \u0431\u0430\u0448\u0442\u043E\u0432\u0438\u0439)",
+      "en": "a clock",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Une horloge g\xE9ante est int\xE9gr\xE9e dans la structure.",
+      "note": "F\xE9m. \xC0 distinguer de \xAB une montre \xBB = \u043D\u0430\u0440\u0443\u0447\u043D\u0438\u0439 \u0433\u043E\u0434\u0438\u043D\u043D\u0438\u043A.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-214",
+      "fr": "une montre",
+      "uk": "\u043D\u0430\u0440\u0443\u0447\u043D\u0438\u0439 \u0433\u043E\u0434\u0438\u043D\u043D\u0438\u043A",
+      "en": "a watch",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Ma montre retarde de cinq minutes.",
+      "note": "F\xE9m. Objet qu'on porte au poignet ; sinon on dit \xAB une horloge \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-215",
+      "fr": "illuminer",
+      "uk": "\u043E\u0441\u0432\u0456\u0442\u043B\u044E\u0432\u0430\u0442\u0438, \u043F\u0456\u0434\u0441\u0432\u0456\u0447\u0443\u0432\u0430\u0442\u0438",
+      "en": "to light up, illuminate",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "Tous les samedis, l'\u0153uvre est illumin\xE9e par une performance lumineuse.",
+      "note": "Verbe r\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-216",
+      "fr": "renvoyer \xE0",
+      "uk": "\u0432\u0456\u0434\u0441\u0438\u043B\u0430\u0442\u0438 \u0434\u043E, \u043D\u0430\u0442\u044F\u043A\u0430\u0442\u0438 \u043D\u0430",
+      "en": "to refer to, allude to",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "Le nom \xAB Cyclop \xBB renvoie clairement au Cyclope de la mythologie grecque.",
+      "note": "Conjugaison type \xAB envoyer \xBB : je renvoie, nous renvoyons, futur je renverrai.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-217",
+      "fr": "la mythologie grecque",
+      "uk": "\u0433\u0440\u0435\u0446\u044C\u043A\u0430 \u043C\u0456\u0444\u043E\u043B\u043E\u0433\u0456\u044F",
+      "en": "Greek mythology",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le titre fait r\xE9f\xE9rence \xE0 la mythologie grecque.",
+      "note": "F\xE9m.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-218",
+      "fr": "restaurer",
+      "uk": "\u0440\u0435\u0441\u0442\u0430\u0432\u0440\u0443\u0432\u0430\u0442\u0438",
+      "en": "to restore",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "L'\u0153uvre a \xE9t\xE9 restaur\xE9e apr\xE8s plus d'un an de travaux.",
+      "note": "R\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-219",
+      "fr": "une restauration",
+      "uk": "\u0440\u0435\u0441\u0442\u0430\u0432\u0440\u0430\u0446\u0456\u044F",
+      "en": "a restoration",
+      "pos": "nom",
+      "theme": "art",
+      "example": "La restauration a provoqu\xE9 une fermeture temporaire du site.",
+      "note": "F\xE9m.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-220",
+      "fr": "fascinant",
+      "uk": "\u0437\u0430\u0445\u043E\u043F\u043B\u0438\u0432\u0438\u0439, \u0437\u0430\u0432\u043E\u0440\u043E\u0436\u043B\u0438\u0432\u0438\u0439",
+      "en": "fascinating",
+      "pos": "adjectif",
+      "theme": "art",
+      "example": "C'\xE9tait fascinant de d\xE9couvrir cette t\xEAte au milieu des bois.",
+      "note": "F\xE9m. : fascinante.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-221",
+      "fr": "f\xE9erique",
+      "uk": "\u043A\u0430\u0437\u043A\u043E\u0432\u0438\u0439, \u0447\u0430\u0440\u0456\u0432\u043D\u0438\u0439",
+      "en": "magical, fairytale-like",
+      "pos": "adjectif",
+      "theme": "art",
+      "example": "Le soir, l'endroit devient f\xE9erique.",
+      "note": "M\xEAme forme au masculin et au f\xE9minin.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-222",
+      "fr": "magique",
+      "uk": "\u0447\u0430\u0440\u0456\u0432\u043D\u0438\u0439",
+      "en": "magical",
+      "pos": "adjectif",
+      "theme": "art",
+      "example": "L'atmosph\xE8re \xE9tait magique.",
+      "note": "M\xEAme forme aux deux genres.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-223",
+      "fr": "ressentir",
+      "uk": "\u0432\u0456\u0434\u0447\u0443\u0432\u0430\u0442\u0438",
+      "en": "to feel, experience",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "J'ai ressenti une grande \xE9motion devant cette \u0153uvre.",
+      "note": "Conjugaison type \xAB sentir \xBB : je ressens, nous ressentons, p.p. ressenti.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-224",
+      "fr": "attirer l'attention",
+      "uk": "\u043F\u0440\u0438\u0432\u0435\u0440\u0442\u0430\u0442\u0438 \u0443\u0432\u0430\u0433\u0443",
+      "en": "to catch one's attention",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Ce qui a attir\xE9 mon attention, c'est l'\u0153il unique.",
+      "note": "Structure de mise en relief : \xAB Ce qui a attir\xE9 mon attention, c'est\u2026 \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-225",
+      "fr": "\xE9tonner",
+      "uk": "\u0434\u0438\u0432\u0443\u0432\u0430\u0442\u0438",
+      "en": "to astonish",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Cette chose si \xE9tonnante l'a beaucoup \xE9tonn\xE9.",
+      "note": "R\xE9gulier en -er ; \xAB s'\xE9tonner de \xBB = \u0434\u0438\u0432\u0443\u0432\u0430\u0442\u0438\u0441\u044F \u0447\u043E\u043C\u0443\u0441\u044C.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-226",
+      "fr": "\xE9tonn\xE9",
+      "uk": "\u0437\u0434\u0438\u0432\u043E\u0432\u0430\u043D\u0438\u0439, \u0432\u0440\u0430\u0436\u0435\u043D\u0438\u0439",
+      "en": "astonished, surprised",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Il \xE9tait \xE9tonn\xE9 par la taille de la sculpture.",
+      "note": "F\xE9m. : \xE9tonn\xE9e.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-227",
+      "fr": "deviner",
+      "uk": "\u0432\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438, \u0437\u0434\u043E\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to guess",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Devinez ce que c'est, \xE0 votre avis.",
+      "note": "R\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-228",
+      "fr": "ressembler \xE0",
+      "uk": "\u0431\u0443\u0442\u0438 \u0441\u0445\u043E\u0436\u0438\u043C \u043D\u0430",
+      "en": "to look like",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "\xC7a ressemble \xE0 un visage g\xE9ant.",
+      "note": "Toujours suivi de \xAB \xE0 \xBB : \xE7a ressemble \xE0 un\u2026 ; \xAB se ressembler \xBB = \u0431\u0443\u0442\u0438 \u0441\u0445\u043E\u0436\u0438\u043C\u0438.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-229",
+      "fr": "avoir l'air",
+      "uk": "\u043C\u0430\u0442\u0438 \u0432\u0438\u0433\u043B\u044F\u0434, \u0437\u0434\u0430\u0432\u0430\u0442\u0438\u0441\u044F",
+      "en": "to look, seem",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Elle a l'air fatigu\xE9e aujourd'hui.",
+      "note": "\xAB avoir l'air + adjectif \xBB. L'accord se fait le plus souvent avec le sujet.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-230",
+      "fr": "mince",
+      "uk": "\u0441\u0442\u0440\u0443\u043D\u043A\u0438\u0439, \u0445\u0443\u0434\u043E\u0440\u043B\u044F\u0432\u0438\u0439",
+      "en": "slim, thin",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Il est grand et mince.",
+      "note": "M\xEAme forme aux deux genres.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-231",
+      "fr": "un reflet",
+      "uk": "\u0432\u0456\u0434\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u043D\u044F, \u0432\u0456\u0434\u0431\u043B\u0438\u0441\u043A",
+      "en": "a reflection",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le reflet du ciel dans le bassin est spectaculaire.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-232",
+      "fr": "refl\xE9ter",
+      "uk": "\u0432\u0456\u0434\u043E\u0431\u0440\u0430\u0436\u0430\u0442\u0438",
+      "en": "to reflect",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "Le bassin refl\xE8te le ciel.",
+      "note": "\xE9 \u2192 \xE8 devant syllabe muette : il refl\xE8te, nous refl\xE9tons.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-233",
+      "fr": "un bassin",
+      "uk": "\u0431\u0430\u0441\u0435\u0439\u043D, \u0432\u043E\u0434\u043E\u0439\u043C\u0430",
+      "en": "a pool, basin",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Les visiteurs ont l'impression d'\xEAtre suspendus entre deux ciels au-dessus du bassin.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-234",
+      "fr": "une exposition",
+      "uk": "\u0432\u0438\u0441\u0442\u0430\u0432\u043A\u0430",
+      "en": "an exhibition",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le succ\xE8s de l'exposition a entra\xEEn\xE9 la prolongation des horaires d'ouverture.",
+      "note": "F\xE9m.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-235",
+      "fr": "un b\xE9n\xE9vole",
+      "uk": "\u0432\u043E\u043B\u043E\u043D\u0442\u0435\u0440",
+      "en": "a volunteer",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Gr\xE2ce \xE0 l'aide de nombreux b\xE9n\xE9voles, l'exposition a pu ouvrir \xE0 temps.",
+      "note": "Masc. / une b\xE9n\xE9vole au f\xE9minin.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-236",
+      "fr": "prolonger",
+      "uk": "\u043F\u0440\u043E\u0434\u043E\u0432\u0436\u0443\u0432\u0430\u0442\u0438 (\u0432 \u0447\u0430\u0441\u0456)",
+      "en": "to extend, prolong",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "Le mus\xE9e a prolong\xE9 les horaires d'ouverture.",
+      "note": "Verbe en -ger : nous prolongeons.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-237",
+      "fr": "annuler",
+      "uk": "\u0441\u043A\u0430\u0441\u043E\u0432\u0443\u0432\u0430\u0442\u0438",
+      "en": "to cancel",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "La visite en plein air a \xE9t\xE9 annul\xE9e \xE0 cause du mauvais temps.",
+      "note": "R\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-238",
+      "fr": "une annulation",
+      "uk": "\u0441\u043A\u0430\u0441\u0443\u0432\u0430\u043D\u043D\u044F",
+      "en": "a cancellation",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Ce probl\xE8me technique a eu pour cons\xE9quence l'annulation du spectacle.",
+      "note": "F\xE9m.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-239",
+      "fr": "un retard",
+      "uk": "\u0437\u0430\u0442\u0440\u0438\u043C\u043A\u0430, \u0437\u0430\u043F\u0456\u0437\u043D\u0435\u043D\u043D\u044F",
+      "en": "a delay",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Le manque de budget a entra\xEEn\xE9 un retard dans les travaux.",
+      "note": "Masc. \xAB \xEAtre en retard \xBB = \u0437\u0430\u043F\u0456\u0437\u043D\u044E\u0432\u0430\u0442\u0438\u0441\u044F.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-240",
+      "fr": "un d\xE9g\xE2t",
+      "uk": "\u0437\u0431\u0438\u0442\u043E\u043A, \u0448\u043A\u043E\u0434\u0430",
+      "en": "damage",
+      "pos": "nom",
+      "theme": "general",
+      "example": "La pluie a caus\xE9 beaucoup de d\xE9g\xE2ts dans le jardin.",
+      "note": "Masc., surtout au pluriel : des d\xE9g\xE2ts.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-241",
+      "fr": "interdire",
+      "uk": "\u0437\u0430\u0431\u043E\u0440\u043E\u043D\u044F\u0442\u0438",
+      "en": "to forbid",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Il est interdit de toucher l'\u0153uvre.",
+      "note": "Type \xAB dire \xBB sauf vous interdisez (et non *interdites).",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-242",
+      "fr": "la fragilit\xE9",
+      "uk": "\u043A\u0440\u0438\u0445\u043A\u0456\u0441\u0442\u044C",
+      "en": "fragility",
+      "pos": "nom",
+      "theme": "art",
+      "example": "La fragilit\xE9 de l'\u0153uvre explique l'interdiction de la toucher.",
+      "note": "F\xE9m. Adjectif : fragile.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-243",
+      "fr": "le manque de",
+      "uk": "\u0431\u0440\u0430\u043A, \u043D\u0435\u0441\u0442\u0430\u0447\u0430",
+      "en": "lack of",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Le manque de budget est \xE0 l'origine du retard des travaux.",
+      "note": "Masc. Verbe : manquer de.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-244",
+      "fr": "comme",
+      "uk": "\u043E\u0441\u043A\u0456\u043B\u044C\u043A\u0438, \u0447\u0435\u0440\u0435\u0437 \u0442\u0435 \u0449\u043E",
+      "en": "as, since",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Comme il pleuvait, nous sommes all\xE9s au mus\xE9e plut\xF4t qu'au parc.",
+      "note": "Cause + phrase. Se place TOUJOURS en d\xE9but de phrase.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-245",
+      "fr": "puisque",
+      "uk": "\u043E\u0441\u043A\u0456\u043B\u044C\u043A\u0438, \u0430\u0434\u0436\u0435 (\u043F\u0440\u0438\u0447\u0438\u043D\u0430 \u0432\u0456\u0434\u043E\u043C\u0430)",
+      "en": "since, seeing that",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Puisque tu es d\xE9j\xE0 l\xE0, aide-moi \xE0 installer l'exposition.",
+      "note": "Cause + phrase. Indique une cause \xE9vidente ou connue de l'interlocuteur.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-246",
+      "fr": "parce que",
+      "uk": "\u0442\u043E\u043C\u0443 \u0449\u043E",
+      "en": "because",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Le concert a \xE9t\xE9 annul\xE9 parce que le chanteur \xE9tait malade.",
+      "note": "Cause + phrase. R\xE9pond directement \xE0 \xAB pourquoi ? \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-247",
+      "fr": "car",
+      "uk": "\u0431\u043E, \u0430\u0434\u0436\u0435",
+      "en": "for, because",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Les visiteurs sont nombreux, car c'est une \u0153uvre unique en France.",
+      "note": "Cause + phrase. Registre plus soutenu/\xE9crit que \xAB parce que \xBB ; jamais en d\xE9but de phrase.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-248",
+      "fr": "\xE9tant donn\xE9 que",
+      "uk": "\u0437\u0432\u0430\u0436\u0430\u044E\u0447\u0438 \u043D\u0430 \u0442\u0435, \u0449\u043E",
+      "en": "given that",
+      "pos": "expression",
+      "theme": "art",
+      "example": "\xC9tant donn\xE9 que le budget d\xE9passait un million d'euros, les travaux ont dur\xE9 plus d'un an.",
+      "note": "Cause + phrase. \xAB \xE9tant donn\xE9 \xBB est invariable ; sans \xAB que \xBB, il est suivi d'un nom.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-249",
+      "fr": "\xE9tant donn\xE9",
+      "uk": "\u0437\u0432\u0430\u0436\u0430\u044E\u0447\u0438 \u043D\u0430, \u0437 \u043E\u0433\u043B\u044F\u0434\u0443 \u043D\u0430",
+      "en": "given, in view of",
+      "pos": "expression",
+      "theme": "art",
+      "example": "\xC9tant donn\xE9 le succ\xE8s de l'exposition, le mus\xE9e a prolong\xE9 les horaires.",
+      "note": "Cause + nom. Invariable.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-250",
+      "fr": "en raison de",
+      "uk": "\u0447\u0435\u0440\u0435\u0437, \u0443 \u0437\u0432'\u044F\u0437\u043A\u0443 \u0437",
+      "en": "owing to, due to",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Le mus\xE9e est ferm\xE9 en raison des travaux de r\xE9novation.",
+      "note": "Cause + nom. Registre neutre/administratif, cause plut\xF4t neutre.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-251",
+      "fr": "du fait de",
+      "uk": "\u0447\u0435\u0440\u0435\u0437, \u0432\u043D\u0430\u0441\u043B\u0456\u0434\u043E\u043A, \u0437 \u043F\u0440\u0438\u0447\u0438\u043D\u0438",
+      "en": "on account of",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Du fait de la fragilit\xE9 de l'\u0153uvre, l'acc\xE8s est limit\xE9.",
+      "note": "Cause + nom. Registre \xE9crit.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-252",
+      "fr": "un fait",
+      "uk": "\u0444\u0430\u043A\u0442",
+      "en": "a fact",
+      "pos": "nom",
+      "theme": "general",
+      "example": "La cause est un fait qui entra\xEEne un autre fait.",
+      "note": "Masc. Prononciation : [f\u025B] seul, mais [f\u025Bt] dans \xAB en fait \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-253",
+      "fr": "en fait",
+      "uk": "\u043D\u0430\u0441\u043F\u0440\u0430\u0432\u0434\u0456",
+      "en": "actually, in fact",
+      "pos": "expression",
+      "theme": "general",
+      "example": "En fait, l'\u0153uvre n'\xE9tait pas visible du tout depuis la route.",
+      "note": "Prononc\xE9 [\u0251\u0303 f\u025Bt]. \xC0 ne pas confondre avec \xAB du fait de \xBB = \u0447\u0435\u0440\u0435\u0437.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-254",
+      "fr": "donc",
+      "uk": "\u043E\u0442\u0436\u0435, \u0442\u043E\u043C\u0443",
+      "en": "so, therefore",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Le budget a d\xE9pass\xE9 un million d'euros, donc les travaux ont dur\xE9 plus d'un an.",
+      "note": "Cons\xE9quence + phrase. Le plus neutre et le plus fr\xE9quent.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-255",
+      "fr": "par cons\xE9quent",
+      "uk": "\u0432\u0456\u0434\u0442\u0430\u043A, \u044F\u043A \u043D\u0430\u0441\u043B\u0456\u0434\u043E\u043A",
+      "en": "consequently",
+      "pos": "expression",
+      "theme": "art",
+      "example": "L'\u0153uvre est class\xE9e ; par cons\xE9quent, toute modification est interdite.",
+      "note": "Cons\xE9quence + phrase. Registre soutenu/\xE9crit.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-256",
+      "fr": "du coup",
+      "uk": "\u0442\u043E\u0436, \u0456 \u0442\u043E\u043C\u0443",
+      "en": "so, as a result",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Il n'y avait plus de billets, du coup nous n'avons pas pu entrer.",
+      "note": "Cons\xE9quence + phrase. Surtout \xE0 l'oral.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-257",
+      "fr": "ce qui fait que",
+      "uk": "\u0449\u043E \u043F\u0440\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u044C \u0434\u043E \u0442\u043E\u0433\u043E, \u0449\u043E",
+      "en": "which means that",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Le bassin refl\xE8te le ciel, ce qui fait que les visiteurs ont l'impression d'\xEAtre suspendus entre deux ciels.",
+      "note": "Cons\xE9quence + phrase. Surtout \xE0 l'oral.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-258",
+      "fr": "c'est pourquoi",
+      "uk": "\u0441\u0430\u043C\u0435 \u0442\u043E\u043C\u0443, \u043E\u0441\u044C \u0447\u043E\u043C\u0443",
+      "en": "that is why",
+      "pos": "expression",
+      "theme": "art",
+      "example": "L'\u0153uvre est tr\xE8s fragile, c'est pourquoi il est interdit de la toucher.",
+      "note": "Cons\xE9quence + phrase.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-259",
+      "fr": "c'est pour cela que",
+      "uk": "\u0441\u0430\u043C\u0435 \u0442\u043E\u043C\u0443",
+      "en": "that's why",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Elle n'a qu'un \u0153il, c'est pour cela qu'on l'appelle Le Cyclop.",
+      "note": "Cons\xE9quence + phrase. Variante orale : \xAB c'est pour \xE7a que \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-260",
+      "fr": "tellement... que",
+      "uk": "\u043D\u0430\u0441\u0442\u0456\u043B\u044C\u043A\u0438... \u0449\u043E",
+      "en": "so ... that",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Il a tellement aim\xE9 l'exposition qu'il y est retourn\xE9 trois fois.",
+      "note": "\xAB tellement \xBB porte sur un verbe ou un adjectif ; \xAB tellement de + nom \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-261",
+      "fr": "si... que",
+      "uk": "\u0442\u0430\u043A\u0438\u0439... \u0449\u043E",
+      "en": "so ... that",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Il \xE9tait confront\xE9 \xE0 une chose si \xE9tonnante qu'il en a ressenti une \xE9motion extraordinaire.",
+      "note": "\xAB si \xBB ne porte que sur un adjectif ou un adverbe, jamais sur un nom.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-262",
+      "fr": "causer",
+      "uk": "\u0441\u043F\u0440\u0438\u0447\u0438\u043D\u044F\u0442\u0438, \u0431\u0443\u0442\u0438 \u043F\u0440\u0438\u0447\u0438\u043D\u043E\u044E",
+      "en": "to cause",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "La pluie a caus\xE9 beaucoup de d\xE9g\xE2ts dans le jardin.",
+      "note": "R\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-263",
+      "fr": "avoir pour cons\xE9quence",
+      "uk": "\u043C\u0430\u0442\u0438 \u043D\u0430\u0441\u043B\u0456\u0434\u043A\u043E\u043C",
+      "en": "to result in",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Ce probl\xE8me technique a eu pour cons\xE9quence l'annulation du spectacle.",
+      "note": "Suivi d'un nom : avoir pour cons\xE9quence + le/la/l'\u2026",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-264",
+      "fr": "un effet",
+      "uk": "\u0432\u043F\u043B\u0438\u0432, \u0435\u0444\u0435\u043A\u0442",
+      "en": "an effect",
+      "pos": "nom",
+      "theme": "art",
+      "example": "L'exposition a eu un grand effet sur le public.",
+      "note": "Masc. \xAB faire de l'effet \xBB = \u0441\u043F\u0440\u0430\u0432\u043B\u044F\u0442\u0438 \u0432\u0440\u0430\u0436\u0435\u043D\u043D\u044F.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-265",
+      "fr": "un r\xE9sultat",
+      "uk": "\u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442",
+      "en": "a result",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Le r\xE9sultat de ces travaux est spectaculaire.",
+      "note": "Masc.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-266",
+      "fr": "\xEAtre \xE0 l'origine de",
+      "uk": "\u0431\u0443\u0442\u0438 \u043F\u0440\u0438\u0447\u0438\u043D\u043E\u044E, \u043B\u0435\u0436\u0430\u0442\u0438 \u0432 \u043E\u0441\u043D\u043E\u0432\u0456",
+      "en": "to be behind, be the cause of",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Le manque de budget est \xE0 l'origine du retard des travaux.",
+      "note": "Attention \xE0 la contraction : \xE0 l'origine DU retard, DE LA fermeture.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-267",
+      "fr": "s'expliquer par",
+      "uk": "\u043F\u043E\u044F\u0441\u043D\u044E\u0432\u0430\u0442\u0438\u0441\u044F \u0447\u0438\u043C\u043E\u0441\u044C",
+      "en": "to be explained by",
+      "pos": "expression",
+      "theme": "art",
+      "example": "Le retard des travaux s'explique par le manque de budget.",
+      "note": "Le sujet est la CONS\xC9QUENCE, le compl\xE9ment est la CAUSE \u2014 inverse de \xAB \xEAtre \xE0 l'origine de \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-268",
+      "fr": "permettre",
+      "uk": "\u0443\u043C\u043E\u0436\u043B\u0438\u0432\u043B\u044E\u0432\u0430\u0442\u0438, \u0434\u043E\u0437\u0432\u043E\u043B\u044F\u0442\u0438",
+      "en": "to allow, make possible",
+      "pos": "verbe",
+      "theme": "art",
+      "example": "La rencontre avec le ferrailleur a permis la naissance du projet du Cyclop.",
+      "note": "Type \xAB mettre \xBB : je permets, nous permettons, p.p. permis. \xAB permettre \xE0 qqn de faire \xBB.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-269",
+      "fr": "une naissance",
+      "uk": "\u043D\u0430\u0440\u043E\u0434\u0436\u0435\u043D\u043D\u044F, \u043F\u043E\u044F\u0432\u0430",
+      "en": "birth",
+      "pos": "nom",
+      "theme": "art",
+      "example": "Cette rencontre est \xE0 l'origine de la naissance du projet.",
+      "note": "F\xE9m.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-270",
+      "fr": "l\xE0-bas",
+      "uk": "\u0442\u0430\u043C, \u0442\u0443\u0434\u0438",
+      "en": "over there",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Je vais l\xE0-bas en m\xE9tro, \xE7a prend une heure.",
+      "note": "Indique un lieu \xE9loign\xE9 ; \xAB l\xE0 \xBB suffit pour un lieu proche.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-271",
+      "fr": "sp\xE9cialement",
+      "uk": "\u0441\u043F\u0435\u0446\u0456\u0430\u043B\u044C\u043D\u043E, \u043E\u0441\u043E\u0431\u043B\u0438\u0432\u043E",
+      "en": "specially, especially",
+      "pos": "adverbe",
+      "theme": "general",
+      "example": "Je suis venu sp\xE9cialement pour voir cette \u0153uvre.",
+      "note": "Adverbe.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-272",
+      "fr": "\xE0 pied",
+      "uk": "\u043F\u0456\u0448\u043A\u0438",
+      "en": "on foot",
+      "pos": "expression",
+      "theme": "transport",
+      "example": "C'est \xE0 vingt minutes \xE0 pied.",
+      "note": "Attention : \xAB \xE0 pied \xBB, jamais *en pied.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-273",
+      "fr": "f\xE2ch\xE9",
+      "uk": "\u0441\u0435\u0440\u0434\u0438\u0442\u0438\u0439, \u0440\u043E\u0437\u0433\u043D\u0456\u0432\u0430\u043D\u0438\u0439",
+      "en": "angry, cross",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Il \xE9tait f\xE2ch\xE9 contre son fr\xE8re.",
+      "note": "Se construit avec \xAB contre qqn \xBB. F\xE9m. : f\xE2ch\xE9e.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-274",
+      "fr": "se f\xE2cher",
+      "uk": "\u0441\u0435\u0440\u0434\u0438\u0442\u0438\u0441\u044F, \u0441\u0432\u0430\u0440\u0438\u0442\u0438\u0441\u044F",
+      "en": "to get angry",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Elle se f\xE2che quand on triche.",
+      "note": "Pronominal ; \xAB se f\xE2cher contre qqn \xBB / \xAB se f\xE2cher avec qqn \xBB (\u043F\u043E\u0441\u0432\u0430\u0440\u0438\u0442\u0438\u0441\u044F).",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-275",
+      "fr": "crier",
+      "uk": "\u043A\u0440\u0438\u0447\u0430\u0442\u0438",
+      "en": "to shout",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Il criait si fort que tout le monde s'est retourn\xE9.",
+      "note": "R\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-276",
+      "fr": "une voix",
+      "uk": "\u0433\u043E\u043B\u043E\u0441",
+      "en": "a voice",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Il a \xE9lev\xE9 la voix pendant la discussion.",
+      "note": "F\xE9m. Le -x est d\xE9j\xE0 la marque du pluriel : une voix / des voix.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-277",
+      "fr": "tricher",
+      "uk": "\u0448\u0430\u0445\u0440\u0430\u044E\u0432\u0430\u0442\u0438, \u043E\u0431\u043C\u0430\u043D\u044E\u0432\u0430\u0442\u0438",
+      "en": "to cheat",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Il a trich\xE9 pendant le jeu et son fr\xE8re s'est f\xE2ch\xE9.",
+      "note": "R\xE9gulier en -er.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-278",
+      "fr": "lors de",
+      "uk": "\u043F\u0456\u0434 \u0447\u0430\u0441",
+      "en": "during, at the time of",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Lors de la restauration, l'acc\xE8s au site \xE9tait ferm\xE9.",
+      "note": "= \xAB pendant \xBB, mais registre plus soutenu ; toujours suivi d'un nom.",
+      "source": "La cause et la cons\xE9quence / Le Cyclop"
+    },
+    {
+      "id": "voc-279",
+      "fr": "un anglicisme",
+      "uk": "\u0430\u043D\u0433\u043B\u0456\u0446\u0438\u0437\u043C",
+      "en": "an anglicism",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le jargon du cin\xE9ma est peupl\xE9 d'anglicismes.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-280",
+      "fr": "franciser",
+      "uk": "\u043E\u0444\u0440\u0430\u043D\u0446\u0443\u0436\u0443\u0432\u0430\u0442\u0438, \u043F\u0435\u0440\u0435\u043A\u043B\u0430\u0434\u0430\u0442\u0438 \u0444\u0440\u0430\u043D\u0446\u0443\u0437\u044C\u043A\u043E\u044E",
+      "en": "to gallicise",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "Petit lexique des anglicismes du cin\xE9ma et comment les franciser.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-281",
+      "fr": "un cin\xE9phile",
+      "uk": "\u043A\u0456\u043D\u043E\u043B\u044E\u0431, \u043A\u0456\u043D\u043E\u043C\u0430\u043D",
+      "en": "a film buff",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Les cin\xE9philes connaissent bien ces mots.",
+      "note": "Masc. / une cin\xE9phile.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-282",
+      "fr": "un s\xE9riephile",
+      "uk": "\u0444\u0430\u043D\u0430\u0442 \u0441\u0435\u0440\u0456\u0430\u043B\u0456\u0432",
+      "en": "a TV-series fan",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Les s\xE9riephiles utilisent le m\xEAme vocabulaire.",
+      "note": "Masc. N\xE9ologisme form\xE9 sur le mod\xE8le de \xAB cin\xE9phile \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-283",
+      "fr": "le jargon",
+      "uk": "\u0436\u0430\u0440\u0433\u043E\u043D, \u043F\u0440\u043E\u0444\u0435\u0441\u0456\u0439\u043D\u0430 \u0433\u043E\u0432\u0456\u0440\u043A\u0430",
+      "en": "jargon",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Il est facile de se perdre dans ce jargon.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-284",
+      "fr": "une salle obscure",
+      "uk": "\u043A\u0456\u043D\u043E\u0437\u0430\u043B",
+      "en": "a movie theatre",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Si la salle est obscure, la langue doit \xEAtre claire !",
+      "note": "F\xE9m. Expression imag\xE9e pour \xAB salle de cin\xE9ma \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-285",
+      "fr": "braquer le projecteur sur",
+      "uk": "\u0441\u043F\u0440\u044F\u043C\u0443\u0432\u0430\u0442\u0438 \u043F\u0440\u043E\u0436\u0435\u043A\u0442\u043E\u0440 \u043D\u0430, \u0437\u043E\u0441\u0435\u0440\u0435\u0434\u0438\u0442\u0438\u0441\u044F \u043D\u0430",
+      "en": "to shine the spotlight on",
+      "pos": "expression",
+      "theme": "cinema",
+      "example": "Aujourd'hui, braquons le projecteur sur les mots du cin\xE9ma.",
+      "note": "Sens figur\xE9 : mettre en lumi\xE8re un sujet.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-286",
+      "fr": "grand public",
+      "uk": "\u043C\u0430\u0441\u043E\u0432\u0438\u0439, \u0434\u043B\u044F \u0448\u0438\u0440\u043E\u043A\u043E\u0457 \u0430\u0443\u0434\u0438\u0442\u043E\u0440\u0456\u0457",
+      "en": "mainstream, for general audiences",
+      "pos": "adjectif",
+      "theme": "cinema",
+      "example": "Les crit\xE8res d'un blockbuster : grand public, gros budget, forte m\xE9diatisation.",
+      "note": "Locution adjectivale invariable : un film grand public.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-287",
+      "fr": "une grosse machine",
+      "uk": "\u0432\u0435\u043B\u0438\u043A\u0438\u0439 \u0441\u0442\u0443\u0434\u0456\u0439\u043D\u0438\u0439 \u0431\u043B\u043E\u043A\u0431\u0430\u0441\u0442\u0435\u0440",
+      "en": "a big studio production",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Comment le dire en fran\xE7ais ? Superproduction, voire grosse machine.",
+      "note": "F\xE9m. Familier, souvent l\xE9g\xE8rement p\xE9joratif.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-288",
+      "fr": "une accroche",
+      "uk": "\u0442\u0438\u0437\u0435\u0440, \u0437\u0430\u0447\u0456\u043F\u043A\u0430",
+      "en": "a teaser, hook",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Comment dire \xAB teaser \xBB en fran\xE7ais ? Une accroche.",
+      "note": "F\xE9m. \xC9quivalent fran\xE7ais officiel de \xAB teaser \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-289",
+      "fr": "un trailer",
+      "uk": "\u0442\u0440\u0435\u0439\u043B\u0435\u0440",
+      "en": "a trailer",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le trailer est plus construit et appara\xEEt apr\xE8s le teaser.",
+      "note": "Masc. Anglicisme ; l'\xE9quivalent fran\xE7ais est \xAB bande-annonce \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-290",
+      "fr": "un ant\xE9pisode",
+      "uk": "\u043F\u0440\u0438\u043A\u0432\u0435\u043B",
+      "en": "a prequel",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Comment dire \xAB prequel \xBB en fran\xE7ais ? Ant\xE9pisode, comme disent les Qu\xE9b\xE9cois.",
+      "note": "Masc. \xC9quivalent qu\xE9b\xE9cois de \xAB prequel \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-291",
+      "fr": "un mot-valise",
+      "uk": "\u0441\u043B\u043E\u0432\u043E-\u0433\u0456\u0431\u0440\u0438\u0434, \u0441\u043B\u043E\u0432\u043E-\u0432\u0430\u043B\u0456\u0437\u0430",
+      "en": "a portmanteau word",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Le mot anglais \xAB prequel \xBB est un mot-valise.",
+      "note": "Masc. Pluriel : des mots-valises.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-292",
+      "fr": "un pr\xE9fixe",
+      "uk": "\u043F\u0440\u0435\u0444\u0456\u043A\u0441",
+      "en": "a prefix",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Il est form\xE9 par le pr\xE9fixe pre- et le nom sequel.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-293",
+      "fr": "une suite",
+      "uk": "\u043F\u0440\u043E\u0434\u043E\u0432\u0436\u0435\u043D\u043D\u044F",
+      "en": "a sequel",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "\xAB Sequel \xBB veut dire \xAB suite \xBB en anglais.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-294",
+      "fr": "un retour en arri\xE8re",
+      "uk": "\u0444\u043B\u0435\u0448\u0431\u0435\u043A, \u043F\u043E\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u044F \u0432 \u043C\u0438\u043D\u0443\u043B\u0435",
+      "en": "a flashback",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le flashback, c'est-\xE0-dire le retour en arri\xE8re au sein d'un m\xEAme film.",
+      "note": "Masc. \xC9quivalent fran\xE7ais de \xAB flashback \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-295",
+      "fr": "un red\xE9marrage",
+      "uk": "\u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u043A",
+      "en": "a reboot",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Comment dire \xAB reboot \xBB en fran\xE7ais ? Red\xE9marrage. D\xE9sol\xE9s, on n'a pas mieux.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-296",
+      "fr": "le found footage",
+      "uk": "\xAB\u0437\u043D\u0430\u0439\u0434\u0435\u043D\u0456 \u043F\u043B\u0456\u0432\u043A\u0438\xBB (\u0436\u0430\u043D\u0440)",
+      "en": "found footage",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le found footage se pr\xE9sente comme un documentaire.",
+      "note": "Masc. Anglicisme ; en fran\xE7ais : enregistrement trouv\xE9, images trouv\xE9es, s\xE9quences trouv\xE9es.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-297",
+      "fr": "un enregistrement",
+      "uk": "\u0437\u0430\u043F\u0438\u0441",
+      "en": "a recording",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "On parle d'enregistrement trouv\xE9 ou d'images trouv\xE9es.",
+      "note": "Masc. Verbe : enregistrer.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-298",
+      "fr": "une s\xE9quence",
+      "uk": "\u0435\u043F\u0456\u0437\u043E\u0434, \u0441\u0446\u0435\u043D\u0430 (\u0443 \u0444\u0456\u043B\u044C\u043C\u0456)",
+      "en": "a sequence, scene",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Des s\xE9quences trouv\xE9es composent tout le film.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-299",
+      "fr": "une saga",
+      "uk": "\u0441\u0430\u0433\u0430, \u043A\u0456\u043D\u043E\u0441\u0435\u0440\u0456\u044F",
+      "en": "a saga, franchise",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le reboot est le red\xE9marrage d'une saga qui s'essouffle.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-300",
+      "fr": "un casting",
+      "uk": "\u0430\u043A\u0442\u043E\u0440\u0441\u044C\u043A\u0438\u0439 \u0441\u043A\u043B\u0430\u0434; \u043A\u0430\u0441\u0442\u0438\u043D\u0433",
+      "en": "a cast; casting",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "L'aventure se poursuit avec un nouveau r\xE9alisateur et un nouveau casting.",
+      "note": "Masc. Anglicisme courant ; \xE9quivalent : \xAB la distribution \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-301",
+      "fr": "un sc\xE9nariste",
+      "uk": "\u0441\u0446\u0435\u043D\u0430\u0440\u0438\u0441\u0442",
+      "en": "a screenwriter",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Dans un film d'auteur, le sc\xE9nariste et le r\xE9alisateur sont une seule et m\xEAme personne.",
+      "note": "Masc. / une sc\xE9nariste (m\xEAme forme).",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-302",
+      "fr": "un spectateur",
+      "uk": "\u0433\u043B\u044F\u0434\u0430\u0447",
+      "en": "a viewer, spectator",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le teaser montre quelques images pour attirer les spectateurs.",
+      "note": "Masc. / une spectatrice.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-303",
+      "fr": "une sortie",
+      "uk": "\u0432\u0438\u0445\u0456\u0434 (\u0444\u0456\u043B\u044C\u043C\u0443 \u0432 \u043F\u0440\u043E\u043A\u0430\u0442)",
+      "en": "a release",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le teaser est diffus\xE9 bien avant la sortie du film.",
+      "note": "F\xE9m. Verbe : sortir \u2014 \xAB le film sort en janvier \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-304",
+      "fr": "diffuser",
+      "uk": "\u043F\u043E\u043A\u0430\u0437\u0443\u0432\u0430\u0442\u0438, \u0442\u0440\u0430\u043D\u0441\u043B\u044E\u0432\u0430\u0442\u0438",
+      "en": "to broadcast, screen",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "Ce cin\xE9ma ne diffuse que des films d'auteur.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-305",
+      "fr": "une adaptation libre",
+      "uk": "\u0432\u0456\u043B\u044C\u043D\u0430 \u0430\u0434\u0430\u043F\u0442\u0430\u0446\u0456\u044F",
+      "en": "a loose adaptation",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le reboot n'est qu'une adaptation libre.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-306",
+      "fr": "un r\xE9cit",
+      "uk": "\u043E\u043F\u043E\u0432\u0456\u0434\u044C, \u0440\u043E\u0437\u043F\u043E\u0432\u0456\u0434\u044C",
+      "en": "a narrative, story",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le prequel traite d'\xE9v\xE9nements se d\xE9roulant avant le r\xE9cit initial.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-307",
+      "fr": "un \xE9clairage",
+      "uk": "\u043E\u0441\u0432\u0456\u0442\u043B\u0435\u043D\u043D\u044F; \u043D\u043E\u0432\u0435 \u0432\u0438\u0441\u0432\u0456\u0442\u043B\u0435\u043D\u043D\u044F (\u043F\u0435\u0440\u0435\u043D.)",
+      "en": "lighting; a new light on sth",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "L'\xE9pisode z\xE9ro offre un \xE9clairage nouveau sur l'histoire.",
+      "note": "Masc. Sens propre = \u043E\u0441\u0432\u0456\u0442\u043B\u0435\u043D\u043D\u044F ; sens figur\xE9 = \u043D\u043E\u0432\u0438\u0439 \u043F\u043E\u0433\u043B\u044F\u0434.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-308",
+      "fr": "se d\xE9rouler",
+      "uk": "\u0432\u0456\u0434\u0431\u0443\u0432\u0430\u0442\u0438\u0441\u044F, \u0440\u043E\u0437\u0433\u043E\u0440\u0442\u0430\u0442\u0438\u0441\u044F",
+      "en": "to take place, unfold",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "L'action se d\xE9roule avant le r\xE9cit initial.",
+      "note": "Pronominal, r\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-309",
+      "fr": "une cam\xE9ra",
+      "uk": "\u043A\u0456\u043D\u043E\u043A\u0430\u043C\u0435\u0440\u0430",
+      "en": "a camera (film)",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Des images film\xE9es en cam\xE9ra amateur.",
+      "note": "F\xE9m. Pour la photo, on dit \xAB un appareil photo \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-310",
+      "fr": "monter",
+      "uk": "\u043C\u043E\u043D\u0442\u0443\u0432\u0430\u0442\u0438 (\u0444\u0456\u043B\u044C\u043C)",
+      "en": "to edit (a film)",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "Le r\xE9alisateur a retrouv\xE9 des images et il les a mont\xE9es.",
+      "note": "Sens cin\xE9matographique de \xAB monter \xBB ; nom : le montage.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-311",
+      "fr": "le montage",
+      "uk": "\u043C\u043E\u043D\u0442\u0430\u0436",
+      "en": "editing",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le montage donne l'impression d'un vrai documentaire.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-312",
+      "fr": "brouiller",
+      "uk": "\u0440\u043E\u0437\u043C\u0438\u0432\u0430\u0442\u0438, \u0437\u0430\u0442\u0438\u0440\u0430\u0442\u0438",
+      "en": "to blur",
+      "pos": "verbe",
+      "theme": "cinema",
+      "example": "La fronti\xE8re entre r\xE9alit\xE9 et fiction est savamment brouill\xE9e.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-313",
+      "fr": "une fronti\xE8re",
+      "uk": "\u043C\u0435\u0436\u0430, \u043A\u043E\u0440\u0434\u043E\u043D",
+      "en": "a border, boundary",
+      "pos": "nom",
+      "theme": "general",
+      "example": "La fronti\xE8re entre r\xE9alit\xE9 et fiction devient floue.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-314",
+      "fr": "la fiction",
+      "uk": "\u0445\u0443\u0434\u043E\u0436\u043D\u0456\u0439 \u0432\u0438\u043C\u0438\u0441\u0435\u043B; \u0456\u0433\u0440\u043E\u0432\u0435 (\u0445\u0443\u0434\u043E\u0436\u043D\u0454) \u043A\u0456\u043D\u043E",
+      "en": "fiction",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "C'est un genre de fiction r\xE9aliste.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-315",
+      "fr": "un documentaire",
+      "uk": "\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u0438\u0439 \u0444\u0456\u043B\u044C\u043C",
+      "en": "a documentary",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le found footage se pr\xE9sente comme un documentaire.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-316",
+      "fr": "\xE9litiste",
+      "uk": "\u0435\u043B\u0456\u0442\u0430\u0440\u043D\u0438\u0439",
+      "en": "elitist",
+      "pos": "adjectif",
+      "theme": "cinema",
+      "example": "Le film d'auteur est plus \xE9litiste et \xE0 budget limit\xE9.",
+      "note": "M\xEAme forme aux deux genres.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-317",
+      "fr": "une avant-premi\xE8re",
+      "uk": "\u043F\u0435\u0440\u0435\u0434\u043F\u0440\u0435\u043C'\u0454\u0440\u043D\u0438\u0439 \u043F\u043E\u043A\u0430\u0437",
+      "en": "a preview screening",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Seuls les critiques ont eu acc\xE8s \xE0 l'avant-premi\xE8re.",
+      "note": "F\xE9m. Pluriel : des avant-premi\xE8res.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-318",
+      "fr": "un critique",
+      "uk": "\u043A\u0440\u0438\u0442\u0438\u043A",
+      "en": "a critic",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Les critiques ont ador\xE9 ce reboot.",
+      "note": "Masc. = la personne ; \xAB une critique \xBB = \u0440\u0435\u0446\u0435\u043D\u0437\u0456\u044F (le texte).",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-319",
+      "fr": "un billet",
+      "uk": "\u043A\u0432\u0438\u0442\u043E\u043A",
+      "en": "a ticket",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Il n'y avait plus de billets, du coup nous n'avons pas pu entrer.",
+      "note": "Masc. Au cin\xE9ma on dit aussi \xAB une place \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-320",
+      "fr": "une sc\xE8ne",
+      "uk": "\u0441\u0446\u0435\u043D\u0430",
+      "en": "a scene",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Cette seule sc\xE8ne a chang\xE9 tout le film.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-321",
+      "fr": "un effet sp\xE9cial",
+      "uk": "\u0441\u043F\u0435\u0446\u0435\u0444\u0435\u043A\u0442",
+      "en": "a special effect",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Le found footage n'utilise que des images amateur, pas d'effets sp\xE9ciaux.",
+      "note": "Masc. Pluriel : des effets sp\xE9ciaux.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-322",
+      "fr": "\xEAtre compos\xE9 de",
+      "uk": "\u0441\u043A\u043B\u0430\u0434\u0430\u0442\u0438\u0441\u044F \u0437",
+      "en": "to be made up of",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Ce mot est compos\xE9 du nom \xAB block \xBB et du verbe \xAB to bust \xBB.",
+      "note": "Attention \xE0 la contraction : compos\xE9 DU nom, DE LA\u2026, DES\u2026",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-323",
+      "fr": "frapper",
+      "uk": "\u0432\u0440\u0430\u0436\u0430\u0442\u0438; \u0431\u0438\u0442\u0438, \u0441\u0442\u0443\u043A\u0430\u0442\u0438",
+      "en": "to strike, hit",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Une pi\xE8ce qui frappe fort, explosive.",
+      "note": "R\xE9gulier en -er. Sens propre = \u0431\u0438\u0442\u0438 ; sens figur\xE9 = \u0432\u0440\u0430\u0436\u0430\u0442\u0438.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-324",
+      "fr": "une pi\xE8ce",
+      "uk": "\u043F'\u0454\u0441\u0430 (\u0442\u0435\u0430\u0442\u0440\u0430\u043B\u044C\u043D\u0430)",
+      "en": "a play",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Le terme s'est appliqu\xE9 au th\xE9\xE2tre pour d\xE9signer une pi\xE8ce qui frappe fort.",
+      "note": "F\xE9m. Autres sens : \u043A\u0456\u043C\u043D\u0430\u0442\u0430 ; \u043C\u043E\u043D\u0435\u0442\u0430 ; \u0434\u0435\u0442\u0430\u043B\u044C.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-325",
+      "fr": "par extension",
+      "uk": "\u0437\u0430 \u0440\u043E\u0437\u0448\u0438\u0440\u0435\u043D\u043D\u044F\u043C \u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F",
+      "en": "by extension",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Par extension et au figur\xE9, le terme s'est appliqu\xE9 au cin\xE9ma.",
+      "note": "Locution fig\xE9e, souvent dans les d\xE9finitions de dictionnaire.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-326",
+      "fr": "un but",
+      "uk": "\u043C\u0435\u0442\u0430",
+      "en": "a goal, aim",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Le but : faire marcher l'imagination.",
+      "note": "Masc. = un objectif.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-327",
+      "fr": "s'appliquer \xE0",
+      "uk": "\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u0442\u0438\u0441\u044F, \u0437\u0430\u0441\u0442\u043E\u0441\u043E\u0432\u0443\u0432\u0430\u0442\u0438\u0441\u044F \u0434\u043E",
+      "en": "to apply to",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Le terme s'est appliqu\xE9 au th\xE9\xE2tre puis au cin\xE9ma.",
+      "note": "Pronominal, r\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-328",
+      "fr": "d\xE9signer",
+      "uk": "\u043F\u043E\u0437\u043D\u0430\u0447\u0430\u0442\u0438, \u043D\u0430\u0437\u0438\u0432\u0430\u0442\u0438",
+      "en": "to designate, refer to",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Le mot d\xE9signe une pi\xE8ce explosive.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-329",
+      "fr": "poursuivre",
+      "uk": "\u043F\u0440\u043E\u0434\u043E\u0432\u0436\u0443\u0432\u0430\u0442\u0438",
+      "en": "to continue, pursue",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "L'aventure se poursuit avec un nouveau r\xE9alisateur.",
+      "note": "Type \xAB suivre \xBB : je poursuis, nous poursuivons, p.p. poursuivi.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-330",
+      "fr": "savamment",
+      "uk": "\u043C\u0430\u0439\u0441\u0442\u0435\u0440\u043D\u043E, \u0432\u043C\u0456\u043B\u043E",
+      "en": "skilfully, cleverly",
+      "pos": "adverbe",
+      "theme": "general",
+      "example": "La fronti\xE8re est savamment brouill\xE9e.",
+      "note": "Adverbe form\xE9 sur \xAB savant \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-331",
+      "fr": "ainsi",
+      "uk": "\u0442\u0430\u043A\u0438\u043C \u0447\u0438\u043D\u043E\u043C, \u043E\u0442\u0436\u0435",
+      "en": "thus, in this way",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Ainsi, la fronti\xE8re entre r\xE9alit\xE9 et fiction est brouill\xE9e.",
+      "note": "Adverbe de mani\xE8re ou de cons\xE9quence ; registre plut\xF4t \xE9crit.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-332",
+      "fr": "un parrain",
+      "uk": "\u0445\u0440\u0435\u0449\u0435\u043D\u0438\u0439 \u0431\u0430\u0442\u044C\u043A\u043E; \xAB\u0445\u0440\u0435\u0449\u0435\u043D\u0438\u0439 \u0431\u0430\u0442\u044C\u043A\u043E\xBB (\u043C\u0430\u0444\u0456\u044F)",
+      "en": "a godfather",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "\xAB Le Parrain \xBB est un classique du cin\xE9ma am\xE9ricain.",
+      "note": "Masc. / une marraine.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-333",
+      "fr": "diabolique",
+      "uk": "\u043F\u0456\u0434\u0441\u0442\u0443\u043F\u043D\u0438\u0439, \u0434\u0438\u044F\u0432\u043E\u043B\u044C\u0441\u044C\u043A\u0438\u0439",
+      "en": "diabolical, fiendish",
+      "pos": "adjectif",
+      "theme": "general",
+      "example": "Le personnage principal a un plan diabolique.",
+      "note": "M\xEAme forme aux deux genres.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-334",
+      "fr": "le souffle",
+      "uk": "\u043F\u043E\u0434\u0438\u0445, \u0434\u0438\u0445\u0430\u043D\u043D\u044F",
+      "en": "breath",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Ce film coupe le souffle.",
+      "note": "Masc. \xAB couper le souffle \xBB = \u0437\u0430\u0445\u043E\u043F\u043B\u044E\u0432\u0430\u0442\u0438 \u0434\u0443\u0445.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-335",
+      "fr": "souffler",
+      "uk": "\u0434\u0443\u0442\u0438; \u0432\u0438\u0434\u0438\u0445\u0430\u0442\u0438",
+      "en": "to blow",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Le vent souffle fort ce soir.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-336",
+      "fr": "respirer",
+      "uk": "\u0434\u0438\u0445\u0430\u0442\u0438",
+      "en": "to breathe",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Respirez profond\xE9ment avant de parler.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-337",
+      "fr": "expirer",
+      "uk": "\u0432\u0438\u0434\u0438\u0445\u0430\u0442\u0438",
+      "en": "to breathe out",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Inspirez, puis expirez lentement.",
+      "note": "Contraire : inspirer = \u0432\u0434\u0438\u0445\u0430\u0442\u0438.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-338",
+      "fr": "la restriction",
+      "uk": "\u043E\u0431\u043C\u0435\u0436\u0435\u043D\u043D\u044F",
+      "en": "restriction",
+      "pos": "nom",
+      "theme": "cinema",
+      "example": "Trouvez les expressions de la restriction dans les phrases suivantes.",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-339",
+      "fr": "ne... que",
+      "uk": "\u043B\u0438\u0448\u0435, \u0442\u0456\u043B\u044C\u043A\u0438",
+      "en": "only",
+      "pos": "expression",
+      "theme": "cinema",
+      "example": "Il ne regarde que les blockbusters.",
+      "note": "Restriction. Temps simple : que apr\xE8s le verbe conjugu\xE9 ou l'infinitif. Temps compos\xE9 : apr\xE8s le participe pass\xE9 \u2014 \xAB Nous n'avons vu qu'un film \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-340",
+      "fr": "seulement",
+      "uk": "\u0442\u0456\u043B\u044C\u043A\u0438, \u043B\u0438\u0448\u0435",
+      "en": "only",
+      "pos": "adverbe",
+      "theme": "cinema",
+      "example": "Il travaille seulement le week-end. = Il ne travaille que le week-end.",
+      "note": "Se place apr\xE8s le verbe ou devant le mot restreint. Ne se combine pas avec \xAB ne\u2026 que \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-341",
+      "fr": "seul",
+      "uk": "\u0454\u0434\u0438\u043D\u0438\u0439; \u0441\u0430\u043C",
+      "en": "only, sole; alone",
+      "pos": "adjectif",
+      "theme": "cinema",
+      "example": "Seuls les membres ont le droit de participer.",
+      "note": "S'accorde en genre et en nombre : seul / seule / seuls / seules. En t\xEAte de phrase = \xAB \u0442\u0456\u043B\u044C\u043A\u0438 \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-342",
+      "fr": "n'avoir qu'\xE0",
+      "uk": "\u0442\u043E\u0431\u0456 \u0432\u0430\u0440\u0442\u043E \u043B\u0438\u0448\u0435, \u043F\u0440\u043E\u0441\u0442\u043E \u0437\u0440\u043E\u0431\u0438",
+      "en": "to only have to",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Tu n'as qu'\xE0 demander au metteur en sc\xE8ne.",
+      "note": "N'est PAS une restriction : exprime un conseil ou un reproche.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-343",
+      "fr": "dont",
+      "uk": "\u0447\u0438\u0439, \u044F\u043A\u043E\u0433\u043E, \u043F\u0440\u043E \u044F\u043A\u043E\u0433\u043E",
+      "en": "whose, of which",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Le nom sequel, dont on n'a conserv\xE9 que la fin.",
+      "note": "Pronom relatif qui remplace \xAB de + nom \xBB. Ne s'\xE9lide jamais.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-344",
+      "fr": "conserver",
+      "uk": "\u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0442\u0438",
+      "en": "to keep, retain",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "On n'a conserv\xE9 que la fin du mot.",
+      "note": "R\xE9gulier en -er.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-345",
+      "fr": "\xEAtre au courant",
+      "uk": "\u0431\u0443\u0442\u0438 \u0432 \u043A\u0443\u0440\u0441\u0456, \u0437\u043D\u0430\u0442\u0438",
+      "en": "to be aware, to know about",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Seules deux personnes \xE9taient au courant de ce secret.",
+      "note": "\xAB \xEAtre au courant de qqch \xBB. Ne pas dire *savoir au courant.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-346",
+      "fr": "la v\xE9rit\xE9",
+      "uk": "\u043F\u0440\u0430\u0432\u0434\u0430",
+      "en": "truth",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Qui conna\xEEt vraiment la v\xE9rit\xE9 dans cette histoire ?",
+      "note": "F\xE9m.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-347",
+      "fr": "un souvenir",
+      "uk": "\u0441\u043F\u043E\u0433\u0430\u0434; \u0441\u0443\u0432\u0435\u043D\u0456\u0440",
+      "en": "a memory; a souvenir",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Je n'ai gard\xE9 que les meilleurs souvenirs.",
+      "note": "Masc.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-348",
+      "fr": "la moiti\xE9",
+      "uk": "\u043F\u043E\u043B\u043E\u0432\u0438\u043D\u0430",
+      "en": "half",
+      "pos": "nom",
+      "theme": "general",
+      "example": "Vous n'avez pay\xE9 que la moiti\xE9.",
+      "note": "F\xE9m. \xAB la moiti\xE9 de + nom \xBB.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-349",
+      "fr": "compter",
+      "uk": "\u043C\u0430\u0442\u0438 \u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F; \u0440\u0430\u0445\u0443\u0432\u0430\u0442\u0438",
+      "en": "to matter; to count",
+      "pos": "verbe",
+      "theme": "general",
+      "example": "Quelle est la seule chose qui compte pour toi aujourd'hui ?",
+      "note": "R\xE9gulier en -er. Sens \xAB \u043C\u0430\u0442\u0438 \u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F \xBB : \xE7a compte.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-350",
+      "fr": "n'avoir aucune id\xE9e",
+      "uk": "\u043D\u0435 \u043C\u0430\u0442\u0438 \u0436\u043E\u0434\u043D\u043E\u0433\u043E \u0443\u044F\u0432\u043B\u0435\u043D\u043D\u044F",
+      "en": "to have no idea",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Je n'ai aucune id\xE9e de la r\xE9ponse.",
+      "note": "\xAB aucun(e) \xBB remplace \xAB pas de \xBB : je n'ai aucune id\xE9e (jamais *aucune id\xE9es).",
+      "source": "Comment le dire en fran\xE7ais ?"
+    },
+    {
+      "id": "voc-351",
+      "fr": "penser + infinitif",
+      "uk": "\u0434\u0443\u043C\u0430\u0442\u0438 \u0449\u043E\u0441\u044C \u0437\u0440\u043E\u0431\u0438\u0442\u0438, \u043F\u043B\u0430\u043D\u0443\u0432\u0430\u0442\u0438",
+      "en": "to be thinking of doing sth",
+      "pos": "expression",
+      "theme": "general",
+      "example": "Je pense aller au cin\xE9ma ce soir.",
+      "note": "\xAB penser faire \xBB = \u043C\u0430\u0442\u0438 \u043D\u0430\u043C\u0456\u0440. \xAB penser \xE0 \xBB = \u0434\u0443\u043C\u0430\u0442\u0438 \u043F\u0440\u043E.",
+      "source": "Comment le dire en fran\xE7ais ?"
+    }
+  ];
+
+  // ../content/src/filestore.ts
+  var DB_NAME = "french-filestore";
+  var STORE = "handles";
+  function idb() {
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.open(DB_NAME, 1);
+      req.onupgradeneeded = () => req.result.createObjectStore(STORE);
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }
+  async function idbGet(key) {
+    const db = await idb();
+    return new Promise((resolve, reject) => {
+      const req = db.transaction(STORE).objectStore(STORE).get(key);
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }
+  async function idbSet(key, value) {
+    const db = await idb();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction(STORE, "readwrite");
+      tx.objectStore(STORE).put(value, key);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    });
+  }
+  async function idbDel(key) {
+    const db = await idb();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction(STORE, "readwrite");
+      tx.objectStore(STORE).delete(key);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    });
+  }
+  var FileStore = class {
+    constructor(key, suggestedName) {
+      this.key = key;
+      this.suggestedName = suggestedName;
+    }
+    status = "none";
+    fileName = null;
+    handle = null;
+    timer = null;
+    pending = null;
+    supported() {
+      return typeof window !== "undefined" && !!window.showSaveFilePicker;
+    }
+    /** Call once at startup; resolves status to unsupported / none / stored. */
+    async init() {
+      if (!this.supported()) {
+        this.status = "unsupported";
+        return;
+      }
+      try {
+        const saved = await idbGet(this.key);
+        if (saved?.handle) {
+          this.status = "stored";
+          this.fileName = saved.name ?? null;
+        }
+      } catch {
+      }
+    }
+    /** Pick (or create) the file. Returns its existing content, parsed, or null. */
+    async connect() {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: this.suggestedName,
+        types: [{ description: "Progression JSON", accept: { "application/json": [".json"] } }]
+      });
+      this.handle = handle;
+      this.fileName = handle.name;
+      this.status = "connected";
+      try {
+        await idbSet(this.key, { handle, name: handle.name });
+      } catch {
+      }
+      return this.read();
+    }
+    /** Re-attach the handle stored at a previous visit (one permission click). */
+    async reconnect() {
+      const saved = await idbGet(this.key);
+      if (!saved?.handle) return null;
+      const h = saved.handle;
+      const perm = await h.queryPermission?.({ mode: "readwrite" }) ?? "granted";
+      if (perm !== "granted") {
+        const req = await h.requestPermission?.({ mode: "readwrite" }) ?? "denied";
+        if (req !== "granted") return null;
+      }
+      this.handle = h;
+      this.fileName = saved.name ?? h.name;
+      this.status = "connected";
+      return this.read();
+    }
+    /** Debounced write — call as often as you like. */
+    scheduleSave(data) {
+      if (this.status !== "connected") return;
+      this.pending = data;
+      if (this.timer !== null) clearTimeout(this.timer);
+      this.timer = setTimeout(() => {
+        this.timer = null;
+        void this.flush();
+      }, 500);
+    }
+    /** Write immediately (used by the debounce; also handy before unload). */
+    async flush() {
+      if (!this.handle || this.pending === null) return;
+      const data = this.pending;
+      this.pending = null;
+      try {
+        const w = await this.handle.createWritable();
+        await w.write(JSON.stringify(data, null, 2));
+        await w.close();
+      } catch {
+      }
+    }
+    /** Detach and forget the stored handle. */
+    async forget() {
+      this.handle = null;
+      this.fileName = null;
+      this.status = this.supported() ? "none" : "unsupported";
+      try {
+        await idbDel(this.key);
+      } catch {
+      }
+    }
+    async read() {
+      if (!this.handle) return null;
+      try {
+        const text = await (await this.handle.getFile()).text();
+        if (!text.trim()) return null;
+        return JSON.parse(text);
+      } catch {
+        return null;
+      }
+    }
+  };
+
+  // src/main.ts
+  var SESSION_SIZE = 15;
+  var MAX_BOX = 5;
+  var THEMES = [
+    { id: "cinema", label: "Cin\xE9ma" },
+    { id: "bd", label: "BD" },
+    { id: "art", label: "Art" },
+    { id: "loisirs", label: "Loisirs" },
+    { id: "celebrite", label: "C\xE9l\xE9brit\xE9" },
+    { id: "logement", label: "Logement" },
+    { id: "renovation", label: "R\xE9novation" },
+    { id: "carriere", label: "Carri\xE8re" },
+    { id: "transport", label: "Transport" },
+    { id: "general", label: "G\xE9n\xE9ral" }
+  ];
+  function themeLabel(id) {
+    return THEMES.find((t) => t.id === id)?.label ?? id;
+  }
+  var progress = { version: 1, box: {}, seen: {} };
+  var fstore = new FileStore("vocabulaire", "progression-vocabulaire.json");
+  function snapshot() {
+    return {
+      ...progress,
+      prefs: { theme: state.theme, mode: state.mode, reverse: state.reverse }
+    };
+  }
+  function persist() {
+    fstore.scheduleSave(snapshot());
+  }
+  function applySaved(data) {
+    if (data.version !== 1) return;
+    progress.box = data.box || {};
+    progress.seen = data.seen || {};
+    if (data.prefs) {
+      state.theme = data.prefs.theme ?? state.theme;
+      if (["cartes", "quiz", "ecrire"].includes(data.prefs.mode))
+        state.mode = data.prefs.mode;
+      state.reverse = !!data.prefs.reverse;
+    }
+  }
+  function boxOf(id) {
+    return progress.box[id] ?? 0;
+  }
+  function grade(item, ok) {
+    const b = boxOf(item.id);
+    progress.box[item.id] = ok ? Math.min(MAX_BOX, (b || 1) + 1) : 1;
+    progress.seen[item.id] = (progress.seen[item.id] ?? 0) + 1;
+  }
+  var state = {
+    screen: "home",
+    mode: "cartes",
+    theme: "all",
+    reverse: false,
+    cards: [],
+    i: 0,
+    flipped: false,
+    answered: false,
+    lastOk: false,
+    lastKind: "wrong",
+    given: "",
+    results: []
+  };
+  function esc(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function shuffle(a) {
+    const r = a.slice();
+    for (let i = r.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [r[i], r[j]] = [r[j], r[i]];
+    }
+    return r;
+  }
+  function norm(s) {
+    return s.trim().toLowerCase().replace(/[‘’ʼ´]/g, "'").replace(/\s+/g, " ").replace(/\s*'\s*/g, "'");
+  }
+  function deacc(s) {
+    return s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+  }
+  var ARTICLES = /^(le |la |les |un |une |des |l'|se |s')/;
+  function checkWritten(item, given) {
+    const g = norm(given);
+    const a = norm(item.fr);
+    if (!g) return "wrong";
+    if (g === a) return "ok";
+    if (deacc(g) === deacc(a)) return "accent";
+    if (g === a.replace(ARTICLES, "") || deacc(g) === deacc(a.replace(ARTICLES, "")))
+      return "accent";
+    return "wrong";
+  }
+  function themePool() {
+    return state.theme === "all" ? VOCAB.slice() : VOCAB.filter((v) => v.theme === state.theme);
+  }
+  function buildSession() {
+    const p = themePool();
+    const weighted = p.map((v) => ({ v, w: boxOf(v.id) === 0 ? 1.5 : MAX_BOX + 1 - boxOf(v.id) + Math.random() })).sort((a, b) => b.w - a.w).slice(0, SESSION_SIZE).map((x) => x.v);
+    return shuffle(weighted).map((item) => {
+      if (state.mode !== "quiz") return { item };
+      const sameTheme = shuffle(VOCAB.filter((v) => v.theme === item.theme && v.id !== item.id));
+      const others = shuffle(VOCAB.filter((v) => v.theme !== item.theme && v.id !== item.id));
+      const distractors = [...sameTheme, ...others].slice(0, 3);
+      return { item, choices: shuffle([item, ...distractors]) };
+    });
+  }
+  function homeHtml() {
+    const p = themePool();
+    const counts = [0, 1, 2, 3, 4, 5].map((b) => p.filter((v) => boxOf(v.id) === b).length);
+    const known = counts[5];
+    const chips = [{ id: "all", label: "Tous" }, ...THEMES].map((t) => {
+      const n = t.id === "all" ? VOCAB.length : VOCAB.filter((v) => v.theme === t.id).length;
+      return `<button class="chip ${state.theme === t.id ? "on" : ""}" data-theme="${t.id}">${esc(
+        t.label
+      )} <span class="chip-n">${n}</span></button>`;
+    }).join("");
+    const modes = [
+      { id: "cartes", label: "Cartes", help: "FR \u2192 devine, puis retourne la carte" },
+      { id: "quiz", label: "Quiz", help: "choisis la bonne traduction parmi 4" },
+      { id: "ecrire", label: "\xC9crire", help: "on donne l'ukrainien, tu \xE9cris le fran\xE7ais" }
+    ];
+    const boxBar = counts.map((n, b) => {
+      const pct = p.length ? n / p.length * 100 : 0;
+      return pct > 0 ? `<div class="seg seg-${b}" style="width:${pct}%" title="bo\xEEte ${b} \u2014 ${n} mots"></div>` : "";
+    }).join("");
+    return `
+  <div class="hero">
+    <h2>Vocabulaire</h2>
+    <p class="sub">${VOCAB.length} mots tir\xE9s du board de ta prof \xB7 ${known} acquis \xB7 ${p.length - counts[0]}/${p.length} commenc\xE9s dans cette s\xE9lection.</p>
+
+    <div class="boxbar" aria-label="R\xE9partition Leitner">${boxBar}</div>
+    <div class="boxkey">
+      <span><i class="seg-0"></i> jamais vu</span>
+      <span><i class="seg-1"></i> 1</span>
+      <span><i class="seg-2"></i> 2</span>
+      <span><i class="seg-3"></i> 3</span>
+      <span><i class="seg-4"></i> 4</span>
+      <span><i class="seg-5"></i> acquis</span>
+    </div>
+  </div>
+
+  <section class="grp">
+    <h3>Th\xE8me</h3>
+    <div class="chips">${chips}</div>
+  </section>
+
+  <section class="grp">
+    <h3>Mode</h3>
+    <div class="mode-grid">
+      ${modes.map(
+      (m) => `<button class="mode-btn ${state.mode === m.id ? "on" : ""}" data-mode="${m.id}">
+              <span class="mode-name">${m.label}</span>
+              <span class="mode-help">${esc(m.help)}</span>
+            </button>`
+    ).join("")}
+    </div>
+    ${state.mode === "quiz" ? `<label class="rev"><input type="checkbox" id="reverse" ${state.reverse ? "checked" : ""} /> sens inverse (\u0423\u041A\u0420 \u2192 FR)</label>` : ""}
+  </section>
+
+  <div class="quick">
+    <button class="big-btn primary" id="start" ${p.length ? "" : "disabled"}>
+      Commencer \u2014 ${Math.min(SESSION_SIZE, p.length)} mots
+    </button>
+  </div>
+
+  <div class="io">
+    ${fileUiHtml()}
+    <button class="link-btn" id="export">\u2913 Exporter ma progression</button>
+    <label class="link-btn" for="import-file">\u2912 Importer</label>
+    <input type="file" id="import-file" accept="application/json" hidden />
+    <button class="link-btn" id="browse">\u2630 Voir toute la liste</button>
+  </div>
+
+  <div id="list-wrap"></div>`;
+  }
+  function fileUiHtml() {
+    switch (fstore.status) {
+      case "connected":
+        return `<span class="fs-status fs-on" title="Chaque r\xE9ponse est \xE9crite dans le fichier">\u25CF ${esc(
+          fstore.fileName ?? "fichier"
+        )}</span>
+      <button class="link-btn" id="fs-forget">d\xE9tacher</button>`;
+      case "stored":
+        return `<button class="link-btn" id="fs-reconnect">\u{1F5C2} Reconnecter ${fstore.fileName ? esc(fstore.fileName) : "le fichier de progression"}</button>`;
+      case "none":
+        return `<button class="link-btn" id="fs-connect" title="La progression s'\xE9crira toute seule dans un fichier .json sur ton disque">\u{1F5C2} Connecter un fichier de progression</button>`;
+      case "unsupported":
+        return `<span class="fs-status" title="File System Access API \u2014 utilise Chrome ou Edge pour l'auto-sauvegarde">sauvegarde-fichier : non support\xE9e par ce navigateur</span>`;
+    }
+  }
+  function listHtml() {
+    const rows = themePool().map(
+      (v) => `<tr>
+        <td class="v-fr">${esc(v.fr)}<span class="v-pos">${esc(v.pos)}</span></td>
+        <td class="v-uk">${esc(v.uk)}</td>
+        <td class="v-en">${esc(v.en)}</td>
+        <td class="v-th">${esc(themeLabel(v.theme))}</td>
+        <td class="v-box"><span class="dot seg-${boxOf(v.id)}"></span></td>
+      </tr>`
+    ).join("");
+    return `<div class="list-scroll"><table class="v-table">
+    <thead><tr><th>Fran\xE7ais</th><th>\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430</th><th>English</th><th>Th\xE8me</th><th></th></tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
+  }
+  function cardHtml() {
+    const c = state.cards[state.i];
+    const v = c.item;
+    const pct = Math.round(state.i / state.cards.length * 100);
+    const head = `
+    <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+    <div class="q-head">
+      <span class="q-count">${state.i + 1} / ${state.cards.length}</span>
+      <span class="q-rule">${esc(themeLabel(v.theme))}</span>
+      <span class="q-lvl">bo\xEEte ${boxOf(v.id) || "\u2014"}</span>
+      <button class="link-btn quit" id="quit">Arr\xEAter</button>
+    </div>`;
+    const back = `
+    <div class="back">
+      <p class="uk">${esc(v.uk)}</p>
+      <p class="en">${esc(v.en)}</p>
+      <p class="ex">${esc(v.example)}</p>
+      ${v.note ? `<p class="note">\u{1F4A1} ${esc(v.note)}</p>` : ""}
+      <p class="src">source : ${esc(v.source)}</p>
+    </div>`;
+    if (state.mode === "cartes") {
+      return `${head}
+    <div class="v-card">
+      <p class="fr-big">${esc(v.fr)}</p>
+      ${state.flipped ? back : `<button class="big-btn" id="flip">Retourner la carte</button>`}
+      ${state.flipped ? `<div class="judge">
+              <button class="big-btn bad-btn" data-know="0">Je ne savais pas</button>
+              <button class="big-btn primary" data-know="1">Je savais</button>
+            </div>` : ""}
+    </div>`;
+    }
+    if (state.mode === "quiz") {
+      const askFr = !state.reverse;
+      const q = askFr ? v.fr : v.uk;
+      const opts = c.choices.map((o, k) => {
+        const label = askFr ? o.uk : o.fr;
+        let cls = "choice";
+        if (state.answered) {
+          if (o.id === v.id) cls += " right";
+          else if (state.given === o.id) cls += " wrongpick";
+        }
+        return `<button class="${cls}" data-pick="${k}" ${state.answered ? "disabled" : ""}>${esc(label)}</button>`;
+      }).join("");
+      return `${head}
+    <div class="v-card">
+      <p class="fr-big">${esc(q)}</p>
+      <div class="choices">${opts}</div>
+      ${state.answered ? back + `<button class="big-btn primary" id="next">Suivant \u2192</button>` : ""}
+    </div>`;
+    }
+    return `${head}
+  <div class="v-card">
+    <p class="fr-big">${esc(v.uk)}</p>
+    <p class="q-hint">${esc(v.pos)} \u2014 \xE9cris le mot fran\xE7ais (avec l'article pour les noms)</p>
+    <div class="answer-row">
+      <input id="answer" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+             placeholder="en fran\xE7ais\u2026" value="${state.answered ? esc(state.given) : ""}"
+             ${state.answered ? "disabled" : ""} />
+      <button class="big-btn primary" id="submit">${state.answered ? "Suivant \u2192" : "V\xE9rifier"}</button>
+    </div>
+    ${state.answered ? `<div class="fb fb-${state.lastKind === "ok" ? "ok" : state.lastKind === "accent" ? "near" : "bad"}">
+            <p class="fb-head">${state.lastKind === "ok" ? "\u2713 Correct" : state.lastKind === "accent" ? "\u2248 Presque \u2014 accent ou article" : "\u2717 Pas tout \xE0 fait"}</p>
+            <p class="fb-line"><code>${esc(v.fr)}</code></p>
+          </div>${back}` : ""}
+  </div>`;
+  }
+  function resultHtml() {
+    const ok = state.results.filter((r) => r.ok).length;
+    const n = state.results.length;
+    const pct = n ? Math.round(ok / n * 100) : 0;
+    const missed = state.results.filter((r) => !r.ok);
+    return `
+  <div class="result">
+    <div class="score ${pct >= 80 ? "great" : pct >= 50 ? "mid" : "low"}">
+      <span class="score-n">${ok}/${n}</span><span class="score-p">${pct}%</span>
+    </div>
+    ${missed.length ? `<h3>Remis en bo\xEEte 1 (${missed.length})</h3>
+           <ul class="misses">${missed.map(
+      (r) => `<li class="miss"><span class="m-fr">${esc(r.item.fr)}</span> \u2014 ${esc(
+        r.item.uk
+      )}</li>`
+    ).join("")}</ul>` : `<p class="perfect">Tout juste. \u{1F389}</p>`}
+    <div class="quick">
+      <button class="big-btn primary" id="again">Nouvelle s\xE9rie</button>
+      <button class="big-btn" id="home">\u2190 Retour</button>
+    </div>
+  </div>`;
+  }
+  function render() {
+    const main = document.getElementById("main");
+    if (state.screen === "home") main.innerHTML = homeHtml();
+    else if (state.screen === "session") main.innerHTML = cardHtml();
+    else main.innerHTML = resultHtml();
+    const inp = document.getElementById("answer");
+    if (inp && !state.answered) inp.focus();
+  }
+  function answer(ok) {
+    const v = state.cards[state.i].item;
+    grade(v, ok);
+    state.results.push({ item: v, ok });
+    state.answered = true;
+    state.lastOk = ok;
+    persist();
+  }
+  function next() {
+    if (state.i + 1 >= state.cards.length) {
+      state.screen = "result";
+    } else {
+      state.i++;
+      state.flipped = false;
+      state.answered = false;
+      state.given = "";
+    }
+    render();
+  }
+  function startSession() {
+    state.cards = buildSession();
+    if (!state.cards.length) return;
+    state.i = 0;
+    state.flipped = false;
+    state.answered = false;
+    state.given = "";
+    state.results = [];
+    state.screen = "session";
+    render();
+  }
+  function download() {
+    const blob = new Blob([JSON.stringify(progress, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "progression-vocabulaire.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+  function init() {
+    document.body.addEventListener("click", (e) => {
+      const t = e.target;
+      const th = t.closest("[data-theme]");
+      if (th) {
+        state.theme = th.dataset.theme;
+        persist();
+        return render();
+      }
+      const md = t.closest("[data-mode]");
+      if (md) {
+        state.mode = md.dataset.mode;
+        persist();
+        return render();
+      }
+      if (t.closest("#start")) return startSession();
+      if (t.closest("#flip")) {
+        state.flipped = true;
+        return render();
+      }
+      const know = t.closest("[data-know]");
+      if (know) {
+        answer(know.dataset.know === "1");
+        return next();
+      }
+      const pick = t.closest("[data-pick]");
+      if (pick) {
+        const c = state.cards[state.i];
+        const chosen = c.choices[Number(pick.dataset.pick)];
+        state.given = chosen.id;
+        answer(chosen.id === c.item.id);
+        return render();
+      }
+      if (t.closest("#next")) return next();
+      if (t.closest("#submit")) {
+        if (state.answered) return next();
+        const inp = document.getElementById("answer");
+        const kind = checkWritten(state.cards[state.i].item, inp.value);
+        state.given = inp.value;
+        state.lastKind = kind;
+        answer(kind === "ok");
+        return render();
+      }
+      if (t.closest("#quit")) {
+        state.screen = state.results.length ? "result" : "home";
+        return render();
+      }
+      if (t.closest("#home")) {
+        state.screen = "home";
+        return render();
+      }
+      if (t.closest("#again")) return startSession();
+      if (t.closest("#export")) return download();
+      if (t.closest("#fs-connect")) {
+        void fstore.connect().then((data) => {
+          if (data) applySaved(data);
+          persist();
+          render();
+        }).catch(() => {
+        });
+        return;
+      }
+      if (t.closest("#fs-reconnect")) {
+        void fstore.reconnect().then((data) => {
+          if (data) applySaved(data);
+          render();
+        });
+        return;
+      }
+      if (t.closest("#fs-forget")) {
+        void fstore.forget().then(render);
+        return;
+      }
+      if (t.closest("#browse")) {
+        const w = document.getElementById("list-wrap");
+        w.innerHTML = w.innerHTML ? "" : listHtml();
+        return;
+      }
+    });
+    document.body.addEventListener("change", (e) => {
+      const el = e.target;
+      if (el.id === "reverse") {
+        state.reverse = el.checked;
+        persist();
+        return;
+      }
+      if (el.id === "import-file" && el.files?.[0]) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          try {
+            const data = JSON.parse(String(reader.result));
+            if (data.version === 1) {
+              applySaved(data);
+              persist();
+              render();
+            }
+          } catch {
+          }
+        };
+        reader.readAsText(el.files[0]);
+      }
+    });
+    document.body.addEventListener("keydown", (e) => {
+      if (state.screen !== "session") return;
+      if (state.mode === "cartes" && e.key === " " && !state.flipped) {
+        e.preventDefault();
+        state.flipped = true;
+        return render();
+      }
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      if (state.mode === "ecrire") {
+        if (state.answered) return next();
+        const inp = document.getElementById("answer");
+        if (!inp) return;
+        const kind = checkWritten(state.cards[state.i].item, inp.value);
+        state.given = inp.value;
+        state.lastKind = kind;
+        answer(kind === "ok");
+        return render();
+      }
+      if (state.answered) return next();
+    });
+    render();
+    void fstore.init().then(() => {
+      if (state.screen === "home") render();
+    });
+    window.addEventListener("beforeunload", () => void fstore.flush());
+  }
+  document.addEventListener("DOMContentLoaded", init);
+})();

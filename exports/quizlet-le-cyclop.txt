@@ -1,0 +1,80 @@
+une installation	інсталяція  —  Le Cyclop est une installation monumentale cachée dans les bois.
+le verre	скло  —  Il est fait en verre et en acier.
+l'acier	сталь  —  La structure en acier pèse plusieurs centaines de tonnes.
+un miroir	дзеркало  —  Une immense tête sans corps, étincelante de miroirs.
+une sculpture sonore	звукова скульптура  —  À l'intérieur, on trouve des sculptures sonores de Jean Tinguely.
+le son	звук  —  Le son des machines fait partie de l'œuvre.
+la matière	матеріал, речовина  —  En quelle matière est-il fait ? — Il est fait en verre et en acier.
+le poids	вага  —  Quel est le poids du Cyclop ? — Il pèse environ 300 tonnes.
+peser	важити  —  Ça pèse combien ? — Ça pèse trois cents tonnes.
+un visage	обличчя  —  On devine un visage géant entre les arbres.
+un œil	око  —  Une immense tête avec un seul œil.
+un chantier	будівельний майданчик, будівництво  —  Le chantier du Cyclop a duré plus de vingt ans.
+une intention	намір  —  Quelle était l'intention des artistes avec Le Cyclop ?
+un labyrinthe	лабіринт  —  On redécouvre un labyrinthe d'œuvres d'art à l'intérieur.
+une horloge	годинник (настінний, баштовий)  —  Une horloge géante est intégrée dans la structure.
+une montre	наручний годинник  —  Ma montre retarde de cinq minutes.
+illuminer	освітлювати, підсвічувати  —  Tous les samedis, l'œuvre est illuminée par une performance lumineuse.
+renvoyer à	відсилати до, натякати на  —  Le nom « Cyclop » renvoie clairement au Cyclope de la mythologie grecque.
+la mythologie grecque	грецька міфологія  —  Le titre fait référence à la mythologie grecque.
+restaurer	реставрувати  —  L'œuvre a été restaurée après plus d'un an de travaux.
+une restauration	реставрація  —  La restauration a provoqué une fermeture temporaire du site.
+fascinant	захопливий, заворожливий  —  C'était fascinant de découvrir cette tête au milieu des bois.
+féerique	казковий, чарівний  —  Le soir, l'endroit devient féerique.
+magique	чарівний  —  L'atmosphère était magique.
+ressentir	відчувати  —  J'ai ressenti une grande émotion devant cette œuvre.
+attirer l'attention	привертати увагу  —  Ce qui a attiré mon attention, c'est l'œil unique.
+étonner	дивувати  —  Cette chose si étonnante l'a beaucoup étonné.
+étonné	здивований, вражений  —  Il était étonné par la taille de la sculpture.
+deviner	вгадувати, здогадуватися  —  Devinez ce que c'est, à votre avis.
+ressembler à	бути схожим на  —  Ça ressemble à un visage géant.
+avoir l'air	мати вигляд, здаватися  —  Elle a l'air fatiguée aujourd'hui.
+mince	стрункий, худорлявий  —  Il est grand et mince.
+un reflet	відображення, відблиск  —  Le reflet du ciel dans le bassin est spectaculaire.
+refléter	відображати  —  Le bassin reflète le ciel.
+un bassin	басейн, водойма  —  Les visiteurs ont l'impression d'être suspendus entre deux ciels au-dessus du bassin.
+une exposition	виставка  —  Le succès de l'exposition a entraîné la prolongation des horaires d'ouverture.
+un bénévole	волонтер  —  Grâce à l'aide de nombreux bénévoles, l'exposition a pu ouvrir à temps.
+prolonger	продовжувати (в часі)  —  Le musée a prolongé les horaires d'ouverture.
+annuler	скасовувати  —  La visite en plein air a été annulée à cause du mauvais temps.
+une annulation	скасування  —  Ce problème technique a eu pour conséquence l'annulation du spectacle.
+un retard	затримка, запізнення  —  Le manque de budget a entraîné un retard dans les travaux.
+un dégât	збиток, шкода  —  La pluie a causé beaucoup de dégâts dans le jardin.
+interdire	забороняти  —  Il est interdit de toucher l'œuvre.
+la fragilité	крихкість  —  La fragilité de l'œuvre explique l'interdiction de la toucher.
+le manque de	брак, нестача  —  Le manque de budget est à l'origine du retard des travaux.
+comme	оскільки, через те що  —  Comme il pleuvait, nous sommes allés au musée plutôt qu'au parc.
+puisque	оскільки, адже (причина відома)  —  Puisque tu es déjà là, aide-moi à installer l'exposition.
+parce que	тому що  —  Le concert a été annulé parce que le chanteur était malade.
+car	бо, адже  —  Les visiteurs sont nombreux, car c'est une œuvre unique en France.
+étant donné que	зважаючи на те, що  —  Étant donné que le budget dépassait un million d'euros, les travaux ont duré plus d'un an.
+étant donné	зважаючи на, з огляду на  —  Étant donné le succès de l'exposition, le musée a prolongé les horaires.
+en raison de	через, у зв'язку з  —  Le musée est fermé en raison des travaux de rénovation.
+du fait de	через, внаслідок, з причини  —  Du fait de la fragilité de l'œuvre, l'accès est limité.
+un fait	факт  —  La cause est un fait qui entraîne un autre fait.
+en fait	насправді  —  En fait, l'œuvre n'était pas visible du tout depuis la route.
+donc	отже, тому  —  Le budget a dépassé un million d'euros, donc les travaux ont duré plus d'un an.
+par conséquent	відтак, як наслідок  —  L'œuvre est classée ; par conséquent, toute modification est interdite.
+du coup	тож, і тому  —  Il n'y avait plus de billets, du coup nous n'avons pas pu entrer.
+ce qui fait que	що призводить до того, що  —  Le bassin reflète le ciel, ce qui fait que les visiteurs ont l'impression d'être suspendus entre deux ciels.
+c'est pourquoi	саме тому, ось чому  —  L'œuvre est très fragile, c'est pourquoi il est interdit de la toucher.
+c'est pour cela que	саме тому  —  Elle n'a qu'un œil, c'est pour cela qu'on l'appelle Le Cyclop.
+tellement... que	настільки... що  —  Il a tellement aimé l'exposition qu'il y est retourné trois fois.
+si... que	такий... що  —  Il était confronté à une chose si étonnante qu'il en a ressenti une émotion extraordinaire.
+causer	спричиняти, бути причиною  —  La pluie a causé beaucoup de dégâts dans le jardin.
+avoir pour conséquence	мати наслідком  —  Ce problème technique a eu pour conséquence l'annulation du spectacle.
+un effet	вплив, ефект  —  L'exposition a eu un grand effet sur le public.
+un résultat	результат  —  Le résultat de ces travaux est spectaculaire.
+être à l'origine de	бути причиною, лежати в основі  —  Le manque de budget est à l'origine du retard des travaux.
+s'expliquer par	пояснюватися чимось  —  Le retard des travaux s'explique par le manque de budget.
+permettre	уможливлювати, дозволяти  —  La rencontre avec le ferrailleur a permis la naissance du projet du Cyclop.
+une naissance	народження, поява  —  Cette rencontre est à l'origine de la naissance du projet.
+là-bas	там, туди  —  Je vais là-bas en métro, ça prend une heure.
+spécialement	спеціально, особливо  —  Je suis venu spécialement pour voir cette œuvre.
+à pied	пішки  —  C'est à vingt minutes à pied.
+fâché	сердитий, розгніваний  —  Il était fâché contre son frère.
+se fâcher	сердитися, сваритися  —  Elle se fâche quand on triche.
+crier	кричати  —  Il criait si fort que tout le monde s'est retourné.
+une voix	голос  —  Il a élevé la voix pendant la discussion.
+tricher	шахраювати, обманювати  —  Il a triché pendant le jeu et son frère s'est fâché.
+lors de	під час  —  Lors de la restauration, l'accès au site était fermé.

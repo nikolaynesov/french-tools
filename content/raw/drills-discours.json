@@ -1,0 +1,1035 @@
+[
+  {
+    "id": "disc-001",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Tu as vu le film ? » → Elle me demande…",
+    "hint": "verbe introducteur au présent",
+    "answer": [
+      "Elle me demande si j'ai vu le film."
+    ],
+    "explain": {
+      "fr": "L'interrogation totale est introduite par « si » et la personne bascule de l'interlocuteur vers celui qui rapporte.",
+      "en": "A yes/no question is introduced by « si », and the person shifts from the addressee to the one now reporting.",
+      "uk": "Загальне питання вводиться сполучником « si », а особа зміщується з адресата на того, хто переказує."
+    },
+    "tags": [
+      "personne",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-002",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Est-ce que tu déménages ce week-end ? » → Il me demande…",
+    "hint": "« est-ce que » disparaît",
+    "answer": [
+      "Il me demande si je déménage ce week-end."
+    ],
+    "explain": {
+      "fr": "« Est-ce que » n'existe pas en interrogation indirecte : il est remplacé par « si », et le sujet change de personne.",
+      "en": "« Est-ce que » cannot survive in an indirect question: it is replaced by « si », and the subject changes person.",
+      "uk": "« Est-ce que » неможливе в непрямому питанні: його замінює « si », а підмет змінює особу."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-003",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Qu'est-ce que tu regardes en ce moment ? » → Elle me demande…",
+    "hint": "objet inanimé, fonction complément",
+    "answer": [
+      "Elle me demande ce que je regarde en ce moment."
+    ],
+    "explain": {
+      "fr": "« Qu'est-ce que », interrogatif complément d'objet, devient « ce que » dans la subordonnée interrogative indirecte.",
+      "en": "« Qu'est-ce que » as a direct-object interrogative becomes « ce que » in the indirect question clause.",
+      "uk": "« Qu'est-ce que » у функції прямого додатка переходить у « ce que » в непрямому питанні."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-004",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Qu'est-ce qui t'intéresse dans la BD ? » → Il me demande…",
+    "hint": "interrogatif sujet",
+    "answer": [
+      "Il me demande ce qui m'intéresse dans la BD."
+    ],
+    "explain": {
+      "fr": "« Qu'est-ce qui », interrogatif sujet, devient « ce qui » ; le pronom complément suit le changement de personne.",
+      "en": "« Qu'est-ce qui » as a subject interrogative becomes « ce qui »; the object pronoun follows the person shift.",
+      "uk": "« Qu'est-ce qui » у функції підмета переходить у « ce qui »; займенник-додаток змінює особу."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-005",
+    "ruleId": "discours-rapporte",
+    "kind": "choice",
+    "prompt": "Laurence me dit : « Est-ce que tu as vu l'expo ? » → Quelle transposition est correcte ?",
+    "hint": "qui est « tu » une fois la phrase rapportée ?",
+    "choices": [
+      "Laurence demande si tu as vu l'expo.",
+      "Laurence demande si j'ai vu l'expo.",
+      "Laurence demande est-ce que tu as vu l'expo ?"
+    ],
+    "answer": [
+      "Laurence demande si j'ai vu l'expo."
+    ],
+    "explain": {
+      "fr": "Le « tu » du discours direct désigne celui qui rapporte : il devient « je ». Le repérage des personnes se refait toujours depuis le rapporteur.",
+      "en": "The « tu » of the direct speech refers to the person now reporting, so it becomes « je »: persons are always recomputed from the reporter.",
+      "uk": "« Tu » прямої мови позначає того, хто переказує, тому стає « je »: особи завжди перераховують від мовця-переказувача."
+    },
+    "tags": [
+      "personne",
+      "ponctuation"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-006",
+    "ruleId": "discours-rapporte",
+    "kind": "cloze",
+    "prompt": "« Tu habites ici ? » → Il me demande ___ j'habite ici.",
+    "hint": "question fermée",
+    "answer": [
+      "si"
+    ],
+    "explain": {
+      "fr": "Une question sans mot interrogatif (réponse oui/non) se rapporte avec le subordonnant « si », jamais avec « que ».",
+      "en": "A question with no question word (yes/no answer) is reported with the linker « si », never with « que ».",
+      "uk": "Питання без питального слова (відповідь так/ні) передається сполучником « si », а не « que »."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-007",
+    "ruleId": "discours-rapporte",
+    "kind": "cloze",
+    "prompt": "« Qu'est-ce que vous faites comme métier ? » → Elle nous demande ___ nous faisons comme métier.",
+    "hint": "deux mots",
+    "answer": [
+      "ce que"
+    ],
+    "explain": {
+      "fr": "L'interrogatif complément « qu'est-ce que » se réduit à « ce que » ; on n'écrit ni « qu'est-ce que » ni « que ».",
+      "en": "The object interrogative « qu'est-ce que » reduces to « ce que »; neither « qu'est-ce que » nor « que » is possible.",
+      "uk": "Питальне « qu'est-ce que » у ролі додатка скорочується до « ce que »; ані « qu'est-ce que », ані « que » не вживають."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-008",
+    "ruleId": "discours-rapporte",
+    "kind": "cloze",
+    "prompt": "« Qu'est-ce qui coûte le plus cher dans la rénovation ? » → Il demande ___ coûte le plus cher dans la rénovation.",
+    "hint": "l'interrogatif est sujet du verbe",
+    "answer": [
+      "ce qui"
+    ],
+    "explain": {
+      "fr": "Quand l'interrogatif est sujet, la forme rapportée est « ce qui » ; le choix ce qui / ce que dépend de la fonction, pas du sens.",
+      "en": "When the interrogative is the subject, the reported form is « ce qui »; the ce qui / ce que choice depends on function, not meaning.",
+      "uk": "Коли питальне слово є підметом, у непрямій мові вживають « ce qui »; вибір ce qui / ce que залежить від функції, а не від значення."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-009",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Range tes cartons ! » → Elle me dit…",
+    "hint": "impératif rapporté",
+    "answer": [
+      "Elle me dit de ranger mes cartons."
+    ],
+    "explain": {
+      "fr": "L'impératif se rapporte par « de + infinitif » ; le possessif se recalcule lui aussi depuis le rapporteur.",
+      "en": "An imperative is reported with « de + infinitive »; the possessive is also recomputed from the reporter's point of view.",
+      "uk": "Наказовий спосіб передається через « de + інфінітив »; присвійний займенник теж перераховують від мовця-переказувача."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-010",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Ne touche pas à mes cartons ! » → Elle me dit…",
+    "hint": "impératif négatif",
+    "answer": [
+      "Elle me dit de ne pas toucher à ses cartons."
+    ],
+    "explain": {
+      "fr": "L'impératif négatif donne « de ne pas + infinitif », les deux éléments de la négation restant soudés devant le verbe ; le possessif change de personne.",
+      "en": "A negative imperative gives « de ne pas + infinitive », both negation elements staying together before the verb; the possessive changes person.",
+      "uk": "Заперечний наказовий спосіб дає « de ne pas + інфінітив », обидві частини заперечення стоять разом перед дієсловом; присвійний займенник змінює особу."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-011",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Je cherche un studio et je visite trois appartements. » → Il dit…",
+    "hint": "deux propositions coordonnées",
+    "answer": [
+      "Il dit qu'il cherche un studio et qu'il visite trois appartements."
+    ],
+    "explain": {
+      "fr": "Le subordonnant se répète devant chaque proposition coordonnée ; on ne le laisse pas sous-entendu après « et ».",
+      "en": "The linker must be repeated before each coordinated clause; it cannot be left implicit after « et ».",
+      "uk": "Сполучник повторюють перед кожним сурядним підрядним реченням; після « et » його не опускають."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-012",
+    "ruleId": "discours-rapporte",
+    "kind": "choice",
+    "prompt": "« Je suis pris le samedi et je travaille le dimanche. » → Quelle transposition est correcte ?",
+    "hint": "répétition du subordonnant",
+    "choices": [
+      "Il explique qu'il est pris le samedi et il travaille le dimanche.",
+      "Il explique qu'il est pris le samedi et qu'il travaille le dimanche."
+    ],
+    "answer": [
+      "Il explique qu'il est pris le samedi et qu'il travaille le dimanche."
+    ],
+    "explain": {
+      "fr": "Sans reprise du subordonnant, la seconde proposition redevient indépendante et sort du discours rapporté.",
+      "en": "Without repeating the linker, the second clause reverts to a main clause and falls outside the reported speech.",
+      "uk": "Без повторення сполучника друга частина знову стає незалежною і випадає з непрямої мови."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-013",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Où est-ce que tu as trouvé cette affiche ? » → Elle me demande…",
+    "hint": "le mot interrogatif est conservé",
+    "answer": [
+      "Elle me demande où j'ai trouvé cette affiche."
+    ],
+    "explain": {
+      "fr": "Un adverbe interrogatif se conserve tel quel et sert lui-même de subordonnant : on n'ajoute ni « que » ni « si ».",
+      "en": "An interrogative adverb is kept as it is and acts as the linker itself: no « que » or « si » is added.",
+      "uk": "Питальний прислівник зберігається і сам виконує роль сполучника: « que » чи « si » не додають."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-014",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Quand pars-tu en vacances ? » → Il me demande…",
+    "hint": "pas d'inversion dans la subordonnée",
+    "answer": [
+      "Il me demande quand je pars en vacances."
+    ],
+    "explain": {
+      "fr": "L'interrogation indirecte suit l'ordre sujet-verbe de la phrase déclarative : l'inversion du sujet est supprimée.",
+      "en": "An indirect question follows declarative subject-verb order: subject inversion is removed.",
+      "uk": "Непряме питання має прямий порядок слів підмет-присудок: інверсію підмета скасовують."
+    },
+    "tags": [
+      "forme",
+      "ponctuation"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-015",
+    "ruleId": "discours-rapporte",
+    "kind": "choice",
+    "prompt": "« Pourquoi est-ce que tu changes de métier ? » → Quelle phrase est correctement ponctuée ?",
+    "hint": "la phrase rapportée n'est plus une question",
+    "choices": [
+      "Elle demande pourquoi je change de métier ?",
+      "Elle demande pourquoi je change de métier."
+    ],
+    "answer": [
+      "Elle demande pourquoi je change de métier."
+    ],
+    "explain": {
+      "fr": "La phrase devient déclarative : le point d'interrogation disparaît avec les guillemets, même si le sens reste interrogatif.",
+      "en": "The sentence becomes declarative: the question mark disappears along with the quotation marks, even though the meaning stays interrogative.",
+      "uk": "Речення стає розповідним: знак питання зникає разом із лапками, хоч зміст лишається питальним."
+    },
+    "tags": [
+      "ponctuation"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-016",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Mon appartement est trop petit. » → Elle affirme…",
+    "hint": "possessif",
+    "answer": [
+      "Elle affirme que son appartement est trop petit."
+    ],
+    "explain": {
+      "fr": "Le déterminant possessif suit le changement de repère énonciatif au même titre que le pronom sujet.",
+      "en": "The possessive determiner follows the shift of speaker reference just as the subject pronoun does.",
+      "uk": "Присвійний займенник змінюється разом зі зміною мовця, так само як і займенник-підмет."
+    },
+    "tags": [
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-017",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Je ne renoncerai jamais à ce projet. » → Il déclare…",
+    "hint": "verbe introducteur au présent : aucun décalage",
+    "answer": [
+      "Il déclare qu'il ne renoncera jamais à ce projet."
+    ],
+    "explain": {
+      "fr": "Avec un verbe introducteur au présent, il n'y a pas de concordance : le futur reste au futur, seule la personne bouge.",
+      "en": "With a present-tense reporting verb there is no backshift: the future stays future, only the person moves.",
+      "uk": "Коли дієслово, що вводить мову, стоїть у теперішньому часі, узгодження немає: майбутній час зберігається, змінюється лише особа."
+    },
+    "tags": [
+      "emploi",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-018",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« J'ai aussi repeint la cuisine. » → Elle ajoute…",
+    "hint": "verbe introducteur au présent",
+    "answer": [
+      "Elle ajoute qu'elle a aussi repeint la cuisine."
+    ],
+    "explain": {
+      "fr": "« Ajouter » introduit une déclaration par « que » ; le présent du verbe introducteur bloque tout changement de temps.",
+      "en": "« Ajouter » introduces a statement with « que »; the present reporting verb blocks any tense change.",
+      "uk": "« Ajouter » вводить твердження через « que »; теперішній час дієслова-вводу унеможливлює зміну часу."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-019",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Non, je ne peux pas venir au vernissage. » → Elle répond…",
+    "hint": "phrase déclarative négative",
+    "answer": [
+      "Elle répond qu'elle ne peut pas venir au vernissage."
+    ],
+    "explain": {
+      "fr": "Une déclaration se rapporte par « que » ; la négation est conservée intégralement autour du verbe conjugué.",
+      "en": "A statement is reported with « que »; the negation is kept intact around the conjugated verb.",
+      "uk": "Твердження передається через « que »; заперечення повністю зберігається навколо відмінюваного дієслова."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-020",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Je t'aiderai à déménager. » → Il me promet…",
+    "hint": "deux constructions possibles avec « promettre »",
+    "answer": [
+      "Il me promet qu'il m'aidera à déménager.",
+      "Il me promet de m'aider à déménager."
+    ],
+    "explain": {
+      "fr": "« Promettre » accepte la complétive en « que » ou l'infinitif en « de » quand le sujet des deux verbes est le même ; le pronom complément change de personne dans les deux cas.",
+      "en": "« Promettre » allows either a « que » clause or a « de » infinitive when both verbs share a subject; the object pronoun changes person either way.",
+      "uk": "« Promettre » допускає підрядне з « que » або інфінітив із « de », якщо підмет обох дієслів однаковий; займенник-додаток змінює особу в обох випадках."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-021",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« J'ai visité trois appartements avec mon agent. » → Il raconte…",
+    "hint": "pronom et possessif",
+    "answer": [
+      "Il raconte qu'il a visité trois appartements avec son agent."
+    ],
+    "explain": {
+      "fr": "Tous les marqueurs de personne, pronom sujet comme possessif, se réalignent d'un seul mouvement sur le sujet du verbe introducteur.",
+      "en": "Every person marker, subject pronoun and possessive alike, realigns in one move onto the subject of the reporting verb.",
+      "uk": "Усі показники особи, і займенник-підмет, і присвійний, одночасно узгоджуються з підметом дієслова-вводу."
+    },
+    "tags": [
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-022",
+    "ruleId": "discours-rapporte",
+    "kind": "transform",
+    "prompt": "« Est-ce que vous avez aimé mes planches ? » → L'auteur de BD nous demande…",
+    "hint": "« vous » désigne ceux qui rapportent",
+    "answer": [
+      "L'auteur de BD nous demande si nous avons aimé ses planches."
+    ],
+    "explain": {
+      "fr": "Double réalignement : le « vous » adressé aux rapporteurs devient « nous », et le possessif du locuteur d'origine passe à la 3e personne.",
+      "en": "Double realignment: the « vous » addressed to the reporters becomes « nous », and the original speaker's possessive moves to the third person.",
+      "uk": "Подвійне узгодження: « vous », звернене до тих, хто переказує, стає « nous », а присвійний займенник мовця переходить у третю особу."
+    },
+    "tags": [
+      "personne",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-023",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "présent → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "imparfait"
+    ],
+    "explain": {
+      "fr": "Le passé du verbe introducteur impose le recul d'un cran : le simultané se dit à l'imparfait.",
+      "en": "A past reporting verb forces a one-step backshift: simultaneity is expressed by the imparfait.",
+      "uk": "Минулий час дієслова-вводу вимагає зсуву на один щабель: одночасність передається imparfait."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-024",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "passé composé → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "plus-que-parfait"
+    ],
+    "explain": {
+      "fr": "L'antériorité par rapport à un repère déjà passé se marque au plus-que-parfait.",
+      "en": "Anteriority relative to an already past reference point is marked by the plus-que-parfait.",
+      "uk": "Передування щодо вже минулої точки відліку позначають plus-que-parfait."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-025",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "futur simple → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "conditionnel présent",
+      "conditionnel"
+    ],
+    "explain": {
+      "fr": "Le futur vu depuis le passé se rend par le conditionnel présent, forme du « futur dans le passé » : ce n'est pas l'imparfait.",
+      "en": "A future seen from the past is rendered by the conditionnel présent, the « future in the past » form: not the imparfait.",
+      "uk": "Майбутнє з погляду минулого передають conditionnel présent, тобто «майбутнім у минулому», а не imparfait."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-026",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "futur proche (aller + infinitif) → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "allait + infinitif",
+      "imparfait d'aller + infinitif",
+      "aller à l'imparfait + infinitif",
+      "imparfait de aller + infinitif"
+    ],
+    "explain": {
+      "fr": "Dans le futur proche, seul l'auxiliaire « aller » se conjugue : c'est donc lui, et lui seul, qui passe à l'imparfait.",
+      "en": "In the futur proche only the auxiliary « aller » is conjugated, so it alone shifts to the imparfait.",
+      "uk": "У futur proche відмінюється лише допоміжне « aller », тож саме воно переходить в imparfait."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-027",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "imparfait → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "imparfait"
+    ],
+    "explain": {
+      "fr": "L'imparfait est déjà un temps du passé non ponctuel : il n'a pas de cran de recul supplémentaire et reste invariable.",
+      "en": "The imparfait is already a non-punctual past tense: it has no further backshift step and stays unchanged.",
+      "uk": "Imparfait уже є неточковим минулим часом: додаткового зсуву не має і лишається незмінним."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-028",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "plus-que-parfait → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "plus-que-parfait"
+    ],
+    "explain": {
+      "fr": "Le plus-que-parfait est le terme final de la chaîne de recul : aucun temps ne le précède, il demeure identique.",
+      "en": "The plus-que-parfait is the end point of the backshift chain: nothing precedes it, so it stays identical.",
+      "uk": "Plus-que-parfait — кінцева ланка ланцюга зсуву: перед ним немає часу, тож він лишається незмінним."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "disc-029",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "conditionnel présent → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "conditionnel présent",
+      "conditionnel"
+    ],
+    "explain": {
+      "fr": "Le conditionnel est déjà la forme d'arrivée de la concordance : il ne subit donc aucune transformation supplémentaire.",
+      "en": "The conditionnel is already the output form of the backshift, so it undergoes no further change.",
+      "uk": "Conditionnel уже є результатом узгодження, тому додаткових змін не зазнає."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-030",
+    "ruleId": "concordance-temps",
+    "kind": "conjugate",
+    "prompt": "impératif → ?",
+    "hint": "verbe introducteur au passé",
+    "answer": [
+      "de + infinitif"
+    ],
+    "explain": {
+      "fr": "L'impératif n'ayant pas de forme subordonnée, il sort du système des temps et se rend par un infinitif introduit par « de », quel que soit le temps du verbe introducteur.",
+      "en": "Having no subordinate form, the imperative leaves the tense system and is rendered by an infinitive introduced by « de », whatever the reporting verb's tense.",
+      "uk": "Наказовий спосіб не має підрядної форми, тож виходить із системи часів і передається інфінітивом із « de », незалежно від часу дієслова-вводу."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-031",
+    "ruleId": "concordance-temps",
+    "kind": "choice",
+    "prompt": "« Je signerai le bail lundi », a-t-il dit. → Choisissez la transposition correcte.",
+    "hint": "futur dans le passé",
+    "choices": [
+      "Il a dit qu'il signait le bail lundi.",
+      "Il a dit qu'il signerait le bail lundi."
+    ],
+    "answer": [
+      "Il a dit qu'il signerait le bail lundi."
+    ],
+    "explain": {
+      "fr": "Confondre imparfait et conditionnel efface la valeur de postériorité : seul le conditionnel exprime un fait à venir vu depuis le passé.",
+      "en": "Confusing imparfait and conditionnel wipes out the sense of posteriority: only the conditionnel expresses a future event seen from the past.",
+      "uk": "Плутанина між imparfait і conditionnel знищує значення наступності: лише conditionnel передає майбутню дію з погляду минулого."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-032",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Je déménage demain. » → Il m'a dit…",
+    "hint": "temps, personne et repère temporel",
+    "answer": [
+      "Il m'a dit qu'il déménageait le lendemain."
+    ],
+    "explain": {
+      "fr": "Trois réglages simultanés : recul du temps, réalignement de la personne et transposition du repère temporel, qui ne se calcule plus depuis le moment de parole.",
+      "en": "Three simultaneous adjustments: tense backshift, person realignment and transposition of the time marker, which is no longer computed from the moment of speaking.",
+      "uk": "Три одночасні зміни: зсув часу, узгодження особи й перетворення часового маркера, який більше не відлічують від моменту мовлення."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-033",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« J'ai visité l'appartement hier. » → Elle m'a raconté…",
+    "hint": "antériorité + repère temporel",
+    "answer": [
+      "Elle m'a raconté qu'elle avait visité l'appartement la veille."
+    ],
+    "explain": {
+      "fr": "Un fait antérieur au récit passe au plus-que-parfait, et le repère déictique doit être recalculé par rapport au moment rapporté.",
+      "en": "An event prior to the narration moves to the plus-que-parfait, and the deictic marker must be recomputed against the reported moment.",
+      "uk": "Дія, що передує розповіді, переходить у plus-que-parfait, а дейктичний маркер перераховують щодо переказаного моменту."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-034",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Je vais repeindre le salon la semaine prochaine. » → Il m'a expliqué…",
+    "hint": "futur proche + repère temporel",
+    "answer": [
+      "Il m'a expliqué qu'il allait repeindre le salon la semaine suivante.",
+      "Il m'a expliqué qu'il allait repeindre le salon la semaine d'après."
+    ],
+    "explain": {
+      "fr": "Seul l'auxiliaire du futur proche recule ; parallèlement, « prochain » devient « suivant » car le repère cesse d'être le présent de l'énonciation.",
+      "en": "Only the futur proche auxiliary backshifts; in parallel « prochain » becomes « suivant » because the reference is no longer the moment of utterance.",
+      "uk": "Зсувається лише допоміжне дієслово futur proche; водночас « prochain » стає « suivant », бо точкою відліку вже не є момент мовлення."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-035",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Je signe mon contrat aujourd'hui. » → Elle a déclaré…",
+    "hint": "temps, possessif et repère temporel",
+    "answer": [
+      "Elle a déclaré qu'elle signait son contrat ce jour-là."
+    ],
+    "explain": {
+      "fr": "Le possessif se réaligne en même temps que le verbe recule, et « aujourd'hui », purement déictique, doit être remplacé par une expression anaphorique.",
+      "en": "The possessive realigns as the verb backshifts, and « aujourd'hui », being purely deictic, must be replaced by an anaphoric expression.",
+      "uk": "Присвійний займенник узгоджується одночасно зі зсувом дієслова, а суто дейктичне « aujourd'hui » треба замінити анафоричним виразом."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-036",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Je cherche un travail maintenant. » → Il a affirmé…",
+    "hint": "présent → ? et « maintenant » → ?",
+    "answer": [
+      "Il a affirmé qu'il cherchait un travail à ce moment-là.",
+      "Il a affirmé qu'à ce moment-là il cherchait un travail."
+    ],
+    "explain": {
+      "fr": "« Maintenant » renvoie au présent de l'énonciation d'origine : il faut le convertir en repère anaphorique pour rester cohérent avec le temps reculé.",
+      "en": "« Maintenant » points to the original moment of utterance and must be turned into an anaphoric marker to stay consistent with the backshifted tense.",
+      "uk": "« Maintenant » вказує на початковий момент мовлення, тож його перетворюють на анафоричний маркер, щоб узгодити зі зсунутим часом."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-037",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« J'ai quitté mon poste il y a deux jours. » → Elle m'a répondu…",
+    "hint": "« il y a » ne se garde pas",
+    "answer": [
+      "Elle m'a répondu qu'elle avait quitté son poste deux jours plus tôt.",
+      "Elle m'a répondu qu'elle avait quitté son poste deux jours auparavant."
+    ],
+    "explain": {
+      "fr": "« Il y a » compte à partir du moment de parole ; dans le récit rapporté, on lui substitue « plus tôt », qui compte à partir du moment évoqué.",
+      "en": "« Il y a » counts from the moment of speaking; in reported narration it is replaced by « plus tôt », which counts from the moment referred to.",
+      "uk": "« Il y a » відлічує від моменту мовлення; у непрямій мові його замінюють на « plus tôt », що відлічує від згаданого моменту."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-038",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Je vous rendrai les clés dans deux jours. » → Le locataire nous a promis…",
+    "hint": "futur dans le passé + « dans » → ?",
+    "answer": [
+      "Le locataire nous a promis qu'il nous rendrait les clés deux jours plus tard.",
+      "Le locataire nous a promis de nous rendre les clés deux jours plus tard."
+    ],
+    "explain": {
+      "fr": "Le futur devient conditionnel, « vous » se réaligne sur les rapporteurs et « dans » cède la place à « plus tard », repère calculé depuis le passé.",
+      "en": "The future becomes conditional, « vous » realigns onto the reporters, and « dans » gives way to « plus tard », a marker computed from the past.",
+      "uk": "Майбутній час стає умовним, « vous » узгоджується з тими, хто переказує, а « dans » поступається виразу « plus tard », який відлічують від минулого."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-039",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Je suis arrivé ici la semaine dernière. » → Il a ajouté…",
+    "hint": "repère de lieu et repère de temps",
+    "answer": [
+      "Il a ajouté qu'il était arrivé là la semaine précédente.",
+      "Il a ajouté qu'il était arrivé là-bas la semaine précédente.",
+      "Il a ajouté qu'il était arrivé là la semaine d'avant."
+    ],
+    "explain": {
+      "fr": "La transposition touche aussi les déictiques de lieu : « ici » devient « là », en même temps que « dernière » devient « précédente ».",
+      "en": "The transposition also affects place deictics: « ici » becomes « là », just as « dernière » becomes « précédente ».",
+      "uk": "Перетворення стосується й просторових дейктиків: « ici » стає « là », так само як « dernière » стає « précédente »."
+    },
+    "tags": [
+      "forme",
+      "personne",
+      "marqueur"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-040",
+    "ruleId": "concordance-temps",
+    "kind": "cloze",
+    "prompt": "« Je passe te voir demain », a-t-il dit. → Il a dit qu'il passait me voir ___.",
+    "hint": "deux mots",
+    "answer": [
+      "le lendemain"
+    ],
+    "explain": {
+      "fr": "Le repère temporel doit être transposé en même temps que le verbe : le laisser tel quel crée une incohérence entre le temps et le marqueur.",
+      "en": "The time marker must be transposed together with the verb: leaving it unchanged creates a clash between tense and marker.",
+      "uk": "Часовий маркер перетворюють одночасно з дієсловом: залишений незмінним, він суперечить зсунутому часу."
+    },
+    "tags": [
+      "marqueur"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-041",
+    "ruleId": "concordance-temps",
+    "kind": "cloze",
+    "prompt": "« J'ai rendu les clés hier », a-t-elle dit. → Elle a dit qu'elle avait rendu les clés ___.",
+    "hint": "deux mots",
+    "answer": [
+      "la veille"
+    ],
+    "explain": {
+      "fr": "« Hier » est un déictique du moment de parole ; sa contrepartie anaphorique s'impose dès que le récit est rapporté au passé.",
+      "en": "« Hier » is a deictic tied to the moment of speaking; its anaphoric counterpart is required once the account is reported in the past.",
+      "uk": "« Hier » — дейктик моменту мовлення; щойно розповідь переказано в минулому, потрібен його анафоричний відповідник."
+    },
+    "tags": [
+      "marqueur"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-042",
+    "ruleId": "concordance-temps",
+    "kind": "cloze",
+    "prompt": "« Il fait froid ici », a-t-il dit. → Il a dit qu'il faisait froid ___.",
+    "hint": "un mot, repère de lieu",
+    "answer": [
+      "là",
+      "là-bas"
+    ],
+    "explain": {
+      "fr": "Le rapport au passé déplace aussi le repère spatial : le lieu n'est plus celui où se trouve le rapporteur.",
+      "en": "Reporting in the past also shifts the spatial reference: the place is no longer where the reporter stands.",
+      "uk": "Переказ у минулому зміщує й просторову точку відліку: місце вже не там, де перебуває мовець-переказувач."
+    },
+    "tags": [
+      "marqueur"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-043",
+    "ruleId": "concordance-temps",
+    "kind": "cloze",
+    "prompt": "« Tu as aimé le film ? » m'a demandé Laurence. → Laurence m'a demandé si ___ aimé le film.",
+    "hint": "pronom + auxiliaire",
+    "answer": [
+      "j'avais"
+    ],
+    "explain": {
+      "fr": "Deux opérations en un seul mot : le « tu » adressé au rapporteur devient « je », et le passé composé recule au plus-que-parfait.",
+      "en": "Two operations in a single word: the « tu » addressed to the reporter becomes « je », and the passé composé backshifts to the plus-que-parfait.",
+      "uk": "Дві дії в одному слові: « tu », звернене до переказувача, стає « je », а passé composé зсувається в plus-que-parfait."
+    },
+    "tags": [
+      "personne",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-044",
+    "ruleId": "concordance-temps",
+    "kind": "cloze",
+    "prompt": "« Est-ce que tu viendras au vernissage ? » → Elle m'a demandé si je ___ au vernissage.",
+    "hint": "un seul mot, verbe « venir »",
+    "answer": [
+      "viendrais"
+    ],
+    "explain": {
+      "fr": "Le futur devient conditionnel présent ; attention à la forme, qui garde le radical du futur et prend les terminaisons de l'imparfait.",
+      "en": "The future becomes conditionnel présent; note the form, which keeps the future stem and takes imparfait endings.",
+      "uk": "Майбутній час стає conditionnel présent; форма зберігає основу майбутнього часу й отримує закінчення imparfait."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-045",
+    "ruleId": "concordance-temps",
+    "kind": "choice",
+    "prompt": "« Tu as vu mon dernier dessin ? » m'a demandé Théo. → Choisissez la transposition correcte.",
+    "hint": "deux repères à changer",
+    "choices": [
+      "Théo m'a demandé si tu avais vu son dernier dessin.",
+      "Théo m'a demandé si j'avais vu son dernier dessin.",
+      "Théo m'a demandé si j'avais vu mon dernier dessin."
+    ],
+    "answer": [
+      "Théo m'a demandé si j'avais vu son dernier dessin."
+    ],
+    "explain": {
+      "fr": "Les deux repères de personne bougent en sens inverse : celui de l'interlocuteur passe à « je », celui du locuteur d'origine à la 3e personne.",
+      "en": "The two person references move in opposite directions: the addressee's becomes « je », the original speaker's becomes third person.",
+      "uk": "Два показники особи змінюються в протилежних напрямках: адресатів стає « je », а мовців — третьою особою."
+    },
+    "tags": [
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-046",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Appelle le plombier ! » → Elle m'a dit…",
+    "hint": "impératif rapporté au passé",
+    "answer": [
+      "Elle m'a dit d'appeler le plombier."
+    ],
+    "explain": {
+      "fr": "L'infinitif étant hors du système des temps, le passé du verbe introducteur ne provoque ici aucune modification de forme.",
+      "en": "Since the infinitive lies outside the tense system, the past reporting verb causes no change of form here.",
+      "uk": "Оскільки інфінітив перебуває поза системою часів, минулий час дієслова-вводу тут не змінює форми."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "disc-047",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Ne parle pas de mon déménagement ! » → Il m'a dit…",
+    "hint": "impératif négatif + possessif",
+    "answer": [
+      "Il m'a dit de ne pas parler de son déménagement."
+    ],
+    "explain": {
+      "fr": "« De ne pas » précède en bloc l'infinitif, et le possessif se réaligne sur le locuteur d'origine devenu sujet du verbe introducteur.",
+      "en": "« De ne pas » precedes the infinitive as a block, and the possessive realigns onto the original speaker, now the reporting verb's subject.",
+      "uk": "« De ne pas » стоїть суцільним блоком перед інфінітивом, а присвійний займенник узгоджується з мовцем, який став підметом дієслова-вводу."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-048",
+    "ruleId": "concordance-temps",
+    "kind": "choice",
+    "prompt": "« Où est-ce que tu as rangé les outils ? » → Choisissez la transposition correcte.",
+    "hint": "ordre des mots et ponctuation",
+    "choices": [
+      "Il m'a demandé où avais-je rangé les outils.",
+      "Il m'a demandé où est-ce que j'avais rangé les outils ?",
+      "Il m'a demandé où j'avais rangé les outils."
+    ],
+    "answer": [
+      "Il m'a demandé où j'avais rangé les outils."
+    ],
+    "explain": {
+      "fr": "Trois marques du direct doivent disparaître ensemble : « est-ce que », l'inversion du sujet et le point d'interrogation.",
+      "en": "Three markers of direct speech must disappear together: « est-ce que », subject inversion and the question mark.",
+      "uk": "Три ознаки прямої мови зникають разом: « est-ce que », інверсія підмета і знак питання."
+    },
+    "tags": [
+      "ponctuation",
+      "forme",
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-049",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« J'habitais chez mes parents et j'ai déménagé en mars. » → Elle a répondu…",
+    "hint": "deux temps différents, un seul subordonnant répété",
+    "answer": [
+      "Elle a répondu qu'elle habitait chez ses parents et qu'elle avait déménagé en mars."
+    ],
+    "explain": {
+      "fr": "Chaque proposition subit le traitement propre à son temps, l'imparfait restant stable et le passé composé reculant, et « que » se répète devant chacune.",
+      "en": "Each clause gets the treatment its own tense requires, the imparfait staying stable and the passé composé backshifting, and « que » is repeated before each one.",
+      "uk": "Кожне підрядне опрацьовують відповідно до його часу: imparfait лишається, passé composé зсувається, а « que » повторюють перед кожним."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "disc-050",
+    "ruleId": "concordance-temps",
+    "kind": "transform",
+    "prompt": "« Qu'est-ce qui t'a décidé à changer de carrière ? » → Il m'a demandé…",
+    "hint": "interrogatif sujet + antériorité",
+    "answer": [
+      "Il m'a demandé ce qui m'avait décidé à changer de carrière.",
+      "Il m'a demandé ce qui m'avait décidée à changer de carrière."
+    ],
+    "explain": {
+      "fr": "L'interrogatif sujet se réduit à « ce qui », le pronom complément change de personne et le passé composé recule : les trois opérations sont indépendantes.",
+      "en": "The subject interrogative reduces to « ce qui », the object pronoun changes person and the passé composé backshifts: the three operations are independent.",
+      "uk": "Питальне слово-підмет скорочується до « ce qui », займенник-додаток змінює особу, а passé composé зсувається: ці три дії незалежні."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 3
+  }
+]

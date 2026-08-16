@@ -1,0 +1,1234 @@
+[
+  {
+    "id": "cond-001",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "vous / être",
+    "hint": "conditionnel présent",
+    "answer": [
+      "vous seriez"
+    ],
+    "explain": {
+      "fr": "Radical irrégulier ser- + terminaison de l'imparfait -iez pour vous, jamais -ons.",
+      "en": "Irregular stem ser- plus the imperfect ending -iez for vous, never -ons.",
+      "uk": "Неправильна основа ser- плюс закінчення imparfait -iez для vous, ніколи -ons."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-002",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "je / avoir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "j'aurais"
+    ],
+    "explain": {
+      "fr": "Radical aur- + -ais ; devant une voyelle, je s'élide obligatoirement en j'.",
+      "en": "Stem aur- plus -ais; before a vowel, je must elide to j'.",
+      "uk": "Основа aur- плюс -ais; перед голосною je обов'язково скорочується до j'."
+    },
+    "tags": [
+      "forme",
+      "elision"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-003",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "je / aller",
+    "hint": "conditionnel présent",
+    "answer": [
+      "j'irais"
+    ],
+    "explain": {
+      "fr": "Aller a le radical ir- au futur comme au conditionnel : j' + irais, jamais je irais.",
+      "en": "Aller uses the stem ir- in future and conditional: j' + irais, never je irais.",
+      "uk": "Aller має основу ir- у futur і conditionnel: j' + irais, ніколи je irais."
+    },
+    "tags": [
+      "forme",
+      "elision"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-004",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "nous / faire",
+    "hint": "conditionnel présent",
+    "answer": [
+      "nous ferions"
+    ],
+    "explain": {
+      "fr": "Radical fer- + terminaison -ions ; le e de fer- reste muet, on n'écrit pas faisions.",
+      "en": "Stem fer- plus the ending -ions; do not confuse it with the imperfect faisions.",
+      "uk": "Основа fer- плюс закінчення -ions; не плутати з imparfait faisions."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-005",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "tu / pouvoir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "tu pourrais"
+    ],
+    "explain": {
+      "fr": "Pouvoir donne pourr- avec deux r : celui du radical et celui du conditionnel.",
+      "en": "Pouvoir gives pourr- with a double r: one from the stem, one from the conditional marker.",
+      "uk": "Pouvoir дає pourr- з подвійним r: одне з основи, друге — показник conditionnel."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-006",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "je / vouloir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "je voudrais"
+    ],
+    "explain": {
+      "fr": "Le conditionnel exige le -r- du futur : voudr- + -ais, alors que je voulais est un imparfait.",
+      "en": "The conditional needs the future -r-: voudr- plus -ais, whereas je voulais is an imperfect.",
+      "uk": "Conditionnel вимагає -r- майбутнього часу: voudr- + -ais, тоді як je voulais — це imparfait."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-007",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "vous / devoir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "vous devriez"
+    ],
+    "explain": {
+      "fr": "Radical devr- + -iez ; la personne vous prend toujours -iez, jamais -ions ni -ons.",
+      "en": "Stem devr- plus -iez; the vous form always takes -iez, never -ions or -ons.",
+      "uk": "Основа devr- плюс -iez; форма vous завжди має -iez, ніколи -ions чи -ons."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-008",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "nous / savoir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "nous saurions"
+    ],
+    "explain": {
+      "fr": "Savoir a le radical contracté saur- ; nous impose la terminaison -ions.",
+      "en": "Savoir has the contracted stem saur-; nous requires the ending -ions.",
+      "uk": "Savoir має скорочену основу saur-; nous вимагає закінчення -ions."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-009",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "elles / voir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "elles verraient"
+    ],
+    "explain": {
+      "fr": "Voir fait verr- à deux r, suivi de -aient à la 3e personne du pluriel.",
+      "en": "Voir becomes verr- with a double r, followed by -aient in the third person plural.",
+      "uk": "Voir дає verr- з подвійним r, далі -aient у третій особі множини."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-010",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "ils / venir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "ils viendraient"
+    ],
+    "explain": {
+      "fr": "Venir insère un d dans son radical : viendr- + -aient, comme au futur ils viendront.",
+      "en": "Venir inserts a d in its stem: viendr- plus -aient, as in the future ils viendront.",
+      "uk": "Venir вставляє d в основу: viendr- + -aient, як у futur ils viendront."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-011",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "tu / tenir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "tu tiendrais"
+    ],
+    "explain": {
+      "fr": "Tenir suit venir : radical tiendr-, jamais le radical du présent tien-.",
+      "en": "Tenir follows venir: stem tiendr-, never the present stem tien-.",
+      "uk": "Tenir поводиться як venir: основа tiendr-, а не основа теперішнього часу tien-."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-012",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "nous / envoyer",
+    "hint": "conditionnel présent",
+    "answer": [
+      "nous enverrions"
+    ],
+    "explain": {
+      "fr": "Envoyer a le radical irrégulier enverr- ; on n'écrit pas envoyerions.",
+      "en": "Envoyer has the irregular stem enverr-; envoyerions does not exist.",
+      "uk": "Envoyer має неправильну основу enverr-; форми envoyerions не існує."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-013",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "vous / recevoir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "vous recevriez"
+    ],
+    "explain": {
+      "fr": "Radical recevr- (sans cédille ici) + -iez, la terminaison propre à vous.",
+      "en": "Stem recevr- (no cedilla here) plus -iez, the ending proper to vous.",
+      "uk": "Основа recevr- (без седилі) плюс -iez — закінчення для vous."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-014",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "je / courir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "je courrais"
+    ],
+    "explain": {
+      "fr": "Deux r distinguent le conditionnel je courrais de l'imparfait je courais.",
+      "en": "The double r distinguishes the conditional je courrais from the imperfect je courais.",
+      "uk": "Подвійне r відрізняє conditionnel je courrais від imparfait je courais."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-015",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "on / mourir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "on mourrait"
+    ],
+    "explain": {
+      "fr": "Mourir double le r au futur et au conditionnel : mourr- + -ait après on.",
+      "en": "Mourir doubles the r in future and conditional: mourr- plus -ait after on.",
+      "uk": "Mourir подвоює r у futur і conditionnel: mourr- + -ait після on."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-016",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "il / falloir",
+    "hint": "conditionnel présent, verbe impersonnel",
+    "answer": [
+      "il faudrait"
+    ],
+    "explain": {
+      "fr": "Falloir est impersonnel : seul il existe, sur le radical faudr-.",
+      "en": "Falloir is impersonal: only the il form exists, built on the stem faudr-.",
+      "uk": "Falloir безособове: існує лише форма il, утворена від основи faudr-."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-017",
+    "ruleId": "conditionnel-present",
+    "kind": "conjugate",
+    "prompt": "il / valoir",
+    "hint": "conditionnel présent",
+    "answer": [
+      "il vaudrait"
+    ],
+    "explain": {
+      "fr": "Valoir prend un d comme falloir : vaudr- + -ait, d'où il vaudrait mieux.",
+      "en": "Valoir takes a d like falloir: vaudr- plus -ait, giving il vaudrait mieux.",
+      "uk": "Valoir отримує d, як і falloir: vaudr- + -ait, звідси il vaudrait mieux."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-018",
+    "ruleId": "conditionnel-present",
+    "kind": "cloze",
+    "prompt": "Avec un peu plus de budget, nous ___ (louer) un appartement plus grand.",
+    "hint": "conditionnel présent",
+    "answer": [
+      "louerions"
+    ],
+    "explain": {
+      "fr": "Radical du futur louer- + terminaison de l'imparfait -ions : le e du radical se garde.",
+      "en": "Future stem louer- plus imperfect ending -ions: the stem's e is kept.",
+      "uk": "Основа futur louer- плюс закінчення imparfait -ions: e основи зберігається."
+    },
+    "tags": [
+      "forme",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-019",
+    "ruleId": "conditionnel-present",
+    "kind": "cloze",
+    "prompt": "À ta place, je ___ (prendre) ce studio près du cinéma.",
+    "hint": "conditionnel présent, conseil",
+    "answer": [
+      "prendrais"
+    ],
+    "explain": {
+      "fr": "Le conseil se dit au conditionnel : prendr- (radical du futur) + -ais.",
+      "en": "Advice is expressed with the conditional: prendr- (future stem) plus -ais.",
+      "uk": "Порада виражається через conditionnel: prendr- (основа futur) + -ais."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-020",
+    "ruleId": "conditionnel-present",
+    "kind": "cloze",
+    "prompt": "Est-ce que vous ___ (pouvoir) m'aider à porter les cartons ?",
+    "hint": "conditionnel de politesse",
+    "answer": [
+      "pourriez"
+    ],
+    "explain": {
+      "fr": "Le conditionnel adoucit la demande ; vous exige -iez sur le radical pourr-.",
+      "en": "The conditional softens the request; vous requires -iez on the stem pourr-.",
+      "uk": "Conditionnel пом'якшує прохання; vous вимагає -iez на основі pourr-."
+    },
+    "tags": [
+      "forme",
+      "registre",
+      "personne"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-021",
+    "ruleId": "conditionnel-present",
+    "kind": "cloze",
+    "prompt": "Selon le journal, l'actrice ___ (tourner) un nouveau film à Lyon.",
+    "hint": "conditionnel présent d'information non confirmée",
+    "answer": [
+      "tournerait"
+    ],
+    "explain": {
+      "fr": "Le conditionnel journalistique marque une information non vérifiée : tourner- + -ait.",
+      "en": "The journalistic conditional marks unverified information: tourner- plus -ait.",
+      "uk": "Журналістський conditionnel позначає неперевірену інформацію: tourner- + -ait."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-022",
+    "ruleId": "conditionnel-present",
+    "kind": "choice",
+    "prompt": "Vous ___ visiter le musée d'art moderne demain ?",
+    "hint": "conditionnel présent",
+    "choices": [
+      "voudriez",
+      "voudrions",
+      "vouliez"
+    ],
+    "answer": [
+      "voudriez"
+    ],
+    "explain": {
+      "fr": "Vous impose -iez, et le conditionnel garde le -r- de voudr-, absent de l'imparfait vouliez.",
+      "en": "Vous requires -iez, and the conditional keeps the -r- of voudr-, missing in the imperfect vouliez.",
+      "uk": "Vous вимагає -iez, а conditionnel зберігає -r- в основі voudr-, якого немає в imparfait vouliez."
+    },
+    "tags": [
+      "personne",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-023",
+    "ruleId": "conditionnel-present",
+    "kind": "choice",
+    "prompt": "Nous ___ vous remercier de votre accueil.",
+    "hint": "conditionnel présent",
+    "choices": [
+      "aimerions",
+      "aimeriez",
+      "aimerons"
+    ],
+    "answer": [
+      "aimerions"
+    ],
+    "explain": {
+      "fr": "Nous prend -ions ; aimerons est un futur et aimeriez appartient à vous.",
+      "en": "Nous takes -ions; aimerons is a future and aimeriez belongs to vous.",
+      "uk": "Nous має -ions; aimerons — це futur, а aimeriez належить до vous."
+    },
+    "tags": [
+      "personne",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-024",
+    "ruleId": "conditionnel-present",
+    "kind": "transform",
+    "prompt": "Je veux changer de métier.",
+    "hint": "Mets au conditionnel présent (politesse)",
+    "answer": [
+      "Je voudrais changer de métier."
+    ],
+    "explain": {
+      "fr": "Le présent vouloir sonne brutal ; le conditionnel voudr- + -ais atténue l'affirmation.",
+      "en": "The present of vouloir sounds blunt; the conditional voudr- plus -ais softens the statement.",
+      "uk": "Теперішній час vouloir звучить різко; conditionnel voudr- + -ais пом'якшує вислів."
+    },
+    "tags": [
+      "registre",
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-025",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "je / finir",
+    "hint": "conditionnel passé",
+    "answer": [
+      "j'aurais fini"
+    ],
+    "explain": {
+      "fr": "Auxiliaire avoir au conditionnel présent + participe passé ; je s'élide devant aurais.",
+      "en": "Auxiliary avoir in the present conditional plus the past participle; je elides before aurais.",
+      "uk": "Допоміжне avoir у conditionnel présent плюс дієприкметник; je скорочується перед aurais."
+    },
+    "tags": [
+      "forme",
+      "elision"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-026",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "elle / venir",
+    "hint": "conditionnel passé",
+    "answer": [
+      "elle serait venue"
+    ],
+    "explain": {
+      "fr": "Venir se conjugue avec être : le participe s'accorde avec le sujet féminin, d'où venue.",
+      "en": "Venir takes être, so the participle agrees with the feminine subject: venue.",
+      "uk": "Venir вживається з être, тому дієприкметник узгоджується з підметом жіночого роду: venue."
+    },
+    "tags": [
+      "accord",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-027",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "nous / partir",
+    "hint": "conditionnel passé",
+    "answer": [
+      "nous serions partis",
+      "nous serions parties"
+    ],
+    "explain": {
+      "fr": "Partir prend être ; le participe s'accorde au pluriel avec nous : partis (ou parties).",
+      "en": "Partir takes être; the participle agrees in the plural with nous: partis (or parties).",
+      "uk": "Partir вживається з être; дієприкметник узгоджується у множині з nous: partis (або parties)."
+    },
+    "tags": [
+      "accord",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-028",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "vous / se lever",
+    "hint": "conditionnel passé, verbe pronominal",
+    "answer": [
+      "vous vous seriez levés",
+      "vous vous seriez levées",
+      "vous vous seriez levé",
+      "vous vous seriez levée"
+    ],
+    "explain": {
+      "fr": "Les pronominaux se conjuguent avec être et le participe s'accorde avec le pronom réfléchi COD.",
+      "en": "Reflexive verbs take être, and the participle agrees with the reflexive pronoun as direct object.",
+      "uk": "Займенникові дієслова вживаються з être, і дієприкметник узгоджується зі зворотним займенником."
+    },
+    "tags": [
+      "accord",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-029",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "ils / devoir",
+    "hint": "conditionnel passé",
+    "answer": [
+      "ils auraient dû"
+    ],
+    "explain": {
+      "fr": "Auxiliaire avoir + participe dû, qui garde son accent circonflexe au masculin singulier.",
+      "en": "Auxiliary avoir plus the participle dû, which keeps its circumflex in the masculine singular.",
+      "uk": "Допоміжне avoir плюс дієприкметник dû, який зберігає циркумфлекс у чоловічому роді однини."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-030",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "tu / pouvoir",
+    "hint": "conditionnel passé",
+    "answer": [
+      "tu aurais pu"
+    ],
+    "explain": {
+      "fr": "Pouvoir se conjugue avec avoir ; le participe pu est invariable et ne prend pas d'accent circonflexe, à la différence de dû.",
+      "en": "Pouvoir takes avoir; the participle pu is invariable and carries no circumflex, unlike dû.",
+      "uk": "Pouvoir вживається з avoir; дієприкметник pu незмінний і не має циркумфлекса, на відміну від dû."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-031",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "elles / rester",
+    "hint": "conditionnel passé",
+    "answer": [
+      "elles seraient restées"
+    ],
+    "explain": {
+      "fr": "Rester fait partie des verbes avec être : accord en genre et en nombre, restées.",
+      "en": "Rester is one of the être verbs: the participle agrees in gender and number, restées.",
+      "uk": "Rester належить до дієслів з être: узгодження в роді й числі — restées."
+    },
+    "tags": [
+      "accord",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-032",
+    "ruleId": "conditionnel-passe",
+    "kind": "conjugate",
+    "prompt": "je / vouloir",
+    "hint": "conditionnel passé",
+    "answer": [
+      "j'aurais voulu"
+    ],
+    "explain": {
+      "fr": "Le regret se dit avec avoir au conditionnel + voulu ; je s'élide en j' devant aurais.",
+      "en": "Regret uses avoir in the conditional plus voulu; je elides to j' before aurais.",
+      "uk": "Жаль виражається через avoir у conditionnel плюс voulu; je скорочується до j' перед aurais."
+    },
+    "tags": [
+      "forme",
+      "elision"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-033",
+    "ruleId": "conditionnel-passe",
+    "kind": "cloze",
+    "prompt": "Elle ___ (venir) au vernissage avec nous, mais elle a raté son train.",
+    "hint": "conditionnel passé",
+    "answer": [
+      "serait venue"
+    ],
+    "explain": {
+      "fr": "Avec être, le participe s'accorde avec le sujet : elle serait venue, jamais venu.",
+      "en": "With être the participle agrees with the subject: elle serait venue, never venu.",
+      "uk": "З être дієприкметник узгоджується з підметом: elle serait venue, а не venu."
+    },
+    "tags": [
+      "accord",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-034",
+    "ruleId": "conditionnel-passe",
+    "kind": "cloze",
+    "prompt": "Nous ___ (aimer) visiter l'exposition, mais le musée était fermé.",
+    "hint": "conditionnel passé",
+    "answer": [
+      "aurions aimé"
+    ],
+    "explain": {
+      "fr": "Le conditionnel passé exprime un souhait non réalisé : aurions (nous) + participe aimé.",
+      "en": "The past conditional expresses an unfulfilled wish: aurions (nous) plus the participle aimé.",
+      "uk": "Conditionnel passé виражає нездійснене бажання: aurions (nous) плюс дієприкметник aimé."
+    },
+    "tags": [
+      "emploi",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-035",
+    "ruleId": "conditionnel-passe",
+    "kind": "cloze",
+    "prompt": "Vous ___ (devoir) réserver les billets de concert plus tôt.",
+    "hint": "conditionnel passé, reproche",
+    "answer": [
+      "auriez dû"
+    ],
+    "explain": {
+      "fr": "Devoir au conditionnel passé exprime le reproche ; vous prend auriez, pas aurions.",
+      "en": "Devoir in the past conditional expresses reproach; vous takes auriez, not aurions.",
+      "uk": "Devoir у conditionnel passé виражає докір; vous має auriez, а не aurions."
+    },
+    "tags": [
+      "emploi",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-036",
+    "ruleId": "conditionnel-passe",
+    "kind": "cloze",
+    "prompt": "Selon la presse, le tournage ___ (commencer) en mars dernier.",
+    "hint": "conditionnel passé d'information non confirmée",
+    "answer": [
+      "aurait commencé"
+    ],
+    "explain": {
+      "fr": "Le conditionnel passé rapporte un fait passé non vérifié : aurait + commencé.",
+      "en": "The past conditional reports an unverified past fact: aurait plus commencé.",
+      "uk": "Conditionnel passé передає неперевірений минулий факт: aurait плюс commencé."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-037",
+    "ruleId": "conditionnel-passe",
+    "kind": "choice",
+    "prompt": "Marie ___ déjà arrivée à l'agence immobilière.",
+    "hint": "conditionnel passé",
+    "choices": [
+      "serait",
+      "aurait",
+      "serais"
+    ],
+    "answer": [
+      "serait"
+    ],
+    "explain": {
+      "fr": "Arriver se conjugue avec être, et le sujet Marie est 3e personne du singulier : serait.",
+      "en": "Arriver takes être, and the subject Marie is third person singular: serait.",
+      "uk": "Arriver вживається з être, а підмет Marie — третя особа однини: serait."
+    },
+    "tags": [
+      "forme",
+      "accord"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-038",
+    "ruleId": "conditionnel-passe",
+    "kind": "choice",
+    "prompt": "Vous ___ prévenir le propriétaire avant de repeindre.",
+    "hint": "conditionnel passé",
+    "choices": [
+      "auriez dû",
+      "auriez du",
+      "seriez dû"
+    ],
+    "answer": [
+      "auriez dû"
+    ],
+    "explain": {
+      "fr": "Devoir prend avoir, et le participe s'écrit dû avec accent pour le distinguer de l'article du.",
+      "en": "Devoir takes avoir, and the participle is written dû with an accent to distinguish it from the article du.",
+      "uk": "Devoir вживається з avoir, а дієприкметник пишеться dû з наголосом, щоб відрізнити від артикля du."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-039",
+    "ruleId": "conditionnel-passe",
+    "kind": "transform",
+    "prompt": "Elle part sans nous prévenir.",
+    "hint": "Mets au conditionnel passé",
+    "answer": [
+      "Elle serait partie sans nous prévenir."
+    ],
+    "explain": {
+      "fr": "Partir exige être : serait + partie, avec accord au féminin singulier du sujet elle.",
+      "en": "Partir requires être: serait plus partie, agreeing with the feminine singular subject elle.",
+      "uk": "Partir вимагає être: serait плюс partie, з узгодженням із підметом elle жіночого роду."
+    },
+    "tags": [
+      "accord",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-040",
+    "ruleId": "conditionnel-passe",
+    "kind": "transform",
+    "prompt": "Tu peux nous aider à repeindre l'atelier.",
+    "hint": "Mets au conditionnel passé",
+    "answer": [
+      "Tu aurais pu nous aider à repeindre l'atelier."
+    ],
+    "explain": {
+      "fr": "On met l'auxiliaire avoir au conditionnel présent et pouvoir au participe passé pu.",
+      "en": "Put the auxiliary avoir in the present conditional and pouvoir in its past participle pu.",
+      "uk": "Допоміжне avoir ставимо в conditionnel présent, а pouvoir — у дієприкметник pu."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-041",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si j'___ (avoir) le temps, je viendrais à ton vernissage.",
+    "hint": "hypothèse de type II",
+    "answer": [
+      "avais"
+    ],
+    "explain": {
+      "fr": "Après si, jamais de conditionnel : l'hypothèse irréelle du présent demande l'imparfait.",
+      "en": "Never a conditional after si: an unreal present hypothesis requires the imperfect.",
+      "uk": "Після si ніколи не вживається conditionnel: нереальна гіпотеза теперішнього вимагає imparfait."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-042",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si tu ___ (venir) demain, nous irons au cinéma.",
+    "hint": "hypothèse de type I",
+    "answer": [
+      "viens"
+    ],
+    "explain": {
+      "fr": "Type I : si + présent, jamais si + futur, même quand la principale est au futur.",
+      "en": "Type I: si plus present, never si plus future, even when the main clause is in the future.",
+      "uk": "Тип I: si + теперішній час, ніколи si + futur, навіть якщо головне речення в майбутньому."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "cond-043",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si nous ___ (gagner) au loto, nous achèterions un loft.",
+    "hint": "hypothèse de type II",
+    "answer": [
+      "gagnions"
+    ],
+    "explain": {
+      "fr": "Gagner est régulier : radical gagn- + -ions à l'imparfait, sans lettre ajoutée.",
+      "en": "Gagner is regular: stem gagn- plus the imperfect ending -ions, with no added letters.",
+      "uk": "Gagner правильне дієслово: основа gagn- плюс закінчення imparfait -ions, без зайвих літер."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-044",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si vous aviez réservé, vous ___ (avoir) de meilleures places.",
+    "hint": "hypothèse de type III",
+    "answer": [
+      "auriez eu"
+    ],
+    "explain": {
+      "fr": "Type III : plus-que-parfait après si, conditionnel passé dans la principale.",
+      "en": "Type III: pluperfect after si, past conditional in the main clause.",
+      "uk": "Тип III: plus-que-parfait після si, conditionnel passé в головному реченні."
+    },
+    "tags": [
+      "emploi",
+      "personne"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-045",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "S'il ___ (faire) beau dimanche, nous irions au parc.",
+    "hint": "hypothèse de type II",
+    "answer": [
+      "faisait"
+    ],
+    "explain": {
+      "fr": "Si s'élide en s' devant il et ils seulement, jamais devant elle ou on ; la subordonnée reste à l'imparfait faisait.",
+      "en": "Si elides to s' only before il and ils, never before elle or on; the subordinate clause stays in the imperfect faisait.",
+      "uk": "Si скорочується до s' лише перед il та ils, ніколи перед elle чи on; підрядне речення лишається в imparfait faisait."
+    },
+    "tags": [
+      "elision",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-046",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Quand tu ___ (arriver) à Paris, tu me téléphoneras.",
+    "hint": "quand + futur",
+    "answer": [
+      "arriveras",
+      "seras arrivé",
+      "seras arrivée"
+    ],
+    "explain": {
+      "fr": "Contrairement à si, quand accepte et exige le futur pour un fait à venir.",
+      "en": "Unlike si, quand accepts and requires the future for an event still to come.",
+      "uk": "На відміну від si, quand допускає й вимагає futur для майбутньої дії."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-047",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Dès que le propriétaire ___ (répondre), je te préviendrai.",
+    "hint": "dès que + futur",
+    "answer": [
+      "répondra",
+      "aura répondu"
+    ],
+    "explain": {
+      "fr": "Dès que, comme lorsque, se construit avec le futur, jamais avec le présent de si.",
+      "en": "Dès que, like lorsque, is built with the future, not with the present used after si.",
+      "uk": "Dès que, як і lorsque, вживається з futur, а не з теперішнім, як після si."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-048",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "J'espère que tu ___ (pouvoir) venir à la première du film.",
+    "hint": "espérer que + futur",
+    "answer": [
+      "pourras"
+    ],
+    "explain": {
+      "fr": "Espérer que est suivi de l'indicatif, jamais du subjonctif ; pour un fait à venir, on emploie le futur : tu pourras.",
+      "en": "Espérer que is followed by the indicative, never the subjunctive; for a future event use the future: tu pourras.",
+      "uk": "Espérer que вживається з дійсним способом, ніколи з subjonctif; для майбутньої дії вживається futur: tu pourras."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-049",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Lorsque nous ___ (être) installés dans le nouvel appartement, nous vous inviterons.",
+    "hint": "lorsque + futur",
+    "answer": [
+      "serons"
+    ],
+    "explain": {
+      "fr": "Lorsque impose le futur simple serons ; serions serait un conditionnel, impossible ici.",
+      "en": "Lorsque requires the simple future serons; serions would be a conditional, impossible here.",
+      "uk": "Lorsque вимагає простого майбутнього serons; serions — це conditionnel, тут неможливий."
+    },
+    "tags": [
+      "emploi",
+      "personne"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-050",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si elle avait su, elle ___ (ne pas accepter) ce poste à l'étranger.",
+    "hint": "hypothèse de type III, forme négative",
+    "answer": [
+      "n'aurait pas accepté"
+    ],
+    "explain": {
+      "fr": "La négation encadre l'auxiliaire : ne (élidé en n') + aurait + pas + participe accepté.",
+      "en": "The negation frames the auxiliary: ne (elided to n') plus aurait plus pas plus the participle accepté.",
+      "uk": "Заперечення обрамляє допоміжне дієслово: ne (як n') + aurait + pas + дієприкметник accepté."
+    },
+    "tags": [
+      "forme",
+      "elision"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-051",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si le ciel se couvrait, il ___ (pleuvoir) avant la fin du tournage.",
+    "hint": "hypothèse de type II",
+    "answer": [
+      "pleuvrait"
+    ],
+    "explain": {
+      "fr": "La principale d'une hypothèse de type II est au conditionnel : radical pleuvr- + -ait.",
+      "en": "The main clause of a type II hypothesis is conditional: stem pleuvr- plus -ait.",
+      "uk": "Головне речення гіпотези типу II стоїть у conditionnel: основа pleuvr- + -ait."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-052",
+    "ruleId": "si-clauses",
+    "kind": "cloze",
+    "prompt": "Si vous ___ (savoir) le prix du loyer, vous ne signeriez pas.",
+    "hint": "hypothèse de type II",
+    "answer": [
+      "saviez"
+    ],
+    "explain": {
+      "fr": "Après si on met l'imparfait saviez ; sauriez serait un conditionnel, interdit ici.",
+      "en": "After si use the imperfect saviez; sauriez would be a conditional, forbidden here.",
+      "uk": "Після si вживаємо imparfait saviez; sauriez — це conditionnel, тут заборонений."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-053",
+    "ruleId": "si-clauses",
+    "kind": "choice",
+    "prompt": "Si j'avais plus d'argent, j'___ un appartement en centre-ville.",
+    "hint": "hypothèse de type II",
+    "choices": [
+      "achèterais",
+      "achèterai",
+      "acheterais"
+    ],
+    "answer": [
+      "achèterais"
+    ],
+    "explain": {
+      "fr": "Type II : conditionnel dans la principale, et acheter prend un accent grave sur toutes ces formes.",
+      "en": "Type II: conditional in the main clause, and acheter takes a grave accent throughout these forms.",
+      "uk": "Тип II: conditionnel у головному реченні, і acheter має accent grave в усіх цих формах."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-054",
+    "ruleId": "si-clauses",
+    "kind": "choice",
+    "prompt": "Si tu ___ ce film, tu comprendrais mieux le roman.",
+    "hint": "hypothèse de type II",
+    "choices": [
+      "voyais",
+      "verrais",
+      "verrait"
+    ],
+    "answer": [
+      "voyais"
+    ],
+    "explain": {
+      "fr": "La subordonnée en si porte l'imparfait ; le conditionnel verrais reste réservé à la principale.",
+      "en": "The si clause carries the imperfect; the conditional verrais belongs only in the main clause.",
+      "uk": "Підрядне з si має imparfait; conditionnel verrais можливий лише в головному реченні."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-055",
+    "ruleId": "si-clauses",
+    "kind": "choice",
+    "prompt": "Si vous étiez arrivés plus tôt, vous ___ le début du concert.",
+    "hint": "hypothèse de type III",
+    "choices": [
+      "auriez entendu",
+      "aviez entendu",
+      "auriez entendus"
+    ],
+    "answer": [
+      "auriez entendu"
+    ],
+    "explain": {
+      "fr": "Conditionnel passé dans la principale, et avec avoir le participe ne s'accorde pas avec le sujet.",
+      "en": "Past conditional in the main clause, and with avoir the participle does not agree with the subject.",
+      "uk": "У головному реченні conditionnel passé, і з avoir дієприкметник не узгоджується з підметом."
+    },
+    "tags": [
+      "accord",
+      "emploi"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-056",
+    "ruleId": "si-clauses",
+    "kind": "choice",
+    "prompt": "Dès qu'il ___ son diplôme, il cherchera du travail dans l'édition.",
+    "hint": "dès que + futur",
+    "choices": [
+      "aura",
+      "aurait",
+      "avait"
+    ],
+    "answer": [
+      "aura"
+    ],
+    "explain": {
+      "fr": "Dès que exige le futur quand la principale est au futur, à la différence de si.",
+      "en": "Dès que requires the future when the main clause is future, unlike si.",
+      "uk": "Dès que вимагає futur, коли головне речення в майбутньому — на відміну від si."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-057",
+    "ruleId": "si-clauses",
+    "kind": "transform",
+    "prompt": "Je n'ai pas assez d'argent, donc je ne déménage pas.",
+    "hint": "Type II : exprime l'hypothèse avec si",
+    "answer": [
+      "Si j'avais assez d'argent, je déménagerais.",
+      "Si j'avais plus d'argent, je déménagerais."
+    ],
+    "explain": {
+      "fr": "On passe au type II : imparfait après si, conditionnel présent déménagerais dans la principale.",
+      "en": "Move to type II: imperfect after si, present conditional déménagerais in the main clause.",
+      "uk": "Переходимо до типу II: imparfait після si, conditionnel présent déménagerais у головному реченні."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-058",
+    "ruleId": "si-clauses",
+    "kind": "transform",
+    "prompt": "Tu ne m'as pas prévenu, donc je ne suis pas venu à la réunion.",
+    "hint": "Type III : exprime l'hypothèse avec si",
+    "answer": [
+      "Si tu m'avais prévenu, je serais venu à la réunion.",
+      "Si tu m'avais prévenue, je serais venue à la réunion."
+    ],
+    "explain": {
+      "fr": "Type III : plus-que-parfait après si et conditionnel passé avec être, donc accord de venu.",
+      "en": "Type III: pluperfect after si and past conditional with être, hence agreement on venu.",
+      "uk": "Тип III: plus-que-parfait після si і conditionnel passé з être, тому узгодження venu."
+    },
+    "tags": [
+      "emploi",
+      "accord"
+    ],
+    "level": 3
+  },
+  {
+    "id": "cond-059",
+    "ruleId": "si-clauses",
+    "kind": "transform",
+    "prompt": "Si j'ai le temps, je passerai à la galerie.",
+    "hint": "Mets au type II",
+    "answer": [
+      "Si j'avais le temps, je passerais à la galerie."
+    ],
+    "explain": {
+      "fr": "Le type II recule d'un cran : présent devient imparfait, futur devient conditionnel présent.",
+      "en": "Type II shifts one step back: present becomes imperfect, future becomes present conditional.",
+      "uk": "Тип II зсуває на крок назад: теперішній стає imparfait, futur — conditionnel présent."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "cond-060",
+    "ruleId": "si-clauses",
+    "kind": "transform",
+    "prompt": "Si nous partions plus tôt, nous éviterions les embouteillages.",
+    "hint": "Mets au type III",
+    "answer": [
+      "Si nous étions partis plus tôt, nous aurions évité les embouteillages.",
+      "Si nous étions parties plus tôt, nous aurions évité les embouteillages."
+    ],
+    "explain": {
+      "fr": "Le type III recule encore : imparfait devient plus-que-parfait avec être et accord partis.",
+      "en": "Type III shifts back again: imperfect becomes pluperfect with être and agreement on partis.",
+      "uk": "Тип III зсуває ще далі: imparfait стає plus-que-parfait з être і узгодженням partis."
+    },
+    "tags": [
+      "emploi",
+      "accord"
+    ],
+    "level": 3
+  }
+]

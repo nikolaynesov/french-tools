@@ -1,0 +1,71 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm --prefix reference-app install
+          npm --prefix exercises-app install
+          npm --prefix vocab-app install
+
+      - name: Generate content bank + build the three apps
+        run: npm run build
+
+      - name: Type-check
+        run: npm run check
+
+      - name: Answer-key harness (no good answer refused, no bad one accepted)
+        run: |
+          cd exercises-app
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+          node harness.mjs
+
+      - name: Assemble the site
+        run: |
+          mkdir -p site
+          cp index.html site/
+          for app in reference-app exercises-app vocab-app; do
+            mkdir -p "site/$app/dist"
+            cp "$app/index.html" "$app/styles.css" "site/$app/"
+            cp "$app"/dist/app.js "$app"/dist/standalone.html "site/$app/dist/"
+          done
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

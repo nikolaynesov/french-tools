@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "conn-001",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "___ il pleuvait, la visite du Cyclop a été annulée.",
+    "hint": "connecteur toujours en tête de phrase",
+    "choices": [
+      "Comme",
+      "Car",
+      "À cause de"
+    ],
+    "answer": [
+      "Comme"
+    ],
+    "explain": {
+      "fr": "Comme introduit une cause et occupe obligatoirement la première place de la phrase.",
+      "en": "Comme introduces a cause and must stand at the very start of the sentence.",
+      "uk": "Comme вводить причину і обов'язково стоїть на початку речення."
+    },
+    "tags": [
+      "position",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-002",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "La visite du Cyclop a été annulée, ___ il pleuvait.",
+    "hint": "connecteur qui relie deux propositions",
+    "choices": [
+      "car",
+      "comme",
+      "grâce à"
+    ],
+    "answer": [
+      "car"
+    ],
+    "explain": {
+      "fr": "Car relie deux propositions et se place entre elles : dans la phrase courante, il n'ouvre pas la phrase.",
+      "en": "Car links two clauses and stands between them: in ordinary usage it does not open the sentence.",
+      "uk": "Car з'єднує дві частини речення і стоїть між ними: у звичайному вжитку воно не починає речення."
+    },
+    "tags": [
+      "syntaxe",
+      "position"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-003",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "___ tu connais déjà le quartier, tu nous guideras jusqu'à l'atelier de sculpture.",
+    "hint": "cause déjà connue de l'interlocuteur",
+    "choices": [
+      "Puisque",
+      "Car",
+      "Grâce à"
+    ],
+    "answer": [
+      "Puisque"
+    ],
+    "explain": {
+      "fr": "Puisque présente une cause que l'interlocuteur connaît déjà et sert d'argument.",
+      "en": "Puisque presents a cause the listener already knows and uses it as an argument.",
+      "uk": "Puisque подає причину, вже відому співрозмовнику, як аргумент."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-004",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "___ que les subventions ont été refusées, la rénovation du musée est reportée.",
+    "hint": "registre formel, texte administratif",
+    "choices": [
+      "Étant donné",
+      "Vu",
+      "Grâce à ce"
+    ],
+    "answer": [
+      "Étant donné"
+    ],
+    "explain": {
+      "fr": "Étant donné que est la locution causale du registre soutenu, propre à l'écrit administratif.",
+      "en": "Étant donné que is the formal causal phrase, typical of administrative writing.",
+      "uk": "Étant donné que — причинова сполука офіційного стилю, типова для документів."
+    },
+    "tags": [
+      "registre"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-005",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "— Tu prends le bus ? — Oui, ___ que ma voiture est au garage.",
+    "hint": "registre oral, conversation",
+    "choices": [
+      "vu",
+      "étant donné",
+      "en raison de ce"
+    ],
+    "answer": [
+      "vu"
+    ],
+    "explain": {
+      "fr": "Vu que est la variante orale et familière des locutions causales.",
+      "en": "Vu que is the spoken, informal variant among causal phrases.",
+      "uk": "Vu que — розмовний, неформальний варіант причинової сполуки."
+    },
+    "tags": [
+      "registre"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-006",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "— Pourquoi as-tu choisi la BD plutôt que le cinéma ? — ___ le dessin me plaît davantage.",
+    "hint": "réponse directe à une question en « pourquoi »",
+    "answer": [
+      "Parce que"
+    ],
+    "explain": {
+      "fr": "Seul parce que peut ouvrir une réponse à une question introduite par pourquoi.",
+      "en": "Only parce que can open an answer to a pourquoi question.",
+      "uk": "Лише parce que може починати відповідь на запитання з pourquoi."
+    },
+    "tags": [
+      "emploi",
+      "position"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-007",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "Le musée est fermé ___ travaux.",
+    "hint": "registre formel, + nom",
+    "answer": [
+      "en raison des"
+    ],
+    "explain": {
+      "fr": "En raison de est la locution formelle suivie d'un nom ; elle se contracte avec l'article défini.",
+      "en": "En raison de is the formal phrase followed by a noun, and it contracts with the definite article.",
+      "uk": "En raison de — офіційна сполука перед іменником, що зливається з означеним артиклем."
+    },
+    "tags": [
+      "registre",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-008",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "Nous sommes arrivés en retard à l'entretien ___ embouteillages.",
+    "hint": "résultat subi, négatif",
+    "choices": [
+      "à cause des",
+      "grâce aux",
+      "faute de"
+    ],
+    "answer": [
+      "à cause des"
+    ],
+    "explain": {
+      "fr": "À cause de introduit une cause dont le résultat est négatif ou subi.",
+      "en": "À cause de introduces a cause whose result is negative or unwanted.",
+      "uk": "À cause de вводить причину з негативним, небажаним наслідком."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-009",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "___ un mécène, la sculpture a pu être restaurée.",
+    "hint": "résultat positif",
+    "choices": [
+      "Grâce à",
+      "À cause d'",
+      "Faute d'"
+    ],
+    "answer": [
+      "Grâce à"
+    ],
+    "explain": {
+      "fr": "Grâce à est réservé aux causes dont le résultat est favorable.",
+      "en": "Grâce à is reserved for causes with a favourable outcome.",
+      "uk": "Grâce à вживається лише тоді, коли наслідок сприятливий."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-010",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "La séance de cinéma a été annulée ___ retard du projectionniste.",
+    "hint": "attention à la contraction",
+    "answer": [
+      "à cause du",
+      "en raison du"
+    ],
+    "explain": {
+      "fr": "La préposition de se contracte obligatoirement avec le : de + le donne du.",
+      "en": "The preposition de must contract with le: de + le becomes du.",
+      "uk": "Прийменник de обов'язково зливається з le: de + le = du."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-011",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "Le tournage est reporté ___ la pluie.",
+    "hint": "+ nom féminin",
+    "answer": [
+      "à cause de",
+      "en raison de"
+    ],
+    "explain": {
+      "fr": "Devant l'article la il n'y a aucune contraction : la locution garde sa forme de base.",
+      "en": "Before the article la there is no contraction: the phrase keeps its base form.",
+      "uk": "Перед артиклем la злиття не відбувається: сполука зберігає базову форму."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-012",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "J'ai trouvé ce studio ___ conseils de mon agent immobilier.",
+    "hint": "résultat positif, + nom pluriel",
+    "answer": [
+      "grâce aux"
+    ],
+    "explain": {
+      "fr": "La préposition à se contracte avec les : à + les donne aux.",
+      "en": "The preposition à contracts with les: à + les becomes aux.",
+      "uk": "Прийменник à зливається з les: à + les = aux."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-013",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "Le festival de BD a été annulé ___ moyens.",
+    "hint": "= par manque de",
+    "answer": [
+      "faute de",
+      "par manque de"
+    ],
+    "explain": {
+      "fr": "Faute de exprime une cause négative par manque et se construit sans article.",
+      "en": "Faute de expresses a cause based on lack and takes no article.",
+      "uk": "Faute de виражає причину-нестачу і вживається без артикля."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-014",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "___ la neige, tous les trains de la ligne sont supprimés.",
+    "hint": "regarde ce qui suit : un nom ou un verbe conjugué ?",
+    "choices": [
+      "À cause de",
+      "Parce que",
+      "Car"
+    ],
+    "answer": [
+      "À cause de"
+    ],
+    "explain": {
+      "fr": "À cause de, grâce à et en raison de se construisent avec un nom, parce que et car avec une proposition conjuguée.",
+      "en": "À cause de, grâce à and en raison de take a noun, while parce que and car take a full clause.",
+      "uk": "À cause de, grâce à, en raison de вимагають іменника, а parce que й car — підрядного речення."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-015",
+    "ruleId": "cause-consequence",
+    "kind": "transform",
+    "prompt": "Le musée a fermé parce que les travaux ont commencé.",
+    "hint": "Exprime la même idée avec un nom",
+    "answer": [
+      "Le musée a fermé à cause du début des travaux.",
+      "Le musée a fermé en raison du début des travaux.",
+      "Le musée a fermé à cause du commencement des travaux.",
+      "Le musée a fermé en raison du commencement des travaux."
+    ],
+    "explain": {
+      "fr": "Le passage de la proposition au groupe nominal impose une locution prépositionnelle et la contraction de l'article.",
+      "en": "Moving from clause to noun phrase requires a prepositional phrase and article contraction.",
+      "uk": "Перехід від підрядного до іменникової групи вимагає прийменникової сполуки та злиття артикля."
+    },
+    "tags": [
+      "syntaxe",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-016",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "J'ai raté le dernier métro, ___ j'ai dormi chez un ami.",
+    "hint": "registre familier",
+    "choices": [
+      "du coup",
+      "par conséquent",
+      "c'est pourquoi"
+    ],
+    "answer": [
+      "du coup"
+    ],
+    "explain": {
+      "fr": "Du coup est le connecteur de conséquence propre au registre familier oral.",
+      "en": "Du coup is the consequence connector belonging to informal spoken register.",
+      "uk": "Du coup — сполучник наслідку розмовного, фамільярного регістру."
+    },
+    "tags": [
+      "registre"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-017",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "Les crédits ont été réduits ; ___, le chantier de rénovation est suspendu.",
+    "hint": "registre formel, écrit",
+    "choices": [
+      "par conséquent",
+      "du coup",
+      "alors"
+    ],
+    "answer": [
+      "par conséquent"
+    ],
+    "explain": {
+      "fr": "Par conséquent est le connecteur de conséquence du registre soutenu.",
+      "en": "Par conséquent is the consequence connector of the formal register.",
+      "uk": "Par conséquent — сполучник наслідку високого, книжного стилю."
+    },
+    "tags": [
+      "registre"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-018",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "La salle était devenue trop petite ; ___ nous avons déplacé l'exposition.",
+    "hint": "met en relief la conséquence",
+    "answer": [
+      "c'est pourquoi",
+      "c'est pour cela que",
+      "c'est pour ça que",
+      "c'est la raison pour laquelle",
+      "voilà pourquoi"
+    ],
+    "explain": {
+      "fr": "Ces tournures présentatives mettent en relief la conséquence qui suit.",
+      "en": "These presentative structures foreground the consequence that follows.",
+      "uk": "Ці видільні звороти підкреслюють наслідок, що йде далі."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-019",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "Mon train a été supprimé, ___ j'ai manqué mon entretien d'embauche.",
+    "hint": "locution conjonctive + indicatif",
+    "answer": [
+      "si bien que",
+      "de sorte que",
+      "de telle sorte que"
+    ],
+    "explain": {
+      "fr": "Si bien que est une conjonction de conséquence suivie de l'indicatif, à l'intérieur de la phrase.",
+      "en": "Si bien que is a consequence conjunction followed by the indicative, inside the sentence.",
+      "uk": "Si bien que — сполучник наслідку з дійсним способом, усередині речення."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-020",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "Le film était ___ long que je me suis endormi au bout d'une heure.",
+    "hint": "adverbe d'intensité devant un adjectif",
+    "answer": [
+      "si",
+      "tellement"
+    ],
+    "explain": {
+      "fr": "L'intensité portant sur un adjectif s'exprime par si ou tellement, repris par que.",
+      "en": "Intensity bearing on an adjective is expressed by si or tellement, resumed by que.",
+      "uk": "Інтенсивність при прикметнику передається через si або tellement із подальшим que."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-021",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "Il y avait ___ monde au vernissage que nous n'avons rien vu.",
+    "hint": "intensité devant un nom",
+    "answer": [
+      "tellement de",
+      "tant de"
+    ],
+    "explain": {
+      "fr": "Devant un nom, l'intensité s'exprime par tellement de ou tant de, jamais par si.",
+      "en": "Before a noun, intensity uses tellement de or tant de, never si.",
+      "uk": "Перед іменником інтенсивність виражають tellement de або tant de, але не si."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-022",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "Les loyers ont beaucoup augmenté, ___ les jeunes quittent le centre-ville.",
+    "hint": "reprend toute la proposition précédente",
+    "choices": [
+      "ce qui fait que",
+      "c'est pourquoi que",
+      "si bien"
+    ],
+    "answer": [
+      "ce qui fait que"
+    ],
+    "explain": {
+      "fr": "Ce qui fait que reprend par un relatif l'ensemble de la proposition précédente et annonce la conséquence.",
+      "en": "Ce qui fait que uses a relative to sum up the whole preceding clause before the consequence.",
+      "uk": "Ce qui fait que відносним займенником узагальнює попередню частину й уводить наслідок."
+    },
+    "tags": [
+      "forme",
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-023",
+    "ruleId": "cause-consequence",
+    "kind": "cloze",
+    "prompt": "La grève des transports ___ de gros retards sur toute la ligne.",
+    "hint": "verbe de conséquence, passé composé",
+    "answer": [
+      "a provoqué",
+      "a entraîné",
+      "a causé",
+      "a occasionné",
+      "a engendré"
+    ],
+    "explain": {
+      "fr": "Provoquer, entraîner et causer ont la cause pour sujet et la conséquence pour COD, sans préposition.",
+      "en": "Provoquer, entraîner and causer take the cause as subject and the consequence as direct object, with no preposition.",
+      "uk": "Provoquer, entraîner, causer мають причину як підмет і наслідок як прямий додаток, без прийменника."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-024",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "Ces fissures ___ par un défaut de construction.",
+    "hint": "attention à la préposition qui suit",
+    "choices": [
+      "s'expliquent",
+      "résultent",
+      "entraînent"
+    ],
+    "answer": [
+      "s'expliquent"
+    ],
+    "explain": {
+      "fr": "S'expliquer se construit avec par, alors que résulter exige de : la préposition impose le verbe.",
+      "en": "S'expliquer takes par whereas résulter requires de, so the preposition dictates the verb.",
+      "uk": "S'expliquer вимагає par, а résulter — de: прийменник визначає вибір дієслова."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-025",
+    "ruleId": "cause-consequence",
+    "kind": "choice",
+    "prompt": "Il pleuvait à verse, ___ on est restés à la maison.",
+    "hint": "registre oral courant",
+    "choices": [
+      "alors",
+      "car",
+      "comme"
+    ],
+    "answer": [
+      "alors"
+    ],
+    "explain": {
+      "fr": "Alors marque la conséquence à l'oral, là où car et comme introduiraient au contraire la cause.",
+      "en": "Alors marks consequence in speech, while car and comme would introduce the cause instead.",
+      "uk": "Alors позначає наслідок в усному мовленні, тоді як car і comme вводили б причину."
+    },
+    "tags": [
+      "registre",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-026",
+    "ruleId": "cause-consequence",
+    "kind": "transform",
+    "prompt": "Il y a eu un court-circuit, donc l'atelier a brûlé.",
+    "hint": "Commence par « Un court-circuit » et nominalise la conséquence : l'incendie de l'atelier (être à l'origine de / avoir pour conséquence)",
+    "answer": [
+      "Un court-circuit est à l'origine de l'incendie de l'atelier.",
+      "Un court-circuit a eu pour conséquence l'incendie de l'atelier.",
+      "Un court-circuit a provoqué l'incendie de l'atelier.",
+      "Un court-circuit a entraîné l'incendie de l'atelier."
+    ],
+    "explain": {
+      "fr": "Avec être à l'origine de ou avoir pour conséquence, la cause devient sujet et la conséquence un groupe nominal.",
+      "en": "With être à l'origine de or avoir pour conséquence, the cause becomes subject and the consequence a noun phrase.",
+      "uk": "Із être à l'origine de чи avoir pour conséquence причина стає підметом, а наслідок — іменниковою групою."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-027",
+    "ruleId": "restriction",
+    "kind": "transform",
+    "prompt": "Je bois seulement du café le matin.",
+    "hint": "Transforme avec ne… que",
+    "answer": [
+      "Je ne bois que du café le matin."
+    ],
+    "explain": {
+      "fr": "Ne… que restreint sans nier : l'article partitif reste intact, contrairement à la négation.",
+      "en": "Ne… que restricts without negating, so the partitive article stays unchanged, unlike after a negation.",
+      "uk": "Ne… que обмежує, а не заперечує, тому частковий артикль залишається без змін."
+    },
+    "tags": [
+      "syntaxe",
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-028",
+    "ruleId": "restriction",
+    "kind": "transform",
+    "prompt": "J'ai acheté seulement des BD à la librairie.",
+    "hint": "Transforme avec ne… que",
+    "answer": [
+      "Je n'ai acheté que des BD à la librairie."
+    ],
+    "explain": {
+      "fr": "Aux temps composés, que se place devant l'élément restreint, après le participe, et l'article indéfini est conservé.",
+      "en": "In compound tenses que goes before the restricted element, after the participle, and the indefinite article is kept.",
+      "uk": "У складних часах que стоїть перед обмеженим членом, після дієприкметника, а неозначений артикль зберігається."
+    },
+    "tags": [
+      "position",
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-029",
+    "ruleId": "restriction",
+    "kind": "choice",
+    "prompt": "Dans cet atelier, on ne fabrique ___ sculptures en métal.",
+    "hint": "restriction, pas négation",
+    "choices": [
+      "que des",
+      "que de",
+      "pas de"
+    ],
+    "answer": [
+      "que des"
+    ],
+    "explain": {
+      "fr": "La règle « des devient de après une négation » ne s'applique pas à ne… que, qui n'est pas une négation.",
+      "en": "The rule turning des into de after a negation does not apply to ne… que, which is not a negation.",
+      "uk": "Правило «des стає de після заперечення» не діє для ne… que, бо це не заперечення."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-030",
+    "ruleId": "restriction",
+    "kind": "choice",
+    "prompt": "Pendant le tournage, il ne boit ___ eau.",
+    "hint": "restriction (ne… que), pas négation : partitif devant voyelle",
+    "choices": [
+      "que de l'",
+      "que d'",
+      "pas d'"
+    ],
+    "answer": [
+      "que de l'"
+    ],
+    "explain": {
+      "fr": "Le partitif complet est maintenu après ne… que ; seule la négation réelle le réduit à de.",
+      "en": "The full partitive is kept after ne… que; only a true negation reduces it to de.",
+      "uk": "Після ne… que частковий артикль зберігається повністю; лише справжнє заперечення зводить його до de."
+    },
+    "tags": [
+      "syntaxe",
+      "elision"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-031",
+    "ruleId": "restriction",
+    "kind": "cloze",
+    "prompt": "Faute de temps, nous n'avons visité ___ deux salles du musée.",
+    "hint": "restriction portant sur la quantité",
+    "answer": [
+      "que"
+    ],
+    "explain": {
+      "fr": "Que se place immédiatement devant l'élément sur lequel porte la restriction.",
+      "en": "Que is placed immediately before the element the restriction bears on.",
+      "uk": "Que ставиться безпосередньо перед членом речення, якого стосується обмеження."
+    },
+    "tags": [
+      "position"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-032",
+    "ruleId": "restriction",
+    "kind": "choice",
+    "prompt": "Choisis la phrase correcte.",
+    "hint": "place de « que » au passé composé",
+    "choices": [
+      "Je n'ai que vu le premier épisode.",
+      "Je n'ai vu que le premier épisode."
+    ],
+    "answer": [
+      "Je n'ai vu que le premier épisode."
+    ],
+    "explain": {
+      "fr": "Contrairement à pas, que ne s'insère pas entre l'auxiliaire et le participe mais précède le mot restreint.",
+      "en": "Unlike pas, que does not slot between auxiliary and participle but precedes the restricted word.",
+      "uk": "На відміну від pas, que не ставиться між допоміжним і дієприкметником, а стоїть перед обмеженим словом."
+    },
+    "tags": [
+      "position"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-033",
+    "ruleId": "restriction",
+    "kind": "transform",
+    "prompt": "Il est resté seulement deux jours sur le chantier.",
+    "hint": "Transforme avec ne… que",
+    "answer": [
+      "Il n'est resté que deux jours sur le chantier."
+    ],
+    "explain": {
+      "fr": "Avec l'auxiliaire être aussi, que suit le participe et précède le complément restreint.",
+      "en": "With the auxiliary être as well, que follows the participle and precedes the restricted complement.",
+      "uk": "І з допоміжним être que стоїть після дієприкметника, перед обмеженим додатком."
+    },
+    "tags": [
+      "position",
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-034",
+    "ruleId": "restriction",
+    "kind": "cloze",
+    "prompt": "___ les membres de l'association peuvent entrer dans l'atelier.",
+    "hint": "adjectif restrictif, accord avec le sujet",
+    "answer": [
+      "Seuls"
+    ],
+    "explain": {
+      "fr": "Seul est un adjectif : il s'accorde en genre et en nombre avec le nom qu'il restreint.",
+      "en": "Seul is an adjective and agrees in gender and number with the noun it restricts.",
+      "uk": "Seul — прикметник, тому узгоджується в роді й числі з іменником, який обмежує."
+    },
+    "tags": [
+      "accord"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-035",
+    "ruleId": "restriction",
+    "kind": "cloze",
+    "prompt": "___ ma sœur a compris la fin du film.",
+    "hint": "adjectif restrictif, sujet féminin singulier",
+    "answer": [
+      "Seule"
+    ],
+    "explain": {
+      "fr": "L'accord de seul se fait avec le sujet restreint, ici féminin singulier.",
+      "en": "Seul agrees with the restricted subject, here feminine singular.",
+      "uk": "Seul узгоджується з обмеженим підметом, тут жіночого роду однини."
+    },
+    "tags": [
+      "accord"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-036",
+    "ruleId": "restriction",
+    "kind": "choice",
+    "prompt": "Le Cyclop n'est ___ une sculpture : c'est aussi un lieu de mémoire.",
+    "hint": "on ajoute quelque chose, on ne retire rien",
+    "choices": [
+      "pas qu'",
+      "qu'",
+      "pas"
+    ],
+    "answer": [
+      "pas qu'"
+    ],
+    "explain": {
+      "fr": "Ne… pas que nie la restriction elle-même et ouvre sur un ajout.",
+      "en": "Ne… pas que negates the restriction itself and opens the way to an addition.",
+      "uk": "Ne… pas que заперечує саме обмеження й відкриває місце для доповнення."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-037",
+    "ruleId": "restriction",
+    "kind": "cloze",
+    "prompt": "Si tu veux visiter l'atelier, tu ___ réserver en ligne.",
+    "hint": "structure n'avoir qu'à + infinitif",
+    "answer": [
+      "n'as qu'à"
+    ],
+    "explain": {
+      "fr": "N'avoir qu'à + infinitif exprime qu'une seule démarche suffit ; à est ici la préposition de l'infinitif.",
+      "en": "N'avoir qu'à + infinitive says a single step is enough; à is the infinitive preposition here.",
+      "uk": "N'avoir qu'à + інфінітив означає, що достатньо однієї дії; à — прийменник перед інфінітивом."
+    },
+    "tags": [
+      "forme",
+      "syntaxe"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-038",
+    "ruleId": "restriction",
+    "kind": "transform",
+    "prompt": "Il suffit d'appeler le gardien.",
+    "hint": "Réécris avec n'avoir qu'à (sujet : tu)",
+    "answer": [
+      "Tu n'as qu'à appeler le gardien."
+    ],
+    "explain": {
+      "fr": "Le passage de il suffit de à n'avoir qu'à change la préposition : de disparaît au profit de à.",
+      "en": "Switching from il suffit de to n'avoir qu'à changes the preposition: de gives way to à.",
+      "uk": "Перехід від il suffit de до n'avoir qu'à змінює прийменник: de поступається місцем à."
+    },
+    "tags": [
+      "syntaxe",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-039",
+    "ruleId": "restriction",
+    "kind": "cloze",
+    "prompt": "Elle ne pense ___ sa carrière.",
+    "hint": "restriction + préposition du verbe penser",
+    "answer": [
+      "qu'à"
+    ],
+    "explain": {
+      "fr": "Que s'élide devant voyelle, et la préposition du verbe penser reste à.",
+      "en": "Que elides before a vowel, and the verb penser keeps its preposition à.",
+      "uk": "Que скорочується перед голосною, а дієслово penser зберігає прийменник à."
+    },
+    "tags": [
+      "elision",
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-040",
+    "ruleId": "restriction",
+    "kind": "cloze",
+    "prompt": "Pour l'instant, je ne fais ___ dessin numérique.",
+    "hint": "restriction + article partitif masculin",
+    "answer": [
+      "que du"
+    ],
+    "explain": {
+      "fr": "Après ne… que le partitif se maintient et se contracte normalement : de + le donne du.",
+      "en": "After ne… que the partitive stays and contracts normally: de + le gives du.",
+      "uk": "Після ne… que частковий артикль зберігається й зливається як звичайно: de + le = du."
+    },
+    "tags": [
+      "syntaxe",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-041",
+    "ruleId": "gerondif",
+    "kind": "cloze",
+    "prompt": "___ le métro, j'ai croisé mon ancien collègue.",
+    "hint": "gérondif du verbe prendre",
+    "answer": [
+      "En prenant"
+    ],
+    "explain": {
+      "fr": "Le gérondif se forme avec en suivi du participe présent, invariable.",
+      "en": "The gérondif is formed with en plus the invariable present participle.",
+      "uk": "Gérondif утворюється за допомогою en і незмінного дієприслівника."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-042",
+    "ruleId": "gerondif",
+    "kind": "choice",
+    "prompt": "nous finissons → gérondif : ___",
+    "hint": "radical de la 1re personne du pluriel",
+    "choices": [
+      "en finissant",
+      "en finant",
+      "en finir"
+    ],
+    "answer": [
+      "en finissant"
+    ],
+    "explain": {
+      "fr": "Le gérondif se construit sur le radical du présent à la première personne du pluriel, auquel on ajoute -ant.",
+      "en": "The gérondif is built on the first-person plural present stem plus -ant.",
+      "uk": "Gérondif будується від основи 1-ї особи множини теперішнього часу з додаванням -ant."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-043",
+    "ruleId": "gerondif",
+    "kind": "choice",
+    "prompt": "Quel est le gérondif du verbe savoir ?",
+    "hint": "forme irrégulière",
+    "choices": [
+      "en sachant",
+      "en savant",
+      "en savoir"
+    ],
+    "answer": [
+      "en sachant"
+    ],
+    "explain": {
+      "fr": "Savoir fait partie des trois verbes à participe présent irrégulier, avec être et avoir.",
+      "en": "Savoir is one of the three verbs with an irregular present participle, along with être and avoir.",
+      "uk": "Savoir — одне з трьох дієслів із неправильним дієприслівником, поряд з être та avoir."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-044",
+    "ruleId": "gerondif",
+    "kind": "cloze",
+    "prompt": "Tout ___ très fatigué, il a terminé la fresque avant la nuit.",
+    "hint": "gérondif irrégulier du verbe être",
+    "answer": [
+      "en étant"
+    ],
+    "explain": {
+      "fr": "Être a un participe présent irrégulier, étant, et tout en souligne ici la concession.",
+      "en": "Être has an irregular present participle, étant, and tout en highlights concession here.",
+      "uk": "Être має неправильний дієприслівник étant, а tout en тут підкреслює поступку."
+    },
+    "tags": [
+      "forme",
+      "emploi"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-045",
+    "ruleId": "gerondif",
+    "kind": "cloze",
+    "prompt": "Tout ___ conscience du risque, il a acheté cet appartement à rénover.",
+    "hint": "gérondif irrégulier du verbe avoir",
+    "answer": [
+      "en ayant"
+    ],
+    "explain": {
+      "fr": "Avoir forme son participe présent irrégulièrement en ayant, troisième exception avec étant et sachant.",
+      "en": "Avoir forms its present participle irregularly as ayant, the third exception with étant and sachant.",
+      "uk": "Avoir має неправильний дієприслівник ayant — третій виняток поряд з étant і sachant."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-046",
+    "ruleId": "gerondif",
+    "kind": "cloze",
+    "prompt": "Il écoute des podcasts ___ dans son appartement.",
+    "hint": "gérondif de bricoler, valeur de simultanéité",
+    "answer": [
+      "en bricolant"
+    ],
+    "explain": {
+      "fr": "Le gérondif marque ici la simultanéité de deux actions faites par le même sujet.",
+      "en": "Here the gérondif marks two actions happening at once, performed by the same subject.",
+      "uk": "Тут gérondif позначає одночасність двох дій того самого підмета."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-047",
+    "ruleId": "gerondif",
+    "kind": "choice",
+    "prompt": "Il a accueilli les visiteurs de l'exposition ___.",
+    "hint": "de quelle manière ?",
+    "choices": [
+      "en souriant",
+      "avec sourire",
+      "souriant"
+    ],
+    "answer": [
+      "en souriant"
+    ],
+    "explain": {
+      "fr": "La manière s'exprime par le gérondif, et en est obligatoire pour le distinguer du simple participe présent.",
+      "en": "Manner is expressed by the gérondif, and en is required to distinguish it from a bare present participle.",
+      "uk": "Спосіб дії передається через gérondif, і en обов'язкове, щоб відрізнити його від простого дієприслівника."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-048",
+    "ruleId": "gerondif",
+    "kind": "cloze",
+    "prompt": "C'est ___ beaucoup de croquis qu'on progresse en dessin.",
+    "hint": "gérondif de faire, valeur de moyen",
+    "answer": [
+      "en faisant"
+    ],
+    "explain": {
+      "fr": "Le gérondif exprime ici le moyen, c'est-à-dire par quelle action on obtient le résultat.",
+      "en": "The gérondif here expresses means, i.e. the action through which the result is obtained.",
+      "uk": "Тут gérondif виражає засіб — дію, завдяки якій досягається результат."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-049",
+    "ruleId": "gerondif",
+    "kind": "transform",
+    "prompt": "Si tu réserves à l'avance, tu paieras moins cher.",
+    "hint": "Fusionne avec un gérondif",
+    "answer": [
+      "En réservant à l'avance, tu paieras moins cher.",
+      "Tu paieras moins cher en réservant à l'avance."
+    ],
+    "explain": {
+      "fr": "Le gérondif peut remplacer une subordonnée de condition quand les deux verbes ont le même sujet.",
+      "en": "The gérondif can replace a conditional clause when both verbs share the same subject.",
+      "uk": "Gérondif може замінити умовне підрядне, коли обидва дієслова мають той самий підмет."
+    },
+    "tags": [
+      "emploi",
+      "syntaxe"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-050",
+    "ruleId": "gerondif",
+    "kind": "transform",
+    "prompt": "Il s'est blessé parce qu'il est tombé de l'échafaudage.",
+    "hint": "Fusionne avec un gérondif",
+    "answer": [
+      "Il s'est blessé en tombant de l'échafaudage.",
+      "En tombant de l'échafaudage, il s'est blessé."
+    ],
+    "explain": {
+      "fr": "Le gérondif condense une subordonnée causale, à condition que le sujet reste identique.",
+      "en": "The gérondif condenses a causal clause, provided the subject stays the same.",
+      "uk": "Gérondif стискає причинове підрядне за умови, що підмет залишається тим самим."
+    },
+    "tags": [
+      "emploi",
+      "syntaxe"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-051",
+    "ruleId": "gerondif",
+    "kind": "cloze",
+    "prompt": "Il a gardé son emploi ___ suivant des cours du soir.",
+    "hint": "valeur d'opposition",
+    "answer": [
+      "tout en"
+    ],
+    "explain": {
+      "fr": "Tout renforce le gérondif et lui donne une valeur d'opposition ou de concession.",
+      "en": "Tout reinforces the gérondif and gives it a contrastive or concessive value.",
+      "uk": "Tout підсилює gérondif і надає йому протиставного, поступального значення."
+    },
+    "tags": [
+      "emploi",
+      "forme"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-052",
+    "ruleId": "gerondif",
+    "kind": "choice",
+    "prompt": "Choisis la phrase correcte.",
+    "hint": "qui fait l'action du gérondif ?",
+    "choices": [
+      "En entrant dans le musée, la sculpture m'a impressionné.",
+      "En entrant dans le musée, j'ai été impressionné par la sculpture."
+    ],
+    "answer": [
+      "En entrant dans le musée, j'ai été impressionné par la sculpture."
+    ],
+    "explain": {
+      "fr": "Le gérondif doit avoir le même sujet que le verbe principal, sinon la phrase est incohérente.",
+      "en": "The gérondif must share its subject with the main verb, otherwise the sentence is incoherent.",
+      "uk": "Gérondif повинен мати той самий підмет, що й головне дієслово, інакше речення нелогічне."
+    },
+    "tags": [
+      "syntaxe"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-053",
+    "ruleId": "plus-que-parfait",
+    "kind": "conjugate",
+    "prompt": "elle / partir",
+    "hint": "plus-que-parfait",
+    "answer": [
+      "elle était partie"
+    ],
+    "explain": {
+      "fr": "Avec l'auxiliaire être à l'imparfait, le participe s'accorde avec le sujet.",
+      "en": "With the auxiliary être in the imperfect, the participle agrees with the subject.",
+      "uk": "З допоміжним être в imparfait дієприкметник узгоджується з підметом."
+    },
+    "tags": [
+      "forme",
+      "accord"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-054",
+    "ruleId": "plus-que-parfait",
+    "kind": "conjugate",
+    "prompt": "nous / finir",
+    "hint": "plus-que-parfait",
+    "answer": [
+      "nous avions fini"
+    ],
+    "explain": {
+      "fr": "Le plus-que-parfait se forme avec l'auxiliaire à l'imparfait suivi du participe passé.",
+      "en": "The pluperfect is formed with the auxiliary in the imperfect plus the past participle.",
+      "uk": "Plus-que-parfait утворюється з допоміжного дієслова в imparfait і дієприкметника минулого часу."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-055",
+    "ruleId": "plus-que-parfait",
+    "kind": "conjugate",
+    "prompt": "tu / prendre",
+    "hint": "plus-que-parfait",
+    "answer": [
+      "tu avais pris"
+    ],
+    "explain": {
+      "fr": "Les verbes transitifs prennent avoir, et le participe reste invariable sans COD antéposé.",
+      "en": "Transitive verbs take avoir, and the participle stays invariable without a preceding direct object.",
+      "uk": "Перехідні дієслова беруть avoir, і дієприкметник не змінюється без препозитивного прямого додатка."
+    },
+    "tags": [
+      "forme"
+    ],
+    "level": 1
+  },
+  {
+    "id": "conn-056",
+    "ruleId": "plus-que-parfait",
+    "kind": "conjugate",
+    "prompt": "ils / se lever",
+    "hint": "plus-que-parfait",
+    "answer": [
+      "ils s'étaient levés"
+    ],
+    "explain": {
+      "fr": "Les verbes pronominaux se conjuguent avec être et accordent leur participe avec le sujet.",
+      "en": "Pronominal verbs use être and their participle agrees with the subject.",
+      "uk": "Займенникові дієслова відмінюються з être, а дієприкметник узгоджується з підметом."
+    },
+    "tags": [
+      "forme",
+      "accord"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-057",
+    "ruleId": "plus-que-parfait",
+    "kind": "cloze",
+    "prompt": "Quand je suis arrivé au vernissage, l'artiste ___ depuis une heure.",
+    "hint": "partir, plus-que-parfait",
+    "answer": [
+      "était parti"
+    ],
+    "explain": {
+      "fr": "Le plus-que-parfait marque une action antérieure à une autre action passée.",
+      "en": "The pluperfect marks an action prior to another past action.",
+      "uk": "Plus-que-parfait позначає дію, що передувала іншій минулій дії."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 3
+  },
+  {
+    "id": "conn-058",
+    "ruleId": "plus-que-parfait",
+    "kind": "cloze",
+    "prompt": "Il a acheté l'appartement que ses parents ___ l'année précédente.",
+    "hint": "visiter, plus-que-parfait",
+    "answer": [
+      "avaient visité"
+    ],
+    "explain": {
+      "fr": "L'antériorité dans une relative au passé s'exprime par le plus-que-parfait.",
+      "en": "Anteriority in a past relative clause is expressed by the pluperfect.",
+      "uk": "Передування в підрядному означальному в минулому передається через plus-que-parfait."
+    },
+    "tags": [
+      "emploi"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-059",
+    "ruleId": "plus-que-parfait",
+    "kind": "choice",
+    "prompt": "Mes sœurs ___ arrivées bien avant nous au cinéma.",
+    "hint": "quel auxiliaire ?",
+    "choices": [
+      "étaient",
+      "avaient",
+      "ont"
+    ],
+    "answer": [
+      "étaient"
+    ],
+    "explain": {
+      "fr": "Les verbes de déplacement comme arriver se conjuguent avec être : le participe s'accorde alors avec le sujet (Mes sœurs étaient arrivées).",
+      "en": "Verbs of movement such as arriver take être: the participle then agrees with the subject (Mes sœurs étaient arrivées).",
+      "uk": "Дієслова руху на кшталт arriver вживаються з être: тоді дієприкметник узгоджується з підметом (Mes sœurs étaient arrivées)."
+    },
+    "tags": [
+      "forme",
+      "accord"
+    ],
+    "level": 2
+  },
+  {
+    "id": "conn-060",
+    "ruleId": "plus-que-parfait",
+    "kind": "transform",
+    "prompt": "Il est arrivé en retard à l'entretien. Il a raté son train.",
+    "hint": "Relie les deux phrases en marquant l'antériorité",
+    "answer": [
+      "Il est arrivé en retard à l'entretien parce qu'il avait raté son train.",
+      "Il est arrivé en retard à l'entretien car il avait raté son train."
+    ],
+    "explain": {
+      "fr": "La cause antérieure à un fait passé se met au plus-que-parfait, le fait principal restant au passé composé.",
+      "en": "A cause preceding a past event goes into the pluperfect while the main event stays in the passé composé.",
+      "uk": "Причина, що передувала минулій події, ставиться в plus-que-parfait, а головна дія лишається в passé composé."
+    },
+    "tags": [
+      "emploi",
+      "syntaxe"
+    ],
+    "level": 3
+  }
+]

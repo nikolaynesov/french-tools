@@ -1,0 +1,15 @@
+{
+  "name": "grammaire-reference",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Grammaire française A2→B1 — référence visuelle (temps, structures, connecteurs)",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --outfile=dist/app.js && node build-standalone.mjs",
+    "check": "tsc --noEmit",
+    "watch": "esbuild src/main.ts --bundle --outfile=dist/app.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "typescript": "^5.9.3"
+  }
+}

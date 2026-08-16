@@ -1,0 +1,1750 @@
+"use strict";
+(() => {
+  // src/data.ts
+  var TENSES = [
+    // ========== 1. PRÉSENT ==========
+    {
+      id: "present",
+      name: "Le pr\xE9sent",
+      badge: "essentiel",
+      tagline: {
+        fr: "Le temps de base : maintenant, les habitudes, les v\xE9rit\xE9s g\xE9n\xE9rales. Tous les autres temps se construisent \xE0 partir de lui.",
+        en: "The base tense: now, habits, general truths. All the other tenses are built from it.",
+        uk: "\u0411\u0430\u0437\u043E\u0432\u0438\u0439 \u0447\u0430\u0441: \u0437\u0430\u0440\u0430\u0437, \u0437\u0432\u0438\u0447\u043A\u0438, \u0437\u0430\u0433\u0430\u043B\u044C\u043D\u0456 \u0456\u0441\u0442\u0438\u043D\u0438. \u0423\u0441\u0456 \u0456\u043D\u0448\u0456 \u0447\u0430\u0441\u0438 \u0431\u0443\u0434\u0443\u044E\u0442\u044C\u0441\u044F \u0432\u0456\u0434 \u043D\u044C\u043E\u0433\u043E."
+      },
+      usage: [
+        {
+          fr: "Ce qui se passe maintenant : \xAB Je travaille en ce moment. \xBB",
+          en: "What is happening now: \u201CI am working right now.\u201D",
+          uk: "\u0422\u0435, \u0449\u043E \u0432\u0456\u0434\u0431\u0443\u0432\u0430\u0454\u0442\u044C\u0441\u044F \u0437\u0430\u0440\u0430\u0437: \xAB\u042F \u043F\u0440\u0430\u0446\u044E\u044E \u0432 \u0446\u0435\u0439 \u043C\u043E\u043C\u0435\u043D\u0442\xBB."
+        },
+        {
+          fr: "Les habitudes : \xAB Je prends le m\xE9tro tous les jours. \xBB",
+          en: "Habits: \u201CI take the metro every day.\u201D",
+          uk: "\u0417\u0432\u0438\u0447\u043A\u0438: \xAB\u042F \u0457\u0436\u0434\u0436\u0443 \u043D\u0430 \u043C\u0435\u0442\u0440\u043E \u0449\u043E\u0434\u043D\u044F\xBB."
+        },
+        {
+          fr: "Les v\xE9rit\xE9s g\xE9n\xE9rales : \xAB Paris est la capitale de la France. \xBB",
+          en: "General truths: \u201CParis is the capital of France.\u201D",
+          uk: "\u0417\u0430\u0433\u0430\u043B\u044C\u043D\u0456 \u0456\u0441\u0442\u0438\u043D\u0438: \xAB\u041F\u0430\u0440\u0438\u0436 \u2014 \u0441\u0442\u043E\u043B\u0438\u0446\u044F \u0424\u0440\u0430\u043D\u0446\u0456\u0457\xBB."
+        },
+        {
+          fr: "Avec \xAB depuis \xBB pour une action qui continue : \xAB J'habite \xE0 Paris depuis deux ans. \xBB",
+          en: "With \u201Cdepuis\u201D for an action that continues: \u201CI have lived in Paris for two years.\u201D (French uses the present!)",
+          uk: "\u0417 \xABdepuis\xBB \u0434\u043B\u044F \u0434\u0456\u0457, \u0449\u043E \u0442\u0440\u0438\u0432\u0430\u0454: \xAB\u042F \u0436\u0438\u0432\u0443 \u0432 \u041F\u0430\u0440\u0438\u0436\u0456 \u0432\u0436\u0435 \u0434\u0432\u0430 \u0440\u043E\u043A\u0438\xBB. (\u0424\u0440\u0430\u043D\u0446\u0443\u0437\u044C\u043A\u0430 \u0432\u0436\u0438\u0432\u0430\u0454 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441!)"
+        }
+      ],
+      formula: "sujet + {radical:stem} + {terminaison:end}",
+      formulaNotes: [
+        {
+          fr: "Verbes en -er : radical = infinitif sans -er (parler \u2192 parl-).",
+          en: "-er verbs: stem = infinitive without -er (parler \u2192 parl-).",
+          uk: "\u0414\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u043D\u0430 -er: \u043E\u0441\u043D\u043E\u0432\u0430 = \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432 \u0431\u0435\u0437 -er (parler \u2192 parl-)."
+        },
+        {
+          fr: "Prononciation : -e, -es, -e et -ent sont muets \u2192 4 formes sur 6 se prononcent pareil !",
+          en: "Pronunciation: -e, -es, -e and -ent are silent \u2192 4 of the 6 forms sound the same!",
+          uk: "\u0412\u0438\u043C\u043E\u0432\u0430: -e, -es, -e \u0442\u0430 -ent \u043D\u0456\u043C\u0456 \u2192 4 \u0437 6 \u0444\u043E\u0440\u043C \u0437\u0432\u0443\u0447\u0430\u0442\u044C \u043E\u0434\u043D\u0430\u043A\u043E\u0432\u043E!"
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Mod\xE8le : parler (verbes en -er, ~90 % des verbes)",
+            en: "Model: parler (-er verbs, ~90% of all verbs)",
+            uk: "\u0417\u0440\u0430\u0437\u043E\u043A: parler (\u0434\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u043D\u0430 -er, ~90 % \u0434\u0456\u0454\u0441\u043B\u0456\u0432)"
+          },
+          rows: [
+            { pronoun: "je", form: "{parl:stem}{e:end}" },
+            { pronoun: "tu", form: "{parl:stem}{es:end}" },
+            { pronoun: "il / elle / on", form: "{parl:stem}{e:end}" },
+            { pronoun: "nous", form: "{parl:stem}{ons:end}" },
+            { pronoun: "vous", form: "{parl:stem}{ez:end}" },
+            { pronoun: "ils / elles", form: "{parl:stem}{ent:end}" }
+          ]
+        }
+      ],
+      extra: {
+        title: {
+          fr: "Les 4 irr\xE9guliers vitaux",
+          en: "The 4 vital irregulars",
+          uk: "4 \u0436\u0438\u0442\u0442\u0454\u0432\u043E \u0432\u0430\u0436\u043B\u0438\u0432\u0456 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u0430"
+        },
+        rows: [
+          { pronoun: "\xEAtre", form: "suis \xB7 es \xB7 est \xB7 sommes \xB7 \xEAtes \xB7 sont" },
+          { pronoun: "avoir", form: "ai \xB7 as \xB7 a \xB7 avons \xB7 avez \xB7 ont" },
+          { pronoun: "aller", form: "vais \xB7 vas \xB7 va \xB7 allons \xB7 allez \xB7 vont" },
+          { pronoun: "faire", form: "fais \xB7 fais \xB7 fait \xB7 faisons \xB7 faites \xB7 font" }
+        ],
+        footnote: {
+          fr: "\xC0 apprendre par c\u0153ur : ils servent aussi \xE0 construire les autres temps.",
+          en: "Learn these by heart: they are also used to build the other tenses.",
+          uk: "\u0412\u0438\u0432\u0447\u0456\u0442\u044C \u043D\u0430\u043F\u0430\u043C'\u044F\u0442\u044C: \u0432\u043E\u043D\u0438 \u0442\u0430\u043A\u043E\u0436 \u043F\u043E\u0442\u0440\u0456\u0431\u043D\u0456 \u0434\u043B\u044F \u0443\u0442\u0432\u043E\u0440\u0435\u043D\u043D\u044F \u0456\u043D\u0448\u0438\u0445 \u0447\u0430\u0441\u0456\u0432."
+        }
+      },
+      mnemo: {
+        fr: "Le pr\xE9sent est le HUB : nous \u2192 imparfait, aller \u2192 futur proche, venir \u2192 pass\xE9 r\xE9cent, avoir/\xEAtre \u2192 pass\xE9 compos\xE9.",
+        en: "The present is the HUB: nous \u2192 imparfait, aller \u2192 futur proche, venir \u2192 pass\xE9 r\xE9cent, avoir/\xEAtre \u2192 pass\xE9 compos\xE9.",
+        uk: "\u0422\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u2014 \u0446\u0435 \u0426\u0415\u041D\u0422\u0420: nous \u2192 imparfait, aller \u2192 futur proche, venir \u2192 pass\xE9 r\xE9cent, avoir/\xEAtre \u2192 pass\xE9 compos\xE9."
+      },
+      examples: [
+        {
+          fr: "J'{habit:stem}{e:end} \xE0 Paris depuis deux ans.",
+          en: "I have lived in Paris for two years.",
+          uk: "\u042F \u0436\u0438\u0432\u0443 \u0432 \u041F\u0430\u0440\u0438\u0436\u0456 \u0432\u0436\u0435 \u0434\u0432\u0430 \u0440\u043E\u043A\u0438.",
+          note: {
+            fr: "depuis + pr\xE9sent (pas de pass\xE9 !)",
+            en: "depuis + present (not past!)",
+            uk: "depuis + \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 (\u043D\u0435 \u043C\u0438\u043D\u0443\u043B\u0438\u0439!)"
+          }
+        },
+        {
+          fr: "Elle {prend:stem} le m\xE9tro \xE0 huit heures.",
+          en: "She takes the metro at eight o'clock.",
+          uk: "\u0412\u043E\u043D\u0430 \u0457\u0434\u0435 \u043D\u0430 \u043C\u0435\u0442\u0440\u043E \u043E \u0432\u043E\u0441\u044C\u043C\u0456\u0439 \u0433\u043E\u0434\u0438\u043D\u0456."
+        },
+        {
+          fr: "Nous {parl:stem}{ons:end} anglais au bureau.",
+          en: "We speak English at the office.",
+          uk: "\u041C\u0438 \u0440\u043E\u0437\u043C\u043E\u0432\u043B\u044F\u0454\u043C\u043E \u0430\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u043E\u044E \u0432 \u043E\u0444\u0456\u0441\u0456."
+        },
+        {
+          fr: "Qu'est-ce que tu {fais:stem} ce week-end ?",
+          en: "What are you doing this weekend?",
+          uk: "\u0429\u043E \u0442\u0438 \u0440\u043E\u0431\u0438\u0448 \u043D\u0430 \u0446\u0438\u0445 \u0432\u0438\u0445\u0456\u0434\u043D\u0438\u0445?",
+          note: {
+            fr: "Le pr\xE9sent peut parler du futur proche avec un mot de temps.",
+            en: "The present can refer to the near future with a time word.",
+            uk: "\u0422\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u043C\u043E\u0436\u0435 \u043E\u0437\u043D\u0430\u0447\u0430\u0442\u0438 \u0431\u043B\u0438\u0437\u044C\u043A\u0435 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454 \u0437\u0456 \u0441\u043B\u043E\u0432\u043E\u043C \u0447\u0430\u0441\u0443."
+          }
+        }
+      ],
+      related: [
+        {
+          id: "imparfait",
+          why: {
+            fr: "Le radical de l'imparfait = la forme \xAB nous \xBB du pr\xE9sent.",
+            en: "The imparfait stem = the \u201Cnous\u201D form of the present.",
+            uk: "\u041E\u0441\u043D\u043E\u0432\u0430 imparfait = \u0444\u043E\u0440\u043C\u0430 \xABnous\xBB \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u0433\u043E \u0447\u0430\u0441\u0443."
+          }
+        },
+        {
+          id: "imperatif",
+          why: {
+            fr: "L'imp\xE9ratif = le pr\xE9sent sans sujet (tu / nous / vous).",
+            en: "The imperative = the present without a subject (tu / nous / vous).",
+            uk: "\u041D\u0430\u043A\u0430\u0437\u043E\u0432\u0438\u0439 \u0441\u043F\u043E\u0441\u0456\u0431 = \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u0431\u0435\u0437 \u043F\u0456\u0434\u043C\u0435\u0442\u0430 (tu / nous / vous)."
+          }
+        },
+        {
+          id: "futur-proche",
+          why: {
+            fr: "Futur proche = aller au pr\xE9sent + infinitif.",
+            en: "Futur proche = aller in the present + infinitive.",
+            uk: "Futur proche = aller \u0443 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u043C\u0443 \u0447\u0430\u0441\u0456 + \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432."
+          }
+        }
+      ]
+    },
+    // ========== 2. PASSÉ COMPOSÉ ==========
+    {
+      id: "passe-compose",
+      name: "Le pass\xE9 compos\xE9",
+      badge: "essentiel",
+      tagline: {
+        fr: "Le pass\xE9 des actions termin\xE9es. C'est LE temps pour raconter ce qui s'est pass\xE9.",
+        en: "The past of completed actions. THE tense for telling what happened.",
+        uk: "\u041C\u0438\u043D\u0443\u043B\u0438\u0439 \u0447\u0430\u0441 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u0445 \u0434\u0456\u0439. \u0413\u041E\u041B\u041E\u0412\u041D\u0418\u0419 \u0447\u0430\u0441, \u0449\u043E\u0431 \u0440\u043E\u0437\u043F\u043E\u0432\u0456\u0441\u0442\u0438, \u0449\u043E \u0441\u0442\u0430\u043B\u043E\u0441\u044F."
+      },
+      usage: [
+        {
+          fr: "Une action finie, souvent dat\xE9e : \xAB Hier, j'ai visit\xE9 le Louvre. \xBB",
+          en: "A finished action, often with a date: \u201CYesterday I visited the Louvre.\u201D",
+          uk: "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u0434\u0456\u044F, \u0447\u0430\u0441\u0442\u043E \u0437 \u0434\u0430\u0442\u043E\u044E: \xAB\u0423\u0447\u043E\u0440\u0430 \u044F \u0432\u0456\u0434\u0432\u0456\u0434\u0430\u0432 \u041B\u0443\u0432\u0440\xBB."
+        },
+        {
+          fr: "Une suite d'actions : \xAB Je me suis lev\xE9, j'ai pris un caf\xE9 et je suis parti. \xBB",
+          en: "A sequence of actions: \u201CI got up, had a coffee and left.\u201D",
+          uk: "\u041F\u043E\u0441\u043B\u0456\u0434\u043E\u0432\u043D\u0456\u0441\u0442\u044C \u0434\u0456\u0439: \xAB\u042F \u0432\u0441\u0442\u0430\u0432, \u0432\u0438\u043F\u0438\u0432 \u043A\u0430\u0432\u0443 \u0456 \u043F\u0456\u0448\u043E\u0432\xBB."
+        },
+        {
+          fr: "L'\xE9v\xE9nement qui interrompt le d\xE9cor : \xAB Je dormais quand le t\xE9l\xE9phone a sonn\xE9. \xBB",
+          en: "The event that interrupts the background: \u201CI was sleeping when the phone rang.\u201D",
+          uk: "\u041F\u043E\u0434\u0456\u044F, \u0449\u043E \u043F\u0435\u0440\u0435\u0440\u0438\u0432\u0430\u0454 \u0442\u043B\u043E: \xAB\u042F \u0441\u043F\u0430\u0432, \u043A\u043E\u043B\u0438 \u0437\u0430\u0434\u0437\u0432\u043E\u043D\u0438\u0432 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\xBB."
+        }
+      ],
+      formula: "sujet + {avoir / \xEAtre au pr\xE9sent:aux} + {participe pass\xE9:part}",
+      formulaNotes: [
+        {
+          fr: "Participe pass\xE9 : -er \u2192 -\xE9 (mang\xE9) \xB7 -ir \u2192 -i (fini) \xB7 -re \u2192 -u (vendu).",
+          en: "Past participle: -er \u2192 -\xE9 (mang\xE9) \xB7 -ir \u2192 -i (fini) \xB7 -re \u2192 -u (vendu).",
+          uk: "\u0414\u0456\u0454\u043F\u0440\u0438\u043A\u043C\u0435\u0442\u043D\u0438\u043A: -er \u2192 -\xE9 (mang\xE9) \xB7 -ir \u2192 -i (fini) \xB7 -re \u2192 -u (vendu)."
+        },
+        {
+          fr: "Avec \xEAtre, le participe s'accorde : elle est all\xE9e, ils sont partis.",
+          en: "With \xEAtre, the participle agrees: elle est all\xE9e, ils sont partis.",
+          uk: "\u0417 \xEAtre \u0434\u0456\u0454\u043F\u0440\u0438\u043A\u043C\u0435\u0442\u043D\u0438\u043A \u0443\u0437\u0433\u043E\u0434\u0436\u0443\u0454\u0442\u044C\u0441\u044F: elle est all\xE9e, ils sont partis."
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Avec avoir : manger",
+            en: "With avoir: manger",
+            uk: "\u0417 avoir: manger"
+          },
+          rows: [
+            { pronoun: "j'", form: "{ai:aux} {mang\xE9:part}" },
+            { pronoun: "tu", form: "{as:aux} {mang\xE9:part}" },
+            { pronoun: "il / elle", form: "{a:aux} {mang\xE9:part}" },
+            { pronoun: "nous", form: "{avons:aux} {mang\xE9:part}" },
+            { pronoun: "vous", form: "{avez:aux} {mang\xE9:part}" },
+            { pronoun: "ils / elles", form: "{ont:aux} {mang\xE9:part}" }
+          ]
+        },
+        {
+          title: {
+            fr: "Avec \xEAtre : aller (accord !)",
+            en: "With \xEAtre: aller (agreement!)",
+            uk: "\u0417 \xEAtre: aller (\u0443\u0437\u0433\u043E\u0434\u0436\u0435\u043D\u043D\u044F!)"
+          },
+          rows: [
+            { pronoun: "je", form: "{suis:aux} {all\xE9(e):part}" },
+            { pronoun: "tu", form: "{es:aux} {all\xE9(e):part}" },
+            { pronoun: "elle", form: "{est:aux} {all\xE9e:part}" },
+            { pronoun: "nous", form: "{sommes:aux} {all\xE9(e)s:part}" },
+            { pronoun: "vous", form: "{\xEAtes:aux} {all\xE9(e)(s):part}" },
+            { pronoun: "elles", form: "{sont:aux} {all\xE9es:part}" }
+          ]
+        }
+      ],
+      extra: {
+        title: {
+          fr: "Qui prend \xEAtre ? (la \xAB maison d'\xEAtre \xBB) + participes irr\xE9guliers",
+          en: "Which verbs take \xEAtre? (the \u201Chouse of \xEAtre\u201D) + irregular participles",
+          uk: "\u042F\u043A\u0456 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u0431\u0435\u0440\u0443\u0442\u044C \xEAtre? (\xAB\u0434\u0456\u043C \xEAtre\xBB) + \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0434\u0456\u0454\u043F\u0440\u0438\u043A\u043C\u0435\u0442\u043D\u0438\u043A\u0438"
+        },
+        rows: [
+          {
+            pronoun: "\xEAtre + mouvement",
+            form: "aller \xB7 venir \xB7 arriver \xB7 partir \xB7 entrer \xB7 sortir \xB7 monter \xB7 descendre \xB7 rester \xB7 tomber \xB7 retourner \xB7 passer \xB7 na\xEEtre \xB7 mourir"
+          },
+          {
+            pronoun: "\xEAtre + pronominaux",
+            form: "se lever \xB7 se coucher \xB7 s'habiller \xB7 se r\xE9veiller\u2026"
+          },
+          {
+            pronoun: "participes irr\xE9guliers",
+            form: "\xEAtre \u2192 \xE9t\xE9 \xB7 avoir \u2192 eu \xB7 faire \u2192 fait \xB7 prendre \u2192 pris \xB7 voir \u2192 vu \xB7 boire \u2192 bu \xB7 lire \u2192 lu \xB7 pouvoir \u2192 pu \xB7 vouloir \u2192 voulu \xB7 venir \u2192 venu \xB7 mettre \u2192 mis \xB7 dire \u2192 dit \xB7 \xE9crire \u2192 \xE9crit \xB7 ouvrir \u2192 ouvert"
+          }
+        ],
+        footnote: {
+          fr: "Tous les autres verbes prennent avoir (\u2248 95 % des verbes).",
+          en: "All other verbs take avoir (\u2248 95% of verbs).",
+          uk: "\u0423\u0441\u0456 \u0456\u043D\u0448\u0456 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u0431\u0435\u0440\u0443\u0442\u044C avoir (\u2248 95 % \u0434\u0456\u0454\u0441\u043B\u0456\u0432)."
+        }
+      },
+      mnemo: {
+        fr: "Le pass\xE9 compos\xE9 = une PHOTO : clic ! L'action est captur\xE9e, finie. (L'imparfait, lui, c'est la vid\xE9o.)",
+        en: "The pass\xE9 compos\xE9 = a PHOTO: click! The action is captured, finished. (The imparfait is the video.)",
+        uk: "Pass\xE9 compos\xE9 = \u0424\u041E\u0422\u041E: \u043A\u043B\u0430\u0446! \u0414\u0456\u044E \u0437\u0430\u0444\u0456\u043A\u0441\u043E\u0432\u0430\u043D\u043E, \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E. (\u0410 imparfait \u2014 \u0446\u0435 \u0432\u0456\u0434\u0435\u043E.)"
+      },
+      examples: [
+        {
+          fr: "Hier soir, nous {avons:aux} {mang\xE9:part} au restaurant.",
+          en: "Last night we ate at a restaurant.",
+          uk: "\u0423\u0447\u043E\u0440\u0430 \u0432\u0432\u0435\u0447\u0435\u0440\u0456 \u043C\u0438 \u043F\u043E\u0432\u0435\u0447\u0435\u0440\u044F\u043B\u0438 \u0432 \u0440\u0435\u0441\u0442\u043E\u0440\u0430\u043D\u0456."
+        },
+        {
+          fr: "Elle {est:aux} {arriv\xE9e:part} \xE0 Paris en 2024.",
+          en: "She arrived in Paris in 2024.",
+          uk: "\u0412\u043E\u043D\u0430 \u043F\u0440\u0438\u0457\u0445\u0430\u043B\u0430 \u0434\u043E \u041F\u0430\u0440\u0438\u0436\u0430 \u0443 2024 \u0440\u043E\u0446\u0456.",
+          note: {
+            fr: "arriver \u2192 \xEAtre \u2192 accord : arriv\xE9e.",
+            en: "arriver \u2192 \xEAtre \u2192 agreement: arriv\xE9e.",
+            uk: "arriver \u2192 \xEAtre \u2192 \u0443\u0437\u0433\u043E\u0434\u0436\u0435\u043D\u043D\u044F: arriv\xE9e."
+          }
+        },
+        {
+          fr: "J'{ai:aux} d\xE9j\xE0 {vu:part} ce film.",
+          en: "I have already seen this film.",
+          uk: "\u042F \u0432\u0436\u0435 \u0431\u0430\u0447\u0438\u0432 \u0446\u0435\u0439 \u0444\u0456\u043B\u044C\u043C.",
+          note: {
+            fr: "\xAB d\xE9j\xE0 \xBB se place entre l'auxiliaire et le participe.",
+            en: "\u201Cd\xE9j\xE0\u201D goes between the auxiliary and the participle.",
+            uk: "\xABd\xE9j\xE0\xBB \u0441\u0442\u0430\u0432\u0438\u0442\u044C\u0441\u044F \u043C\u0456\u0436 \u0434\u043E\u043F\u043E\u043C\u0456\u0436\u043D\u0438\u043C \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u043E\u043C \u0456 \u0434\u0456\u0454\u043F\u0440\u0438\u043A\u043C\u0435\u0442\u043D\u0438\u043A\u043E\u043C."
+          }
+        },
+        {
+          fr: "Ils {se:pron} {sont:aux} {lev\xE9s:part} tr\xE8s t\xF4t ce matin.",
+          en: "They got up very early this morning.",
+          uk: "\u0412\u043E\u043D\u0438 \u0432\u0441\u0442\u0430\u043B\u0438 \u0434\u0443\u0436\u0435 \u0440\u0430\u043D\u043E \u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u0432\u0440\u0430\u043D\u0446\u0456.",
+          note: {
+            fr: "Verbe pronominal \u2192 \xEAtre.",
+            en: "Reflexive verb \u2192 \xEAtre.",
+            uk: "\u0417\u0432\u043E\u0440\u043E\u0442\u043D\u0435 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u043E \u2192 \xEAtre."
+          }
+        }
+      ],
+      related: [
+        {
+          id: "imparfait",
+          why: {
+            fr: "Le duo du pass\xE9 : pass\xE9 compos\xE9 = l'action (photo), imparfait = le d\xE9cor (vid\xE9o).",
+            en: "The past-tense duo: pass\xE9 compos\xE9 = the action (photo), imparfait = the background (video).",
+            uk: "\u0414\u0443\u0435\u0442 \u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E: pass\xE9 compos\xE9 = \u0434\u0456\u044F (\u0444\u043E\u0442\u043E), imparfait = \u0442\u043B\u043E (\u0432\u0456\u0434\u0435\u043E)."
+          }
+        },
+        {
+          id: "present",
+          why: {
+            fr: "L'auxiliaire (avoir/\xEAtre) se conjugue au pr\xE9sent.",
+            en: "The auxiliary (avoir/\xEAtre) is conjugated in the present.",
+            uk: "\u0414\u043E\u043F\u043E\u043C\u0456\u0436\u043D\u0435 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u043E (avoir/\xEAtre) \u0432\u0456\u0434\u043C\u0456\u043D\u044E\u0454\u0442\u044C\u0441\u044F \u0432 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u043C\u0443 \u0447\u0430\u0441\u0456."
+          }
+        },
+        {
+          id: "passe-recent",
+          why: {
+            fr: "Action tr\xE8s r\xE9cente ? \xAB Je viens de manger \xBB plut\xF4t que \xAB j'ai mang\xE9 il y a 5 minutes \xBB.",
+            en: "Very recent action? \u201CJe viens de manger\u201D rather than \u201Cj'ai mang\xE9 5 minutes ago\u201D.",
+            uk: "\u0429\u043E\u0439\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u0434\u0456\u044F? \xABJe viens de manger\xBB, \u0430 \u043D\u0435 \xABj'ai mang\xE9\xBB 5 \u0445\u0432\u0438\u043B\u0438\u043D \u0442\u043E\u043C\u0443."
+          }
+        }
+      ]
+    },
+    // ========== 3. IMPARFAIT ==========
+    {
+      id: "imparfait",
+      name: "L'imparfait",
+      badge: "essentiel",
+      tagline: {
+        fr: "Le d\xE9cor du pass\xE9 : descriptions, habitudes, actions en cours. La cam\xE9ra qui filme l'arri\xE8re-plan.",
+        en: "The background of the past: descriptions, habits, ongoing actions. The camera filming the scene.",
+        uk: "\u0422\u043B\u043E \u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E: \u043E\u043F\u0438\u0441\u0438, \u0437\u0432\u0438\u0447\u043A\u0438, \u0442\u0440\u0438\u0432\u0430\u043B\u0456 \u0434\u0456\u0457. \u041A\u0430\u043C\u0435\u0440\u0430, \u0449\u043E \u0437\u043D\u0456\u043C\u0430\u0454 \u0437\u0430\u0434\u043D\u0456\u0439 \u043F\u043B\u0430\u043D."
+      },
+      usage: [
+        {
+          fr: "Description dans le pass\xE9 (m\xE9t\xE9o, lieux, sentiments) : \xAB Il faisait beau, j'\xE9tais content. \xBB",
+          en: "Description in the past (weather, places, feelings): \u201CThe weather was nice, I was happy.\u201D",
+          uk: "\u041E\u043F\u0438\u0441 \u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443 (\u043F\u043E\u0433\u043E\u0434\u0430, \u043C\u0456\u0441\u0446\u044F, \u043F\u043E\u0447\u0443\u0442\u0442\u044F): \xAB\u0411\u0443\u043B\u0430 \u0433\u0430\u0440\u043D\u0430 \u043F\u043E\u0433\u043E\u0434\u0430, \u044F \u0431\u0443\u0432 \u0437\u0430\u0434\u043E\u0432\u043E\u043B\u0435\u043D\u0438\u0439\xBB."
+        },
+        {
+          fr: "Habitude pass\xE9e : \xAB Quand j'\xE9tais petit, je jouais au foot le dimanche. \xBB",
+          en: "Past habit: \u201CWhen I was little, I played football on Sundays.\u201D",
+          uk: "\u0417\u0432\u0438\u0447\u043A\u0430 \u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443: \xAB\u041A\u043E\u043B\u0438 \u044F \u0431\u0443\u0432 \u043C\u0430\u043B\u0438\u043C, \u044F \u0433\u0440\u0430\u0432 \u0443 \u0444\u0443\u0442\u0431\u043E\u043B \u0449\u043E\u043D\u0435\u0434\u0456\u043B\u0456\xBB."
+        },
+        {
+          fr: "Action en cours, interrompue par un \xE9v\xE9nement : \xAB Je dormais quand tu as appel\xE9. \xBB",
+          en: "Ongoing action interrupted by an event: \u201CI was sleeping when you called.\u201D",
+          uk: "\u0422\u0440\u0438\u0432\u0430\u043B\u0430 \u0434\u0456\u044F, \u043F\u0435\u0440\u0435\u0440\u0432\u0430\u043D\u0430 \u043F\u043E\u0434\u0456\u0454\u044E: \xAB\u042F \u0441\u043F\u0430\u0432, \u043A\u043E\u043B\u0438 \u0442\u0438 \u043F\u043E\u0434\u0437\u0432\u043E\u043D\u0438\u0432\xBB."
+        }
+      ],
+      formula: "sujet + {radical de \xAB nous \xBB au pr\xE9sent:stem} + {-ais, -ais, -ait, -ions, -iez, -aient:end}",
+      formulaNotes: [
+        {
+          fr: "Radical = la forme \xAB nous \xBB du pr\xE9sent sans -ons : nous faisons \u2192 fais- ; nous finissons \u2192 finiss-.",
+          en: "Stem = the present \u201Cnous\u201D form without -ons: nous faisons \u2192 fais-; nous finissons \u2192 finiss-.",
+          uk: "\u041E\u0441\u043D\u043E\u0432\u0430 = \u0444\u043E\u0440\u043C\u0430 \xABnous\xBB \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u0433\u043E \u0447\u0430\u0441\u0443 \u0431\u0435\u0437 -ons: nous faisons \u2192 fais-; nous finissons \u2192 finiss-."
+        },
+        {
+          fr: "Une seule exception dans toute la langue : \xEAtre \u2192 \xE9t- (j'\xE9tais).",
+          en: "Only one exception in the whole language: \xEAtre \u2192 \xE9t- (j'\xE9tais).",
+          uk: "\u0404\u0434\u0438\u043D\u0438\u0439 \u0432\u0438\u043D\u044F\u0442\u043E\u043A \u0443 \u0432\u0441\u0456\u0439 \u043C\u043E\u0432\u0456: \xEAtre \u2192 \xE9t- (j'\xE9tais)."
+        },
+        {
+          fr: "Prononciation : -ais, -ait, -aient se prononcent tous \xAB \xE8 \xBB.",
+          en: "Pronunciation: -ais, -ait, -aient are all pronounced \u201C\xE8\u201D.",
+          uk: "\u0412\u0438\u043C\u043E\u0432\u0430: -ais, -ait, -aient \u0443\u0441\u0456 \u0432\u0438\u043C\u043E\u0432\u043B\u044F\u044E\u0442\u044C\u0441\u044F \u044F\u043A \xAB\u0435\xBB."
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Mod\xE8le : faire (nous faisons \u2192 fais-)",
+            en: "Model: faire (nous faisons \u2192 fais-)",
+            uk: "\u0417\u0440\u0430\u0437\u043E\u043A: faire (nous faisons \u2192 fais-)"
+          },
+          rows: [
+            { pronoun: "je", form: "{fais:stem}{ais:end}" },
+            { pronoun: "tu", form: "{fais:stem}{ais:end}" },
+            { pronoun: "il / elle", form: "{fais:stem}{ait:end}" },
+            { pronoun: "nous", form: "{fais:stem}{ions:end}" },
+            { pronoun: "vous", form: "{fais:stem}{iez:end}" },
+            { pronoun: "ils / elles", form: "{fais:stem}{aient:end}" }
+          ],
+          footnote: {
+            fr: "\xEAtre : j'\xE9tais, tu \xE9tais, il \xE9tait, nous \xE9tions, vous \xE9tiez, ils \xE9taient.",
+            en: "\xEAtre: j'\xE9tais, tu \xE9tais, il \xE9tait, nous \xE9tions, vous \xE9tiez, ils \xE9taient.",
+            uk: "\xEAtre: j'\xE9tais, tu \xE9tais, il \xE9tait, nous \xE9tions, vous \xE9tiez, ils \xE9taient."
+          }
+        }
+      ],
+      mnemo: {
+        fr: "L'imparfait = la VID\xC9O qui tourne en fond. Mots-signaux : avant, quand j'\xE9tais\u2026, tous les jours, pendant que, souvent, d'habitude.",
+        en: "The imparfait = the VIDEO running in the background. Signal words: avant, quand j'\xE9tais\u2026, tous les jours, pendant que, souvent, d'habitude.",
+        uk: "Imparfait = \u0412\u0406\u0414\u0415\u041E, \u0449\u043E \u043A\u0440\u0443\u0442\u0438\u0442\u044C\u0441\u044F \u043D\u0430 \u0442\u043B\u0456. \u0421\u043B\u043E\u0432\u0430-\u0441\u0438\u0433\u043D\u0430\u043B\u0438: avant, quand j'\xE9tais\u2026, tous les jours, pendant que, souvent, d'habitude."
+      },
+      examples: [
+        {
+          fr: "Il {fais:stem}{ait:end} tr\xE8s froid ce matin.",
+          en: "It was very cold this morning.",
+          uk: "\u0421\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u0432\u0440\u0430\u043D\u0446\u0456 \u0431\u0443\u043B\u043E \u0434\u0443\u0436\u0435 \u0445\u043E\u043B\u043E\u0434\u043D\u043E."
+        },
+        {
+          fr: "Avant, j'{habit:stem}{ais:end} \xE0 Kyiv.",
+          en: "Before, I lived in Kyiv.",
+          uk: "\u0420\u0430\u043D\u0456\u0448\u0435 \u044F \u0436\u0438\u0432 \u0443 \u041A\u0438\u0454\u0432\u0456."
+        },
+        {
+          fr: "Nous {regard:stem}{ions:end} la t\xE9l\xE9 quand il {est:aux} {entr\xE9:part}.",
+          en: "We were watching TV when he came in.",
+          uk: "\u041C\u0438 \u0434\u0438\u0432\u0438\u043B\u0438\u0441\u044F \u0442\u0435\u043B\u0435\u0432\u0456\u0437\u043E\u0440, \u043A\u043E\u043B\u0438 \u0432\u0456\u043D \u0443\u0432\u0456\u0439\u0448\u043E\u0432.",
+          note: {
+            fr: "Imparfait (d\xE9cor) + pass\xE9 compos\xE9 (\xE9v\xE9nement).",
+            en: "Imparfait (background) + pass\xE9 compos\xE9 (event).",
+            uk: "Imparfait (\u0442\u043B\u043E) + pass\xE9 compos\xE9 (\u043F\u043E\u0434\u0456\u044F)."
+          }
+        },
+        {
+          fr: "Quand j'{\xE9t:stem}{ais:end} \xE9tudiant, je {mange:stem}{ais:end} souvent des p\xE2tes.",
+          en: "When I was a student, I often ate pasta.",
+          uk: "\u041A\u043E\u043B\u0438 \u044F \u0431\u0443\u0432 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u043E\u043C, \u044F \u0447\u0430\u0441\u0442\u043E \u0457\u0432 \u043C\u0430\u043A\u0430\u0440\u043E\u043D\u0438."
+        }
+      ],
+      related: [
+        {
+          id: "passe-compose",
+          why: {
+            fr: "Le contraste n\xB0 1 du DELF : d\xE9cor (imparfait) vs action (pass\xE9 compos\xE9).",
+            en: "DELF contrast #1: background (imparfait) vs action (pass\xE9 compos\xE9).",
+            uk: "\u041A\u043E\u043D\u0442\u0440\u0430\u0441\u0442 \u2116 1 \u043D\u0430 DELF: \u0442\u043B\u043E (imparfait) \u043F\u0440\u043E\u0442\u0438 \u0434\u0456\u0457 (pass\xE9 compos\xE9)."
+          }
+        },
+        {
+          id: "present",
+          why: {
+            fr: "Le radical vient de \xAB nous \xBB au pr\xE9sent.",
+            en: "The stem comes from the present \u201Cnous\u201D form.",
+            uk: "\u041E\u0441\u043D\u043E\u0432\u0430 \u043F\u043E\u0445\u043E\u0434\u0438\u0442\u044C \u0432\u0456\u0434 \u0444\u043E\u0440\u043C\u0438 \xABnous\xBB \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u0433\u043E \u0447\u0430\u0441\u0443."
+          }
+        },
+        {
+          id: "conditionnel-politesse",
+          why: {
+            fr: "Le conditionnel utilise les m\xEAmes terminaisons (-ais, -ait\u2026).",
+            en: "The conditional uses the same endings (-ais, -ait\u2026).",
+            uk: "\u0423\u043C\u043E\u0432\u043D\u0438\u0439 \u0441\u043F\u043E\u0441\u0456\u0431 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454 \u0442\u0456 \u0441\u0430\u043C\u0456 \u0437\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u043D\u044F (-ais, -ait\u2026)."
+          }
+        }
+      ]
+    },
+    // ========== 4. FUTUR PROCHE ==========
+    {
+      id: "futur-proche",
+      name: "Le futur proche",
+      badge: "essentiel",
+      tagline: {
+        fr: "Le futur de tous les jours : plans, intentions, ce qui va arriver. \xC0 l'oral, c'est lui qu'on utilise.",
+        en: "The everyday future: plans, intentions, what is about to happen. In speech, this is the one you use.",
+        uk: "\u041F\u043E\u0432\u0441\u044F\u043A\u0434\u0435\u043D\u043D\u0435 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454: \u043F\u043B\u0430\u043D\u0438, \u043D\u0430\u043C\u0456\u0440\u0438, \u0442\u0435, \u0449\u043E \u043E\u0442-\u043E\u0442 \u0441\u0442\u0430\u043D\u0435\u0442\u044C\u0441\u044F. \u0412 \u0443\u0441\u043D\u043E\u043C\u0443 \u043C\u043E\u0432\u043B\u0435\u043D\u043D\u0456 \u0432\u0436\u0438\u0432\u0430\u044E\u0442\u044C \u0441\u0430\u043C\u0435 \u0439\u043E\u0433\u043E."
+      },
+      usage: [
+        {
+          fr: "Un plan d\xE9cid\xE9, proche : \xAB Je vais partir dans cinq minutes. \xBB",
+          en: "A decided, near plan: \u201CI'm going to leave in five minutes.\u201D",
+          uk: "\u0412\u0438\u0440\u0456\u0448\u0435\u043D\u0438\u0439, \u0431\u043B\u0438\u0437\u044C\u043A\u0438\u0439 \u043F\u043B\u0430\u043D: \xAB\u042F \u0437\u0431\u0438\u0440\u0430\u044E\u0441\u044F \u043F\u0456\u0442\u0438 \u0437\u0430 \u043F'\u044F\u0442\u044C \u0445\u0432\u0438\u043B\u0438\u043D\xBB."
+        },
+        {
+          fr: "Une intention : \xAB On va d\xE9m\xE9nager l'ann\xE9e prochaine. \xBB",
+          en: "An intention: \u201CWe're going to move next year.\u201D",
+          uk: "\u041D\u0430\u043C\u0456\u0440: \xAB\u041C\u0438 \u0437\u0431\u0438\u0440\u0430\u0454\u043C\u043E\u0441\u044F \u043F\u0435\u0440\u0435\u0457\u0445\u0430\u0442\u0438 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E \u0440\u043E\u043A\u0443\xBB."
+        },
+        {
+          fr: "Une pr\xE9diction \xE9vidente : \xAB Regarde les nuages ! Il va pleuvoir. \xBB",
+          en: "An obvious prediction: \u201CLook at the clouds! It's going to rain.\u201D",
+          uk: "\u041E\u0447\u0435\u0432\u0438\u0434\u043D\u0435 \u043F\u0435\u0440\u0435\u0434\u0431\u0430\u0447\u0435\u043D\u043D\u044F: \xAB\u041F\u043E\u0434\u0438\u0432\u0438\u0441\u044C \u043D\u0430 \u0445\u043C\u0430\u0440\u0438! \u0417\u0430\u0440\u0430\u0437 \u043F\u0456\u0434\u0435 \u0434\u043E\u0449\xBB."
+        }
+      ],
+      formula: "sujet + {aller au pr\xE9sent:aux} + {infinitif:inf}",
+      formulaNotes: [
+        {
+          fr: "Exactement comme l'anglais \xAB going to \xBB : I am going to eat = je vais manger.",
+          en: "Exactly like English \u201Cgoing to\u201D: I am going to eat = je vais manger.",
+          uk: "\u0422\u043E\u0447\u043D\u043E \u044F\u043A \u0430\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0435 \xABgoing to\xBB: I am going to eat = je vais manger."
+        },
+        {
+          fr: "N\xE9gation autour de \xAB aller \xBB : Je ne vais pas venir.",
+          en: "Negation goes around \u201Caller\u201D: Je ne vais pas venir.",
+          uk: "\u0417\u0430\u043F\u0435\u0440\u0435\u0447\u0435\u043D\u043D\u044F \u043D\u0430\u0432\u043A\u043E\u043B\u043E \xABaller\xBB: Je ne vais pas venir."
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Mod\xE8le : partir",
+            en: "Model: partir",
+            uk: "\u0417\u0440\u0430\u0437\u043E\u043A: partir"
+          },
+          rows: [
+            { pronoun: "je", form: "{vais:aux} {partir:inf}" },
+            { pronoun: "tu", form: "{vas:aux} {partir:inf}" },
+            { pronoun: "il / elle", form: "{va:aux} {partir:inf}" },
+            { pronoun: "nous", form: "{allons:aux} {partir:inf}" },
+            { pronoun: "vous", form: "{allez:aux} {partir:inf}" },
+            { pronoun: "ils / elles", form: "{vont:aux} {partir:inf}" }
+          ]
+        }
+      ],
+      mnemo: {
+        fr: "ALLER + infinitif = \xAB going to \xBB. Si c'est d\xE9cid\xE9 ou proche \u2192 futur proche. Si c'est un r\xEAve lointain \u2192 futur simple.",
+        en: "ALLER + infinitive = \u201Cgoing to\u201D. Decided or near \u2192 futur proche. A distant dream \u2192 futur simple.",
+        uk: "ALLER + \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432 = \xABgoing to\xBB. \u0412\u0438\u0440\u0456\u0448\u0435\u043D\u043E \u0430\u0431\u043E \u0431\u043B\u0438\u0437\u044C\u043A\u043E \u2192 futur proche. \u0414\u0430\u043B\u0435\u043A\u0430 \u043C\u0440\u0456\u044F \u2192 futur simple."
+      },
+      examples: [
+        {
+          fr: "Je {vais:aux} {prendre:inf} un caf\xE9. Tu en veux un ?",
+          en: "I'm going to get a coffee. Do you want one?",
+          uk: "\u042F \u0437\u0431\u0438\u0440\u0430\u044E\u0441\u044F \u0432\u0437\u044F\u0442\u0438 \u043A\u0430\u0432\u0443. \u0425\u043E\u0447\u0435\u0448 \u0456 \u0441\u043E\u0431\u0456?"
+        },
+        {
+          fr: "Nous {allons:aux} {visiter:inf} Lyon ce week-end.",
+          en: "We're going to visit Lyon this weekend.",
+          uk: "\u041C\u0438 \u0437\u0431\u0438\u0440\u0430\u0454\u043C\u043E\u0441\u044F \u0432\u0456\u0434\u0432\u0456\u0434\u0430\u0442\u0438 \u041B\u0456\u043E\u043D \u043D\u0430 \u0432\u0438\u0445\u0456\u0434\u043D\u0438\u0445."
+        },
+        {
+          fr: "Attention, tu {vas:aux} {tomber:inf} !",
+          en: "Careful, you're going to fall!",
+          uk: "\u041E\u0431\u0435\u0440\u0435\u0436\u043D\u043E, \u0442\u0438 \u0437\u0430\u0440\u0430\u0437 \u0432\u043F\u0430\u0434\u0435\u0448!"
+        },
+        {
+          fr: "Ils ne {vont:aux} pas {venir:inf} \xE0 la f\xEAte.",
+          en: "They are not going to come to the party.",
+          uk: "\u0412\u043E\u043D\u0438 \u043D\u0435 \u043F\u0440\u0438\u0439\u0434\u0443\u0442\u044C \u043D\u0430 \u0432\u0435\u0447\u0456\u0440\u043A\u0443.",
+          note: {
+            fr: "ne + aller + pas + infinitif.",
+            en: "ne + aller + pas + infinitive.",
+            uk: "ne + aller + pas + \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432."
+          }
+        }
+      ],
+      related: [
+        {
+          id: "futur-simple",
+          why: {
+            fr: "Futur proche = d\xE9cid\xE9/proche \xB7 futur simple = lointain/moins certain.",
+            en: "Futur proche = decided/near \xB7 futur simple = distant/less certain.",
+            uk: "Futur proche = \u0432\u0438\u0440\u0456\u0448\u0435\u043D\u043E/\u0431\u043B\u0438\u0437\u044C\u043A\u043E \xB7 futur simple = \u0434\u0430\u043B\u0435\u043A\u043E/\u043C\u0435\u043D\u0448 \u043F\u0435\u0432\u043D\u043E."
+          }
+        },
+        {
+          id: "passe-recent",
+          why: {
+            fr: "Construction miroir : venir de + infinitif (pass\xE9) \u2194 aller + infinitif (futur).",
+            en: "Mirror construction: venir de + infinitive (past) \u2194 aller + infinitive (future).",
+            uk: "\u0414\u0437\u0435\u0440\u043A\u0430\u043B\u044C\u043D\u0430 \u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0456\u044F: venir de + \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432 (\u043C\u0438\u043D\u0443\u043B\u0435) \u2194 aller + \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432 (\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454)."
+          }
+        },
+        {
+          id: "present",
+          why: {
+            fr: "\xAB Aller \xBB se conjugue au pr\xE9sent.",
+            en: "\u201CAller\u201D is conjugated in the present.",
+            uk: "\xABAller\xBB \u0432\u0456\u0434\u043C\u0456\u043D\u044E\u0454\u0442\u044C\u0441\u044F \u0432 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u043C\u0443 \u0447\u0430\u0441\u0456."
+          }
+        }
+      ]
+    },
+    // ========== 5. IMPÉRATIF ==========
+    {
+      id: "imperatif",
+      name: "L'imp\xE9ratif",
+      badge: "essentiel",
+      tagline: {
+        fr: "Ordres, conseils, instructions et invitations \u2014 sans sujet ! Seulement 3 formes : tu, nous, vous.",
+        en: "Orders, advice, instructions and invitations \u2014 without a subject! Only 3 forms: tu, nous, vous.",
+        uk: "\u041D\u0430\u043A\u0430\u0437\u0438, \u043F\u043E\u0440\u0430\u0434\u0438, \u0456\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0456\u0457 \u0442\u0430 \u0437\u0430\u043F\u0440\u043E\u0448\u0435\u043D\u043D\u044F \u2014 \u0431\u0435\u0437 \u043F\u0456\u0434\u043C\u0435\u0442\u0430! \u041B\u0438\u0448\u0435 3 \u0444\u043E\u0440\u043C\u0438: tu, nous, vous."
+      },
+      usage: [
+        {
+          fr: "Les directions : \xAB Tournez \xE0 gauche, prenez la deuxi\xE8me rue. \xBB",
+          en: "Directions: \u201CTurn left, take the second street.\u201D",
+          uk: "\u041D\u0430\u043F\u0440\u044F\u043C\u043A\u0438: \xAB\u041F\u043E\u0432\u0435\u0440\u043D\u0456\u0442\u044C \u043B\u0456\u0432\u043E\u0440\u0443\u0447, \u0434\u0440\u0443\u0433\u0430 \u0432\u0443\u043B\u0438\u0446\u044F\xBB."
+        },
+        {
+          fr: "Les conseils : \xAB Repose-toi ! Ne t'inqui\xE8te pas. \xBB",
+          en: "Advice: \u201CRest! Don't worry.\u201D",
+          uk: "\u041F\u043E\u0440\u0430\u0434\u0438: \xAB\u0412\u0456\u0434\u043F\u043E\u0447\u0438\u043D\u044C! \u041D\u0435 \u0445\u0432\u0438\u043B\u044E\u0439\u0441\u044F\xBB."
+        },
+        {
+          fr: "Les instructions et recettes : \xAB Ajoutez le sel, m\xE9langez bien. \xBB",
+          en: "Instructions and recipes: \u201CAdd the salt, mix well.\u201D",
+          uk: "\u0406\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0456\u0457 \u0442\u0430 \u0440\u0435\u0446\u0435\u043F\u0442\u0438: \xAB\u0414\u043E\u0434\u0430\u0439\u0442\u0435 \u0441\u0456\u043B\u044C, \u0434\u043E\u0431\u0440\u0435 \u043F\u0435\u0440\u0435\u043C\u0456\u0448\u0430\u0439\u0442\u0435\xBB."
+        },
+        {
+          fr: "Les invitations : \xAB Allons-y ! Venez d\xEEner chez nous ! \xBB",
+          en: "Invitations: \u201CLet's go! Come have dinner at our place!\u201D",
+          uk: "\u0417\u0430\u043F\u0440\u043E\u0448\u0435\u043D\u043D\u044F: \xAB\u0425\u043E\u0434\u0456\u043C\u043E! \u041F\u0440\u0438\u0445\u043E\u0434\u044C\u0442\u0435 \u0434\u043E \u043D\u0430\u0441 \u043D\u0430 \u0432\u0435\u0447\u0435\u0440\u044E!\xBB"
+        }
+      ],
+      formula: "{pr\xE9sent:stem} sans sujet (tu \xB7 nous \xB7 vous)",
+      formulaNotes: [
+        {
+          fr: "Verbes en -er : le -s de \xAB tu \xBB dispara\xEEt \u2192 tu parles \u2192 Parle !",
+          en: "-er verbs: the -s of the \u201Ctu\u201D form disappears \u2192 tu parles \u2192 Parle!",
+          uk: "\u0414\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u043D\u0430 -er: -s \u0444\u043E\u0440\u043C\u0438 \xABtu\xBB \u0437\u043D\u0438\u043A\u0430\u0454 \u2192 tu parles \u2192 Parle!"
+        },
+        {
+          fr: "Pronominaux : le pronom passe apr\xE8s avec un trait d'union \u2192 L\xE8ve-toi ! (mais : Ne te l\xE8ve pas.)",
+          en: "Reflexives: the pronoun moves after the verb with a hyphen \u2192 L\xE8ve-toi! (but: Ne te l\xE8ve pas.)",
+          uk: "\u0417\u0432\u043E\u0440\u043E\u0442\u043D\u0456: \u0437\u0430\u0439\u043C\u0435\u043D\u043D\u0438\u043A \u0456\u0434\u0435 \u043F\u0456\u0441\u043B\u044F \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u0447\u0435\u0440\u0435\u0437 \u0434\u0435\u0444\u0456\u0441 \u2192 L\xE8ve-toi! (\u0430\u043B\u0435: Ne te l\xE8ve pas.)"
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Mod\xE8le : parler / prendre",
+            en: "Model: parler / prendre",
+            uk: "\u0417\u0440\u0430\u0437\u043E\u043A: parler / prendre"
+          },
+          rows: [
+            { pronoun: "(tu)", form: "{Parle:stem} ! \xB7 {Prends:stem} !" },
+            { pronoun: "(nous)", form: "{Parlons:stem} ! \xB7 {Prenons:stem} !" },
+            { pronoun: "(vous)", form: "{Parlez:stem} ! \xB7 {Prenez:stem} !" }
+          ],
+          footnote: {
+            fr: "\xAB nous \xBB = suggestion (Let's\u2026) : Allons-y !",
+            en: "\u201Cnous\u201D = suggestion (Let's\u2026): Allons-y!",
+            uk: "\xABnous\xBB = \u043F\u0440\u043E\u043F\u043E\u0437\u0438\u0446\u0456\u044F (Let's\u2026): Allons-y!"
+          }
+        }
+      ],
+      extra: {
+        title: {
+          fr: "Les irr\xE9guliers de l'imp\xE9ratif",
+          en: "Irregular imperatives",
+          uk: "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0444\u043E\u0440\u043C\u0438 \u043D\u0430\u043A\u0430\u0437\u043E\u0432\u043E\u0433\u043E \u0441\u043F\u043E\u0441\u043E\u0431\u0443"
+        },
+        rows: [
+          { pronoun: "\xEAtre", form: "sois \xB7 soyons \xB7 soyez  (Sois sage !)" },
+          { pronoun: "avoir", form: "aie \xB7 ayons \xB7 ayez  (N'aie pas peur !)" },
+          { pronoun: "savoir", form: "sache \xB7 sachons \xB7 sachez" }
+        ]
+      },
+      mnemo: {
+        fr: "Imp\xE9ratif = pr\xE9sent MOINS le sujet (et moins le -s pour les verbes en -er, forme \xAB tu \xBB).",
+        en: "Imperative = present MINUS the subject (and minus the -s for -er verbs, \u201Ctu\u201D form).",
+        uk: "\u041D\u0430\u043A\u0430\u0437\u043E\u0432\u0438\u0439 \u0441\u043F\u043E\u0441\u0456\u0431 = \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u041C\u0406\u041D\u0423\u0421 \u043F\u0456\u0434\u043C\u0435\u0442 (\u0456 \u043C\u0456\u043D\u0443\u0441 -s \u0434\u043B\u044F \u0434\u0456\u0454\u0441\u043B\u0456\u0432 \u043D\u0430 -er \u0443 \u0444\u043E\u0440\u043C\u0456 \xABtu\xBB)."
+      },
+      examples: [
+        {
+          fr: "{Tournez:stem} \xE0 droite apr\xE8s la boulangerie.",
+          en: "Turn right after the bakery.",
+          uk: "\u041F\u043E\u0432\u0435\u0440\u043D\u0456\u0442\u044C \u043F\u0440\u0430\u0432\u043E\u0440\u0443\u0447 \u043F\u0456\u0441\u043B\u044F \u043F\u0435\u043A\u0430\u0440\u043D\u0456."
+        },
+        {
+          fr: "{\xC9coute:stem} bien la question !",
+          en: "Listen carefully to the question!",
+          uk: "\u0423\u0432\u0430\u0436\u043D\u043E \u0441\u043B\u0443\u0445\u0430\u0439 \u0437\u0430\u043F\u0438\u0442\u0430\u043D\u043D\u044F!",
+          note: {
+            fr: "\xE9couter \u2192 tu \xE9coutes \u2192 \xC9coute ! (sans -s)",
+            en: "\xE9couter \u2192 tu \xE9coutes \u2192 \xC9coute! (no -s)",
+            uk: "\xE9couter \u2192 tu \xE9coutes \u2192 \xC9coute! (\u0431\u0435\u0437 -s)"
+          }
+        },
+        {
+          fr: "{Allons:stem}-y, on est en retard !",
+          en: "Let's go, we're late!",
+          uk: "\u0425\u043E\u0434\u0456\u043C\u043E, \u043C\u0438 \u0437\u0430\u043F\u0456\u0437\u043D\u044E\u0454\u043C\u043E\u0441\u044C!"
+        },
+        {
+          fr: "Ne {vous:pron} {inqui\xE9tez:stem} pas, tout va bien.",
+          en: "Don't worry, everything is fine.",
+          uk: "\u041D\u0435 \u0445\u0432\u0438\u043B\u044E\u0439\u0442\u0435\u0441\u044F, \u0432\u0441\u0435 \u0434\u043E\u0431\u0440\u0435."
+        }
+      ],
+      related: [
+        {
+          id: "present",
+          why: {
+            fr: "Les formes viennent directement du pr\xE9sent.",
+            en: "The forms come directly from the present.",
+            uk: "\u0424\u043E\u0440\u043C\u0438 \u043F\u043E\u0445\u043E\u0434\u044F\u0442\u044C \u0431\u0435\u0437\u043F\u043E\u0441\u0435\u0440\u0435\u0434\u043D\u044C\u043E \u0432\u0456\u0434 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u0433\u043E \u0447\u0430\u0441\u0443."
+          }
+        },
+        {
+          id: "conditionnel-politesse",
+          why: {
+            fr: "Pour \xEAtre plus poli qu'un ordre : \xAB Pourriez-vous\u2026 ? \xBB au lieu de \xAB Faites\u2026 ! \xBB",
+            en: "To be more polite than an order: \u201CPourriez-vous\u2026?\u201D instead of \u201CFaites\u2026!\u201D",
+            uk: "\u0429\u043E\u0431 \u0431\u0443\u0442\u0438 \u0432\u0432\u0456\u0447\u043B\u0438\u0432\u0456\u0448\u0438\u043C \u0437\u0430 \u043D\u0430\u043A\u0430\u0437: \xABPourriez-vous\u2026?\xBB \u0437\u0430\u043C\u0456\u0441\u0442\u044C \xABFaites\u2026!\xBB"
+          }
+        }
+      ]
+    },
+    // ========== 6. FUTUR SIMPLE ==========
+    {
+      id: "futur-simple",
+      name: "Le futur simple",
+      badge: "reconnaitre",
+      tagline: {
+        fr: "Le futur \xAB officiel \xBB : projets lointains, promesses, pr\xE9visions. \xC0 reconna\xEEtre \xE0 l'A2, \xE0 ma\xEEtriser au B1.",
+        en: "The \u201Cofficial\u201D future: distant plans, promises, forecasts. Recognize it at A2, master it at B1.",
+        uk: "\xAB\u041E\u0444\u0456\u0446\u0456\u0439\u043D\u0435\xBB \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454: \u0434\u0430\u043B\u0435\u043A\u0456 \u043F\u043B\u0430\u043D\u0438, \u043E\u0431\u0456\u0446\u044F\u043D\u043A\u0438, \u043F\u0440\u043E\u0433\u043D\u043E\u0437\u0438. \u041D\u0430 A2 \u2014 \u0432\u043F\u0456\u0437\u043D\u0430\u0432\u0430\u0442\u0438, \u043D\u0430 B1 \u2014 \u0432\u043E\u043B\u043E\u0434\u0456\u0442\u0438."
+      },
+      usage: [
+        {
+          fr: "Un futur lointain ou incertain : \xAB Un jour, j'habiterai \xE0 la mer. \xBB",
+          en: "A distant or uncertain future: \u201COne day I will live by the sea.\u201D",
+          uk: "\u0414\u0430\u043B\u0435\u043A\u0435 \u0430\u0431\u043E \u043D\u0435\u043F\u0435\u0432\u043D\u0435 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454: \xAB\u041A\u043E\u043B\u0438\u0441\u044C \u044F \u0436\u0438\u0442\u0438\u043C\u0443 \u0431\u0456\u043B\u044F \u043C\u043E\u0440\u044F\xBB."
+        },
+        {
+          fr: "Une promesse : \xAB Je t'appellerai demain, promis. \xBB",
+          en: "A promise: \u201CI'll call you tomorrow, promise.\u201D",
+          uk: "\u041E\u0431\u0456\u0446\u044F\u043D\u043A\u0430: \xAB\u042F \u043F\u043E\u0434\u0437\u0432\u043E\u043D\u044E \u0442\u043E\u0431\u0456 \u0437\u0430\u0432\u0442\u0440\u0430, \u043E\u0431\u0456\u0446\u044F\u044E\xBB."
+        },
+        {
+          fr: "Les pr\xE9visions (m\xE9t\xE9o\u2026) : \xAB Demain, il pleuvra sur Paris. \xBB",
+          en: "Forecasts (weather\u2026): \u201CTomorrow it will rain in Paris.\u201D",
+          uk: "\u041F\u0440\u043E\u0433\u043D\u043E\u0437\u0438 (\u043F\u043E\u0433\u043E\u0434\u0430\u2026): \xAB\u0417\u0430\u0432\u0442\u0440\u0430 \u0432 \u041F\u0430\u0440\u0438\u0436\u0456 \u0439\u0442\u0438\u043C\u0435 \u0434\u043E\u0449\xBB."
+        },
+        {
+          fr: "Apr\xE8s \xAB si + pr\xE9sent \xBB : \xAB Si j'ai le temps, je viendrai. \xBB",
+          en: "After \u201Csi + present\u201D: \u201CIf I have time, I will come.\u201D",
+          uk: "\u041F\u0456\u0441\u043B\u044F \xABsi + \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441\xBB: \xAB\u042F\u043A\u0449\u043E \u043C\u0430\u0442\u0438\u043C\u0443 \u0447\u0430\u0441, \u044F \u043F\u0440\u0438\u0439\u0434\u0443\xBB."
+        }
+      ],
+      formula: "sujet + {infinitif:inf} + {-ai, -as, -a, -ons, -ez, -ont:end}",
+      formulaNotes: [
+        {
+          fr: "Les terminaisons = avoir au pr\xE9sent (ai, as, a, ons, ez, ont) !",
+          en: "The endings = avoir in the present (ai, as, a, ons, ez, ont)!",
+          uk: "\u0417\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u043D\u044F = avoir \u0443 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u043C\u0443 \u0447\u0430\u0441\u0456 (ai, as, a, ons, ez, ont)!"
+        },
+        {
+          fr: "Verbes en -re : on enl\xE8ve le -e final \u2192 prendre \u2192 je prendrai.",
+          en: "-re verbs: drop the final -e \u2192 prendre \u2192 je prendrai.",
+          uk: "\u0414\u0456\u0454\u0441\u043B\u043E\u0432\u0430 \u043D\u0430 -re: \u0432\u0456\u0434\u043A\u0438\u0434\u0430\u0454\u043C\u043E \u043A\u0456\u043D\u0446\u0435\u0432\u0435 -e \u2192 prendre \u2192 je prendrai."
+        },
+        {
+          fr: "Le radical du futur contient toujours un R \u2014 c'est le son du futur : je parleRai.",
+          en: "The future stem always contains an R \u2014 that's the sound of the future: je parleRai.",
+          uk: "\u041E\u0441\u043D\u043E\u0432\u0430 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u044C\u043E\u0433\u043E \u0437\u0430\u0432\u0436\u0434\u0438 \u043C\u0456\u0441\u0442\u0438\u0442\u044C R \u2014 \u0446\u0435 \u0437\u0432\u0443\u043A \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u044C\u043E\u0433\u043E: je parleRai."
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Mod\xE8le : parler",
+            en: "Model: parler",
+            uk: "\u0417\u0440\u0430\u0437\u043E\u043A: parler"
+          },
+          rows: [
+            { pronoun: "je", form: "{parler:inf}{ai:end}" },
+            { pronoun: "tu", form: "{parler:inf}{as:end}" },
+            { pronoun: "il / elle", form: "{parler:inf}{a:end}" },
+            { pronoun: "nous", form: "{parler:inf}{ons:end}" },
+            { pronoun: "vous", form: "{parler:inf}{ez:end}" },
+            { pronoun: "ils / elles", form: "{parler:inf}{ont:end}" }
+          ]
+        }
+      ],
+      extra: {
+        title: {
+          fr: "Radicaux irr\xE9guliers fr\xE9quents",
+          en: "Common irregular stems",
+          uk: "\u0427\u0430\u0441\u0442\u0456 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u043E\u0441\u043D\u043E\u0432\u0438"
+        },
+        rows: [
+          { pronoun: "\xEAtre \u2192 ser-", form: "je serai" },
+          { pronoun: "avoir \u2192 aur-", form: "j'aurai" },
+          { pronoun: "aller \u2192 ir-", form: "j'irai" },
+          { pronoun: "faire \u2192 fer-", form: "je ferai" },
+          { pronoun: "venir \u2192 viendr-", form: "je viendrai" },
+          { pronoun: "pouvoir \u2192 pourr-", form: "je pourrai" },
+          { pronoun: "voir \u2192 verr-", form: "je verrai" },
+          { pronoun: "devoir \u2192 devr-", form: "je devrai" }
+        ]
+      },
+      mnemo: {
+        fr: "Infinitif + AVOIR : \xAB je parler-AI \xBB = j'ai \xE0 parler dans le futur. Et le R est toujours l\xE0 : parleRai, seRai, iRai.",
+        en: "Infinitive + AVOIR: \u201Cje parler-AI\u201D. And the R is always there: parleRai, seRai, iRai.",
+        uk: "\u0406\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432 + AVOIR: \xABje parler-AI\xBB. \u0406 R \u0437\u0430\u0432\u0436\u0434\u0438 \u043D\u0430 \u043C\u0456\u0441\u0446\u0456: parleRai, seRai, iRai."
+      },
+      examples: [
+        {
+          fr: "Un jour, nous {ach\xE8ter:inf}{ons:end} une maison en Provence.",
+          en: "One day we will buy a house in Provence.",
+          uk: "\u041A\u043E\u043B\u0438\u0441\u044C \u043C\u0438 \u043A\u0443\u043F\u0438\u043C\u043E \u0431\u0443\u0434\u0438\u043D\u043E\u043A \u0443 \u041F\u0440\u043E\u0432\u0430\u043D\u0441\u0456."
+        },
+        {
+          fr: "Je t'{appeller:inf}{ai:end} ce soir.",
+          en: "I will call you tonight.",
+          uk: "\u042F \u043F\u043E\u0434\u0437\u0432\u043E\u043D\u044E \u0442\u043E\u0431\u0456 \u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u0432\u0432\u0435\u0447\u0435\u0440\u0456."
+        },
+        {
+          fr: "Si tu \xE9tudies chaque jour, tu {r\xE9ussir:inf}{as:end} le DELF.",
+          en: "If you study every day, you will pass the DELF.",
+          uk: "\u042F\u043A\u0449\u043E \u0442\u0438 \u0432\u0447\u0438\u0442\u0438\u043C\u0435\u0448\u0441\u044F \u0449\u043E\u0434\u043D\u044F, \u0442\u0438 \u0441\u043A\u043B\u0430\u0434\u0435\u0448 DELF.",
+          note: {
+            fr: "si + pr\xE9sent \u2192 futur simple.",
+            en: "si + present \u2192 futur simple.",
+            uk: "si + \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u2192 futur simple."
+          }
+        },
+        {
+          fr: "Demain, il {fer:inf}{a:end} beau sur toute la France.",
+          en: "Tomorrow the weather will be nice all over France.",
+          uk: "\u0417\u0430\u0432\u0442\u0440\u0430 \u043F\u043E \u0432\u0441\u0456\u0439 \u0424\u0440\u0430\u043D\u0446\u0456\u0457 \u0431\u0443\u0434\u0435 \u0433\u0430\u0440\u043D\u0430 \u043F\u043E\u0433\u043E\u0434\u0430.",
+          note: {
+            fr: "faire \u2192 radical irr\xE9gulier fer-.",
+            en: "faire \u2192 irregular stem fer-.",
+            uk: "faire \u2192 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0430 \u043E\u0441\u043D\u043E\u0432\u0430 fer-."
+          }
+        }
+      ],
+      related: [
+        {
+          id: "futur-proche",
+          why: {
+            fr: "\xC0 l'oral, le futur proche remplace souvent le futur simple.",
+            en: "In speech, the futur proche often replaces the futur simple.",
+            uk: "\u0412 \u0443\u0441\u043D\u043E\u043C\u0443 \u043C\u043E\u0432\u043B\u0435\u043D\u043D\u0456 futur proche \u0447\u0430\u0441\u0442\u043E \u0437\u0430\u043C\u0456\u043D\u044E\u0454 futur simple."
+          }
+        },
+        {
+          id: "conditionnel-politesse",
+          why: {
+            fr: "M\xEAme radical ! futur + terminaisons de l'imparfait = conditionnel : je voudrai \u2192 je voudrais.",
+            en: "Same stem! future + imparfait endings = conditional: je voudrai \u2192 je voudrais.",
+            uk: "\u0422\u0430 \u0441\u0430\u043C\u0430 \u043E\u0441\u043D\u043E\u0432\u0430! \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454 + \u0437\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u043D\u044F imparfait = \u0443\u043C\u043E\u0432\u043D\u0438\u0439 \u0441\u043F\u043E\u0441\u0456\u0431: je voudrai \u2192 je voudrais."
+          }
+        }
+      ]
+    },
+    // ========== 7. PASSÉ RÉCENT ==========
+    {
+      id: "passe-recent",
+      name: "Le pass\xE9 r\xE9cent",
+      badge: "essentiel",
+      tagline: {
+        fr: "\xAB Je viens de\u2026 \xBB \u2014 une action termin\xE9e il y a quelques instants. Le miroir du futur proche.",
+        en: "\u201CJe viens de\u2026\u201D \u2014 an action finished moments ago. The mirror of the futur proche.",
+        uk: "\xABJe viens de\u2026\xBB \u2014 \u0434\u0456\u044F, \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u043C\u0438\u0442\u044C \u0442\u043E\u043C\u0443. \u0414\u0437\u0435\u0440\u043A\u0430\u043B\u043E futur proche."
+      },
+      usage: [
+        {
+          fr: "Une action tout juste finie : \xAB Je viens de rentrer du travail. \xBB",
+          en: "An action that just finished: \u201CI just got home from work.\u201D",
+          uk: "\u0429\u043E\u0439\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u0434\u0456\u044F: \xAB\u042F \u0449\u043E\u0439\u043D\u043E \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0432\u0441\u044F \u0437 \u0440\u043E\u0431\u043E\u0442\u0438\xBB."
+        },
+        {
+          fr: "Refuser poliment : \xAB \u2014 Tu veux d\xE9jeuner ? \u2014 Non merci, je viens de manger. \xBB",
+          en: "Declining politely: \u201C\u2014 Want to have lunch? \u2014 No thanks, I just ate.\u201D",
+          uk: "\u0412\u0432\u0456\u0447\u043B\u0438\u0432\u0430 \u0432\u0456\u0434\u043C\u043E\u0432\u0430: \xAB\u2014 \u041F\u043E\u043E\u0431\u0456\u0434\u0430\u0454\u043C\u043E? \u2014 \u041D\u0456, \u0434\u044F\u043A\u0443\u044E, \u044F \u0449\u043E\u0439\u043D\u043E \u043F\u043E\u0457\u0432\xBB."
+        },
+        {
+          fr: "Une nouvelle toute fra\xEEche : \xAB Le train vient de partir ! \xBB",
+          en: "Fresh news: \u201CThe train just left!\u201D",
+          uk: "\u0421\u0432\u0456\u0436\u0430 \u043D\u043E\u0432\u0438\u043D\u0430: \xAB\u041F\u043E\u0442\u044F\u0433 \u0449\u043E\u0439\u043D\u043E \u043F\u043E\u0457\u0445\u0430\u0432!\xBB"
+        }
+      ],
+      formula: "sujet + {venir au pr\xE9sent:aux} + {de:aux} + {infinitif:inf}",
+      formulaNotes: [
+        {
+          fr: "= anglais \xAB to have just \xBB : I just ate = je viens de manger.",
+          en: "= English \u201Cto have just\u201D: I just ate = je viens de manger.",
+          uk: "= \u0430\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0435 \xABto have just\xBB: I just ate = je viens de manger."
+        },
+        {
+          fr: "de + voyelle \u2192 d' : je viens d'arriver.",
+          en: "de + vowel \u2192 d': je viens d'arriver.",
+          uk: "de + \u0433\u043E\u043B\u043E\u0441\u043D\u0430 \u2192 d': je viens d'arriver."
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Mod\xE8le : finir",
+            en: "Model: finir",
+            uk: "\u0417\u0440\u0430\u0437\u043E\u043A: finir"
+          },
+          rows: [
+            { pronoun: "je", form: "{viens:aux} {de:aux} {finir:inf}" },
+            { pronoun: "tu", form: "{viens:aux} {de:aux} {finir:inf}" },
+            { pronoun: "il / elle", form: "{vient:aux} {de:aux} {finir:inf}" },
+            { pronoun: "nous", form: "{venons:aux} {de:aux} {finir:inf}" },
+            { pronoun: "vous", form: "{venez:aux} {de:aux} {finir:inf}" },
+            { pronoun: "ils / elles", form: "{viennent:aux} {de:aux} {finir:inf}" }
+          ]
+        }
+      ],
+      mnemo: {
+        fr: "VENIR DE = \xAB je viens (j'arrive) de cette action \xBB. Miroir parfait : je viens de manger \u2190 MAINTENANT \u2192 je vais manger.",
+        en: "VENIR DE = \u201CI'm coming from that action\u201D. Perfect mirror: je viens de manger \u2190 NOW \u2192 je vais manger.",
+        uk: "VENIR DE = \xAB\u044F \u0439\u0434\u0443 \u0432\u0456\u0434 \u0446\u0456\u0454\u0457 \u0434\u0456\u0457\xBB. \u0406\u0434\u0435\u0430\u043B\u044C\u043D\u0435 \u0434\u0437\u0435\u0440\u043A\u0430\u043B\u043E: je viens de manger \u2190 \u0417\u0410\u0420\u0410\u0417 \u2192 je vais manger."
+      },
+      examples: [
+        {
+          fr: "Je {viens:aux} {d':aux}{arriver:inf} au bureau.",
+          en: "I just arrived at the office.",
+          uk: "\u042F \u0449\u043E\u0439\u043D\u043E \u043F\u0440\u0438\u0439\u0448\u043E\u0432 \u0432 \u043E\u0444\u0456\u0441."
+        },
+        {
+          fr: "Elle {vient:aux} {de:aux} {finir:inf} sa le\xE7on de fran\xE7ais.",
+          en: "She just finished her French lesson.",
+          uk: "\u0412\u043E\u043D\u0430 \u0449\u043E\u0439\u043D\u043E \u0437\u0430\u043A\u0456\u043D\u0447\u0438\u043B\u0430 \u0443\u0440\u043E\u043A \u0444\u0440\u0430\u043D\u0446\u0443\u0437\u044C\u043A\u043E\u0457."
+        },
+        {
+          fr: "Nous {venons:aux} {de:aux} {voir:inf} ce film.",
+          en: "We just saw that film.",
+          uk: "\u041C\u0438 \u0449\u043E\u0439\u043D\u043E \u043F\u043E\u0434\u0438\u0432\u0438\u043B\u0438\u0441\u044F \u0446\u0435\u0439 \u0444\u0456\u043B\u044C\u043C."
+        },
+        {
+          fr: "Le bus {vient:aux} {de:aux} {passer:inf} \u2014 le prochain est dans dix minutes.",
+          en: "The bus just went by \u2014 the next one is in ten minutes.",
+          uk: "\u0410\u0432\u0442\u043E\u0431\u0443\u0441 \u0449\u043E\u0439\u043D\u043E \u043F\u0440\u043E\u0457\u0445\u0430\u0432 \u2014 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 \u0437\u0430 \u0434\u0435\u0441\u044F\u0442\u044C \u0445\u0432\u0438\u043B\u0438\u043D."
+        }
+      ],
+      related: [
+        {
+          id: "futur-proche",
+          why: {
+            fr: "Construction miroir : venir de + inf (juste avant) \u2194 aller + inf (juste apr\xE8s).",
+            en: "Mirror construction: venir de + inf (just before) \u2194 aller + inf (just after).",
+            uk: "\u0414\u0437\u0435\u0440\u043A\u0430\u043B\u044C\u043D\u0430 \u043A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0456\u044F: venir de + \u0456\u043D\u0444 (\u0449\u043E\u0439\u043D\u043E) \u2194 aller + \u0456\u043D\u0444 (\u043E\u0442-\u043E\u0442)."
+          }
+        },
+        {
+          id: "passe-compose",
+          why: {
+            fr: "Il y a 5 minutes \u2192 pass\xE9 r\xE9cent \xB7 hier \u2192 pass\xE9 compos\xE9.",
+            en: "5 minutes ago \u2192 pass\xE9 r\xE9cent \xB7 yesterday \u2192 pass\xE9 compos\xE9.",
+            uk: "5 \u0445\u0432\u0438\u043B\u0438\u043D \u0442\u043E\u043C\u0443 \u2192 pass\xE9 r\xE9cent \xB7 \u0443\u0447\u043E\u0440\u0430 \u2192 pass\xE9 compos\xE9."
+          }
+        }
+      ]
+    },
+    // ========== 8. CONDITIONNEL DE POLITESSE ==========
+    {
+      id: "conditionnel-politesse",
+      name: "Le conditionnel de politesse",
+      badge: "reconnaitre",
+      tagline: {
+        fr: "La politesse en fran\xE7ais : demander sans ordonner. \xC0 l'A2, on apprend des formules fixes.",
+        en: "Politeness in French: asking without ordering. At A2, you learn fixed phrases.",
+        uk: "\u0412\u0432\u0456\u0447\u043B\u0438\u0432\u0456\u0441\u0442\u044C \u0443 \u0444\u0440\u0430\u043D\u0446\u0443\u0437\u044C\u043A\u0456\u0439: \u043F\u0440\u043E\u0441\u0438\u0442\u0438, \u0430 \u043D\u0435 \u043D\u0430\u043A\u0430\u0437\u0443\u0432\u0430\u0442\u0438. \u041D\u0430 A2 \u0432\u0447\u0438\u043C\u043E \u0441\u0442\u0430\u043B\u0456 \u0444\u043E\u0440\u043C\u0443\u043B\u0438."
+      },
+      usage: [
+        {
+          fr: "Commander poliment : \xAB Je voudrais un caf\xE9, s'il vous pla\xEEt. \xBB",
+          en: "Ordering politely: \u201CI would like a coffee, please.\u201D",
+          uk: "\u0412\u0432\u0456\u0447\u043B\u0438\u0432\u0435 \u0437\u0430\u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F: \xAB\u042F \u0445\u043E\u0442\u0456\u0432 \u0431\u0438 \u043A\u0430\u0432\u0443, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430\xBB."
+        },
+        {
+          fr: "Exprimer un souhait : \xAB J'aimerais visiter le Japon. \xBB",
+          en: "Expressing a wish: \u201CI would love to visit Japan.\u201D",
+          uk: "\u0412\u0438\u0441\u043B\u043E\u0432\u0438\u0442\u0438 \u0431\u0430\u0436\u0430\u043D\u043D\u044F: \xAB\u042F \u0445\u043E\u0442\u0456\u0432 \u0431\u0438 \u0432\u0456\u0434\u0432\u0456\u0434\u0430\u0442\u0438 \u042F\u043F\u043E\u043D\u0456\u044E\xBB."
+        },
+        {
+          fr: "Demander un service : \xAB Pourriez-vous r\xE9p\xE9ter, s'il vous pla\xEEt ? \xBB",
+          en: "Asking a favour: \u201CCould you repeat, please?\u201D",
+          uk: "\u041F\u043E\u043F\u0440\u043E\u0441\u0438\u0442\u0438 \u043F\u0440\u043E \u043F\u043E\u0441\u043B\u0443\u0433\u0443: \xAB\u0427\u0438 \u043D\u0435 \u043C\u043E\u0433\u043B\u0438 \u0431 \u0432\u0438 \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0438, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430?\xBB"
+        },
+        {
+          fr: "Donner un conseil : \xAB Tu devrais te reposer. \xBB",
+          en: "Giving advice: \u201CYou should rest.\u201D",
+          uk: "\u0414\u0430\u0442\u0438 \u043F\u043E\u0440\u0430\u0434\u0443: \xAB\u0422\u043E\u0431\u0456 \u0432\u0430\u0440\u0442\u043E \u0432\u0456\u0434\u043F\u043E\u0447\u0438\u0442\u0438\xBB."
+        }
+      ],
+      formula: "{radical du futur:inf} + {terminaisons de l'imparfait:end}",
+      formulaNotes: [
+        {
+          fr: "\xC0 l'A2 : apprenez ces 6 formules par c\u0153ur, comme des mots.",
+          en: "At A2: learn these 6 phrases by heart, like vocabulary.",
+          uk: "\u041D\u0430 A2: \u0432\u0438\u0432\u0447\u0456\u0442\u044C \u0446\u0456 6 \u0444\u043E\u0440\u043C\u0443\u043B \u043D\u0430\u043F\u0430\u043C'\u044F\u0442\u044C, \u044F\u043A \u0441\u043B\u043E\u0432\u0430."
+        },
+        {
+          fr: "Le secret (pour plus tard) : radical du futur + -ais/-ait = tout le conditionnel.",
+          en: "The secret (for later): future stem + -ais/-ait = the whole conditional.",
+          uk: "\u0421\u0435\u043A\u0440\u0435\u0442 (\u043D\u0430 \u043F\u043E\u0442\u0456\u043C): \u043E\u0441\u043D\u043E\u0432\u0430 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u044C\u043E\u0433\u043E + -ais/-ait = \u0443\u0432\u0435\u0441\u044C \u0443\u043C\u043E\u0432\u043D\u0438\u0439 \u0441\u043F\u043E\u0441\u0456\u0431."
+        }
+      ],
+      tables: [
+        {
+          title: {
+            fr: "Les 6 formules magiques",
+            en: "The 6 magic phrases",
+            uk: "6 \u0447\u0430\u0440\u0456\u0432\u043D\u0438\u0445 \u0444\u043E\u0440\u043C\u0443\u043B"
+          },
+          rows: [
+            { pronoun: "je", form: "{voudr:inf}{ais:end}  (vouloir \u2192 I'd like)" },
+            { pronoun: "j'", form: "{aimer:inf}{ais:end}  (aimer \u2192 I'd love)" },
+            { pronoun: "tu", form: "{devr:inf}{ais:end}  (devoir \u2192 you should)" },
+            { pronoun: "vous", form: "{pourr:inf}{iez:end}-vous ?  (pouvoir \u2192 could you?)" },
+            { pronoun: "on", form: "{pourr:inf}{ait:end}  (pouvoir \u2192 we could)" },
+            { pronoun: "\xE7a", form: "{ser:inf}{ait:end} bien  (\xEAtre \u2192 it would be nice)" }
+          ]
+        }
+      ],
+      mnemo: {
+        fr: "\xAB Je veux \xBB = \u{1F620} un enfant. \xAB Je voudrais \xBB = \u{1F60A} un adulte poli. Le -S de politesse : voudrai (futur) \u2192 voudraiS (poli).",
+        en: "\u201CJe veux\u201D = \u{1F620} a child. \u201CJe voudrais\u201D = \u{1F60A} a polite adult. The politeness -S: voudrai (future) \u2192 voudraiS (polite).",
+        uk: "\xABJe veux\xBB = \u{1F620} \u0434\u0438\u0442\u0438\u043D\u0430. \xABJe voudrais\xBB = \u{1F60A} \u0432\u0432\u0456\u0447\u043B\u0438\u0432\u0438\u0439 \u0434\u043E\u0440\u043E\u0441\u043B\u0438\u0439. \u0412\u0432\u0456\u0447\u043B\u0438\u0432\u0435 -S: voudrai (\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454) \u2192 voudraiS (\u0432\u0432\u0456\u0447\u043B\u0438\u0432\u043E)."
+      },
+      examples: [
+        {
+          fr: "Je {voudr:inf}{ais:end} une baguette, s'il vous pla\xEEt.",
+          en: "I would like a baguette, please.",
+          uk: "\u042F \u0445\u043E\u0442\u0456\u0432 \u0431\u0438 \u0431\u0430\u0433\u0435\u0442, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430."
+        },
+        {
+          fr: "{Pourr:inf}{iez:end}-vous parler plus lentement ?",
+          en: "Could you speak more slowly?",
+          uk: "\u0427\u0438 \u043D\u0435 \u043C\u043E\u0433\u043B\u0438 \u0431 \u0432\u0438 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0438 \u043F\u043E\u0432\u0456\u043B\u044C\u043D\u0456\u0448\u0435?"
+        },
+        {
+          fr: "J'{aimer:inf}{ais:end} bien habiter pr\xE8s du parc.",
+          en: "I would love to live near the park.",
+          uk: "\u042F \u0445\u043E\u0442\u0456\u0432 \u0431\u0438 \u0436\u0438\u0442\u0438 \u0431\u0456\u043B\u044F \u043F\u0430\u0440\u043A\u0443."
+        },
+        {
+          fr: "Tu {devr:inf}{ais:end} r\xE9viser le pass\xE9 compos\xE9 !",
+          en: "You should review the pass\xE9 compos\xE9!",
+          uk: "\u0422\u043E\u0431\u0456 \u0432\u0430\u0440\u0442\u043E \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0438 pass\xE9 compos\xE9!"
+        }
+      ],
+      related: [
+        {
+          id: "futur-simple",
+          why: {
+            fr: "M\xEAme radical que le futur : je voudrai (futur) vs je voudrais (conditionnel).",
+            en: "Same stem as the future: je voudrai (future) vs je voudrais (conditional).",
+            uk: "\u0422\u0430 \u0441\u0430\u043C\u0430 \u043E\u0441\u043D\u043E\u0432\u0430, \u0449\u043E \u0439 \u0443 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u044C\u043E\u0433\u043E: je voudrai (\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454) vs je voudrais (\u0443\u043C\u043E\u0432\u043D\u0438\u0439)."
+          }
+        },
+        {
+          id: "imparfait",
+          why: {
+            fr: "M\xEAmes terminaisons que l'imparfait (-ais, -ait, -iez\u2026).",
+            en: "Same endings as the imparfait (-ais, -ait, -iez\u2026).",
+            uk: "\u0422\u0456 \u0441\u0430\u043C\u0456 \u0437\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u043D\u044F, \u0449\u043E \u0439 \u0432 imparfait (-ais, -ait, -iez\u2026)."
+          }
+        },
+        {
+          id: "imperatif",
+          why: {
+            fr: "L'alternative polie \xE0 l'imp\xE9ratif.",
+            en: "The polite alternative to the imperative.",
+            uk: "\u0412\u0432\u0456\u0447\u043B\u0438\u0432\u0430 \u0430\u043B\u044C\u0442\u0435\u0440\u043D\u0430\u0442\u0438\u0432\u0430 \u043D\u0430\u043A\u0430\u0437\u043E\u0432\u043E\u043C\u0443 \u0441\u043F\u043E\u0441\u043E\u0431\u0443."
+          }
+        }
+      ]
+    }
+  ];
+  var CONTRASTS = [
+    {
+      key: "imparfait|passe-compose",
+      headline: {
+        fr: "La vid\xE9o (imparfait) contre la photo (pass\xE9 compos\xE9) \u2014 LE contraste \xE0 ma\xEEtriser.",
+        en: "The video (imparfait) versus the photo (pass\xE9 compos\xE9) \u2014 THE contrast to master.",
+        uk: "\u0412\u0456\u0434\u0435\u043E (imparfait) \u043F\u0440\u043E\u0442\u0438 \u0444\u043E\u0442\u043E (pass\xE9 compos\xE9) \u2014 \u0413\u041E\u041B\u041E\u0412\u041D\u0418\u0419 \u043A\u043E\u043D\u0442\u0440\u0430\u0441\u0442."
+      },
+      rows: [
+        {
+          a: {
+            fr: "Quand j'{\xE9t:stem}{ais:end} \xE9tudiant, je {mange:stem}{ais:end} souvent des pizzas.",
+            en: "When I was a student, I often ate pizza. (habit \u2014 no start, no end)",
+            uk: "\u041A\u043E\u043B\u0438 \u044F \u0431\u0443\u0432 \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u043E\u043C, \u044F \u0447\u0430\u0441\u0442\u043E \u0457\u0432 \u043F\u0456\u0446\u0443. (\u0437\u0432\u0438\u0447\u043A\u0430 \u2014 \u0431\u0435\u0437 \u043F\u043E\u0447\u0430\u0442\u043A\u0443 \u0439 \u043A\u0456\u043D\u0446\u044F)"
+          },
+          b: {
+            fr: "Hier, j'{ai:aux} {mang\xE9:part} une pizza.",
+            en: "Yesterday I ate a pizza. (one finished event)",
+            uk: "\u0423\u0447\u043E\u0440\u0430 \u044F \u0437'\u0457\u0432 \u043F\u0456\u0446\u0443. (\u043E\u0434\u043D\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u043F\u043E\u0434\u0456\u044F)"
+          },
+          point: {
+            fr: "Habitude r\xE9p\xE9t\xE9e \u2192 imparfait \xB7 \xE9v\xE9nement unique et fini \u2192 pass\xE9 compos\xE9.",
+            en: "Repeated habit \u2192 imparfait \xB7 single finished event \u2192 pass\xE9 compos\xE9.",
+            uk: "\u041F\u043E\u0432\u0442\u043E\u0440\u044E\u0432\u0430\u043D\u0430 \u0437\u0432\u0438\u0447\u043A\u0430 \u2192 imparfait \xB7 \u043E\u0434\u0438\u043D\u0438\u0447\u043D\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u043F\u043E\u0434\u0456\u044F \u2192 pass\xE9 compos\xE9."
+          }
+        },
+        {
+          a: {
+            fr: "Il {pleuv:stem}{ait:end} et les rues {\xE9t:stem}{aient:end} vides.",
+            en: "It was raining and the streets were empty. (setting the scene)",
+            uk: "\u0406\u0448\u043E\u0432 \u0434\u043E\u0449, \u0456 \u0432\u0443\u043B\u0438\u0446\u0456 \u0431\u0443\u043B\u0438 \u043F\u043E\u0440\u043E\u0436\u043D\u0456. (\u043E\u043F\u0438\u0441 \u0441\u0446\u0435\u043D\u0438)"
+          },
+          b: {
+            fr: "Soudain, quelqu'un {a:aux} {frapp\xE9:part} \xE0 la porte.",
+            en: "Suddenly, someone knocked at the door. (the event)",
+            uk: "\u0420\u0430\u043F\u0442\u043E\u043C \u0445\u0442\u043E\u0441\u044C \u043F\u043E\u0441\u0442\u0443\u043A\u0430\u0432 \u0443 \u0434\u0432\u0435\u0440\u0456. (\u043F\u043E\u0434\u0456\u044F)"
+          },
+          point: {
+            fr: "Le d\xE9cor de l'histoire \u2192 imparfait \xB7 ce qui arrive \u2192 pass\xE9 compos\xE9.",
+            en: "The story's background \u2192 imparfait \xB7 what happens \u2192 pass\xE9 compos\xE9.",
+            uk: "\u0422\u043B\u043E \u0456\u0441\u0442\u043E\u0440\u0456\u0457 \u2192 imparfait \xB7 \u0442\u0435, \u0449\u043E \u0441\u0442\u0430\u0454\u0442\u044C\u0441\u044F \u2192 pass\xE9 compos\xE9."
+          }
+        },
+        {
+          a: {
+            fr: "Je {dorm:stem}{ais:end} tranquillement\u2026",
+            en: "I was sleeping peacefully\u2026 (action in progress)",
+            uk: "\u042F \u0441\u043F\u043E\u043A\u0456\u0439\u043D\u043E \u0441\u043F\u0430\u0432\u2026 (\u0434\u0456\u044F \u0442\u0440\u0438\u0432\u0430\u0454)"
+          },
+          b: {
+            fr: "\u2026quand le t\xE9l\xE9phone {a:aux} {sonn\xE9:part}.",
+            en: "\u2026when the phone rang. (interruption)",
+            uk: "\u2026\u043A\u043E\u043B\u0438 \u0437\u0430\u0434\u0437\u0432\u043E\u043D\u0438\u0432 \u0442\u0435\u043B\u0435\u0444\u043E\u043D. (\u043F\u0435\u0440\u0435\u0440\u0438\u0432\u0430\u043D\u043D\u044F)"
+          },
+          point: {
+            fr: "La phrase type du DELF : imparfait (en cours) + \xAB quand \xBB + pass\xE9 compos\xE9 (interruption).",
+            en: "The classic DELF sentence: imparfait (in progress) + \u201Cquand\u201D + pass\xE9 compos\xE9 (interruption).",
+            uk: "\u041A\u043B\u0430\u0441\u0438\u0447\u043D\u0435 \u0440\u0435\u0447\u0435\u043D\u043D\u044F DELF: imparfait (\u0442\u0440\u0438\u0432\u0430\u0454) + \xABquand\xBB + pass\xE9 compos\xE9 (\u043F\u0435\u0440\u0435\u0440\u0438\u0432\u0430\u043D\u043D\u044F)."
+          }
+        }
+      ]
+    },
+    {
+      key: "futur-proche|futur-simple",
+      headline: {
+        fr: "D\xE9cid\xE9 et proche (futur proche) contre lointain et r\xEAv\xE9 (futur simple).",
+        en: "Decided and near (futur proche) versus distant and dreamed (futur simple).",
+        uk: "\u0412\u0438\u0440\u0456\u0448\u0435\u043D\u0435 \u0439 \u0431\u043B\u0438\u0437\u044C\u043A\u0435 (futur proche) \u043F\u0440\u043E\u0442\u0438 \u0434\u0430\u043B\u0435\u043A\u043E\u0433\u043E \u0439 \u043E\u043C\u0440\u0456\u044F\u043D\u043E\u0433\u043E (futur simple)."
+      },
+      rows: [
+        {
+          a: {
+            fr: "Je {vais:aux} {d\xE9m\xE9nager:inf} le mois prochain.",
+            en: "I'm moving next month. (decided, organized)",
+            uk: "\u042F \u043F\u0435\u0440\u0435\u0457\u0436\u0434\u0436\u0430\u044E \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E \u043C\u0456\u0441\u044F\u0446\u044F. (\u0432\u0438\u0440\u0456\u0448\u0435\u043D\u043E, \u043E\u0440\u0433\u0430\u043D\u0456\u0437\u043E\u0432\u0430\u043D\u043E)"
+          },
+          b: {
+            fr: "Un jour, je {d\xE9m\xE9nager:inf}{ai:end} \xE0 la campagne.",
+            en: "One day I will move to the countryside. (a dream)",
+            uk: "\u041A\u043E\u043B\u0438\u0441\u044C \u044F \u043F\u0435\u0440\u0435\u0457\u0434\u0443 \u0432 \u0441\u0435\u043B\u043E. (\u043C\u0440\u0456\u044F)"
+          },
+          point: {
+            fr: "Plan concret \u2192 futur proche \xB7 projet vague / lointain \u2192 futur simple.",
+            en: "Concrete plan \u2192 futur proche \xB7 vague / distant project \u2192 futur simple.",
+            uk: "\u041A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u0438\u0439 \u043F\u043B\u0430\u043D \u2192 futur proche \xB7 \u0442\u0443\u043C\u0430\u043D\u043D\u0438\u0439 / \u0434\u0430\u043B\u0435\u043A\u0438\u0439 \u043F\u0440\u043E\u0454\u043A\u0442 \u2192 futur simple."
+          }
+        },
+        {
+          a: {
+            fr: "Regarde le ciel : il {va:aux} {pleuvoir:inf} !",
+            en: "Look at the sky: it's going to rain! (evidence now)",
+            uk: "\u041F\u043E\u0434\u0438\u0432\u0438\u0441\u044C \u043D\u0430 \u043D\u0435\u0431\u043E: \u0437\u0430\u0440\u0430\u0437 \u043F\u0456\u0434\u0435 \u0434\u043E\u0449! (\u0434\u043E\u043A\u0430\u0437\u0438 \u0437\u0430\u0440\u0430\u0437)"
+          },
+          b: {
+            fr: "Selon la m\xE9t\xE9o, il {pleuvr:inf}{a:end} demain.",
+            en: "According to the forecast, it will rain tomorrow. (formal prediction)",
+            uk: "\u0417\u0430 \u043F\u0440\u043E\u0433\u043D\u043E\u0437\u043E\u043C, \u0437\u0430\u0432\u0442\u0440\u0430 \u0439\u0442\u0438\u043C\u0435 \u0434\u043E\u0449. (\u043E\u0444\u0456\u0446\u0456\u0439\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u043D\u043E\u0437)"
+          },
+          point: {
+            fr: "Signes visibles maintenant \u2192 futur proche \xB7 pr\xE9vision officielle \u2192 futur simple.",
+            en: "Visible signs now \u2192 futur proche \xB7 official forecast \u2192 futur simple.",
+            uk: "\u0412\u0438\u0434\u0438\u043C\u0456 \u043E\u0437\u043D\u0430\u043A\u0438 \u0437\u0430\u0440\u0430\u0437 \u2192 futur proche \xB7 \u043E\u0444\u0456\u0446\u0456\u0439\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u043D\u043E\u0437 \u2192 futur simple."
+          }
+        }
+      ]
+    },
+    {
+      key: "passe-compose|passe-recent",
+      headline: {
+        fr: "Il y a 5 minutes (pass\xE9 r\xE9cent) contre hier (pass\xE9 compos\xE9).",
+        en: "5 minutes ago (pass\xE9 r\xE9cent) versus yesterday (pass\xE9 compos\xE9).",
+        uk: "5 \u0445\u0432\u0438\u043B\u0438\u043D \u0442\u043E\u043C\u0443 (pass\xE9 r\xE9cent) \u043F\u0440\u043E\u0442\u0438 \u0432\u0447\u043E\u0440\u0430 (pass\xE9 compos\xE9)."
+      },
+      rows: [
+        {
+          a: {
+            fr: "J'{ai:aux} {d\xE9jeun\xE9:part} \xE0 midi avec un coll\xE8gue.",
+            en: "I had lunch at noon with a colleague. (completed, situated in time)",
+            uk: "\u042F \u043F\u043E\u043E\u0431\u0456\u0434\u0430\u0432 \u043E\u043F\u0456\u0432\u0434\u043D\u0456 \u0437 \u043A\u043E\u043B\u0435\u0433\u043E\u044E. (\u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E, \u0437 \u0447\u0430\u0441\u043E\u0432\u043E\u044E \u043F\u0440\u0438\u0432'\u044F\u0437\u043A\u043E\u044E)"
+          },
+          b: {
+            fr: "Non merci, je {viens:aux} {de:aux} {d\xE9jeuner:inf}.",
+            en: "No thanks, I just had lunch. (moments ago)",
+            uk: "\u041D\u0456, \u0434\u044F\u043A\u0443\u044E, \u044F \u0449\u043E\u0439\u043D\u043E \u043F\u043E\u043E\u0431\u0456\u0434\u0430\u0432. (\u043C\u0438\u0442\u044C \u0442\u043E\u043C\u0443)"
+          },
+          point: {
+            fr: "Action tr\xE8s fra\xEEche (\xE0 l'instant) \u2192 pass\xE9 r\xE9cent \xB7 action pass\xE9e situ\xE9e \u2192 pass\xE9 compos\xE9.",
+            en: "Very fresh action (just now) \u2192 pass\xE9 r\xE9cent \xB7 situated past action \u2192 pass\xE9 compos\xE9.",
+            uk: "\u0429\u043E\u0439\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430 \u0434\u0456\u044F \u2192 pass\xE9 r\xE9cent \xB7 \u0434\u0456\u044F \u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443 \u0437 \u043F\u0440\u0438\u0432'\u044F\u0437\u043A\u043E\u044E \u2192 pass\xE9 compos\xE9."
+          }
+        }
+      ]
+    },
+    {
+      key: "conditionnel-politesse|futur-simple",
+      headline: {
+        fr: "Une lettre change tout : je voudrai (futur) contre je voudrais (poli).",
+        en: "One letter changes everything: je voudrai (future) versus je voudrais (polite).",
+        uk: "\u041E\u0434\u043D\u0430 \u043B\u0456\u0442\u0435\u0440\u0430 \u0437\u043C\u0456\u043D\u044E\u0454 \u0432\u0441\u0435: je voudrai (\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454) \u043F\u0440\u043E\u0442\u0438 je voudrais (\u0432\u0432\u0456\u0447\u043B\u0438\u0432\u043E)."
+      },
+      rows: [
+        {
+          a: {
+            fr: "Je {voudr:inf}{ais:end} un caf\xE9, s'il vous pla\xEEt.",
+            en: "I would like a coffee, please. (polite request, now)",
+            uk: "\u042F \u0445\u043E\u0442\u0456\u0432 \u0431\u0438 \u043A\u0430\u0432\u0443, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430. (\u0432\u0432\u0456\u0447\u043B\u0438\u0432\u0435 \u043F\u0440\u043E\u0445\u0430\u043D\u043D\u044F, \u0437\u0430\u0440\u0430\u0437)"
+          },
+          b: {
+            fr: "Plus tard, je {voudr:inf}{ai:end} peut-\xEAtre un dessert.",
+            en: "Later, I will perhaps want a dessert. (future fact)",
+            uk: "\u041F\u0456\u0437\u043D\u0456\u0448\u0435 \u044F, \u043C\u043E\u0436\u043B\u0438\u0432\u043E, \u0437\u0430\u0445\u043E\u0447\u0443 \u0434\u0435\u0441\u0435\u0440\u0442. (\u0444\u0430\u043A\u0442 \u0443 \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u044C\u043E\u043C\u0443)"
+          },
+          point: {
+            fr: "M\xEAme radical (voudr-) : -ais = politesse \xB7 -ai = futur. Le -s change le sens !",
+            en: "Same stem (voudr-): -ais = politeness \xB7 -ai = future. The -s changes the meaning!",
+            uk: "\u0422\u0430 \u0441\u0430\u043C\u0430 \u043E\u0441\u043D\u043E\u0432\u0430 (voudr-): -ais = \u0432\u0432\u0456\u0447\u043B\u0438\u0432\u0456\u0441\u0442\u044C \xB7 -ai = \u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454. \u041B\u0456\u0442\u0435\u0440\u0430 -s \u0437\u043C\u0456\u043D\u044E\u0454 \u0437\u043C\u0456\u0441\u0442!"
+          }
+        }
+      ]
+    },
+    {
+      key: "futur-proche|passe-recent",
+      headline: {
+        fr: "Le miroir parfait autour de MAINTENANT : venir de \u2190 \xB7 \u2192 aller.",
+        en: "The perfect mirror around NOW: venir de \u2190 \xB7 \u2192 aller.",
+        uk: "\u0406\u0434\u0435\u0430\u043B\u044C\u043D\u0435 \u0434\u0437\u0435\u0440\u043A\u0430\u043B\u043E \u043D\u0430\u0432\u043A\u043E\u043B\u043E \u0417\u0410\u0420\u0410\u0417: venir de \u2190 \xB7 \u2192 aller."
+      },
+      rows: [
+        {
+          a: {
+            fr: "Je {vais:aux} {manger:inf}. (dans un instant)",
+            en: "I'm going to eat. (in a moment)",
+            uk: "\u042F \u0437\u0431\u0438\u0440\u0430\u044E\u0441\u044F \u0457\u0441\u0442\u0438. (\u0437\u0430 \u043C\u0438\u0442\u044C)"
+          },
+          b: {
+            fr: "Je {viens:aux} {de:aux} {manger:inf}. (il y a un instant)",
+            en: "I just ate. (a moment ago)",
+            uk: "\u042F \u0449\u043E\u0439\u043D\u043E \u043F\u043E\u0457\u0432. (\u043C\u0438\u0442\u044C \u0442\u043E\u043C\u0443)"
+          },
+          point: {
+            fr: "M\xEAme structure : verbe au pr\xE9sent + infinitif. Seul le verbe change : aller (futur) / venir de (pass\xE9).",
+            en: "Same structure: present-tense verb + infinitive. Only the verb changes: aller (future) / venir de (past).",
+            uk: "\u041E\u0434\u043D\u0430\u043A\u043E\u0432\u0430 \u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430: \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u043E \u0432 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u044C\u043E\u043C\u0443 + \u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432. \u0417\u043C\u0456\u043D\u044E\u0454\u0442\u044C\u0441\u044F \u043B\u0438\u0448\u0435 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u043E: aller (\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0454) / venir de (\u043C\u0438\u043D\u0443\u043B\u0435)."
+          }
+        }
+      ]
+    },
+    {
+      key: "imperatif|present",
+      headline: {
+        fr: "Enlevez le sujet et le pr\xE9sent devient un ordre.",
+        en: "Remove the subject and the present becomes an order.",
+        uk: "\u041F\u0440\u0438\u0431\u0435\u0440\u0456\u0442\u044C \u043F\u0456\u0434\u043C\u0435\u0442 \u2014 \u0456 \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u0441\u0442\u0430\u0454 \u043D\u0430\u043A\u0430\u0437\u043E\u043C."
+      },
+      rows: [
+        {
+          a: {
+            fr: "{Parle:stem} plus fort !",
+            en: "Speak louder! (order \u2014 note: no -s)",
+            uk: "\u0413\u043E\u0432\u043E\u0440\u0438 \u0433\u043E\u043B\u043E\u0441\u043D\u0456\u0448\u0435! (\u043D\u0430\u043A\u0430\u0437 \u2014 \u0431\u0435\u0437 -s)"
+          },
+          b: {
+            fr: "Tu {parl:stem}{es:end} tr\xE8s doucement.",
+            en: "You speak very quietly. (statement)",
+            uk: "\u0422\u0438 \u0433\u043E\u0432\u043E\u0440\u0438\u0448 \u0434\u0443\u0436\u0435 \u0442\u0438\u0445\u043E. (\u0442\u0432\u0435\u0440\u0434\u0436\u0435\u043D\u043D\u044F)"
+          },
+          point: {
+            fr: "tu parles \u2192 Parle ! : sujet supprim\xE9, et le -s tombe pour les verbes en -er.",
+            en: "tu parles \u2192 Parle!: subject removed, and the -s drops for -er verbs.",
+            uk: "tu parles \u2192 Parle!: \u043F\u0456\u0434\u043C\u0435\u0442 \u043F\u0440\u0438\u0431\u0440\u0430\u043D\u043E, \u0430 -s \u0437\u043D\u0438\u043A\u0430\u0454 \u0432 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u0430\u0445 \u043D\u0430 -er."
+          }
+        }
+      ]
+    },
+    {
+      key: "imparfait|present",
+      headline: {
+        fr: "Le pr\xE9sent fabrique l'imparfait : prenez \xAB nous \xBB, enlevez -ons.",
+        en: "The present builds the imparfait: take \u201Cnous\u201D, drop -ons.",
+        uk: "\u0422\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441 \u0443\u0442\u0432\u043E\u0440\u044E\u0454 imparfait: \u0431\u0435\u0440\u0435\u043C\u043E \xABnous\xBB, \u0432\u0456\u0434\u043A\u0438\u0434\u0430\u0454\u043C\u043E -ons."
+      },
+      rows: [
+        {
+          a: {
+            fr: "Avant, je {buv:stem}{ais:end} beaucoup de caf\xE9.",
+            en: "Before, I drank a lot of coffee. (imparfait)",
+            uk: "\u0420\u0430\u043D\u0456\u0448\u0435 \u044F \u043F\u0438\u0432 \u0431\u0430\u0433\u0430\u0442\u043E \u043A\u0430\u0432\u0438. (imparfait)"
+          },
+          b: {
+            fr: "Nous {buv:stem}{ons:end} un caf\xE9 ensemble.",
+            en: "We are drinking a coffee together. (present \u2014 the stem donor!)",
+            uk: "\u041C\u0438 \u043F'\u0454\u043C\u043E \u043A\u0430\u0432\u0443 \u0440\u0430\u0437\u043E\u043C. (\u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u2014 \u0434\u043E\u043D\u043E\u0440 \u043E\u0441\u043D\u043E\u0432\u0438!)"
+          },
+          point: {
+            fr: "boire : nous buvons \u2192 buv- \u2192 je buvais. \xC7a marche pour tous les verbes sauf \xEAtre.",
+            en: "boire: nous buvons \u2192 buv- \u2192 je buvais. Works for every verb except \xEAtre.",
+            uk: "boire: nous buvons \u2192 buv- \u2192 je buvais. \u041F\u0440\u0430\u0446\u044E\u0454 \u0434\u043B\u044F \u0432\u0441\u0456\u0445 \u0434\u0456\u0454\u0441\u043B\u0456\u0432, \u043A\u0440\u0456\u043C \xEAtre."
+          }
+        }
+      ]
+    }
+  ];
+  var ROLE_LABELS = {
+    aux: { fr: "auxiliaire / semi-auxiliaire", en: "auxiliary", uk: "\u0434\u043E\u043F\u043E\u043C\u0456\u0436\u043D\u0435 \u0434\u0456\u0454\u0441\u043B\u043E\u0432\u043E" },
+    stem: { fr: "radical", en: "stem", uk: "\u043E\u0441\u043D\u043E\u0432\u0430" },
+    end: { fr: "terminaison", en: "ending", uk: "\u0437\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u043D\u044F" },
+    part: { fr: "participe pass\xE9", en: "past participle", uk: "\u0434\u0456\u0454\u043F\u0440\u0438\u043A\u043C\u0435\u0442\u043D\u0438\u043A \u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E \u0447\u0430\u0441\u0443" },
+    inf: { fr: "infinitif", en: "infinitive", uk: "\u0456\u043D\u0444\u0456\u043D\u0456\u0442\u0438\u0432" },
+    pron: { fr: "pronom r\xE9fl\xE9chi", en: "reflexive pronoun", uk: "\u0437\u0432\u043E\u0440\u043E\u0442\u043D\u0438\u0439 \u0437\u0430\u0439\u043C\u0435\u043D\u043D\u0438\u043A" }
+  };
+
+  // src/main.ts
+  var state = {
+    view: "overview",
+    compareA: "passe-compose",
+    compareB: "imparfait"
+  };
+  var ROLES = ["aux", "stem", "end", "part", "inf", "pron"];
+  function esc(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function marked(src) {
+    let out = "";
+    let last = 0;
+    const re = /\{([^:{}]+):(aux|stem|end|part|inf|pron)\}/g;
+    let m;
+    while ((m = re.exec(src)) !== null) {
+      out += esc(src.slice(last, m.index));
+      out += `<span class="role role-${m[2]}">${esc(m[1])}</span>`;
+      last = m.index + m[0].length;
+    }
+    out += esc(src.slice(last));
+    return out;
+  }
+  function tri(t, frHtml = false) {
+    const fr = frHtml ? marked(t.fr) : esc(t.fr);
+    return `<span class="fr">${fr}</span><span class="tr tr-en">${esc(t.en)}</span><span class="tr tr-uk">${esc(t.uk)}</span>`;
+  }
+  function tenseById(id) {
+    const t = TENSES.find((x) => x.id === id);
+    if (!t) throw new Error(`Unknown tense: ${id}`);
+    return t;
+  }
+  function legendHtml() {
+    const items = ROLES.map(
+      (r) => `<span class="legend-item"><span class="legend-dot role-${r}"></span>${tri(
+        ROLE_LABELS[r]
+      )}</span>`
+    ).join("");
+    return `<div class="legend" aria-label="Code couleur">${items}</div>`;
+  }
+  function badgeHtml(t) {
+    return t.badge === "essentiel" ? `<span class="badge badge-core">\u2605 essentiel A2</span>` : `<span class="badge badge-soft">\u25D0 \xE0 reconna\xEEtre</span>`;
+  }
+  function exampleHtml(ex, tenseId, i, open = false) {
+    const note = ex.note ? `<div class="ex-note">\u{1F4A1} ${tri(ex.note)}</div>` : "";
+    return `
+  <li class="example ${open ? "revealed" : ""}" data-ex="${tenseId}-${i}">
+    <button class="reveal-btn" type="button" aria-expanded="${open}">
+      <span class="when-hidden">\u{1F441} Montrer</span><span class="when-shown">Cacher</span>
+    </button>
+    <div class="ex-body">
+      <div class="ex-fr">${marked(ex.fr)}</div>
+      <div class="ex-tr tr tr-en">${esc(ex.en)}</div>
+      <div class="ex-tr tr tr-uk">${esc(ex.uk)}</div>
+      ${note}
+    </div>
+  </li>`;
+  }
+  function tenseCardHtml(t) {
+    const usage = t.usage.map((u) => `<li>${tri(u)}</li>`).join("");
+    const tables = t.tables.map((tb) => {
+      const rows = tb.rows.map(
+        (r) => `<tr><td class="pronoun">${esc(r.pronoun)}</td><td class="form">${marked(
+          r.form
+        )}</td></tr>`
+      ).join("");
+      const foot = tb.footnote ? `<p class="table-foot">${tri(tb.footnote)}</p>` : "";
+      return `<div class="conj">
+        <p class="conj-title">${tri(tb.title)}</p>
+        <table><tbody>${rows}</tbody></table>${foot}
+      </div>`;
+    }).join("");
+    const extra = t.extra ? `<details class="extra">
+        <summary>${tri(t.extra.title)}</summary>
+        <table class="extra-table"><tbody>${t.extra.rows.map(
+      (r) => `<tr><td class="pronoun">${esc(r.pronoun)}</td><td>${marked(
+        r.form
+      )}</td></tr>`
+    ).join("")}</tbody></table>
+        ${t.extra.footnote ? `<p class="table-foot">${tri(t.extra.footnote)}</p>` : ""}
+      </details>` : "";
+    const formulaNotes = t.formulaNotes.map((n) => `<li>${tri(n)}</li>`).join("");
+    const examples = t.examples.map((ex, i) => exampleHtml(ex, t.id, i)).join("");
+    const related = t.related.map(
+      (r) => `<li><button class="link-btn" data-goto="${r.id}">${esc(
+        tenseById(r.id).name
+      )}</button> \u2014 ${tri(r.why)}</li>`
+    ).join("");
+    return `
+  <article class="card" id="card-${t.id}" data-tense="${t.id}">
+    <header class="card-head">
+      <h2>${esc(t.name)}</h2>
+      ${badgeHtml(t)}
+    </header>
+    <p class="tagline">${tri(t.tagline)}</p>
+
+    <section>
+      <h3>Quand l'utiliser ?</h3>
+      <ul class="usage">${usage}</ul>
+    </section>
+
+    <section>
+      <h3>Formation</h3>
+      <p class="formula">${marked(t.formula)}</p>
+      <ul class="notes">${formulaNotes}</ul>
+      <div class="conj-row">${tables}</div>
+      ${extra}
+    </section>
+
+    <section class="mnemo">
+      <h3>\u{1F9E0} Astuce m\xE9mo</h3>
+      <p>${tri(t.mnemo)}</p>
+    </section>
+
+    <section>
+      <div class="ex-head">
+        <h3>Exemples</h3>
+        <button class="link-btn reveal-all" data-card="${t.id}" type="button">Tout montrer</button>
+      </div>
+      <ul class="examples">${examples}</ul>
+    </section>
+
+    <section class="related">
+      <h3>Liens avec les autres temps</h3>
+      <ul>${related}</ul>
+    </section>
+  </article>`;
+  }
+  function timelineSvg() {
+    const W = 960;
+    const CX = 480;
+    const AXIS_Y = 250;
+    const wave = (() => {
+      let d = `M 70 70`;
+      for (let x = 70; x <= 400; x += 10) {
+        const y = 70 + Math.sin((x - 70) / 18) * 7;
+        d += ` L ${x} ${y.toFixed(1)}`;
+      }
+      return d;
+    })();
+    return `
+<svg class="timeline" viewBox="0 0 ${W} 372" role="img" aria-label="Frise chronologique des temps">
+  <!-- zones -->
+  <rect x="20" y="30" width="${CX - 30}" height="250" class="zone zone-past" rx="10"/>
+  <rect x="${CX + 10}" y="30" width="${W - CX - 30}" height="250" class="zone zone-future" rx="10"/>
+  <text x="40" y="56" class="zone-label">LE PASS\xC9</text>
+  <text x="${W - 40}" y="56" class="zone-label" text-anchor="end">LE FUTUR</text>
+
+  <!-- axis -->
+  <line x1="40" y1="${AXIS_Y}" x2="${W - 48}" y2="${AXIS_Y}" class="axis"/>
+  <polygon points="${W - 48},${AXIS_Y - 6} ${W - 34},${AXIS_Y} ${W - 48},${AXIS_Y + 6}" class="axis-head"/>
+
+  <!-- NOW line / pr\xE9sent -->
+  <g class="tl-item" data-goto="present" tabindex="0" role="button" aria-label="Le pr\xE9sent">
+    <line x1="${CX}" y1="60" x2="${CX}" y2="292" class="now-line"/>
+    <circle cx="${CX}" cy="${AXIS_Y}" r="9" class="now-dot"/>
+    <circle cx="${CX}" cy="${AXIS_Y}" r="9" class="now-pulse"/>
+    <text x="${CX}" y="320" text-anchor="middle" class="tl-label now-label">MAINTENANT \u2014 le pr\xE9sent</text>
+  </g>
+
+  <!-- imparfait: background wave -->
+  <g class="tl-item" data-goto="imparfait" tabindex="0" role="button" aria-label="L'imparfait">
+    <path d="${wave}" class="mark-wave"/>
+    <text x="70" y="100" class="tl-label">l'imparfait <tspan class="tl-hint">\u2014 le d\xE9cor, les habitudes</tspan></text>
+  </g>
+
+  <!-- pass\xE9 compos\xE9: events -->
+  <g class="tl-item" data-goto="passe-compose" tabindex="0" role="button" aria-label="Le pass\xE9 compos\xE9">
+    <line x1="150" y1="152" x2="150" y2="168" class="mark-tick"/>
+    <line x1="235" y1="152" x2="235" y2="168" class="mark-tick"/>
+    <line x1="320" y1="152" x2="320" y2="168" class="mark-tick"/>
+    <circle cx="150" cy="160" r="7" class="mark-dot"/>
+    <circle cx="235" cy="160" r="7" class="mark-dot"/>
+    <circle cx="320" cy="160" r="7" class="mark-dot"/>
+    <text x="70" y="192" class="tl-label">le pass\xE9 compos\xE9 <tspan class="tl-hint">\u2014 les \xE9v\xE9nements finis</tspan></text>
+  </g>
+
+  <!-- pass\xE9 r\xE9cent: arrow into now -->
+  <g class="tl-item" data-goto="passe-recent" tabindex="0" role="button" aria-label="Le pass\xE9 r\xE9cent">
+    <line x1="384" y1="222" x2="458" y2="222" class="mark-arrow"/>
+    <polygon points="458,216 470,222 458,228" class="mark-arrow-head"/>
+    <text x="466" y="210" text-anchor="end" class="tl-label">le pass\xE9 r\xE9cent <tspan class="tl-hint">\u2014 je viens de\u2026</tspan></text>
+  </g>
+
+  <!-- futur proche: arrow out of now -->
+  <g class="tl-item" data-goto="futur-proche" tabindex="0" role="button" aria-label="Le futur proche">
+    <line x1="502" y1="222" x2="576" y2="222" class="mark-arrow"/>
+    <polygon points="576,216 588,222 576,228" class="mark-arrow-head"/>
+    <text x="502" y="210" class="tl-label">le futur proche <tspan class="tl-hint">\u2014 je vais\u2026</tspan></text>
+  </g>
+
+  <!-- futur simple: distant dots -->
+  <g class="tl-item" data-goto="futur-simple" tabindex="0" role="button" aria-label="Le futur simple">
+    <circle cx="700" cy="160" r="7" class="mark-dot mark-dot-hollow"/>
+    <circle cx="800" cy="160" r="7" class="mark-dot mark-dot-hollow"/>
+    <circle cx="875" cy="160" r="7" class="mark-dot mark-dot-hollow"/>
+    <text x="640" y="192" class="tl-label">le futur simple <tspan class="tl-hint">\u2014 un jour, plus tard\u2026</tspan></text>
+  </g>
+
+  <!-- modes strip -->
+  <g class="modes">
+    <text x="40" y="352" class="modes-label">Hors du temps (les modes) :</text>
+    <g class="tl-item" data-goto="imperatif" tabindex="0" role="button" aria-label="L'imp\xE9ratif">
+      <rect x="270" y="336" width="150" height="26" rx="13" class="mode-chip"/>
+      <text x="345" y="353" text-anchor="middle" class="mode-text">l'imp\xE9ratif \u2014 Fais !</text>
+    </g>
+    <g class="tl-item" data-goto="conditionnel-politesse" tabindex="0" role="button" aria-label="Le conditionnel de politesse">
+      <rect x="440" y="336" width="230" height="26" rx="13" class="mode-chip"/>
+      <text x="555" y="353" text-anchor="middle" class="mode-text">le conditionnel \u2014 je voudrais\u2026</text>
+    </g>
+  </g>
+</svg>`;
+  }
+  function hubSvg() {
+    const nodes = [
+      { id: "imparfait", x: 130, y: 84, label: "imparfait", recipe: "\xAB nous \xBB sans -ons + -ais" },
+      { id: "passe-compose", x: 130, y: 208, label: "pass\xE9 compos\xE9", recipe: "avoir / \xEAtre + participe" },
+      { id: "passe-recent", x: 240, y: 322, label: "pass\xE9 r\xE9cent", recipe: "venir + de + infinitif" },
+      { id: "futur-proche", x: 660, y: 322, label: "futur proche", recipe: "aller + infinitif" },
+      { id: "imperatif", x: 770, y: 84, label: "imp\xE9ratif", recipe: "pr\xE9sent sans sujet" }
+    ];
+    const hub = { x: 450, y: 195 };
+    const spokes = nodes.map((n) => {
+      const dx = n.x - hub.x;
+      const dy = n.y - hub.y;
+      const len = Math.hypot(dx, dy);
+      const sx = hub.x + dx / len * 66;
+      const sy = hub.y + dy / len * 40;
+      const ex = n.x - dx / len * 78;
+      const ey = n.y - dy / len * 30;
+      const mx = (sx + ex) / 2;
+      const my = (sy + ey) / 2;
+      return `
+      <g class="spoke">
+        <line x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" class="spoke-line"/>
+        <rect x="${mx - 92}" y="${my - 12}" width="184" height="22" rx="11" class="recipe-bg"/>
+        <text x="${mx}" y="${my + 3}" text-anchor="middle" class="recipe">${esc(n.recipe)}</text>
+      </g>`;
+    }).join("");
+    const nodeEls = nodes.map(
+      (n) => `
+    <g class="tl-item hub-node" data-goto="${n.id}" tabindex="0" role="button" aria-label="${esc(n.label)}">
+      <rect x="${n.x - 78}" y="${n.y - 20}" width="156" height="40" rx="20" class="node-bg"/>
+      <text x="${n.x}" y="${n.y + 5}" text-anchor="middle" class="node-text">${esc(n.label)}</text>
+    </g>`
+    ).join("");
+    return `
+<svg class="hub" viewBox="0 0 900 420" role="img" aria-label="Le pr\xE9sent construit les autres temps">
+  ${spokes}
+  ${nodeEls}
+  <g class="tl-item hub-center" data-goto="present" tabindex="0" role="button" aria-label="Le pr\xE9sent">
+    <circle cx="${hub.x}" cy="${hub.y}" r="56" class="hub-bg"/>
+    <text x="${hub.x}" y="${hub.y - 2}" text-anchor="middle" class="hub-text">LE</text>
+    <text x="${hub.x}" y="${hub.y + 18}" text-anchor="middle" class="hub-text">PR\xC9SENT</text>
+  </g>
+  <!-- side chain: infinitif \u2192 futur simple \u2192 conditionnel -->
+  <g class="chain">
+    <text x="450" y="392" text-anchor="middle" class="chain-text">
+      Et \xE0 part : <tspan class="chain-strong">infinitif</tspan> + avoir \u2192
+      <tspan class="chain-link" data-goto="futur-simple">futur simple</tspan>
+      \u2192 m\xEAme radical + -ais \u2192
+      <tspan class="chain-link" data-goto="conditionnel-politesse">conditionnel</tspan>
+    </text>
+  </g>
+</svg>`;
+  }
+  function overviewHtml() {
+    return `
+  <section class="panel">
+    <h2 class="panel-title">La frise du temps</h2>
+    <p class="panel-sub">${tri({
+      fr: "O\xF9 \xAB vit \xBB chaque temps ? Cliquez sur un temps pour ouvrir sa fiche.",
+      en: "Where does each tense \u201Clive\u201D? Click a tense to open its card.",
+      uk: "\u0414\u0435 \xAB\u0436\u0438\u0432\u0435\xBB \u043A\u043E\u0436\u0435\u043D \u0447\u0430\u0441? \u041D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \u043D\u0430 \u0447\u0430\u0441, \u0449\u043E\u0431 \u0432\u0456\u0434\u043A\u0440\u0438\u0442\u0438 \u0439\u043E\u0433\u043E \u043A\u0430\u0440\u0442\u043A\u0443."
+    })}</p>
+    ${timelineSvg()}
+  </section>
+
+  <section class="panel">
+    <h2 class="panel-title">Tout part du pr\xE9sent</h2>
+    <p class="panel-sub">${tri({
+      fr: "Apprenez bien le pr\xE9sent : les autres temps sont des recettes \xE0 partir de lui.",
+      en: "Learn the present well: the other tenses are recipes built from it.",
+      uk: "\u0414\u043E\u0431\u0440\u0435 \u0432\u0438\u0432\u0447\u0456\u0442\u044C \u0442\u0435\u043F\u0435\u0440\u0456\u0448\u043D\u0456\u0439 \u0447\u0430\u0441: \u0456\u043D\u0448\u0456 \u0447\u0430\u0441\u0438 \u2014 \u0446\u0435 \u0440\u0435\u0446\u0435\u043F\u0442\u0438 \u043D\u0430 \u0439\u043E\u0433\u043E \u043E\u0441\u043D\u043E\u0432\u0456."
+    })}</p>
+    ${hubSvg()}
+  </section>`;
+  }
+  function cardsHtml() {
+    const chips = TENSES.map(
+      (t) => `<button class="chip" data-goto="${t.id}">${esc(
+        t.name.replace(/^(Le |L'|La )/, "")
+      )}</button>`
+    ).join("");
+    return `
+  <div class="toc">${chips}</div>
+  ${legendHtml()}
+  <div class="cards">${TENSES.map(tenseCardHtml).join("")}</div>`;
+  }
+  function compareColumn(t) {
+    const usage = t.usage.map((u) => `<li>${tri(u)}</li>`).join("");
+    const tb = t.tables[0];
+    const rows = tb.rows.map(
+      (r) => `<tr><td class="pronoun">${esc(r.pronoun)}</td><td class="form">${marked(
+        r.form
+      )}</td></tr>`
+    ).join("");
+    return `
+  <div class="cmp-col">
+    <h3 class="cmp-name">${esc(t.name)} ${badgeHtml(t)}</h3>
+    <p class="formula">${marked(t.formula)}</p>
+    <h4>Quand ?</h4>
+    <ul class="usage">${usage}</ul>
+    <h4>${tri(tb.title)}</h4>
+    <table class="cmp-table"><tbody>${rows}</tbody></table>
+    <p class="cmp-more"><button class="link-btn" data-goto="${t.id}">Voir la fiche compl\xE8te \u2192</button></p>
+  </div>`;
+  }
+  function compareHtml() {
+    const opts = (sel) => TENSES.map(
+      (t) => `<option value="${t.id}" ${t.id === sel ? "selected" : ""}>${esc(
+        t.name
+      )}</option>`
+    ).join("");
+    const a = tenseById(state.compareA);
+    const b = tenseById(state.compareB);
+    const key = [a.id, b.id].sort().join("|");
+    const contrast = CONTRASTS.find((c) => c.key === key);
+    const aIsFirst = a.id.localeCompare(b.id) <= 0;
+    const cell = (t, ex) => `
+        <div class="face-cell">
+          <div class="face-tense">${esc(t.name)}</div>
+          <div class="face-fr">${marked(ex.fr)}</div>
+          <div class="tr tr-en">${esc(ex.en)}</div>
+          <div class="tr tr-uk">${esc(ex.uk)}</div>
+        </div>`;
+    const faceRows = contrast ? contrast.rows.map(
+      (r) => `
+      <div class="face-row">
+        ${aIsFirst ? cell(a, r.a) + cell(b, r.b) : cell(a, r.b) + cell(b, r.a)}
+        <div class="face-point">\u2192 ${tri(r.point)}</div>
+      </div>`
+    ).join("") : "";
+    const faceSection = contrast ? `<section class="panel face">
+        <h3 class="panel-title">Face \xE0 face</h3>
+        <p class="panel-sub">${tri(contrast.headline)}</p>
+        ${faceRows}
+      </section>` : `<p class="no-contrast">${tri({
+      fr: "Pas de duel pr\xE9par\xE9 pour cette paire \u2014 mais comparez la formation et l'usage ci-dessus ! Paires recommand\xE9es : pass\xE9 compos\xE9 \u2194 imparfait, futur proche \u2194 futur simple.",
+      en: "No prepared duel for this pair \u2014 but compare the formation and usage above! Recommended pairs: pass\xE9 compos\xE9 \u2194 imparfait, futur proche \u2194 futur simple.",
+      uk: "\u0414\u043B\u044F \u0446\u0456\u0454\u0457 \u043F\u0430\u0440\u0438 \u043D\u0435\u043C\u0430\u0454 \u0433\u043E\u0442\u043E\u0432\u043E\u0433\u043E \u0434\u0443\u0435\u043B\u044E \u2014 \u0430\u043B\u0435 \u043F\u043E\u0440\u0456\u0432\u043D\u044F\u0439\u0442\u0435 \u0443\u0442\u0432\u043E\u0440\u0435\u043D\u043D\u044F \u0442\u0430 \u0432\u0436\u0438\u0442\u043E\u043A \u0432\u0438\u0449\u0435! \u0420\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u043E\u0432\u0430\u043D\u0456 \u043F\u0430\u0440\u0438: pass\xE9 compos\xE9 \u2194 imparfait, futur proche \u2194 futur simple."
+    })}</p>`;
+    return `
+  <div class="cmp-pickers">
+    <label>A <select id="cmp-a">${opts(state.compareA)}</select></label>
+    <span class="vs">contre</span>
+    <label>B <select id="cmp-b">${opts(state.compareB)}</select></label>
+  </div>
+  ${legendHtml()}
+  <div class="cmp-grid">
+    ${compareColumn(a)}
+    ${compareColumn(b)}
+  </div>
+  ${faceSection}`;
+  }
+  function render() {
+    const main = document.getElementById("main");
+    document.querySelectorAll(".nav-btn").forEach((b) => b.classList.toggle("active", b.dataset.view === state.view));
+    if (state.view === "overview") main.innerHTML = overviewHtml();
+    else if (state.view === "cards") main.innerHTML = cardsHtml();
+    else main.innerHTML = compareHtml();
+    if (state.view === "compare") {
+      document.getElementById("cmp-a").addEventListener(
+        "change",
+        (e) => {
+          state.compareA = e.target.value;
+          render();
+        }
+      );
+      document.getElementById("cmp-b").addEventListener(
+        "change",
+        (e) => {
+          state.compareB = e.target.value;
+          render();
+        }
+      );
+    }
+  }
+  function goToTense(id) {
+    if (state.view !== "cards") {
+      state.view = "cards";
+      render();
+    }
+    const el = document.getElementById(`card-${id}`);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      el.classList.remove("flash");
+      void el.offsetWidth;
+      el.classList.add("flash");
+    }
+  }
+  function init() {
+    document.querySelectorAll(".nav-btn").forEach(
+      (b) => b.addEventListener("click", () => {
+        state.view = b.dataset.view;
+        render();
+        window.scrollTo({ top: 0 });
+      })
+    );
+    const btnEn = document.getElementById("toggle-en");
+    const btnUk = document.getElementById("toggle-uk");
+    btnEn.addEventListener("click", () => {
+      document.body.classList.toggle("show-en");
+      btnEn.classList.toggle("active");
+    });
+    btnUk.addEventListener("click", () => {
+      document.body.classList.toggle("show-uk");
+      btnUk.classList.toggle("active");
+    });
+    document.body.addEventListener("click", (e) => {
+      const target = e.target;
+      const goto = target.closest("[data-goto]");
+      if (goto) {
+        goToTense(goto.dataset.goto);
+        return;
+      }
+      const revealAll = target.closest(".reveal-all");
+      if (revealAll) {
+        const card = document.getElementById(`card-${revealAll.dataset.card}`);
+        const examples = card.querySelectorAll(".example");
+        const anyHidden = Array.from(examples).some(
+          (x) => !x.classList.contains("revealed")
+        );
+        examples.forEach((x) => x.classList.toggle("revealed", anyHidden));
+        revealAll.textContent = anyHidden ? "Tout cacher" : "Tout montrer";
+        return;
+      }
+      const ex = target.closest(".example");
+      if (ex && (target.closest(".reveal-btn") || !ex.classList.contains("revealed"))) {
+        ex.classList.toggle("revealed");
+        return;
+      }
+    });
+    document.body.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const goto = e.target.closest?.("[data-goto]");
+      if (goto) {
+        e.preventDefault();
+        goToTense(goto.dataset.goto);
+      }
+    });
+    render();
+  }
+  document.addEventListener("DOMContentLoaded", init);
+})();

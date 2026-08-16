@@ -1,0 +1,12 @@
+{
+  "name": "french",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projet DELF B2 — référence de grammaire, exercices et vocabulaire sur une banque de contenu partagée",
+  "scripts": {
+    "generate": "node tools/generate.mjs",
+    "check": "npm --prefix reference-app run check && npm --prefix exercises-app run check && npm --prefix vocab-app run check",
+    "build": "npm run generate && npm --prefix reference-app run build && npm --prefix exercises-app run build && npm --prefix vocab-app run build"
+  },
+  "devDependencies": { "esbuild": "^0.24.0", "typescript": "^5.6.0" }
+}

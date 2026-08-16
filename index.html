@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Français · DELF B2 — les outils</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+      --muted: #898781; --hairline: #e1e0d9; --border: rgba(11,11,11,.1);
+      --accent: #2a78d6; --accent-ink: #1c5cab;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+        --muted: #898781; --hairline: #2c2c2a; --border: rgba(255,255,255,.1);
+        --accent: #3987e5; --accent-ink: #6da7ec;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--page); color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.55; min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 8vh 20px 40px;
+    }
+    h1 { font-size: 1.7rem; margin: 0 0 6px; }
+    h1 .lvl { color: var(--accent-ink); }
+    .sub { color: var(--ink-2); margin: 0 0 36px; text-align: center; }
+    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; width: 100%; max-width: 900px; }
+    a.app {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 26px; text-decoration: none; color: var(--ink);
+      transition: border-color .15s, transform .15s;
+    }
+    a.app:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .app-emoji { font-size: 1.6rem; }
+    .app h2 { margin: 8px 0 6px; font-size: 1.12rem; }
+    .app p { margin: 0; color: var(--ink-2); font-size: .92rem; }
+    .foot { margin-top: auto; padding-top: 40px; color: var(--muted); font-size: .82rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Le français, direction <span class="lvl">DELF B2</span></h1>
+  <p class="sub">Trois outils, une seule banque de contenu partagée.</p>
+  <div class="apps">
+    <a class="app" href="reference-app/">
+      <span class="app-emoji">📖</span>
+      <h2>Grammaire — la référence</h2>
+      <p>Les règles A2 → B1 : temps, structures, connecteurs, schémas et comparaisons.</p>
+    </a>
+    <a class="app" href="exercises-app/">
+      <span class="app-emoji">✏️</span>
+      <h2>Exercices</h2>
+      <p>Séries de 10 items, 4 niveaux d'aide (guidé → examen), progression dans un fichier.</p>
+    </a>
+    <a class="app" href="vocab-app/">
+      <span class="app-emoji">🃏</span>
+      <h2>Vocabulaire</h2>
+      <p>198 mots FR ↔ УКР en répétition espacée : cartes, quiz, écriture.</p>
+    </a>
+  </div>
+  <p class="foot">Objectif DELF B2 · construit sur une banque de contenu unique · déployé par GitHub Actions</p>
+</body>
+</html>
