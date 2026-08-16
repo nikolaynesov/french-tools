@@ -218,18 +218,23 @@ function ruleStructure(ruleId: string): Structure | undefined {
   return STRUCTURES.find((s) => s.id === id);
 }
 
-/** « v___ s_____ » — first letter of each word + one _ per hidden letter.
- *  Letters after apostrophes/hyphens are also revealed (j'aurais → j'a_____). */
-function skeleton(answer: string): string {
+/** Letter tiles: first letter of each word shown, one empty tile per hidden
+ *  letter. Letters after apostrophes/hyphens are also revealed (j'aurais → j'a······). */
+function skeletonHtml(answer: string): string {
   let out = "";
   let reveal = true;
   for (const ch of answer) {
     if (/\p{L}/u.test(ch)) {
-      out += reveal ? ch : "_";
+      out += reveal
+        ? `<span class="sk sk-show">${esc(ch)}</span>`
+        : `<span class="sk"></span>`;
       reveal = false;
+    } else if (ch === " ") {
+      out += `<span class="sk-gap"></span>`;
+      reveal = true;
     } else {
-      out += ch;
-      reveal = true; // space, apostrophe, hyphen… → next letter shows
+      out += `<span class="sk-sep">${esc(ch)}</span>`;
+      reveal = true;
     }
   }
   return out;
@@ -248,9 +253,10 @@ function rulePanelHtml(d: Drill, full: boolean): string {
     d.ruleId
   )}" target="_blank" rel="noopener">Fiche complète : ${esc(ruleName(d.ruleId))} ↗</a>`;
 
+  const head = `<div class="rp-head">📖 La règle</div>`;
   const t = ruleTense(d.ruleId);
   if (t) {
-    let body = `<p class="rp-formula">${markedHtml(t.formula)}</p>`;
+    let body = head + `<p class="rp-formula">${markedHtml(t.formula)}</p>`;
     if (full) {
       const tb = t.tables[0];
       if (tb) {
@@ -280,7 +286,7 @@ function rulePanelHtml(d: Drill, full: boolean): string {
 
   const s = ruleStructure(d.ruleId);
   if (s) {
-    let body = `<p class="rp-formula">${esc(s.tagline.fr)}</p>`;
+    let body = head + `<p class="rp-formula">${esc(s.tagline.fr)}</p>`;
     if (full) {
       const b = s.blocks.find((x) => x.kind === "rule");
       if (b && b.kind === "rule") {
@@ -330,12 +336,6 @@ function buildSet(ruleId: string, label: string): Session {
 
 // ---------- rendering ----------
 
-function accuracy(id: string): string {
-  const s = progress.byRule[id];
-  if (!s || !s.seen) return "";
-  return `${Math.round((s.correct / s.seen) * 100)}%`;
-}
-
 function homeHtml(): string {
   const groups: RuleMeta["group"][] = ["Temps", "Structures", "Connecteurs"];
   const blocks = groups
@@ -343,12 +343,18 @@ function homeHtml(): string {
       const rows = RULES.filter((r) => r.group === g)
         .map((r) => {
           const n = pool(r.id).length;
-          const acc = accuracy(r.id);
+          const s = progress.byRule[r.id];
+          const pct = s && s.seen ? Math.round((s.correct / s.seen) * 100) : null;
           return `<button class="rule-btn" data-start="${r.id}" ${n === 0 ? "disabled" : ""}>
             <span class="rule-name">${esc(r.name)}</span>
             <span class="rule-meta">${n} item${n > 1 ? "s" : ""}${
-            acc ? ` · <b class="acc">${acc}</b>` : ""
+            pct !== null ? ` · <b class="acc">${pct}%</b>` : ""
           }</span>
+            ${
+              pct !== null
+                ? `<span class="rule-bar"><i style="width:${pct}%"></i></span>`
+                : ""
+            }
           </button>`;
         })
         .join("");
@@ -359,11 +365,23 @@ function homeHtml(): string {
   const wrong = wrongPool().length;
   const total = DRILLS.length;
   const seen = Object.keys(progress.byItem).length;
+  const answered = Object.values(progress.byRule);
+  const totSeen = answered.reduce((n, r) => n + r.seen, 0);
+  const totOk = answered.reduce((n, r) => n + r.correct, 0);
+  const globalPct = totSeen ? Math.round((totOk / totSeen) * 100) : null;
+  const rulesTouched = answered.filter((r) => r.seen > 0).length;
 
   return `
   <div class="hero">
     <h2>Choisis ta série</h2>
-    <p class="sub">${SET_SIZE} items par série — courte et finissable, c'est le principe. ${seen}/${total} items vus.</p>
+    <p class="sub">${SET_SIZE} items par série — courte et finissable, c'est le principe.</p>
+    <div class="stats">
+      <div class="stat"><span class="stat-n">${seen}<em>/${total}</em></span><span class="stat-l">items vus</span></div>
+      <div class="stat"><span class="stat-n">${
+        globalPct === null ? "—" : `${globalPct}%`
+      }</span><span class="stat-l">précision</span></div>
+      <div class="stat"><span class="stat-n">${rulesTouched}<em>/${RULES.length}</em></span><span class="stat-l">règles travaillées</span></div>
+    </div>
     <div class="quick">
       <button class="big-btn primary" data-start="all">Révision générale</button>
       <button class="big-btn ${wrong ? "" : "muted"}" data-start="errors" ${
@@ -488,9 +506,9 @@ function sessionHtml(): string {
     if (state.aide <= 2) {
       help = rulePanelHtml(d, state.aide === 1);
       if (state.aide === 1 && d.kind !== "choice") {
-        help += `<p class="skel" title="squelette de la réponse">${esc(
-          skeleton(d.answer[0])
-        )}</p>`;
+        help += `<div class="skel" title="squelette de la réponse">${skeletonHtml(
+          d.answer[0]
+        )}</div>`;
       }
     } else if (state.aide === 3) {
       help = s.indice
@@ -555,8 +573,8 @@ function resultHtml(): string {
   return `
   <div class="result">
     <div class="score ${pct >= 80 ? "great" : pct >= 50 ? "mid" : "low"}">
-      <span class="score-n">${ok}/${n}</span>
-      <span class="score-p">${pct}%</span>
+      <div class="ring" style="--p:${pct}"><span>${pct}%</span></div>
+      <span class="score-n">${ok}<em>/${n}</em></span>
     </div>
     <p class="sub">${esc(s.label)} · aide : ${AIDE_META[state.aide].label.toLowerCase()}${
     helpedOk ? ` · ${helpedOk} bonne${helpedOk > 1 ? "s" : ""} réponse${

@@ -5776,15 +5776,18 @@
     const id = canonicalId(ruleId);
     return STRUCTURES.find((s) => s.id === id);
   }
-  function skeleton(answer) {
+  function skeletonHtml(answer) {
     let out = "";
     let reveal = true;
     for (const ch of answer) {
       if (/\p{L}/u.test(ch)) {
-        out += reveal ? ch : "_";
+        out += reveal ? `<span class="sk sk-show">${esc(ch)}</span>` : `<span class="sk"></span>`;
         reveal = false;
+      } else if (ch === " ") {
+        out += `<span class="sk-gap"></span>`;
+        reveal = true;
       } else {
-        out += ch;
+        out += `<span class="sk-sep">${esc(ch)}</span>`;
         reveal = true;
       }
     }
@@ -5798,9 +5801,10 @@
     const link = `<a class="rule-link" href="${REFERENCE_URL}#card-${canonicalId(
       d.ruleId
     )}" target="_blank" rel="noopener">Fiche compl\xE8te : ${esc(ruleName(d.ruleId))} \u2197</a>`;
+    const head = `<div class="rp-head">\u{1F4D6} La r\xE8gle</div>`;
     const t = ruleTense(d.ruleId);
     if (t) {
-      let body = `<p class="rp-formula">${markedHtml(t.formula)}</p>`;
+      let body = head + `<p class="rp-formula">${markedHtml(t.formula)}</p>`;
       if (full) {
         const tb = t.tables[0];
         if (tb) {
@@ -5820,7 +5824,7 @@
     }
     const s = ruleStructure(d.ruleId);
     if (s) {
-      let body = `<p class="rp-formula">${esc(s.tagline.fr)}</p>`;
+      let body = head + `<p class="rp-formula">${esc(s.tagline.fr)}</p>`;
       if (full) {
         const b = s.blocks.find((x) => x.kind === "rule");
         if (b && b.kind === "rule") {
@@ -5861,20 +5865,17 @@
       label
     };
   }
-  function accuracy(id) {
-    const s = progress.byRule[id];
-    if (!s || !s.seen) return "";
-    return `${Math.round(s.correct / s.seen * 100)}%`;
-  }
   function homeHtml() {
     const groups = ["Temps", "Structures", "Connecteurs"];
     const blocks = groups.map((g) => {
       const rows = RULES.filter((r) => r.group === g).map((r) => {
         const n = pool(r.id).length;
-        const acc = accuracy(r.id);
+        const s = progress.byRule[r.id];
+        const pct = s && s.seen ? Math.round(s.correct / s.seen * 100) : null;
         return `<button class="rule-btn" data-start="${r.id}" ${n === 0 ? "disabled" : ""}>
             <span class="rule-name">${esc(r.name)}</span>
-            <span class="rule-meta">${n} item${n > 1 ? "s" : ""}${acc ? ` \xB7 <b class="acc">${acc}</b>` : ""}</span>
+            <span class="rule-meta">${n} item${n > 1 ? "s" : ""}${pct !== null ? ` \xB7 <b class="acc">${pct}%</b>` : ""}</span>
+            ${pct !== null ? `<span class="rule-bar"><i style="width:${pct}%"></i></span>` : ""}
           </button>`;
       }).join("");
       return `<section class="grp"><h3>${g}</h3><div class="rule-grid">${rows}</div></section>`;
@@ -5882,10 +5883,20 @@
     const wrong = wrongPool().length;
     const total = DRILLS.length;
     const seen = Object.keys(progress.byItem).length;
+    const answered = Object.values(progress.byRule);
+    const totSeen = answered.reduce((n, r) => n + r.seen, 0);
+    const totOk = answered.reduce((n, r) => n + r.correct, 0);
+    const globalPct = totSeen ? Math.round(totOk / totSeen * 100) : null;
+    const rulesTouched = answered.filter((r) => r.seen > 0).length;
     return `
   <div class="hero">
     <h2>Choisis ta s\xE9rie</h2>
-    <p class="sub">${SET_SIZE} items par s\xE9rie \u2014 courte et finissable, c'est le principe. ${seen}/${total} items vus.</p>
+    <p class="sub">${SET_SIZE} items par s\xE9rie \u2014 courte et finissable, c'est le principe.</p>
+    <div class="stats">
+      <div class="stat"><span class="stat-n">${seen}<em>/${total}</em></span><span class="stat-l">items vus</span></div>
+      <div class="stat"><span class="stat-n">${globalPct === null ? "\u2014" : `${globalPct}%`}</span><span class="stat-l">pr\xE9cision</span></div>
+      <div class="stat"><span class="stat-n">${rulesTouched}<em>/${RULES.length}</em></span><span class="stat-l">r\xE8gles travaill\xE9es</span></div>
+    </div>
     <div class="quick">
       <button class="big-btn primary" data-start="all">R\xE9vision g\xE9n\xE9rale</button>
       <button class="big-btn ${wrong ? "" : "muted"}" data-start="errors" ${wrong ? "" : "disabled"}>Mes erreurs <span class="pill">${wrong}</span></button>
@@ -5967,9 +5978,9 @@
       if (state.aide <= 2) {
         help = rulePanelHtml(d, state.aide === 1);
         if (state.aide === 1 && d.kind !== "choice") {
-          help += `<p class="skel" title="squelette de la r\xE9ponse">${esc(
-            skeleton(d.answer[0])
-          )}</p>`;
+          help += `<div class="skel" title="squelette de la r\xE9ponse">${skeletonHtml(
+            d.answer[0]
+          )}</div>`;
         }
       } else if (state.aide === 3) {
         help = s.indice ? rulePanelHtml(d, false) : `<button class="link-btn indice" id="indice">\u{1F4A1} Indice</button>`;
@@ -6017,8 +6028,8 @@
     return `
   <div class="result">
     <div class="score ${pct >= 80 ? "great" : pct >= 50 ? "mid" : "low"}">
-      <span class="score-n">${ok}/${n}</span>
-      <span class="score-p">${pct}%</span>
+      <div class="ring" style="--p:${pct}"><span>${pct}%</span></div>
+      <span class="score-n">${ok}<em>/${n}</em></span>
     </div>
     <p class="sub">${esc(s.label)} \xB7 aide : ${AIDE_META[state.aide].label.toLowerCase()}${helpedOk ? ` \xB7 ${helpedOk} bonne${helpedOk > 1 ? "s" : ""} r\xE9ponse${helpedOk > 1 ? "s" : ""} avec aide` : ""}</p>
     ${missed.length ? `<h3>\xC0 revoir (${missed.length})</h3><ul class="misses">${list}</ul>` : `<p class="perfect">S\xE9rie parfaite. \u{1F389}</p>`}
